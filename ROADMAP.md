@@ -36,11 +36,15 @@
 - [x] Define the standard .NET repository and solution structures.
 - [x] Define .NET coding, logging, configuration, persistence, testing, and error-handling rules.
 
-## Phase 3 — Supporting Assets
+## Phase 3 — Processes and Supporting Assets
 
-- [ ] Complete document templates.
-- [ ] Complete checklists.
-- [ ] Create prompt packages for the SASD Prompt Manager.
+- [x] Define project classification and new-project initialization.
+- [x] Define architecture-decision and review processes.
+- [x] Define legacy migration, release, and project archival processes.
+- [x] Add process templates, checklists, examples, prompts, indexes, and validation tooling.
+- [ ] Complete remaining document templates.
+- [ ] Complete remaining checklists.
+- [ ] Complete prompt packages for the SASD Prompt Manager.
 - [x] Add initial reusable `.editorconfig`, MSBuild, package-management, SDK, and CI templates.
 - [x] Add initial WinForms and WPF project templates, desktop checklists, and deployment templates.
 - [ ] Refine reusable templates after .NET and Desktop pilot feedback.
@@ -48,9 +52,9 @@
 
 ## Phase 4 — Pilot Projects
 
-- [ ] Apply the standard to one small project.
-- [ ] Apply the standard to one medium project.
-- [ ] Apply the standard to one more complex C#/.NET project.
+- [ ] Apply classification and initialization or migration to one small project.
+- [ ] Apply the full process chain to one medium project.
+- [ ] Apply the full process chain to one more complex C#/.NET project.
 - [ ] Record deviations and lessons learned.
 
 ## Phase 5 — Version 1.0

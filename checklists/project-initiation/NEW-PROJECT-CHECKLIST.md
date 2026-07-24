@@ -1,31 +1,33 @@
-# New Project Checklist
+# Checkliste für neue Projekte
 
-## Purpose and scope
+## Projektgrundlage
 
-- [ ] The problem is described.
-- [ ] Intended users are identified.
-- [ ] Goals are measurable enough to review.
-- [ ] Non-goals are documented.
-- [ ] Project size, risk, and expected lifetime are assessed.
+- [ ] Projektbrief enthält Problem, Ziel, Zielgruppe, Nutzen und Verantwortlichen.
+- [ ] Scope und wesentliche Nicht-Ziele sind dokumentiert.
+- [ ] Annahmen und offene Fragen sind von bestätigten Fakten getrennt.
+- [ ] Projektklassifikation ist abgeschlossen oder vorläufig freigegeben.
+- [ ] Qualitätsstufe und Profile sind dokumentiert.
 
-## Standard selection
+## Anforderungen und Architektur
 
-- [ ] The applicable SASD standard version is recorded.
-- [ ] The quality level is selected.
-- [ ] Applicable profiles are selected.
-- [ ] Required documents are identified.
+- [ ] Erster Meilenstein besitzt prüfbare Akzeptanzkriterien.
+- [ ] Funktionale und relevante nichtfunktionale Anforderungen sind erfasst.
+- [ ] Systemkontext, Daten, Integrationen und Betriebsform sind sichtbar.
+- [ ] Wesentliche Technologieentscheidungen sind begründet oder als ADR erfasst.
+- [ ] Risiken, Security, Datenschutz und Lizenzen wurden betrachtet.
 
-## Repository
+## Repository und Qualität
 
-- [ ] Repository name and visibility are decided.
-- [ ] License is selected.
-- [ ] Initial structure is created.
-- [ ] README and roadmap exist.
-- [ ] Secrets are excluded from version control.
+- [ ] README, LICENSE-Entscheidung und Grundstruktur sind vorhanden.
+- [ ] Secrets und lokale Nutzerdaten sind ausgeschlossen.
+- [ ] Entwicklungswerkzeuge und Versionen sind dokumentiert.
+- [ ] Frischer Checkout kann gebaut werden oder der Blocker ist dokumentiert.
+- [ ] Teststrategie und Definition of Done sind festgelegt.
+- [ ] Speicherorte für Konfiguration, Logs und Daten sind bestimmt.
 
-## Architecture and delivery
+## Readiness Gate
 
-- [ ] Initial architecture is documented.
-- [ ] Major risks and dependencies are recorded.
-- [ ] Milestone 1 has a bounded scope.
-- [ ] Build, test, and run instructions are planned.
+- [ ] Blocker und Restunsicherheiten sind getrennt.
+- [ ] Erster Umsetzungsmeilenstein ist priorisiert.
+- [ ] Selbstreview oder Reviewerprüfung wurde durchgeführt.
+- [ ] Entscheidung ist als Ready, Ready with conditions oder Not ready dokumentiert.

@@ -83,3 +83,21 @@ Checks the four Proposed 0.5.0 Desktop documents, requirement-ID ranges, normati
 ### `generate-desktop-requirements-index.py`
 
 Generates `docs/20-profiles/desktop/DESKTOP-REQUIREMENTS-INDEX.md` from the normative requirement tables.
+
+
+## Operational process checks
+
+```bash
+python tooling/validate-operational-processes.py
+python tooling/generate-process-requirements-index.py --check
+python tooling/generate-process-quality-matrix.py --check
+```
+
+### `validate-operational-processes.py`
+
+Checks all seven Proposed 0.6.0 process documents, requirement-ID ranges, normative keywords, exact duplicates, expected process sections, templates and generated views.
+
+### Generated process views
+
+- `docs/30-processes/PROCESS-REQUIREMENTS-INDEX.md`
+- `docs/30-processes/PROCESS-QUALITY-LEVEL-MATRIX.md`

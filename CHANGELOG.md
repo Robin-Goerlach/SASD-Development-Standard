@@ -8,6 +8,14 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Complete Proposed 0.6.0 operational process handbook for project classification, new-project initialization, architecture decisions, reviews, legacy migration, releases, and project archival.
+- Stable operational process requirement IDs with generated requirement index and quality-level matrix.
+- Process map, documented process review, project classification and initialization records, ADR index, review record, migration assessment and plan, release record, and project archival record.
+- Classification, ADR, review, legacy migration, release readiness, and archival checklists.
+- Project classification, ADR preparation, legacy migration review, and release preparation prompt templates.
+- Process examples and dependency-free operational-process validator and generators.
+
+
 - Complete Proposed 0.5.0 Desktop Application Profile covering technology selection, UI architecture, user experience, accessibility, application lifecycle, publishing, installation, updates, and support.
 - 215 stable Desktop profile requirement IDs with generated requirement index and consolidated quality-level matrix.
 - WinForms and WPF implementation guidance, desktop project sizing guide, primary-source reference baseline, and documented profile review.
@@ -36,6 +44,11 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+
+- Moved all seven operational process documents from Planned 0.1.0 to Proposed 0.6.0.
+- Clarified the separation of structural project size, quality level, risk characteristics, lifecycle intent, and applicable profiles.
+- Updated repository navigation, document catalog, roadmap, tooling documentation, and repository manifest for the operational processes.
+
 
 - Moved all four Desktop profile documents from Planned 0.1.0 to Proposed 0.5.0.
 - Updated repository navigation, document catalog, roadmap, tooling documentation, and repository manifest for the Desktop profile.

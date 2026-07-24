@@ -59,13 +59,13 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-PROF-DESKTOP-002 | `docs/20-profiles/desktop/UI-ARCHITECTURE.md` | Normativ | Proposed | UI-Schichten, Zuständigkeiten und Navigation | Desktopentwickler | DESKTOP-001, CORE-003 |
 | SASD-PROF-DESKTOP-003 | `docs/20-profiles/desktop/USER-EXPERIENCE.md` | Normativ | Proposed | Bedienbarkeit, Barrierefreiheit und konsistente Interaktion | Desktopentwickler | DESKTOP-001 |
 | SASD-PROF-DESKTOP-004 | `docs/20-profiles/desktop/APPLICATION-LIFECYCLE.md` | Normativ | Proposed | Start, Shutdown, Single Instance, Updates und Diagnose | Desktopentwickler | DESKTOP-001, DOTNET-004 bis 006 |
-| SASD-PROC-001 | `docs/30-processes/NEW-PROJECT.md` | Normativ | Planned | Wiederholbarer Start eines neuen Projekts | Projektverantwortliche | CORE-001, CORE-002 |
-| SASD-PROC-002 | `docs/30-processes/PROJECT-CLASSIFICATION.md` | Normativ | Planned | Auswahl von Qualitätsstufe und Profilen | Projektverantwortliche | CORE-006 |
-| SASD-PROC-003 | `docs/30-processes/ARCHITECTURE-DECISION-PROCESS.md` | Normativ | Planned | Erstellen, Prüfen und Pflegen von ADRs | Entwickler, Architekten | CORE-003, CORE-012 |
-| SASD-PROC-004 | `docs/30-processes/REVIEW-PROCESS.md` | Normativ | Planned | Dokument-, Code- und Projektprüfung | Reviewer, Entwickler | CORE-007 |
-| SASD-PROC-005 | `docs/30-processes/LEGACY-MIGRATION.md` | Normativ | Planned | Schrittweise Migration bestehender Projekte | Maintainer | PROC-002, GOV-007 |
-| SASD-PROC-006 | `docs/30-processes/RELEASE-PROCESS.md` | Normativ | Planned | Vorbereitung, Freigabe und Veröffentlichung | Maintainer | CORE-010 |
-| SASD-PROC-007 | `docs/30-processes/PROJECT-ARCHIVAL.md` | Normativ | Planned | Geordnete Stilllegung und Archivierung | Maintainer | CORE-011 |
+| SASD-PROC-001 | `docs/30-processes/NEW-PROJECT.md` | Normativ | Proposed | Wiederholbarer Start eines neuen Projekts | Projektverantwortliche | CORE-001, CORE-002 |
+| SASD-PROC-002 | `docs/30-processes/PROJECT-CLASSIFICATION.md` | Normativ | Proposed | Auswahl von Qualitätsstufe und Profilen | Projektverantwortliche | CORE-006 |
+| SASD-PROC-003 | `docs/30-processes/ARCHITECTURE-DECISION-PROCESS.md` | Normativ | Proposed | Erstellen, Prüfen und Pflegen von ADRs | Entwickler, Architekten | CORE-003, CORE-012 |
+| SASD-PROC-004 | `docs/30-processes/REVIEW-PROCESS.md` | Normativ | Proposed | Dokument-, Code- und Projektprüfung | Reviewer, Entwickler | CORE-007 |
+| SASD-PROC-005 | `docs/30-processes/LEGACY-MIGRATION.md` | Normativ | Proposed | Schrittweise Migration bestehender Projekte | Maintainer | PROC-002, GOV-007 |
+| SASD-PROC-006 | `docs/30-processes/RELEASE-PROCESS.md` | Normativ | Proposed | Vorbereitung, Freigabe und Veröffentlichung | Maintainer | CORE-010 |
+| SASD-PROC-007 | `docs/30-processes/PROJECT-ARCHIVAL.md` | Normativ | Proposed | Geordnete Stilllegung und Archivierung | Maintainer | CORE-011 |
 | SASD-GOV-001 | `docs/40-governance/NORMATIVE-LANGUAGE.md` | Normativ | Proposed | Verbindliche Schlüsselwörter und Interpretation | Alle Autoren und Anwender | SASD-FND-004 |
 | SASD-GOV-002 | `docs/40-governance/DOCUMENT-LIFECYCLE.md` | Normativ | Proposed | Statusmodell und Freigabekriterien | Maintainer, Reviewer | GOV-001, GOV-003 |
 | SASD-GOV-003 | `docs/40-governance/DOCUMENT-METADATA.md` | Normativ | Proposed | Front-Matter, Dokument-IDs und Versionen | Autoren, Tooling | GOV-001, GOV-002 |
@@ -91,6 +91,11 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-REF-DESKTOP-006 | `docs/20-profiles/desktop/DESKTOP-REQUIREMENTS-INDEX.md` | Informativ, erzeugt | Draft | Index aller Desktopanforderungen | Anwender, Tooling | SASD-PROF-DESKTOP-* |
 | SASD-REF-DESKTOP-007 | `docs/20-profiles/desktop/DESKTOP-QUALITY-LEVEL-MATRIX.md` | Informativ | Draft | Konsolidierte Qualitätsstufensicht des Desktopprofils | Anwender, Reviewer | DESKTOP-001 bis DESKTOP-004 |
 | SASD-REF-006 | `docs/10-core-standard/CORE-QUALITY-LEVEL-MATRIX.md` | Informativ, erzeugt | Draft | Vergleich aller Qualitätsstufentabellen | Anwender, Reviewer | SASD-CORE-* |
+
+| SASD-REF-PROC-001 | `docs/30-processes/PROCESS-MAP.md` | Informativ | Draft | Zusammenspiel und Verantwortungsgrenzen der operativen Prozesse | Anwender, Maintainer | SASD-PROC-001 bis SASD-PROC-007 |
+| SASD-REF-PROC-002 | `docs/30-processes/PROCESS-REVIEW-0.6.0.md` | Informativ | Draft | Reviewnachweis für Proposed 0.6.0 | Maintainer, Reviewer | SASD-PROC-001 bis SASD-PROC-007 |
+| SASD-REF-PROC-003 | `docs/30-processes/PROCESS-REQUIREMENTS-INDEX.md` | Informativ, erzeugt | Draft | Index aller operativen Prozessanforderungen | Anwender, Tooling | SASD-PROC-001 bis SASD-PROC-007 |
+| SASD-REF-PROC-004 | `docs/30-processes/PROCESS-QUALITY-LEVEL-MATRIX.md` | Informativ, erzeugt | Draft | Qualitätsstufensicht der operativen Prozesse | Anwender, Reviewer | SASD-PROC-001 bis SASD-PROC-007 |
 
 ## 3. Unterstützende Artefakte für Version 1.0
 

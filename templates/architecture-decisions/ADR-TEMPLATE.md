@@ -1,32 +1,59 @@
-# ADR-NNNN: Decision title
+# ADR-NNNN: Kurzer Entscheidungstitel
 
-- **Status:** Proposed
-- **Date:** YYYY-MM-DD
-- **Decision owners:**
-- **Related requirements:**
+- Status: Proposed
+- Datum:
+- Entscheider:
+- Betroffene Anforderungen:
+- Ersetzt:
+- Ersetzt durch:
 
-## Context
+## Kontext
 
-Describe the problem, constraints, and forces that require a decision.
+Welches Problem muss entschieden werden? Welche Randbedingungen, Annahmen und nicht verhandelbaren Vorgaben gelten?
 
-## Decision
+## Entscheidungskriterien
 
-Describe the selected option clearly.
+- Kriterium 1
+- Kriterium 2
+- Kriterium 3
 
-## Alternatives considered
+## Betrachtete Optionen
 
-Describe realistic alternatives and why they were not selected.
+### Option A
 
-## Consequences
+- Vorteile:
+- Nachteile:
+- Risiken:
 
-### Positive
+### Option B
 
-- Consequence
+- Vorteile:
+- Nachteile:
+- Risiken:
 
-### Negative
+## Entscheidung
 
-- Consequence
+Welche Option wird gewählt und was bedeutet die Entscheidung konkret?
 
-### Risks
+## Konsequenzen
 
-- Risk and mitigation
+### Positiv
+
+### Negativ / technische Schulden
+
+### Sicherheit, Datenschutz und Betrieb
+
+## Umsetzung und Verifikation
+
+- Folgemaßnahmen:
+- Verantwortliche:
+- Prüfkriterien:
+
+## Quellen und Evidenz
+
+Primärquellen, Messungen, Prototypen oder Tests.
+
+## Reviewverlauf
+
+| Datum | Reviewer | Ergebnis / Änderung |
+|---|---|---|

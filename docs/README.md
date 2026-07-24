@@ -20,6 +20,9 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 14. [C#/.NET Profile Review 0.4.0](20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md)
 15. [Desktop Application Profile](20-profiles/desktop/README.md)
 16. [Desktop Profile Review 0.5.0](20-profiles/desktop/DESKTOP-PROFILE-REVIEW-0.5.0.md)
+17. [Operative Prozesse](30-processes/README.md)
+18. [Prozesslandkarte](30-processes/PROCESS-MAP.md)
+19. [Prozessreview 0.6.0](30-processes/PROCESS-REVIEW-0.6.0.md)
 
 ## Dokumentgruppen
 
@@ -28,7 +31,7 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 | `00-foundation` | Mandat, Scope, Prinzipien, Begriffe und Inhaltsarchitektur |
 | `10-core-standard` | technologieunabhängige Anforderungen, Anwendungshilfen und Reviewnachweise |
 | `20-profiles` | technologie- und projektspezifische Konkretisierungen |
-| `30-processes` | wiederholbare Arbeitsabläufe |
+| `30-processes` | Proposed-Prozesse für Klassifikation, Initialisierung, ADRs, Reviews, Migration, Releases und Archivierung |
 | `40-governance` | Pflege und Anwendung des Standards |
 | `50-reference-implementations` | Pilotprojekte, Erfahrungen und Beispiele |
 
