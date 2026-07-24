@@ -1,0 +1,38 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Temporary and generated files
+*.tmp
+*.temp
+*.bak
+*.log
+~$*
+
+# Build and tooling output
+bin/
+obj/
+artifacts/
+coverage/
+TestResults/
+
+# Generated publication artefacts
+artefacts/publications/*.docx
+artefacts/publications/*.pdf
+!artefacts/publications/README.md
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+secrets/
