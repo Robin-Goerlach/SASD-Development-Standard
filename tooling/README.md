@@ -142,3 +142,40 @@ python tooling/validate-foundation-governance-approval.py
 ```
 
 The manifest generator verifies SHA-256 hashes for the 14 Approved Foundation and Governance documents. The approval validator checks status, version, approval metadata, catalog entries, the resolved Governance dependency, and the completed approval evidence.
+
+## Repository quality gates
+
+The canonical local and GitHub entry point is:
+
+```bash
+python tooling/run-quality-gates.py
+```
+
+The orchestrator executes every blocking validator, writes per-check logs,
+creates `quality-gates.json` and `quality-gates.md`, and runs the Version 1.0
+readiness report as informational evidence.
+
+### CI and repository checks
+
+```bash
+python tooling/validate-repository-hygiene.py
+python tooling/validate-ci-policy.py
+python tooling/generate-repository-manifest.py --check
+```
+
+- `validate-repository-hygiene.py` rejects duplicated repository roots,
+  generated operating-system files, symbolic links, invalid UTF-8, missing
+  final newlines, trailing whitespace, and tabs in structured text.
+- `validate-ci-policy.py` checks triggers, read-only permissions, timeouts,
+  concurrency, immutable action pins, checkout credential handling,
+  Dependabot, and CODEOWNERS.
+- `generate-repository-manifest.py` deterministically writes or verifies
+  `REPOSITORY-MANIFEST.txt`. Regenerate it after adding or removing files:
+
+```bash
+python tooling/generate-repository-manifest.py --write
+```
+
+Generated execution evidence is stored below `artifacts/quality-gates/` and is
+not committed.
+

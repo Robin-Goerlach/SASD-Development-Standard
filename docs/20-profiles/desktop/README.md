@@ -1,6 +1,6 @@
 # Desktop Application Profile
 
-**Normative status:** Proposed 0.5.0  
+**Normative status:** Proposed 0.5.0
 **Primary scope:** C#/.NET desktop applications on Windows, especially WinForms and WPF
 
 The Desktop Application Profile adds UI, UX, accessibility, lifecycle, packaging and support requirements to the technology-independent Core and the C#/.NET Profile.

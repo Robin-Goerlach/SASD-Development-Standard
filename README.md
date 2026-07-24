@@ -4,6 +4,7 @@
 
 [![Status](https://img.shields.io/badge/status-pre--1.0-orange)](#project-status)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![SASD Quality Gates](https://github.com/Robin-Goerlach/SASD-Development-Standard/actions/workflows/quality-gates.yml/badge.svg)](https://github.com/Robin-Goerlach/SASD-Development-Standard/actions/workflows/quality-gates.yml)
 [![Language](https://img.shields.io/badge/normative%20draft-German-lightgrey)](#language)
 
 ## Overview
@@ -125,6 +126,7 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 10. Follow the [`Roadmap`](ROADMAP.md).
 11. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
 12. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
+13. Run the local repository quality gates with `python tooling/run-quality-gates.py` or the scripts in [`scripts/`](scripts/README.md).
 
 ## Normative language
 
@@ -140,14 +142,17 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 The project is currently in the **first pilot execution and normative-baseline development phase**. Foundation and Governance are formally approved as version 0.8.0 and provide the binding organizational basis for further work. The technology-independent Core is available as Proposed 0.3.0, the C#/.NET Profile as Proposed 0.4.0, the Desktop Application Profile as Proposed 0.5.0, and all seven operational processes as Proposed 0.6.0. The Foundation/Governance approval is not yet a stable Version 1.0 release.
 
+Repository CI is implemented with cross-platform local and GitHub quality gates. The first pushed GitHub Actions run and activation of the required `SASD merge gate` branch rule remain separate evidence steps.
+
 Current priorities:
 
-1. add repository CI based on the approved Governance rules,
-2. execute Wave 01 of Pilot 01 on SASD TaskHost Local and record verified evidence,
-3. refine repository templates, CI and assessment tooling from pilot feedback,
-4. select the medium and complex pilot projects,
-5. complete and review the prompt packages,
-6. move Core, profiles, and processes toward approval.
+1. commit and confirm the first green Ubuntu and Windows repository-CI run,
+2. activate `SASD merge gate` as a required status check after that successful run,
+3. execute Wave 01 of Pilot 01 on SASD TaskHost Local and record verified evidence,
+4. refine repository templates and assessment tooling from pilot feedback,
+5. select the medium and complex pilot projects,
+6. complete and review the prompt packages,
+7. move Core, profiles, and processes toward approval.
 
 ## Language
 

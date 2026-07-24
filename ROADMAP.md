@@ -50,7 +50,8 @@
 - [x] Add initial WinForms and WPF project templates, desktop checklists, and deployment templates.
 - [ ] Refine reusable templates after .NET and Desktop pilot feedback.
 - [x] Extend governance validation tooling and add release-readiness reporting.
-- [ ] Add repository CI using the formally approved Foundation and Governance rules.
+- [x] Add repository CI using the formally approved Foundation and Governance rules.
+- [ ] Confirm the first green Ubuntu and Windows CI run and activate `SASD merge gate` for `main`.
 
 ## Phase 4 — Pilot Projects
 

@@ -32,3 +32,19 @@ Contributions should:
 - Use **MUST**, **SHOULD**, and **MAY** only in normative documents.
 - Explain the reason behind important requirements.
 - Avoid copying the same rule into multiple normative documents.
+## Verification before submission
+
+Run the same dependency-free checks used by repository CI:
+
+```bash
+python tooling/run-quality-gates.py
+```
+
+Windows users may also run:
+
+```powershell
+.\scripts\validate-repository.ps1
+```
+
+A successful local run does not replace the GitHub Actions result for the committed revision. Changes to workflows, tooling, Foundation, or Governance require particular review because these paths are covered by CODEOWNERS.
+

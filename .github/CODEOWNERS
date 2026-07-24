@@ -1,0 +1,9 @@
+# Default ownership
+* @Robin-Goerlach
+
+# Governance-sensitive areas
+/.github/ @Robin-Goerlach
+/tooling/ @Robin-Goerlach
+/scripts/ @Robin-Goerlach
+/docs/00-foundation/ @Robin-Goerlach
+/docs/40-governance/ @Robin-Goerlach

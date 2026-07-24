@@ -48,7 +48,7 @@ Ergebnis von git diff --stat nach Einspielung:
 Aus dem Repository-Stamm:
 
 ```powershell
-python .	oolingalidate-wave-01.py
+python .    oolingalidate-wave-01.py
 powershell -ExecutionPolicy Bypass -File .\scriptserify-wave-01.ps1
 ```
 

@@ -8,6 +8,11 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Cross-platform repository quality-gate workflow for Ubuntu and Windows with a stable `SASD merge gate` status check.
+- Dependency-free quality-gate orchestrator, CI-policy validator, repository-hygiene validator, and deterministic repository-manifest generator.
+- Immutable full-SHA action pins, read-only workflow permissions, non-persisted checkout credentials, concurrency cancellation, explicit timeouts, Dependabot for GitHub Actions, and CODEOWNERS.
+- Local PowerShell and shell validation entry points, evidence artifacts, CI review and activation checklists, and implementation manifest.
+
 - Formal Foundation and Governance Approval Record 0.8.0, completed approval checklist, and SHA-256 manifest for all 14 Approved normative documents.
 - Approval validation and manifest-generation tooling with deterministic Git commit resolution guidance.
 
@@ -66,6 +71,11 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+
+- Activated repository CI after formal approval of the Foundation and Governance baseline while keeping the first GitHub run and branch-rule activation as pending evidence.
+- Replaced the manually maintained repository manifest with a deterministic generated-file check and removed stale nested-root entries.
+- Updated repository navigation, contribution guidance, GitHub setup instructions, workflow documentation, and roadmap for the CI baseline.
+- Corrected one trailing-whitespace finding and one tab character detected by the new repository-hygiene gate.
 
 - Promoted all seven Foundation documents and all seven Governance documents from Proposed to Approved 0.8.0 after the documented Maintainer review.
 - Corrected the Alignment model dependency from the still-Proposed Core quality-level document to the Approved glossary definition, removing the final approval blocker.
