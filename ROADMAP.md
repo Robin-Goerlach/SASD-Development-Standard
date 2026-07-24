@@ -9,7 +9,8 @@
 - [x] Define document roles, IDs, and dependencies.
 - [x] Define normative language, document lifecycle, and metadata.
 - [x] Define initial Version 1.0 acceptance criteria.
-- [ ] Review and approve the proposed foundation and governance documents.
+- [x] Review the proposed foundation and governance documents for consistency and approval readiness.
+- [ ] Record formal Maintainer approval of the Foundation and Governance baseline.
 
 ## Phase 1 — Core Standard
 
@@ -48,14 +49,17 @@
 - [x] Add initial reusable `.editorconfig`, MSBuild, package-management, SDK, and CI templates.
 - [x] Add initial WinForms and WPF project templates, desktop checklists, and deployment templates.
 - [ ] Refine reusable templates after .NET and Desktop pilot feedback.
-- [ ] Extend repository validation tooling and add CI after rules are approved.
+- [x] Extend governance validation tooling and add release-readiness reporting.
+- [ ] Add repository CI after the Foundation and Governance rules are formally approved.
 
 ## Phase 4 — Pilot Projects
 
 - [x] Select and classify one small project: SASD TaskHost Local.
 - [x] Prepare its evidence-based baseline assessment, gap register, migration plan, and Wave 01.
-- [ ] Execute and validate Wave 01 in the SASD TaskHost Local repository.
-- [ ] Record verified results and lessons learned from the small-project pilot.
+- [x] Prepare and statically review the Wave 01 implementation artifact for SASD TaskHost Local.
+- [ ] Commit and validate Wave 01 in the SASD TaskHost Local repository.
+- [x] Record interim lessons learned from the Wave 01 artifact.
+- [ ] Record verified results and final lessons learned from the small-project pilot.
 - [ ] Apply the full process chain to one medium project.
 - [ ] Apply the full process chain to one more complex C#/.NET project.
 - [ ] Consolidate deviations and lessons learned across all pilots.

@@ -14,6 +14,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Der Testcode darf ausschließlich interne Self-Check-Komponenten prüfen. -->
+    <InternalsVisibleTo Include="TaskHostLocal.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- Schlanker SQLite-Zugriff ohne Entity Framework. Die Version wird zentral verwaltet. -->
     <PackageReference Include="Microsoft.Data.Sqlite" />
   </ItemGroup>

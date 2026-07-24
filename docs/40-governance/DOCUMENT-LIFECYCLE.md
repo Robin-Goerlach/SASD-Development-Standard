@@ -3,7 +3,7 @@ title: "Lebenszyklus von Standarddokumenten"
 document-id: SASD-GOV-002
 document-type: normative
 status: Proposed
-version: 0.1.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -19,95 +19,90 @@ normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 
 ## 1. Zweck
 
-Dieses Dokument definiert die zulässigen Statuswerte, Übergänge und Freigabekriterien für Dokumente des SASD Development Standard.
+Dieses Dokument definiert Statuswerte, Übergänge, Prüfschritte und Freigaben für Dokumente des SASD Development Standard.
 
 ## 2. Statusmodell
 
 ```text
 Planned -> Draft -> Proposed -> Approved -> Deprecated -> Retired
-            ^          |
-            |----------|
+             ^          |
+             |----------|
 ```
 
-### Planned
-
-Das Dokument ist im Dokumentkatalog vorgesehen, wurde aber noch nicht fachlich ausgearbeitet. Ein Planned-Dokument enthält keine verbindlichen Anforderungen.
-
-### Draft
-
-Das Dokument wird aktiv erarbeitet. Struktur, Inhalt und Anforderungen können sich grundlegend ändern. Draft-Inhalte sind nicht verbindlich.
-
-### Proposed
-
-Das Dokument ist inhaltlich vollständig genug für eine gezielte Prüfung. Es ist ein Freigabekandidat, aber noch nicht verbindlich.
-
-### Approved
-
-Das Dokument ist für die angegebene Standardversion freigegeben. Nur Approved-Dokumente können verbindliche Anforderungen einer veröffentlichten Standardversion enthalten.
-
-### Deprecated
-
-Das Dokument oder ein wesentlicher Teil davon ist noch referenzierbar, soll aber nicht mehr für neue Projekte verwendet werden. Eine Nachfolge oder ein Migrationsweg MUSS benannt sein.
-
-### Retired
-
-Das Dokument ist nicht mehr Bestandteil des aktiven Standards. Es bleibt nur aus Gründen der Nachvollziehbarkeit erhalten oder wird in einen Archivbereich verschoben.
-
-## 3. Zulässige Übergänge
-
-| Von | Nach | Mindestbedingung |
+| Status | Bedeutung | Normative Wirkung |
 |---|---|---|
-| Planned | Draft | Zweck, Dokument-ID und Owner festgelegt |
-| Draft | Proposed | vorgesehene Inhalte vollständig, Abhängigkeiten benannt, Selbstprüfung durchgeführt |
-| Proposed | Approved | Review abgeschlossen, Widersprüche geklärt, Freigabekriterien erfüllt |
-| Proposed | Draft | wesentliche Überarbeitung erforderlich |
-| Approved | Draft | neue Hauptüberarbeitung für eine zukünftige Version; bestehende Approved-Fassung bleibt über Tag nachvollziehbar |
-| Approved | Deprecated | Nachfolge oder Ablösegrund dokumentiert |
-| Deprecated | Retired | aktive Standardversionen verweisen nicht mehr darauf |
+| `Planned` | Dokumentrolle vorgesehen | keine |
+| `Draft` | aktiver Arbeitsentwurf | keine |
+| `Proposed` | vollständiger Freigabekandidat | Pilot Alignment |
+| `Approved` | fachlich freigegeben | verbindlich innerhalb veröffentlichter Bezugsfassung |
+| `Deprecated` | noch vorhanden, aber zur Ablösung vorgesehen | eingeschränkt mit Übergangsregel |
+| `Retired` | außer Kraft | keine |
 
-Direkte Übergänge dürfen nur erfolgen, wenn keine Nachvollziehbarkeit verloren geht.
+## 3. Normative Anforderungen
 
-## 4. Freigabekriterien für Proposed
+| Anforderungs-ID | Normative Anforderung |
+|---|---|
+| `SASD-GOV-REQ-100` | Jedes Standarddokument MUSS genau einen zulässigen Status besitzen. |
+| `SASD-GOV-REQ-101` | Ein Planned-Dokument DARF NICHT verbindliche Anforderungen für Anwender setzen. |
+| `SASD-GOV-REQ-102` | Ein Draft-Dokument KANN für Entwicklung und Review genutzt werden, ist aber nicht verbindlich. |
+| `SASD-GOV-REQ-103` | Ein Proposed-Dokument MUSS fachlich vollständig genug für Pilotierung und Freigabereview sein. |
+| `SASD-GOV-REQ-104` | Ein Proposed-Dokument KANN für Pilot Alignment verwendet werden, DARF aber NICHT als Grundlage einer stabilen formalen Alignment-Aussage dienen. |
+| `SASD-GOV-REQ-105` | Ein Approved-Dokument MUSS einen dokumentierten Freigabenachweis besitzen. |
+| `SASD-GOV-REQ-106` | Dokumente ohne Approved-Status DÜRFEN NICHT verbindlicher Bestandteil eines stabil veröffentlichten Standards sein. |
+| `SASD-GOV-REQ-107` | Ein Deprecated-Dokument MUSS einen vorgesehenen Ersatz oder eine begründete Auslaufentscheidung nennen. |
+| `SASD-GOV-REQ-108` | Ein Retired-Dokument DARF NICHT mehr als anwendbare normative Quelle verwendet werden. |
+| `SASD-GOV-REQ-109` | Der Übergang Planned zu Draft MUSS einen verantwortlichen Owner und einen initialen Geltungsbereich voraussetzen. |
+| `SASD-GOV-REQ-110` | Der Übergang Draft zu Proposed MUSS vollständige Metadaten, stabile IDs, geschlossene interne Platzhalter und erfolgreiche Basisvalidatoren voraussetzen. |
+| `SASD-GOV-REQ-111` | Der Übergang Proposed zu Approved MUSS einen Review gegen dokumentierte Freigabekriterien voraussetzen. |
+| `SASD-GOV-REQ-112` | Ein Approved-Dokument MUSS mindestens gegen Widersprüche, Anwendbarkeit, Proportionalität, Nachweisbarkeit und Abhängigkeiten geprüft worden sein. |
+| `SASD-GOV-REQ-113` | Ein Approved-Dokument MUSS die freigebende Person, das Datum, die Version und den geprüften Commit nennen. |
+| `SASD-GOV-REQ-114` | Eine Person KANN als alleiniger Maintainer freigeben, MUSS dann aber einen zeitlich getrennten Selbstreview dokumentieren. |
+| `SASD-GOV-REQ-115` | Für sicherheitskritische oder rechtlich relevante Inhalte SOLLTE zusätzliche fachkundige Prüfung eingeholt werden. |
+| `SASD-GOV-REQ-116` | Eine Änderung an einem Approved-Dokument MUSS nach ihrem Änderungsgrad erneut geprüft werden. |
+| `SASD-GOV-REQ-117` | Redaktionelle Änderungen an Approved-Dokumenten KÖNNEN ohne vollständigen Neufreigabeprozess erfolgen, MÜSSEN aber nachvollziehbar protokolliert werden. |
+| `SASD-GOV-REQ-118` | Normative Bedeutungsänderungen an Approved-Dokumenten MÜSSEN den Status mindestens auf Proposed zurücksetzen oder in einer neuen Dokumentversion als Proposed geführt werden. |
+| `SASD-GOV-REQ-119` | Eine Statusänderung MUSS im Changelog oder Freigabeprotokoll nachvollziehbar sein. |
+| `SASD-GOV-REQ-120` | Abhängige Dokumente MÜSSEN bei einer relevanten Status- oder Bedeutungsänderung auf Auswirkungen geprüft werden. |
+| `SASD-GOV-REQ-121` | Ein Dokument DARF NICHT Approved sein, wenn eine normative Abhängigkeit nur Planned oder Draft ist. |
+| `SASD-GOV-REQ-122` | Eine Proposed-Abhängigkeit KANN für eine koordinierte Freigabe akzeptiert werden, wenn beide Dokumente gemeinsam geprüft und freigegeben werden. |
+| `SASD-GOV-REQ-123` | Die autoritative Fassung MUSS vor einer Übersetzung freigegeben werden oder die Übersetzung MUSS ausdrücklich als vorläufig bezeichnet werden. |
+| `SASD-GOV-REQ-124` | Deprecated-Dokumente MÜSSEN mindestens eine Übergangsfrist oder ein Auslaufkriterium nennen. |
+| `SASD-GOV-REQ-125` | Retired-Dokumente SOLLTEN aus aktiver Navigation entfernt, aber zur historischen Nachvollziehbarkeit erhalten werden. |
+| `SASD-GOV-REQ-126` | Dokumentdateien SOLLTEN nicht allein wegen einer Statusänderung umbenannt werden. |
+| `SASD-GOV-REQ-127` | Dokument-IDs MÜSSEN über Statusübergänge hinweg stabil bleiben. |
+| `SASD-GOV-REQ-128` | Ein Freigabereview MUSS offene Blocker ausschließen. |
+| `SASD-GOV-REQ-129` | Offene Major-Befunde MÜSSEN behoben, als genehmigte Ausnahme dokumentiert oder ausdrücklich aus dem Freigabeumfang entfernt werden. |
+| `SASD-GOV-REQ-130` | Minor-Befunde KÖNNEN nach Freigabe offen bleiben, wenn sie keinen Widerspruch oder falsche Anwendung erzeugen. |
+| `SASD-GOV-REQ-131` | Ein Freigabenachweis MUSS zwischen geprüft, genehmigt und veröffentlicht unterscheiden. |
+| `SASD-GOV-REQ-132` | Die Veröffentlichung eines Tags DARF NICHT automatisch als fachliche Dokumentfreigabe interpretiert werden. |
+| `SASD-GOV-REQ-133` | Eine fachliche Freigabe DARF NICHT automatisch als Veröffentlichung interpretiert werden. |
 
-Ein Draft kann Proposed werden, wenn:
+## 4. Freigabekriterien Proposed zu Approved
 
-- Zweck und Geltungsbereich eindeutig sind,
-- Metadaten vollständig sind,
-- normative und informative Aussagen getrennt sind,
-- Abhängigkeiten und verwandte Dokumente benannt sind,
-- keine bekannten internen Widersprüche bestehen,
-- offene Punkte ausdrücklich markiert sind,
-- die Dokumentstruktur angemessen vollständig ist.
+Ein Freigabereview bewertet mindestens:
 
-## 5. Freigabekriterien für Approved
+1. Zweck und Geltungsbereich,
+2. eindeutige Zuständigkeit,
+3. Widerspruchsfreiheit,
+4. Verhältnismäßigkeit für Einzelentwickler und kleine Teams,
+5. Anwendbarkeit der Qualitätsstufen,
+6. Prüfbarkeit und mögliche Nachweise,
+7. Abhängigkeiten und Vorrangregeln,
+8. Sicherheit, Datenschutz und rechtliche Auswirkungen,
+9. Vorlagen, Checklisten, Prompts und Tooling,
+10. offene Befunde und genehmigte Ausnahmen.
 
-Ein Proposed-Dokument kann Approved werden, wenn:
+## 5. Freigabeverantwortung
 
-1. der Inhalt fachlich geprüft wurde,
-2. alle MUSS-Anforderungen verständlich und prinzipiell prüfbar sind,
-3. Auswirkungen auf andere Dokumente berücksichtigt wurden,
-4. Terminologie mit dem Glossar übereinstimmt,
-5. notwendige Vorlagen, Checklisten oder Nachweise vorhanden oder geplant sind,
-6. wesentliche offene Punkte gelöst wurden,
-7. die Freigabe im Commit, Changelog oder Release nachvollziehbar ist.
+Vor Version 1.0 ist der benannte Maintainer die Freigabeinstanz. Ein dokumentierter Selbstreview ist zulässig, sofern Erarbeitung und abschließende Prüfung zeitlich oder methodisch getrennt werden. Externe Zertifizierung wird nicht behauptet.
 
-## 6. Freigabeverantwortung
+## 6. Freigabenachweis
 
-Solange das Projekt durch einen einzelnen Maintainer geführt wird, kann dieselbe Person Autor, Reviewer und Freigabeverantwortlicher sein. In diesem Fall SOLLTE die Selbstprüfung mit der Dokument-Review-Checkliste nachvollziehbar erfolgen.
+Der Nachweis verwendet die Vorlage [Document Approval Record](../../templates/documents/DOCUMENT-APPROVAL-RECORD-TEMPLATE.md) und referenziert den geprüften Commit.
 
-Bei mehreren Mitwirkenden SOLLTE mindestens eine zweite Person normative Proposed-Dokumente prüfen.
+## 7. Verwandte Dokumente
 
-## 7. Änderungen an Approved-Dokumenten
-
-Redaktionelle Korrekturen ohne Bedeutungsänderung können innerhalb einer Patch-Version erfolgen.
-
-Änderungen, die Pflichten, Verbote, Geltungsbereiche oder Compliance verändern, MÜSSEN:
-
-- über den Änderungsprozess bewertet werden,
-- eine neue Dokumentversion erhalten,
-- im Changelog erscheinen,
-- hinsichtlich Migration und Rückwärtskompatibilität geprüft werden.
-
-## 8. Archivierung
-
-Retired-Dokumente SOLLTEN nicht gelöscht werden, wenn sie Teil einer veröffentlichten Standardversion waren. Git-Tags und Releases bleiben die primäre historische Referenz.
+- [Dokumentmetadaten](DOCUMENT-METADATA.md)
+- [Änderungsprozess](CHANGE-PROCESS.md)
+- [Versionierung](VERSIONING.md)
+- [Approval Readiness 0.8.0](APPROVAL-READINESS-0.8.0.md)

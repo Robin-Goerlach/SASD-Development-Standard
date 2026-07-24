@@ -1,4 +1,4 @@
-name: Build and test
+name: Build, test and verify
 
 "on":
   push:
@@ -15,10 +15,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-test-audit:
-    name: Windows build, tests and package audit
+  verify:
+    name: Windows Wave 01 verification
     runs-on: windows-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Check out repository
@@ -29,32 +29,30 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Display .NET information
-        run: dotnet --info
-
-      - name: Restore
-        run: dotnet restore TaskHostLocal.sln
-
-      - name: Build
-        run: dotnet build TaskHostLocal.sln --configuration Release --no-restore
-
-      - name: Test
+      - name: Execute repository verification
+        shell: powershell
         run: >-
-          dotnet test TaskHostLocal.sln
-          --configuration Release
-          --no-build
-          --logger "trx;LogFileName=taskhost-local-tests.trx"
-          --collect "XPlat Code Coverage"
-          --results-directory TestResults
+          .\scripts\verify-wave-01.ps1
+          -Configuration Release
+          -EvidenceRoot .\verification-results\ci
 
-      - name: Audit NuGet packages
-        run: dotnet list TaskHostLocal.sln package --vulnerable --include-transitive
+      - name: Publish verification summary
+        if: always()
+        shell: powershell
+        run: |
+          $summary = '.\verification-results\ci\verification-summary.md'
+          if (Test-Path $summary) {
+            Get-Content $summary | Add-Content $env:GITHUB_STEP_SUMMARY
+          }
+          else {
+            '# Verification summary was not generated' | Add-Content $env:GITHUB_STEP_SUMMARY
+          }
 
-      - name: Upload test results
+      - name: Upload verification evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: taskhost-local-test-results
-          path: TestResults
-          if-no-files-found: warn
-          retention-days: 14
+          name: taskhost-local-wave-01-evidence-${{ github.sha }}
+          path: verification-results/ci
+          if-no-files-found: error
+          retention-days: 30

@@ -3,7 +3,7 @@ title: "Grundprinzipien"
 document-id: SASD-FND-003
 document-type: normative
 status: Proposed
-version: 0.1.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true

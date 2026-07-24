@@ -3,7 +3,7 @@ title: "Inhaltsarchitektur für SASD Development Standard Version 1.0"
 document-id: SASD-FND-005
 document-type: normative
 status: Proposed
-version: 0.2.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true

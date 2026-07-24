@@ -2,6 +2,7 @@ using TaskHostLocal.WinForms.Database;
 using TaskHostLocal.WinForms.Diagnostics;
 using TaskHostLocal.WinForms.Repositories;
 using TaskHostLocal.WinForms.Services;
+using TaskHostLocal.WinForms.Verification;
 
 namespace TaskHostLocal.WinForms;
 
@@ -11,12 +12,20 @@ namespace TaskHostLocal.WinForms;
 internal static class Program
 {
     /// <summary>
-    /// Startet TaskHost Local und erzeugt bei einem fehlgeschlagenen Start einen
-    /// lokalen Diagnosebericht ohne Aufgabeninhalte.
+    /// Startet entweder den kopflosen Verifikationsmodus oder die grafische Anwendung.
     /// </summary>
+    /// <param name="args">Optionale Kommandozeilenparameter.</param>
+    /// <returns>Prozess-Exitcode. Null bedeutet Erfolg.</returns>
     [STAThread]
-    private static void Main()
+    private static int Main(string[] args)
     {
+        if (SelfCheckOptions.IsSelfCheckRequested(args))
+        {
+            // Der Self-Check startet bewusst keine Windows-Forms-Oberfläche. Dadurch kann
+            // derselbe produktive Build in CI und auf einem lokalen Windows-System geprüft werden.
+            return SelfCheckRunner.Execute(args);
+        }
+
         ApplicationConfiguration.Initialize();
 
         DbConnectionFactory? connectionFactory = null;
@@ -37,6 +46,7 @@ internal static class Program
             var backupService = new BackupService(connectionFactory);
 
             Application.Run(new MainForm(listService, taskService, backupService));
+            return 0;
         }
         catch (Exception exception)
         {
@@ -52,6 +62,8 @@ internal static class Program
                 "TaskHost Local – Startfehler",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
+
+            return 1;
         }
     }
 }

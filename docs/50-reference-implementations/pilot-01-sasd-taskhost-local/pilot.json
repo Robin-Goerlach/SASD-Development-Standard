@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "pilot_id": "SASD-PILOT-001",
   "title": "Pilot 01 – SASD TaskHost Local",
   "target_repository": "https://github.com/Robin-Goerlach/SASD-TaskHost-Local",
@@ -11,7 +11,7 @@
     "DotNet",
     "Desktop"
   ],
-  "status": "Wave Planned",
+  "status": "In Execution",
   "baseline_date": "2026-07-24",
   "standard_documents": {
     "core": "Proposed 0.3.0",
@@ -19,7 +19,7 @@
     "desktop": "Proposed 0.5.0",
     "processes": "Proposed 0.6.0"
   },
-  "execution_statement": "Documentation and Wave 01 plan prepared; no target-repository changes are claimed by this package.",
+  "execution_statement": "Wave 01 update artifact prepared and statically inspected; target commit, .NET build/test, Windows startup, data migration and CI verification remain pending.",
   "documents": {
     "charter": "PILOT-CHARTER.md",
     "classification": "PROJECT-CLASSIFICATION.md",
@@ -29,6 +29,19 @@
     "wave_01": "WAVE-01-PLAN.md",
     "evidence": "EVIDENCE-MAP.md",
     "decisions": "DECISION-LOG.md",
-    "review": "PILOT-REVIEW.md"
+    "review": "PILOT-REVIEW.md",
+    "implementation_review": "WAVE-01-IMPLEMENTATION-REVIEW.md",
+    "verification_plan": "WAVE-01-VERIFICATION-PLAN.md",
+    "interim_retrospective": "INTERIM-RETROSPECTIVE.md"
+  },
+  "implementation_state": "Artifact Prepared",
+  "verification_state": "Pending",
+  "current_wave": "Wave 01",
+  "target_commit": null,
+  "implementation_artifact": {
+    "name": "SASD-TaskHost-Local-Wave-01-Update.zip",
+    "sha256": "61a199c1785c9b5e614a1564644f8b1db756b7030a9008675aa411088fb072d7",
+    "file_count": 36,
+    "prepared_on": "2026-07-24"
   }
 }

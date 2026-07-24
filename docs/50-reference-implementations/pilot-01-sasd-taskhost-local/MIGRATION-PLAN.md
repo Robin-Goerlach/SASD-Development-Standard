@@ -3,7 +3,7 @@ title: "Pilot 01 Migrationsplan – SASD TaskHost Local"
 document-id: SASD-REF-PILOT-106
 document-type: informative
 status: Draft
-version: 0.7.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -42,6 +42,9 @@ Vor Änderungen:
 
 ## 4. Wave 01 – Stabilisierung
 
+**Stand 2026-07-24:** Implementierungsartefakt vorbereitet; Ziel-Commit und technische Verifikation stehen aus.
+
+
 [Der detaillierte Plan](WAVE-01-PLAN.md) ist verbindliche Arbeitsgrundlage des Piloten. Die Welle soll möglichst in kleinen Commits ausgeführt werden:
 
 1. Baseline und Fehlerreproduktion,
@@ -51,7 +54,11 @@ Vor Änderungen:
 5. Lizenz, Security und Alignment,
 6. abschließender Selbstreview.
 
-## 5. Wave 02 – Vertrauensbildung
+## 5. Gate vor Wave 02
+
+Wave 02 beginnt erst, wenn der [Wave-01-Verifikationsplan](WAVE-01-VERIFICATION-PLAN.md) abgeschlossen ist. Ein statisch geprüftes Overlay genügt nicht.
+
+## 6. Wave 02 – Vertrauensbildung
 
 - Backup mit echtem Restore-Szenario prüfen,
 - Datenbankfehler und korrupte Datei kontrolliert behandeln,
@@ -60,7 +67,7 @@ Vor Änderungen:
 - Release Record und Smoke Test durchführen,
 - README und Screenshot auf den tatsächlichen Stand bringen.
 
-## 6. Rückfallstrategie
+## 7. Rückfallstrategie
 
 - jede Welle beginnt auf sauberem, reproduzierbarem Commit,
 - Datenbankänderungen erhalten Sicherung und Rückweg,
@@ -68,6 +75,6 @@ Vor Änderungen:
 - bei Regression wird auf den letzten geprüften Commit zurückgegangen,
 - bestehende Nutzerdaten werden nicht als Testdaten verwendet.
 
-## 7. Abschluss des Piloten
+## 8. Abschluss des Piloten
 
 Der Pilot wird erst geschlossen, wenn mindestens Wave 01 technisch ausgeführt, nachgewiesen und retrospektiv bewertet wurde. Wave 02 kann danach als reguläre Projektarbeit fortgeführt werden.

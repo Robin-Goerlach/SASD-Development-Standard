@@ -3,7 +3,7 @@ title: "Referenzimplementierungen"
 document-id: SASD-REF-001
 document-type: informative
 status: Proposed
-version: 0.7.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -23,12 +23,14 @@ Dieses Verzeichnis dokumentiert die praktische Erprobung des SASD Development St
 1. [Pilotprogramm](PILOT-PROGRAM.md)
 2. [Evidenzmodell](PILOT-EVIDENCE-MODEL.md)
 3. [Pilotportfolio](PILOT-PORTFOLIO.md)
+4. [Feedbacklog](PILOT-FEEDBACK-LOG.md)
+5. [Feedbackübersicht](PILOT-FEEDBACK-SUMMARY.md)
 
 ## Aktive Piloten
 
-| Pilot | Kategorie | Zielstufe | Status | Nächster Schritt |
-|---|---|---|---|---|
-| [Pilot 01 – SASD TaskHost Local](pilot-01-sasd-taskhost-local/README.md) | kleines C#/.NET-WinForms-Werkzeug | Recommended | Wave 01 vorbereitet | technische Ausführung im Ziel-Repository |
+| Pilot | Kategorie | Zielstufe | Status | Umsetzung | Verifikation | Nächster Schritt |
+|---|---|---|---|---|---|---|
+| [Pilot 01 – SASD TaskHost Local](pilot-01-sasd-taskhost-local/README.md) | kleines C#/.NET-WinForms-Werkzeug | Recommended | In Execution | Artifact Prepared | Pending | kontrollierte Wave-01-Verifikation |
 
 ## Für Version 1.0 vorgesehene Kategorien
 
@@ -36,8 +38,6 @@ Dieses Verzeichnis dokumentiert die praktische Erprobung des SASD Development St
 2. mittlere gepflegte Desktopanwendung,
 3. komplexere geschichtete C#/.NET-Anwendung.
 
-Für jeden Piloten werden mindestens Standardversion, Profile, Qualitätsstufe, Evidenzbasis, Ausgangszustand, priorisierte Lücken, Migrationswellen, Abweichungen und Lessons Learned dokumentiert.
-
 ## Wichtige Abgrenzung
 
-Die Referenzdokumentation ist informativ. Sie zeigt die Anwendung und liefert Feedback an den Standard, ersetzt aber weder die normativen Dokumente noch die Nachweise im jeweiligen Ziel-Repository.
+Die Referenzdokumentation ist informativ. Sie zeigt Anwendung und Feedback, ersetzt aber weder normative Dokumente noch Nachweise im Ziel-Repository. Ein statisch geprüftes Overlay ist ein wertvolles Artefakt, aber noch keine verifizierte Referenzimplementierung.

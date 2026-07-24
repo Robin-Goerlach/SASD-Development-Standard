@@ -3,7 +3,7 @@ title: "Pilotportfolio für Version 1.0"
 document-id: SASD-REF-PILOT-003
 document-type: informative
 status: Draft
-version: 0.7.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -18,10 +18,10 @@ depends-on: [SASD-REF-PILOT-001, SASD-REF-PILOT-002]
 
 Diese Datei wird aus den `pilot.json`-Manifesten erzeugt.
 
-| Pilot-ID | Pilot | Kategorie | Qualitätsstufe | Profile | Status |
-|---|---|---|---|---|---|
-| SASD-PILOT-001 | [Pilot 01 – SASD TaskHost Local](pilot-01-sasd-taskhost-local/README.md) | small-dotnet-desktop-legacy-migration | Recommended | Core, DotNet, Desktop | Wave Planned |
+| Pilot-ID | Pilot | Kategorie | Qualitätsstufe | Profile | Lebenszyklus | Umsetzung | Verifikation |
+|---|---|---|---|---|---|---|---|
+| SASD-PILOT-001 | [Pilot 01 – SASD TaskHost Local](pilot-01-sasd-taskhost-local/README.md) | small-dotnet-desktop-legacy-migration | Recommended | Core, DotNet, Desktop | In Execution | Artifact Prepared | Pending |
 
 ## Statushinweis
 
-`Wave Planned` bedeutet, dass Klassifikation, Assessment und Wellenplan vorliegen. Es bedeutet nicht, dass Änderungen im Ziel-Repository bereits ausgeführt wurden.
+`Artifact Prepared` bestätigt ein geprüftes Updateartefakt, nicht Build, Laufzeit oder CI. `Pending` blockiert die Aussage `Wave Validated`.

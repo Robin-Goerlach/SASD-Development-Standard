@@ -88,3 +88,8 @@ Die Welle darf erst auf `Completed` gesetzt werden, wenn:
 ## 6. Overengineering-Review
 
 Die bestehende Schichtung `Forms → Services → Repositories → Database` bleibt erhalten. Die Welle ergänzt Testbarkeit, Nachweise und Diagnose, ohne eine für das kleine Projekt unangemessene Architektur einzuführen.
+## 7. Verifikations-Harness
+
+Wave 01 besitzt nun einen kopflosen Selbsttest, einen einheitlichen lokalen/CI-Lauf und einen geschützten Closeout-Prozess. Diese Ergänzungen erhöhen die Nachweisfähigkeit, ändern den Status der Welle aber noch nicht.
+
+Der Abschluss bleibt ausstehend, bis `docs/160_Wave_01_Closeout.md` vollständig belegt und ein commitbezogener Verifikationsnachweis erzeugt wurde.

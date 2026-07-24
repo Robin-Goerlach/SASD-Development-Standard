@@ -1,196 +1,166 @@
-# SASD TaskHost Local
+# SASD Development Standard
 
-**TaskHost Local** ist eine lokale Windows-Aufgabenverwaltung für die TaskHost-Projektfamilie. Das Projekt ist bewusst pragmatisch angelegt: Es soll schnell arbeitsfähig werden, lokal ohne Server funktionieren und trotzdem so sauber strukturiert sein, dass spätere Weiterentwicklung, Debugging und eine mögliche Integration in TaskHost nicht verbaut werden.
+> An open, practical development standard for reproducible, understandable, secure, and maintainable technical projects.
 
-> English summary: TaskHost Local is a small local Windows task management application built with C#, Windows Forms and SQLite. It is part of the TaskHost project family, but the MVP is intentionally offline-only and does not include cloud sync, collaboration or a TaskHost API connection.
+[![Status](https://img.shields.io/badge/status-pre--1.0-orange)](#project-status)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Language](https://img.shields.io/badge/normative%20draft-German-lightgrey)](#language)
 
-## Projektstatus
+## Overview
 
-| Bereich | Status |
-|---|---|
-| Repository | vorhanden |
-| Grundprojekt | vorhanden |
-| Buildbasis | .NET 8, zentrale Konfiguration und Windows-CI vorbereitet |
-| Automatisierte Tests | SQLite-Integrationstests vorhanden; erster CI-Lauf ausstehend |
-| Historischer SQLite-Startfehler | technisch abgesichert, manueller Windows-Smoke-Test ausstehend |
-| Dokumentation | Migrationswelle 01 dokumentiert |
-| Lizenz | MIT License |
-| Screenshot | noch zu ergänzen |
+The **SASD Development Standard** defines a complete and repeatable way to turn an idea into a maintainable technical product. It focuses not only on programming, but on the entire lifecycle of a project:
 
-TaskHost Local ist der erste praktische Pilot des **SASD Development Standard**. Die Anwendung richtet sich am Core Standard sowie am C#/.NET- und Desktopprofil auf der Qualitätsstufe **Recommended** aus. Da diese Standardteile noch `Proposed` sind, wird dies als Pilot Alignment und nicht als formale Compliance bezeichnet.
+- project initiation and scope,
+- requirements and architecture,
+- repository and documentation structure,
+- implementation quality,
+- testing and reviews,
+- security and privacy,
+- releases and maintenance,
+- knowledge management,
+- prompt engineering and responsible AI-assisted development.
 
-Die frühere Meldung `SQLite Error 1: near "=": syntax error` konnte aus dem aktuellen öffentlichen Quellstand nicht eindeutig reproduziert oder einer bestimmten SQL-Zeile zugeordnet werden. Migrationswelle 01 ergänzt deshalb transaktionale Initialisierung, Regressionstests und Startdiagnose. Der Known Issue bleibt bis zum erfolgreichen Windows-Smoke-Test in Verifikation.
+The standard is designed primarily for solo developers, freelancers, open-source maintainers, students, trainees, administrators with development tasks, and small technical teams.
 
-## Ziel des MVP
+## Vision
 
-Das MVP soll eine einfache, lokale und alltagstaugliche Aufgabenverwaltung bereitstellen.
+Every project created under the SASD Development Standard should remain understandable, reproducible, testable, and maintainable—even years later and by someone who did not originally create it.
 
-Der Fokus liegt auf:
+Knowledge must not exist only in a developer's head, in temporary chats, or in undocumented routines.
 
-- lokalen Aufgabenlisten,
-- Aufgaben mit Titel, Notiz, Fälligkeit und Priorität,
-- erledigt/offen-Status,
-- einfacher Suche,
-- lokaler SQLite-Speicherung,
-- einfacher Datenbanksicherung,
-- klassischer Windows-Bedienung mit Menüleiste und Toolbar.
+## Core question
 
-Das Projekt soll **nicht** durch Cloud, Synchronisierung, Login, Benutzerverwaltung oder Collaboration verlangsamt werden.
+The standard does not primarily answer:
 
-## Nicht-Ziele des MVP
+> How do I program?
 
-Nicht Bestandteil der ersten Version:
+It answers:
 
-- Cloud-Synchronisierung,
-- Multi-Geräte-Synchronisierung,
-- geteilte Listen,
-- Benutzerkonten,
-- Rechteverwaltung,
-- Kommentare oder Collaboration,
-- mobile Apps,
-- aktive Windows-Benachrichtigungen,
-- Hintergrunddienst,
-- komplexe Wiederholungslogik,
-- direkte TaskHost-API-Anbindung,
-- Telemetrie,
-- automatische Update-Prüfung,
-- Netzwerkkommunikation zur Laufzeit.
+> How do I develop, document, test, release, operate, and maintain a professional technical project?
 
-## Verhältnis zu TaskHost
+## Three product layers
 
-TaskHost Local ist **kein konkurrierendes Produkt** zum bestehenden TaskHost-Projekt.
-
-Die strategische Einordnung lautet:
-
-> TaskHost Local ist eine eigenständige lokale Windows-Aufgabenverwaltung, die kurzfristig produktiv nutzbar werden soll und langfristig als möglicher Desktop- oder Offline-Client der TaskHost-Produktfamilie vorbereitet wird.
-
-Für das MVP bedeutet das:
-
-- TaskHost Local arbeitet eigenständig.
-- Es gibt keine API-Anbindung.
-- Es gibt keinen Login.
-- Es gibt keine Synchronisierung.
-- Die Begriffe und Datenstrukturen sollen dennoch kompatibel genug bleiben, damit Migration, Export/Import oder spätere API-Anbindung nicht unnötig erschwert werden.
-
-## Technik
-
-| Bereich | Entscheidung |
-|---|---|
-| Sprache | C# |
-| Framework | .NET 8 Windows |
-| Oberfläche | Windows Forms |
-| Datenbank | SQLite |
-| Datenbankbibliothek | Microsoft.Data.Sqlite |
-| ORM | keines |
-| Zielplattform MVP | Windows |
-| Architektur | einfache Schichtung: Forms → Services → Repositories → Database |
-
-## Start in Visual Studio
-
-1. Visual Studio öffnen.
-2. `TaskHostLocal.sln` öffnen.
-3. NuGet-Pakete wiederherstellen, falls Visual Studio dies nicht automatisch erledigt.
-4. Projekt `TaskHostLocal.WinForms` starten.
-
-Voraussetzung:
-
-- Workload **.NET-Desktopentwicklung**.
-
-## Start per Kommandozeile
-
-```powershell
-.\scripts\verify-wave-01.ps1
-dotnet run --project .\TaskHostLocal.WinForms\TaskHostLocal.WinForms.csproj
+```mermaid
+flowchart LR
+    A[Standard] --> B[Reference Implementations]
+    A --> C[Development Tooling]
+    B --> A
+    C --> A
 ```
 
-Da Windows Forms verwendet wird, sollte die Anwendung unter Windows gestartet werden. Ein Build aus WSL kann funktionieren, der eigentliche Programmstart sollte aber bevorzugt in einer Windows-Umgebung erfolgen.
+### 1. Standard
 
-## Speicherort der Datenbank
+The normative rules, principles, profiles, processes, templates, and checklists.
 
-Die lokale SQLite-Datenbank liegt absichtlich nicht im Programmverzeichnis, sondern im Benutzerprofil:
+### 2. Reference implementations
+
+Existing SASD projects that demonstrate how the standard is applied in practice. The first focus is the consolidation of the SASD C#/.NET codebase.
+
+### 3. Development tooling
+
+Reusable files and tools that help create and verify compliant projects, such as `.editorconfig`, `Directory.Build.props`, repository templates, analyzers, checks, and prompt packages.
+
+## Quality levels
+
+The standard uses scalable quality levels so that small utilities are not burdened with the same requirements as production systems.
+
+| Level | Intended use |
+|---|---|
+| **SASD Minimum** | Small tools, learning projects, experiments, and prototypes |
+| **SASD Recommended** | Maintained applications, public repositories, and regular SASD projects |
+| **SASD Production** | Business-critical, security-sensitive, customer-facing, or operational systems |
+
+## Version 1.0 scope
+
+Version 1.0 is intended to provide a stable foundation consisting of:
+
+- a technology-independent core standard,
+- a repository and documentation model,
+- project lifecycle and governance rules,
+- quality levels,
+- fundamental testing and security requirements,
+- a C#/.NET profile,
+- a desktop application profile,
+- GitHub conventions,
+- prompt engineering guidance,
+- reusable templates and checklists,
+- initial technical configuration files,
+- pilot migrations of selected SASD repositories.
+
+Detailed Linux, database, Docker, Kubernetes, and advanced security profiles are part of the long-term vision but are not required to complete Version 1.0.
+
+## Repository structure
 
 ```text
-%AppData%\SASD\TaskHostLocal\taskhost.db
+.
+├── docs/
+│   ├── 00-foundation/
+│   ├── 10-core-standard/
+│   ├── 20-profiles/
+│   ├── 30-processes/
+│   ├── 40-governance/
+│   └── 50-reference-implementations/
+├── templates/
+├── checklists/
+├── prompts/
+├── tooling/
+├── examples/
+├── artefacts/
+└── .github/
 ```
 
-Beispiel:
+See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and the [Version 1.0 document catalog](docs/00-foundation/DOCUMENT-CATALOG.md) for the planned standard structure.
 
-```text
-C:\Users\<Benutzername>\AppData\Roaming\SASD\TaskHostLocal\taskhost.db
-```
+## Getting started
 
-Vorteile:
+1. Read the [`Project Charter`](docs/00-foundation/PROJECT-CHARTER.md).
+2. Review the [`Version 1.0 Scope`](docs/00-foundation/SCOPE.md).
+3. Review the [`Content Architecture`](docs/00-foundation/CONTENT-ARCHITECTURE.md) and [`Document Catalog`](docs/00-foundation/DOCUMENT-CATALOG.md).
+4. Review the [`Governance Overview`](docs/40-governance/README.md), then read the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
+5. Review the [`Core Standard`](docs/10-core-standard/README.md), starting with the [`Quality Levels`](docs/10-core-standard/QUALITY-LEVELS.md).
+6. Review the [`C#/.NET Profile`](docs/20-profiles/dotnet/README.md) when working on a .NET project.
+7. Apply the [`Desktop Application Profile`](docs/20-profiles/desktop/README.md) for WinForms or WPF applications.
+8. Use the [`Operational Process Handbook`](docs/30-processes/README.md) to classify, initialize, review, migrate, release, and archive projects.
+9. Review the [`Reference Implementation Program`](docs/50-reference-implementations/README.md) and [`Pilot 01 – SASD TaskHost Local`](docs/50-reference-implementations/pilot-01-sasd-taskhost-local/README.md).
+10. Follow the [`Roadmap`](ROADMAP.md).
+11. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
+12. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
 
-- keine Adminrechte erforderlich,
-- Daten bleiben bei Programmupdates erhalten,
-- Daten liegen benutzerspezifisch,
-- Backups können nachvollziehbar erstellt werden.
+## Normative language
 
-## Architekturüberblick
+The following terms are used intentionally:
 
-```text
-TaskHostLocal.sln
-├── TaskHostLocal.WinForms
-│   ├── Forms/          Dialoge und zusätzliche Fenster
-│   ├── Models/         einfache Datenmodelle
-│   ├── Services/       fachliche Operationen und Koordination
-│   ├── Repositories/   SQLite-Zugriff mit parametrisierten SQL-Abfragen
-│   ├── Database/       Datenbankpfad, Verbindung, Initialisierung
-│   ├── Diagnostics/    lokale Startdiagnose ohne Aufgabendaten
-│   ├── MainForm.cs     Hauptfenster und UI-Koordination
-│   └── Program.cs
-└── TaskHostLocal.Tests/    SQLite-Integrationstests
-```
+- **MUST**: mandatory requirement,
+- **SHOULD**: recommended requirement; deviations require a reason,
+- **MAY**: optional practice.
 
-Wichtige Architekturregel:
+The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governance/NORMATIVE-LANGUAGE.md). Documents become binding only after reaching the `Approved` state defined by the document lifecycle.
 
-> SQL gehört nicht in Formularcode. Formulare rufen Services auf, Services verwenden Repositories, Repositories kapseln SQLite.
+## Project status
 
-## Dokumentation
+The project is currently in the **first pilot execution and governance approval-readiness phase**. Foundation and Governance are available as Proposed 0.8.0 after a structured consistency review; formal Maintainer approval remains pending. The technology-independent Core is available as Proposed 0.3.0, the C#/.NET Profile as Proposed 0.4.0, the Desktop Application Profile as Proposed 0.5.0, and all seven operational processes as Proposed 0.6.0. Proposed documents are pilot-ready candidates, not yet stable Version 1.0 requirements.
 
-Wichtige Dokumente:
+Current priorities:
 
-| Dokument | Zweck |
-|---|---|
-| `docs/000_Project_Overview.md` | Projektüberblick |
-| `docs/010_Strategic_Positioning.md` | strategische Einordnung und Verhältnis zu TaskHost |
-| `docs/020_Lastenheft_MVP.md` | fachliche Anforderungen an das MVP |
-| `docs/030_Pflichtenheft_MVP.md` | technische Umsetzung des MVP |
-| `docs/040_UI_Concept.md` | UI-Richtung und Zielbild |
-| `docs/050_Technical_Design.md` | technische Architektur |
-| `docs/060_Data_Model.md` | SQLite-Datenmodell und Erweiterungen |
-| `docs/070_Roadmap.md` | Entwicklungsplanung |
-| `docs/080_Known_Issues.md` | bekannte Fehler und Risiken |
-| `docs/090_Documentation_Checklist.md` | Dokumentations- und Projektcheckliste |
-| `docs/100_Manual_Test_Plan.md` | manueller Testplan für MVP-Abnahme |
-| `docs/110_SASD_Alignment.md` | Pilot Alignment zum SASD Development Standard |
-| `docs/120_Wave_01_Review.md` | Review und offene Nachweise der ersten Migrationswelle |
-| `docs/130_Build_and_Test.md` | Build-, Test- und Audit-Anleitung |
-| `docs/140_Migration_Notes.md` | Datensicherung, Testreihenfolge und Rollback |
-| `docs/adr/` | Architekturentscheidungen |
+1. complete the Maintainer approval review for Foundation and Governance,
+2. execute Wave 01 of Pilot 01 on SASD TaskHost Local and record verified evidence,
+3. refine repository templates, CI and assessment tooling from pilot feedback,
+4. select the medium and complex pilot projects,
+5. complete and review the prompt packages,
+6. move Core, profiles, and processes toward approval.
 
-## Datenschutz und lokale Daten
+## Language
 
-Aufgaben können private oder geschäftliche Informationen enthalten. Deshalb gilt:
+The normative pre-1.0 draft is initially written in German to allow precise development and review. An English edition is planned once the structure and terminology have stabilized.
 
-- keine echten Aufgaben in Screenshots,
-- keine `.db`-Dateien ins Repository,
-- keine Backup-Dateien ins Repository,
-- keine Zugangsdaten oder Secrets ins Repository,
-- keine Telemetrie im MVP,
-- keine Netzwerkkommunikation im MVP.
+## Contributing
 
-## Nächste technische Schritte
+The project is currently developed as a SASD reference initiative. Contributions, reviews, and experience reports are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-1. Update einspielen und `scripts/verify-wave-01.ps1` ausführen.
-2. Ersten GitHub-Actions-Lauf prüfen.
-3. Anwendung mit frischer Datenbank starten.
-4. Gesicherte vorhandene Datenbank testen.
-5. manuellen Smoke-Test dokumentieren.
-6. historischen SQLite-Known-Issue erst danach schließen.
-7. Backup-Funktion und Wiederherstellung vertiefen.
-8. README-Screenshot mit ausschließlich fiktiven Daten ergänzen.
+## License
 
-## Lizenz
+This repository is licensed under the [MIT License](LICENSE), unless a document or included third-party material states otherwise.
 
-Dieses Projekt steht unter der [MIT License](LICENSE). Die Entscheidung ist in `docs/adr/ADR-006-Use-MIT-License.md` dokumentiert.
+## Current pilot status
+
+Pilot 01 (SASD TaskHost Local) is `In Execution`. A Wave 01 update artifact has been prepared and statically reviewed, while target commit, .NET build/test, Windows runtime and CI verification remain pending. See `docs/50-reference-implementations/`.

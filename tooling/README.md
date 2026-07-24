@@ -108,13 +108,28 @@ Checks all seven Proposed 0.6.0 process documents, requirement-ID ranges, normat
 
 ```bash
 python tooling/generate-pilot-portfolio.py --check
+python tooling/generate-pilot-feedback-summary.py --check
 python tooling/validate-reference-pilots.py
 ```
 
 ### `generate-pilot-portfolio.py`
 
-Erzeugt `docs/50-reference-implementations/PILOT-PORTFOLIO.md` aus den `pilot.json`-Manifesten.
+Erzeugt eine Übersicht mit getrenntem Lebenszyklus-, Umsetzungs- und Verifikationsstatus.
+
+### `generate-pilot-feedback-summary.py`
+
+Erzeugt die kompakte Statusübersicht aus dem Pilotfeedbacklog.
 
 ### `validate-reference-pilots.py`
 
-Prüft Pilot-IDs, Statuswerte, Qualitätsstufen, Pflichtdokumente, Gap- und Decision-IDs sowie die Aktualität des Portfolios.
+Prüft Pilot-IDs, Manifest-Schema 1.1, Qualitätsstufen, Umsetzungs- und Verifikationszustände, Artefakt-Hashes, Pflichtdokumente, Gap- und Decision-IDs sowie die Aktualität der erzeugten Übersichten.
+
+## Foundation and Governance
+
+```bash
+python tooling/generate-governance-requirements-index.py --check
+python tooling/validate-governance.py
+python tooling/report-version-1-readiness.py
+```
+
+The readiness reporter is informational. It intentionally reports non-Approved documents as release blockers and does not change document status.

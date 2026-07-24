@@ -2,8 +2,8 @@
 title: "Glossar"
 document-id: SASD-FND-004
 document-type: normative
-status: Draft
-version: 0.1.0
+status: Proposed
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -19,6 +19,15 @@ normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 
 | Begriff | Bedeutung |
 |---|---|
+| Alignment | Nachvollziehbar bewerteter Grad der Übereinstimmung mit einer benannten Bezugsfassung, Profilen und Qualitätsstufen. |
+| Approval Record | Nachweis einer fachlichen Freigabe mit Dokumentversion, Commit, Reviewer, Befunden und Entscheidung. |
+| Bezugsfassung | Unveränderlich benannte Version, Tag oder Commit des Standards, gegen die bewertet wird. |
+| Breaking Change | Normative Änderung, durch die eine bisher korrekte Anwendung des Standards inkompatibel wird. |
+| Evidence | Nachweis, der eine Bewertung oder Behauptung nachvollziehbar stützt. |
+| Pilot Alignment | Bewertung gegen Draft- oder Proposed-Dokumente ohne stabile formale Alignment-Aussage. |
+| Release Record | Freigabe- und Veröffentlichungsnachweis eines Standardrelease. |
+| Self-Assessment | Vom Projektverantwortlichen selbst durchgeführte und als solche gekennzeichnete Bewertung. |
+| Standard Change Proposal | Strukturierter Vorschlag zur Änderung normativer Inhalte. |
 | Abweichung | Bewusste Nichterfüllung oder alternative Umsetzung einer Anforderung mit dokumentierter Begründung, Risikoabwägung und gegebenenfalls Genehmigung. |
 | ADR | Architecture Decision Record; dauerhaft dokumentierte Architekturentscheidung mit Kontext, Alternativen und Konsequenzen. |
 | Approved | Freigegebener Dokumentstatus. Nur Approved-Dokumente können verbindlicher Bestandteil einer veröffentlichten Standardversion sein. |
@@ -37,3 +46,7 @@ normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 | Source of Truth | Verbindliche Quelle, aus der abgeleitete Darstellungen oder Exporte erzeugt werden. |
 | Standardversion | Veröffentlichter oder geplanter Gesamtstand des SASD Development Standard. |
 | Unterstützendes Artefakt | Vorlage, Checkliste, Prompt oder Tool, das die Anwendung des Standards erleichtert, ohne selbst automatisch neue Anforderungen zu erzeugen. |
+
+## Begriffsregel
+
+Begriffe in diesem Glossar MÜSSEN in normativen Dokumenten konsistent verwendet werden. Fachspezifische Profile KÖNNEN zusätzliche Begriffe definieren, DÜRFEN bestehende Begriffe aber nicht widersprüchlich umdeuten.

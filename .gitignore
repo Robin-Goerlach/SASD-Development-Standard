@@ -30,3 +30,7 @@ logs/
 
 # Optionale lokale Sicherungsziele im Repository
 local-backups/
+
+# Lokale Verifikations- und Publish-Artefakte
+verification-results/
+artifacts/

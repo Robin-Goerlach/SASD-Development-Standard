@@ -3,15 +3,15 @@ title: "Pilot 01 – SASD TaskHost Local"
 document-id: SASD-REF-PILOT-101
 document-type: informative
 status: Draft
-version: 0.7.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: false
 owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
-applies-to-quality-levels: [Minimum, Recommended, Production]
+applies-to-quality-levels: [Recommended]
 applies-to-profiles: [Core, DotNet, Desktop]
-depends-on: [SASD-REF-PILOT-001, SASD-REF-PILOT-002, SASD-PROC-005]
+depends-on: [SASD-REF-PILOT-001, SASD-PROC-005]
 ---
 
 # Pilot 01 – SASD TaskHost Local
@@ -19,15 +19,18 @@ depends-on: [SASD-REF-PILOT-001, SASD-REF-PILOT-002, SASD-PROC-005]
 ## Status
 
 ```text
-Pilot ID:       SASD-PILOT-001
-Kategorie:      kleines C#/.NET-Desktopprojekt
-Qualitätsstufe: SASD Recommended
-Profile:        Core + DotNet + Desktop
-Pilotstatus:    Wave 01 vorbereitet
-Ziel-Repository: https://github.com/Robin-Goerlach/SASD-TaskHost-Local
+Pilotstatus: In Execution
+Umsetzung: Artifact Prepared
+Verifikation: Pending
+Aktuelle Welle: Wave 01
+Ziel-Commit: noch nicht erfasst
 ```
 
-Dieses Paket dokumentiert Auswahl, Baseline Assessment und die erste begrenzte Migrationswelle. Es nimmt keine Änderungen am Ziel-Repository vor und behauptet deshalb noch keine abgeschlossene Umsetzung.
+Ein 36-Dateien-Overlay für Wave 01 wurde erstellt und statisch geprüft. Es ist noch nicht als gebauter, getesteter, gestarteter oder per CI bestätigter Zielstand dokumentiert.
+
+## Ziel
+
+Der Pilot prüft die proportionale Anwendung von Core, C#/.NET-, Desktop- und Prozessstandard auf ein kleines, langfristig gepflegtes WinForms-/SQLite-Projekt.
 
 ## Dokumente
 
@@ -37,15 +40,15 @@ Dieses Paket dokumentiert Auswahl, Baseline Assessment und die erste begrenzte M
 4. [Gap Register](GAP-REGISTER.md)
 5. [Migrationsplan](MIGRATION-PLAN.md)
 6. [Wave-01-Plan](WAVE-01-PLAN.md)
-7. [Evidenzzuordnung](EVIDENCE-MAP.md)
-8. [Entscheidungslog](DECISION-LOG.md)
-9. [Pilotreview](PILOT-REVIEW.md)
-10. [`pilot.json`](pilot.json)
-
-## Warum dieses Projekt?
-
-TaskHost Local ist klein genug für einen überschaubaren Pilotdurchlauf, besitzt aber reale Persistenz, private Nutzerdaten, einen dokumentierten Laufzeitblocker, eine WinForms-Oberfläche und einen langfristigen Nutzungszweck. Damit prüft es, ob der Standard pragmatisch hilft, ohne einen modularen Monolithen oder eine Clean-Architecture-Solution künstlich zu erzwingen.
+7. [Wave-01-Implementierungsreview](WAVE-01-IMPLEMENTATION-REVIEW.md)
+8. [Wave-01-Verifikationsplan](WAVE-01-VERIFICATION-PLAN.md)
+9. [Evidenzzuordnung](EVIDENCE-MAP.md)
+10. [Entscheidungslog](DECISION-LOG.md)
+11. [Zwischenreview](PILOT-REVIEW.md)
+12. [Zwischenretrospektive](INTERIM-RETROSPECTIVE.md)
 
 ## Nächster Schritt
 
-Wave 01 wird im Ziel-Repository technisch ausgeführt. Danach werden Build-, Test-, Laufzeit- und Reviewnachweise hier ergänzt und die Pilotbewertung aktualisiert.
+Das Overlay wird kontrolliert in einen sauberen Clone des Ziel-Repositories eingespielt. Danach werden Restore, Build, Tests, Windows-Start, Datenbankzustände, Diagnose und CI gemäß Verifikationsplan nachgewiesen.
+
+Wave 02 bleibt bis zu diesem Nachweis gesperrt.

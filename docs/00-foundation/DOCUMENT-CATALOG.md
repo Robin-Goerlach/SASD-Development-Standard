@@ -3,7 +3,7 @@ title: "Dokumentkatalog für Version 1.0"
 document-id: SASD-FND-006
 document-type: normative
 status: Proposed
-version: 0.4.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -30,10 +30,10 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-FND-001 | `docs/00-foundation/PROJECT-CHARTER.md` | Normativ | Proposed | Mandat, Vision, Mission und Produktmodell | Alle Beteiligten | — |
 | SASD-FND-002 | `docs/00-foundation/SCOPE.md` | Normativ | Proposed | Grenzt Version 1.0 ein und definiert Erfolgskriterien | Maintainer, Anwender | SASD-FND-001 |
 | SASD-FND-003 | `docs/00-foundation/PRINCIPLES.md` | Normativ | Proposed | Technologieunabhängige Leitprinzipien | Alle Beteiligten | SASD-FND-001 |
-| SASD-FND-004 | `docs/00-foundation/GLOSSARY.md` | Normativ | Draft | Verbindliche Begriffe und Definitionen | Alle Beteiligten | SASD-FND-001 |
+| SASD-FND-004 | `docs/00-foundation/GLOSSARY.md` | Normativ | Proposed | Verbindliche Begriffe und Definitionen | Alle Beteiligten | SASD-FND-001 |
 | SASD-FND-005 | `docs/00-foundation/CONTENT-ARCHITECTURE.md` | Normativ | Proposed | Struktur, Hierarchie und Dokumentrollen von Version 1.0 | Maintainer, Autoren | FND-001 bis FND-004, GOV-001 bis GOV-003 |
 | SASD-FND-006 | `docs/00-foundation/DOCUMENT-CATALOG.md` | Normativ | Proposed | Vollständiges Inventar der Dokumente für Version 1.0 | Maintainer, Autoren | SASD-FND-005 |
-| SASD-FND-007 | `docs/00-foundation/VERSION-1.0-ACCEPTANCE-CRITERIA.md` | Normativ | Draft | Freigabe- und Fertigstellungskriterien für Version 1.0 | Maintainer, Reviewer | SASD-FND-002, SASD-FND-005 |
+| SASD-FND-007 | `docs/00-foundation/VERSION-1.0-ACCEPTANCE-CRITERIA.md` | Normativ | Proposed | Freigabe- und Fertigstellungskriterien für Version 1.0 | Maintainer, Reviewer | SASD-FND-002, SASD-FND-005 |
 | SASD-CORE-001 | `docs/10-core-standard/PROJECT-LIFECYCLE.md` | Normativ | Proposed | Projektphasen von Idee bis Archivierung | Projektverantwortliche | SASD-FND-002, SASD-FND-003, SASD-CORE-006 |
 | SASD-CORE-002 | `docs/10-core-standard/REQUIREMENTS.md` | Normativ | Proposed | Anforderungen, Scope, Nachverfolgbarkeit und Änderungen | Projektverantwortliche, Entwickler | SASD-CORE-001, SASD-CORE-006 |
 | SASD-CORE-003 | `docs/10-core-standard/ARCHITECTURE.md` | Normativ | Proposed | Architektur, Modularisierung, Abhängigkeiten und Entscheidungen | Entwickler, Architekten | SASD-CORE-002, SASD-CORE-006, SASD-CORE-008 |
@@ -69,10 +69,10 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-GOV-001 | `docs/40-governance/NORMATIVE-LANGUAGE.md` | Normativ | Proposed | Verbindliche Schlüsselwörter und Interpretation | Alle Autoren und Anwender | SASD-FND-004 |
 | SASD-GOV-002 | `docs/40-governance/DOCUMENT-LIFECYCLE.md` | Normativ | Proposed | Statusmodell und Freigabekriterien | Maintainer, Reviewer | GOV-001, GOV-003 |
 | SASD-GOV-003 | `docs/40-governance/DOCUMENT-METADATA.md` | Normativ | Proposed | Front-Matter, Dokument-IDs und Versionen | Autoren, Tooling | GOV-001, GOV-002 |
-| SASD-GOV-004 | `docs/40-governance/VERSIONING.md` | Normativ | Draft | Versionierung des Standards und seiner Dokumente | Maintainer | GOV-002, GOV-003 |
-| SASD-GOV-005 | `docs/40-governance/CHANGE-PROCESS.md` | Normativ | Draft | Änderungsvorschläge, Bewertung und Entscheidung | Maintainer, Beitragende | GOV-004 |
-| SASD-GOV-006 | `docs/40-governance/EXCEPTIONS.md` | Normativ | Draft | Ausnahmen, Risiken und Ablaufdaten | Projektverantwortliche | GOV-001 |
-| SASD-GOV-007 | `docs/40-governance/COMPLIANCE.md` | Normativ | Draft | Anwendung, Nachweise und Compliance-Erklärung | Projektverantwortliche, Reviewer | CORE-006, GOV-006 |
+| SASD-GOV-004 | `docs/40-governance/VERSIONING.md` | Normativ | Proposed | Versionierung des Standards und seiner Dokumente | Maintainer | GOV-002, GOV-003 |
+| SASD-GOV-005 | `docs/40-governance/CHANGE-PROCESS.md` | Normativ | Proposed | Änderungsvorschläge, Bewertung und Entscheidung | Maintainer, Beitragende | GOV-004 |
+| SASD-GOV-006 | `docs/40-governance/EXCEPTIONS.md` | Normativ | Proposed | Ausnahmen, Risiken und Ablaufdaten | Projektverantwortliche | GOV-001 |
+| SASD-GOV-007 | `docs/40-governance/COMPLIANCE.md` | Normativ | Proposed | Anwendung, Nachweise und Compliance-Erklärung | Projektverantwortliche, Reviewer | CORE-006, GOV-006 |
 | SASD-REF-001 | `docs/50-reference-implementations/README.md` | Informativ | Proposed | Einstieg, Pilotkategorien und aktive Referenzprojekte | Maintainer, Anwender | SASD-GOV-007, SASD-PROC-005 |
 | SASD-REF-002 | `docs/10-core-standard/CORE-RESPONSIBILITY-MAP.md` | Informativ | Draft | Zuständigkeitsgrenzen und zulässige Querschnittsregeln des Core | Autoren, Reviewer | SASD-CORE-* |
 | SASD-REF-003 | `docs/10-core-standard/SOLO-DEVELOPER-GUIDE.md` | Informativ | Draft | Pragmatische Anwendung durch Einzelentwickler | Einzelentwickler, kleine Teams | SASD-CORE-006, SASD-GOV-007 |
@@ -110,6 +110,17 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-REF-PILOT-108 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/EVIDENCE-MAP.md` | Informativ | Draft | Quellen und geplante lokale Nachweise | Reviewer, Maintainer | SASD-GOV-007, SASD-REF-PILOT-002 |
 | SASD-REF-PILOT-109 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/DECISION-LOG.md` | Informativ | Draft | Pilotentscheidungen und Overengineering-Grenzen | Maintainer, Reviewer | SASD-PROC-003 |
 | SASD-REF-PILOT-110 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/PILOT-REVIEW.md` | Informativ | Draft | Review der Pilotvorbereitung | Maintainer, Reviewer | SASD-PROC-004 |
+
+| SASD-REF-PILOT-004 | `docs/50-reference-implementations/PILOT-FEEDBACK-LOG.md` | Informativ | Draft | Konsolidiertes Feedback aus Piloten | Maintainer, Reviewer | SASD-REF-PILOT-001, SASD-REF-PILOT-002 |
+| SASD-REF-PILOT-005 | `docs/50-reference-implementations/PILOT-FEEDBACK-SUMMARY.md` | Informativ, erzeugt | Draft | Statusübersicht des Pilotfeedbacks | Maintainer, Anwender | SASD-REF-PILOT-004 |
+| SASD-REF-PILOT-111 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/WAVE-01-IMPLEMENTATION-REVIEW.md` | Informativ | Draft | Statisches Review des Wave-01-Updateartefakts | Maintainer, Reviewer | SASD-REF-PILOT-002, SASD-REF-PILOT-107 |
+| SASD-REF-PILOT-112 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/WAVE-01-VERIFICATION-PLAN.md` | Informativ | Draft | Kontrollierter Build-, Test-, Start-, Daten- und CI-Nachweis | Entwickler, Reviewer | SASD-REF-PILOT-107, SASD-REF-PILOT-111 |
+| SASD-REF-PILOT-113 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/INTERIM-RETROSPECTIVE.md` | Informativ | Draft | Vorläufige Erkenntnisse vor technischer Verifikation | Maintainer, Reviewer | SASD-REF-PILOT-111, SASD-REF-PILOT-004 |
+
+| SASD-REF-GOV-001 | `docs/40-governance/GOVERNANCE-RESPONSIBILITY-MAP.md` | Informativ | Draft | Primäre Zuständigkeiten der Governance-Dokumente | Maintainer, Reviewer | SASD-GOV-001 bis SASD-GOV-007 |
+| SASD-REF-GOV-002 | `docs/40-governance/FOUNDATION-GOVERNANCE-REVIEW-0.8.0.md` | Informativ | Draft | Reviewnachweis für Foundation und Governance Proposed 0.8.0 | Maintainer, Reviewer | SASD-FND-*, SASD-GOV-* |
+| SASD-REF-GOV-003 | `docs/40-governance/APPROVAL-READINESS-0.8.0.md` | Informativ | Draft | Freigabereife und ausstehende Maintainer-Entscheidung | Maintainer | SASD-GOV-002, SASD-FND-007 |
+| SASD-REF-GOV-004 | `docs/40-governance/GOVERNANCE-REQUIREMENTS-INDEX.md` | Informativ, erzeugt | Draft | Index aller Governance-Anforderungen | Anwender, Tooling | SASD-GOV-001 bis SASD-GOV-007 |
 
 ## 3. Unterstützende Artefakte für Version 1.0
 

@@ -2,8 +2,8 @@
 title: "Akzeptanzkriterien für SASD Development Standard Version 1.0"
 document-id: SASD-FND-007
 document-type: normative
-status: Draft
-version: 0.1.0
+status: Proposed
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -76,3 +76,22 @@ Für jedes Pilotprojekt sind dokumentiert:
 - Word- und PDF-Ausgaben wurden aus der Markdown-Quelle erzeugt,
 - Tag `v1.0.0` verweist auf den freigegebenen Stand,
 - ein fremder Entwickler kann aus README und Dokumentation heraus mit der Anwendung beginnen.
+
+## 9. Freigabe- und Veröffentlichungsnachweise
+
+- Für jedes normative Approved-Dokument existiert ein Freigabenachweis mit Commit, Version, Reviewer und Entscheidung.
+- Ein Standard Release Record dokumentiert Validatoren, offene Ausnahmen, Known Issues, Publikationsartefakte und den freigegebenen Tag.
+- Der Release Candidate wurde in einem sauberen Checkout vollständig geprüft.
+- Word- und PDF-Artefakte wurden aus demselben freigegebenen Quellstand erzeugt.
+- Prüfsummen der Publikationsartefakte sind dokumentiert.
+
+## 10. Release-Blocker
+
+Version 1.0 DARF NICHT veröffentlicht werden, solange einer der folgenden Zustände besteht:
+
+- ein für Version 1.0 erforderliches normatives Dokument ist nicht Approved,
+- ein Validator meldet Fehler,
+- ein offener Blocker oder nicht genehmigte anwendbare MUSS-Lücke besteht,
+- die Bezugsfassung der Pilotnachweise ist unklar,
+- Release Record, Changelog oder Dokumentmanifest fehlen,
+- Publikationsartefakte stammen nicht aus dem freigegebenen Commit.

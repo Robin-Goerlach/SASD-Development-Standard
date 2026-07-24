@@ -1,9 +1,9 @@
 ---
-title: "Pilot 01 Vorbereitungsreview – SASD TaskHost Local"
+title: "Pilot 01 Zwischenreview – SASD TaskHost Local"
 document-id: SASD-REF-PILOT-110
 document-type: informative
 status: Draft
-version: 0.7.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -11,50 +11,49 @@ owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core, DotNet, Desktop]
-depends-on: [SASD-REF-PILOT-107, SASD-PROC-004]
+depends-on: [SASD-REF-PILOT-111, SASD-REF-PILOT-112, SASD-PROC-004]
 ---
 
-# Pilot 01 Vorbereitungsreview – SASD TaskHost Local
+# Pilot 01 Zwischenreview – SASD TaskHost Local
 
 ## 1. Reviewumfang
 
-Dieses Review bewertet die Pilotvorbereitung, nicht die technische Ausführung. Die Ziel-Repository-Änderungen, Buildläufe und Tests stehen noch aus.
+Dieses Review bewertet Pilotvorbereitung und Wave-01-Implementierungsartefakt. Es bewertet noch keinen committed, gebauten oder gestarteten Zielstand.
 
 ## 2. Ergebnis
 
 ```text
-Pilotstatus: Wave 01 vorbereitet
-Reviewstatus: Ready for execution with known unknowns
+Pilotstatus: In Execution
+Implementierungszustand: Artifact Prepared
+Verifikationszustand: Pending
+Reviewstatus: Ready for controlled verification
 Formale Alignment-Aussage: nicht möglich
-Technische Abschlussaussage: nicht möglich
+Wave-Validierung: nicht erfolgt
 ```
 
 ## 3. Positive Befunde
 
 - Der Pilot besitzt einen klar begrenzten Scope.
-- Blocker, Major-Gaps und spätere Verbesserungen sind getrennt.
+- Blocker, Major-Gaps und spätere Verbesserungen bleiben getrennt.
 - Die bestehende einfache Architektur wird nicht pauschal verworfen.
-- Die erste Welle verbindet Fehlerbehebung mit Regressionstest.
-- Evidenzklassen verhindern Scheingenauigkeit.
+- Das Overlay verbindet robustere Persistenz mit Regressionstests.
 - Daten- und Rückfallrisiken werden vor kosmetischen Änderungen behandelt.
+- Buildbasis, CI, Security und Lizenz sind nachvollziehbar vorbereitet.
+- Nicht ausgeführte Windows- und .NET-Prüfungen sind ausdrücklich benannt.
 
-## 4. Offene Reviewpunkte vor Ausführung
+## 4. Offene Blocker
 
-- tatsächliche lokale SDK-Version,
-- genauer SQL-Fehler und betroffene Datenbankzustände,
-- vorhandene ADR-Inhalte,
-- aktueller Paket- und Schwachstellenstand,
-- konkrete Lizenzentscheidung,
-- Verfügbarkeit einer anonymisierten oder frisch erzeugten Testdatenbank.
+- Ziel-Commit fehlt.
+- Restore, Build und Tests sind nicht ausgeführt.
+- Start mit frischer und bestehender Testdatenbank ist nicht geprüft.
+- historische SQLite-Fehlerursache ist nicht bestätigt.
+- CI-Lauf fehlt.
+- Lizenzentscheidung muss vor Commit bewusst bestätigt werden.
 
-## 5. Feedback an den Standard aus der Vorbereitung
+## 5. Feedback an den Standard
 
-1. Die Trennung von Projektgröße und Qualitätsstufe ist für diesen Piloten notwendig und verständlich.
-2. Der Standard muss ausdrücklich erlauben, dass ein Small-Projekt nicht unter `src/` verschoben und nicht in mehrere Assemblies zerlegt wird.
-3. Pilotbewertungen benötigen eine verbindliche Evidenzsprache; diese wurde mit dem Pilot-Evidenzmodell ergänzt.
-4. Ein Referenzpilot braucht einen maschinenlesbaren Status, damit Portfolio und Tooling später automatisiert werden können.
-5. Die Definition einer Referenzimplementierung muss technische Ausführung verlangen; Dokumentplanung allein reicht nicht.
+Die wichtigsten Erkenntnisse sind im [Feedbacklog](../PILOT-FEEDBACK-LOG.md) und in der [Zwischenretrospektive](INTERIM-RETROSPECTIVE.md) erfasst. Besonders relevant ist die Trennung von Artefakt-, Commit- und Verifikationsevidenz.
 
 ## 6. Reviewentscheidung
 
-**Go für Wave 01**, sofern vor Codeänderungen eine lokale Baseline und Datensicherung erstellt werden. Nach Ausführung ist dieses Dokument durch ein Wellenreview mit tatsächlichen Befunden zu ergänzen.
+**Go für kontrollierte Wave-01-Verifikation.** Kein Go für Wave 02 oder für eine Aussage, der historische Startfehler sei behoben.

@@ -3,7 +3,7 @@ title: "Projektcharta — SASD Development Standard Version 1.0"
 document-id: SASD-FND-001
 document-type: normative
 status: Proposed
-version: 0.1.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true

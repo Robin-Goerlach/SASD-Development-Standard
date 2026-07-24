@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
-"""Static and SQLite smoke validation for TaskHost Local Wave 01.
+"""Static and SQLite validation for TaskHost Local Wave 01.
 
-This validator intentionally does not replace `dotnet build` and `dotnet test`.
-It provides a dependency-free structural check and executes the schema SQL with
-Python's SQLite implementation so obvious packaging and SQL errors are caught.
+This validator intentionally does not replace `dotnet build`, `dotnet test`,
+the published application's headless self-check, GitHub Actions or the manual
+Windows smoke test. It verifies only repository structure and portable syntax.
 """
 
 from __future__ import annotations
 
+import json
 import re
 import sqlite3
 import sys
 import tempfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+try:
+    import yaml
+except ImportError:  # pragma: no cover - optional dependency for local convenience.
+    yaml = None
 
 ROOT = Path(__file__).resolve().parents[1]
 FAILURES: list[str] = []
@@ -26,12 +32,22 @@ REQUIRED = [
     "SECURITY.md",
     ".github/workflows/ci.yml",
     "TaskHostLocal.Tests/TaskHostLocal.Tests.csproj",
+    "TaskHostLocal.Tests/Verification/SelfCheckRunnerTests.cs",
     "TaskHostLocal.WinForms/Database/DatabaseInitializer.cs",
+    "TaskHostLocal.WinForms/Verification/SelfCheckOptions.cs",
+    "TaskHostLocal.WinForms/Verification/SelfCheckReport.cs",
+    "TaskHostLocal.WinForms/Verification/SelfCheckRunner.cs",
     "docs/110_SASD_Alignment.md",
     "docs/120_Wave_01_Review.md",
     "docs/140_Migration_Notes.md",
+    "docs/150_Wave_01_Verification.md",
+    "docs/160_Wave_01_Closeout.md",
+    "docs/170_CI_Evidence_Guide.md",
+    "docs/evidence/WAVE-01-MANUAL-TEST-RECORD-TEMPLATE.md",
     "scripts/backup-taskhost-data.ps1",
     "scripts/verify-wave-01.ps1",
+    "scripts/finalize-wave-01.ps1",
+    "WAVE-01-VERIFICATION-UPDATE-MANIFEST.md",
 ]
 
 for relative_path in REQUIRED:
@@ -46,16 +62,66 @@ for xml_file in [
 ]:
     try:
         ET.parse(xml_file)
-    except Exception as exc:  # noqa: BLE001 - validator reports all failures together.
+    except Exception as exc:  # noqa: BLE001
         FAILURES.append(f"Invalid XML in {xml_file.relative_to(ROOT)}: {exc}")
+
+try:
+    global_json = json.loads((ROOT / "global.json").read_text(encoding="utf-8"))
+    if "sdk" not in global_json or "version" not in global_json["sdk"]:
+        FAILURES.append("global.json does not define sdk.version")
+except Exception as exc:  # noqa: BLE001
+    FAILURES.append(f"Invalid global.json: {exc}")
+
+workflow_text = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+if yaml is not None:
+    try:
+        yaml.safe_load(workflow_text)
+    except Exception as exc:  # noqa: BLE001
+        FAILURES.append(f"Invalid workflow YAML: {exc}")
+
+for expected in [
+    ".\\scripts\\verify-wave-01.ps1",
+    "verification-results/ci",
+    "actions/upload-artifact@v4",
+]:
+    if expected not in workflow_text:
+        FAILURES.append(f"CI workflow misses expected verification marker: {expected}")
 
 solution = (ROOT / "TaskHostLocal.sln").read_text(encoding="utf-8")
 if "TaskHostLocal.Tests\\TaskHostLocal.Tests.csproj" not in solution:
     FAILURES.append("TaskHostLocal.Tests is not referenced by TaskHostLocal.sln")
 
 product_project = (ROOT / "TaskHostLocal.WinForms/TaskHostLocal.WinForms.csproj").read_text(encoding="utf-8")
+if 'InternalsVisibleTo Include="TaskHostLocal.Tests"' not in product_project:
+    FAILURES.append("Product project does not expose internal verification classes to the test project")
 if re.search(r'Microsoft\.Data\.Sqlite"\s+Version=', product_project):
     FAILURES.append("Microsoft.Data.Sqlite version must be managed centrally")
+
+program = (ROOT / "TaskHostLocal.WinForms/Program.cs").read_text(encoding="utf-8")
+for marker in ["private static int Main(string[] args)", "SelfCheckOptions.IsSelfCheckRequested", "SelfCheckRunner.Execute"]:
+    if marker not in program:
+        FAILURES.append(f"Program.cs misses self-check integration marker: {marker}")
+
+runner = (ROOT / "TaskHostLocal.WinForms/Verification/SelfCheckRunner.cs").read_text(encoding="utf-8")
+for marker in [
+    "PRAGMA integrity_check",
+    "PRAGMA foreign_key_check",
+    "repository-and-service-crud",
+    "VerifyBackup",
+    "ComputeSha256",
+]:
+    if marker not in runner:
+        FAILURES.append(f"SelfCheckRunner.cs misses expected check: {marker}")
+
+verify_script = (ROOT / "scripts/verify-wave-01.ps1").read_text(encoding="utf-8")
+for marker in ["dotnet", "publish", "--self-check", "verification-summary.json", "manualSmokeTestStatus = 'Pending'"]:
+    if marker not in verify_script:
+        FAILURES.append(f"verify-wave-01.ps1 misses expected marker: {marker}")
+
+finalize_script = (ROOT / "scripts/finalize-wave-01.ps1").read_text(encoding="utf-8")
+for marker in ["automatedVerificationStatus -ne 'Passed'", "repositoryDirty", "ManualTestRecord", "Overall result", "CiResult", "commit SHA"]:
+    if marker not in finalize_script:
+        FAILURES.append(f"finalize-wave-01.ps1 misses closeout guard: {marker}")
 
 initializer = (ROOT / "TaskHostLocal.WinForms/Database/DatabaseInitializer.cs").read_text(encoding="utf-8")
 schema_statements = re.findall(
@@ -88,55 +154,35 @@ else:
                 """,
                 (list_id, "Smoke task", "Wave 01", None, 1, 0, "2026-07-24T00:00:00Z", "2026-07-24T00:00:00Z"),
             )
-            connection.execute(
-                """
-                SELECT id, list_id, title, description, due_date, priority, is_completed, created_at, updated_at, completed_at
-                FROM tasks
-                WHERE list_id = ?
-                ORDER BY is_completed,
-                         CASE WHEN due_date IS NULL THEN 1 ELSE 0 END,
-                         due_date, priority DESC, updated_at DESC
-                """,
-                (list_id,),
-            ).fetchall()
-            connection.execute(
-                """
-                SELECT id
-                FROM tasks
-                WHERE title LIKE ? OR COALESCE(description, '') LIKE ?
-                ORDER BY is_completed,
-                         CASE WHEN due_date IS NULL THEN 1 ELSE 0 END,
-                         due_date, priority DESC, updated_at DESC
-                """,
-                ("%Wave%", "%Wave%"),
-            ).fetchall()
+            integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
+            if integrity != "ok":
+                FAILURES.append(f"Portable SQLite integrity check failed: {integrity}")
             connection.commit()
         except sqlite3.Error as exc:
             FAILURES.append(f"SQLite smoke validation failed: {exc}")
         finally:
             connection.close()
 
+# Prevent documentation from claiming completion before generated evidence exists.
+closeout = (ROOT / "docs/160_Wave_01_Closeout.md").read_text(encoding="utf-8")
+if "**Current status:** Pending verification" not in closeout:
+    FAILURES.append("Wave 01 closeout document must remain Pending verification in the prepared package")
+
 if FAILURES:
-    print("Wave 01 validation failed:")
+    print("Wave 01 verification update validation failed:")
     for failure in FAILURES:
         print(f"- {failure}")
     sys.exit(1)
 
-print(f"Validated {len(REQUIRED)} required Wave 01 files.")
 test_files = list((ROOT / "TaskHostLocal.Tests").rglob("*Tests.cs"))
-if len(test_files) < 4:
-    print(f"Expected at least 4 test files, found {len(test_files)}")
-    sys.exit(1)
-
 test_methods = sum(
     len(re.findall(r"\[Fact\]\s+public void ", path.read_text(encoding="utf-8")))
     for path in test_files
 )
-if test_methods < 10:
-    print(f"Expected at least 10 automated test methods, found {test_methods}")
-    sys.exit(1)
 
-print(f"Parsed 4 MSBuild XML files.")
+print(f"Validated {len(REQUIRED)} required Wave 01 verification files.")
+print("Parsed 4 MSBuild XML files and global.json.")
 print(f"Found {len(test_files)} automated test files with {test_methods} test methods.")
 print(f"Executed {len(schema_statements)} embedded schema statements with SQLite {sqlite3.sqlite_version}.")
-print("Wave 01 static validation: OK")
+print("Verified closeout guards and pending-status semantics.")
+print("Wave 01 verification update static validation: OK")

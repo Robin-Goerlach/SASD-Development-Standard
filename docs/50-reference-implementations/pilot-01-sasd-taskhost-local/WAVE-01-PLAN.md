@@ -3,7 +3,7 @@ title: "Pilot 01 Wave 01 – Stabilisierung und Engineering-Basis"
 document-id: SASD-REF-PILOT-107
 document-type: informative
 status: Draft
-version: 0.7.0
+version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -19,6 +19,17 @@ depends-on: [SASD-REF-PILOT-106, SASD-PROC-004, SASD-PROF-DOTNET-008, SASD-PROF-
 ## 1. Ziel
 
 Wave 01 stellt eine startfähige, reproduzierbar baubare und minimal regressionsgeschützte Baseline her. Sie vermeidet Funktionsausbau und größere Architekturänderungen.
+
+
+## 1.1 Aktueller Ausführungsstand
+
+```text
+Implementierungszustand: Artifact Prepared
+Verifikationszustand: Pending
+Ziel-Commit: noch nicht vorhanden
+```
+
+Die Arbeitspakete sind in einem statisch geprüften Overlay vorbereitet. Die Akzeptanzkriterien bleiben bis zur Ausführung des [Verifikationsplans](WAVE-01-VERIFICATION-PLAN.md) offen.
 
 ## 2. Arbeitspakete
 
