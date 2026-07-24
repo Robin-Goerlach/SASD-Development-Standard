@@ -3,7 +3,7 @@ title: "Dokumentkatalog für Version 1.0"
 document-id: SASD-FND-006
 document-type: normative
 status: Proposed
-version: 0.1.0
+version: 0.2.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -34,19 +34,19 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-FND-005 | `docs/00-foundation/CONTENT-ARCHITECTURE.md` | Normativ | Proposed | Struktur, Hierarchie und Dokumentrollen von Version 1.0 | Maintainer, Autoren | FND-001 bis FND-004, GOV-001 bis GOV-003 |
 | SASD-FND-006 | `docs/00-foundation/DOCUMENT-CATALOG.md` | Normativ | Proposed | Vollständiges Inventar der Dokumente für Version 1.0 | Maintainer, Autoren | SASD-FND-005 |
 | SASD-FND-007 | `docs/00-foundation/VERSION-1.0-ACCEPTANCE-CRITERIA.md` | Normativ | Draft | Freigabe- und Fertigstellungskriterien für Version 1.0 | Maintainer, Reviewer | SASD-FND-002, SASD-FND-005 |
-| SASD-CORE-001 | `docs/10-core-standard/PROJECT-LIFECYCLE.md` | Normativ | Planned | Projektphasen von Idee bis Archivierung | Projektverantwortliche | SASD-FND-003 |
-| SASD-CORE-002 | `docs/10-core-standard/REQUIREMENTS.md` | Normativ | Planned | Anforderungen, Scope, Nachverfolgbarkeit und Änderungen | Projektverantwortliche, Entwickler | SASD-CORE-001 |
-| SASD-CORE-003 | `docs/10-core-standard/ARCHITECTURE.md` | Normativ | Planned | Architektur, Modularisierung, Abhängigkeiten und Entscheidungen | Entwickler, Architekten | SASD-CORE-002 |
-| SASD-CORE-004 | `docs/10-core-standard/DOCUMENTATION.md` | Normativ | Planned | Dokumentarten, Pflege und Mindestinhalte | Alle Projektbeteiligten | SASD-CORE-001 |
-| SASD-CORE-005 | `docs/10-core-standard/REPOSITORY.md` | Normativ | Planned | Repository-Aufbau, Git und Plattformkonventionen | Maintainer, Entwickler | SASD-CORE-004 |
-| SASD-CORE-006 | `docs/10-core-standard/QUALITY-LEVELS.md` | Normativ | Planned | Minimum, Recommended und Production | Alle Projektbeteiligten | SASD-FND-002 |
-| SASD-CORE-007 | `docs/10-core-standard/QUALITY.md` | Normativ | Planned | Qualitätsziele, Reviews, statische Analyse und Definition of Done | Entwickler, Reviewer | SASD-CORE-006 |
-| SASD-CORE-008 | `docs/10-core-standard/SECURITY.md` | Normativ | Planned | Sicherheitsgrundlagen, Datenschutz und Supply Chain | Alle Projektbeteiligten | SASD-CORE-002, SASD-CORE-003 |
-| SASD-CORE-009 | `docs/10-core-standard/TESTING.md` | Normativ | Planned | Teststrategie, Testarten und Nachweise | Entwickler, Tester | SASD-CORE-006, SASD-CORE-007 |
-| SASD-CORE-010 | `docs/10-core-standard/RELEASES.md` | Normativ | Planned | Versionierung, Releasequalität und Veröffentlichungen | Maintainer | SASD-CORE-007, SASD-CORE-009 |
-| SASD-CORE-011 | `docs/10-core-standard/MAINTENANCE.md` | Normativ | Planned | Betrieb, Wartung, Updates, Backups und Archivierung | Maintainer, Betreiber | SASD-CORE-010 |
-| SASD-CORE-012 | `docs/10-core-standard/KNOWLEDGE-MANAGEMENT.md` | Normativ | Planned | ADRs, Lessons Learned, Übergaben und Wissenssicherung | Alle Projektbeteiligten | SASD-CORE-004 |
-| SASD-CORE-013 | `docs/10-core-standard/AI-ASSISTED-DEVELOPMENT.md` | Normativ | Planned | Verantwortungsvolle KI-Nutzung und Ergebnisprüfung | Entwickler, Reviewer | SASD-CORE-007, SASD-CORE-008 |
+| SASD-CORE-001 | `docs/10-core-standard/PROJECT-LIFECYCLE.md` | Normativ | Draft | Projektphasen von Idee bis Archivierung | Projektverantwortliche | SASD-FND-002, SASD-FND-003, SASD-CORE-006 |
+| SASD-CORE-002 | `docs/10-core-standard/REQUIREMENTS.md` | Normativ | Draft | Anforderungen, Scope, Nachverfolgbarkeit und Änderungen | Projektverantwortliche, Entwickler | SASD-CORE-001, SASD-CORE-006 |
+| SASD-CORE-003 | `docs/10-core-standard/ARCHITECTURE.md` | Normativ | Draft | Architektur, Modularisierung, Abhängigkeiten und Entscheidungen | Entwickler, Architekten | SASD-CORE-002, SASD-CORE-006, SASD-CORE-008 |
+| SASD-CORE-004 | `docs/10-core-standard/DOCUMENTATION.md` | Normativ | Draft | Dokumentarten, Pflege und Mindestinhalte | Alle Projektbeteiligten | SASD-CORE-001, SASD-CORE-006 |
+| SASD-CORE-005 | `docs/10-core-standard/REPOSITORY.md` | Normativ | Draft | Repository-Aufbau, Git und Plattformkonventionen | Maintainer, Entwickler | SASD-CORE-004, SASD-CORE-006, SASD-CORE-008, SASD-CORE-010 |
+| SASD-CORE-006 | `docs/10-core-standard/QUALITY-LEVELS.md` | Normativ | Draft | Minimum, Recommended und Production | Alle Projektbeteiligten | SASD-FND-002, SASD-GOV-006, SASD-GOV-007 |
+| SASD-CORE-007 | `docs/10-core-standard/QUALITY.md` | Normativ | Draft | Qualitätsziele, Reviews, statische Analyse und Definition of Done | Entwickler, Reviewer | SASD-CORE-002, SASD-CORE-003, SASD-CORE-006, SASD-CORE-009 |
+| SASD-CORE-008 | `docs/10-core-standard/SECURITY.md` | Normativ | Draft | Sicherheitsgrundlagen, Datenschutz und Supply Chain | Alle Projektbeteiligten | SASD-CORE-002, SASD-CORE-003, SASD-CORE-006, SASD-CORE-007 |
+| SASD-CORE-009 | `docs/10-core-standard/TESTING.md` | Normativ | Draft | Teststrategie, Testarten und Nachweise | Entwickler, Tester | SASD-CORE-002, SASD-CORE-006, SASD-CORE-007, SASD-CORE-008 |
+| SASD-CORE-010 | `docs/10-core-standard/RELEASES.md` | Normativ | Draft | Versionierung, Releasequalität und Veröffentlichungen | Maintainer | SASD-CORE-005, SASD-CORE-007, SASD-CORE-008, SASD-CORE-009 |
+| SASD-CORE-011 | `docs/10-core-standard/MAINTENANCE.md` | Normativ | Draft | Betrieb, Wartung, Updates, Backups und Archivierung | Maintainer, Betreiber | SASD-CORE-006, SASD-CORE-008, SASD-CORE-009, SASD-CORE-010, SASD-CORE-012 |
+| SASD-CORE-012 | `docs/10-core-standard/KNOWLEDGE-MANAGEMENT.md` | Normativ | Draft | ADRs, Lessons Learned, Übergaben und Wissenssicherung | Alle Projektbeteiligten | SASD-CORE-003, SASD-CORE-004, SASD-CORE-006, SASD-CORE-011 |
+| SASD-CORE-013 | `docs/10-core-standard/AI-ASSISTED-DEVELOPMENT.md` | Normativ | Draft | Verantwortungsvolle KI-Nutzung und Ergebnisprüfung | Entwickler, Reviewer | SASD-CORE-002, SASD-CORE-004, SASD-CORE-006 bis SASD-CORE-009, SASD-CORE-012 |
 | SASD-PROF-DOTNET-001 | `docs/20-profiles/dotnet/DOTNET-PROFILE.md` | Normativ | Planned | Geltungsbereich und Anwendung des .NET-Profils | C#/.NET-Entwickler | SASD-CORE-* |
 | SASD-PROF-DOTNET-002 | `docs/20-profiles/dotnet/SOLUTION-STRUCTURE.md` | Normativ | Planned | Solution-, Projekt- und Abhängigkeitsstruktur | C#/.NET-Entwickler | DOTNET-001, CORE-003 |
 | SASD-PROF-DOTNET-003 | `docs/20-profiles/dotnet/CODING-STANDARD.md` | Normativ | Planned | C#-Konventionen, Kommentare und Analyzer | C#/.NET-Entwickler | DOTNET-001, CORE-007 |

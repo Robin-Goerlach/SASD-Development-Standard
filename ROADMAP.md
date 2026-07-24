@@ -13,12 +13,17 @@
 
 ## Phase 1 — Core Standard
 
-- [ ] Define quality levels and project classification.
-- [ ] Define the project lifecycle and requirements management.
-- [ ] Define documentation and repository requirements.
-- [ ] Define architecture and decision-record requirements.
-- [ ] Define quality, testing, security, release, and maintenance requirements.
-- [ ] Define knowledge management and AI-assisted development requirements.
+- [x] Draft the quality-level model.
+- [x] Draft the project lifecycle and requirements management rules.
+- [x] Draft documentation and repository requirements.
+- [x] Draft architecture and decision-record requirements.
+- [x] Draft quality, testing, security, release, and maintenance requirements.
+- [x] Draft knowledge-management and AI-assisted-development requirements.
+- [x] Add stable Core requirement IDs and validation tooling.
+- [x] Add initial operational templates and Core adoption checklists.
+- [ ] Review proportionality across Minimum, Recommended, and Production.
+- [ ] Resolve duplicated or conflicting Core requirements.
+- [ ] Move the Core documents from Draft to Proposed.
 
 ## Phase 2 — First Profiles
 

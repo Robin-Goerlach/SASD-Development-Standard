@@ -12,6 +12,8 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 6. [Normative Sprache](40-governance/NORMATIVE-LANGUAGE.md)
 7. [Dokumentlebenszyklus](40-governance/DOCUMENT-LIFECYCLE.md)
 8. [Dokumentmetadaten](40-governance/DOCUMENT-METADATA.md)
+9. [Core Standard](10-core-standard/README.md)
+10. [Qualitätsstufen](10-core-standard/QUALITY-LEVELS.md)
 
 ## Dokumentgruppen
 

@@ -1,6 +1,6 @@
 SASD Development Standard repository manifest
 Generated: 2026-07-24
-File count: 98
+File count: 109
 
 .editorconfig
 .github/ISSUE_TEMPLATE/config.yml
@@ -22,8 +22,10 @@ ROADMAP.md
 SECURITY.md
 artefacts/README.md
 artefacts/publications/README.md
+checklists/development/DEFINITION-OF-DONE-CHECKLIST.md
 checklists/development/DOCUMENT-REVIEW-CHECKLIST.md
 checklists/development/MILESTONE-CHECKLIST.md
+checklists/project-initiation/CORE-STANDARD-ADOPTION-CHECKLIST.md
 checklists/project-initiation/NEW-PROJECT-CHECKLIST.md
 checklists/releases/RELEASE-CHECKLIST.md
 checklists/security/SECURITY-BASELINE-CHECKLIST.md
@@ -42,6 +44,7 @@ docs/10-core-standard/MAINTENANCE.md
 docs/10-core-standard/PROJECT-LIFECYCLE.md
 docs/10-core-standard/QUALITY-LEVELS.md
 docs/10-core-standard/QUALITY.md
+docs/10-core-standard/README.md
 docs/10-core-standard/RELEASES.md
 docs/10-core-standard/REPOSITORY.md
 docs/10-core-standard/REQUIREMENTS.md
@@ -90,13 +93,21 @@ prompts/project-initiation/PROJECT-INITIALIZATION-PROMPT.md
 prompts/release/README.md
 prompts/review/README.md
 templates/architecture-decisions/ADR-TEMPLATE.md
+templates/documents/ARCHITECTURE-TEMPLATE.md
 templates/documents/INFORMATIVE-DOCUMENT-TEMPLATE.md
+templates/documents/MAINTENANCE-PLAN-TEMPLATE.md
 templates/documents/NORMATIVE-DOCUMENT-TEMPLATE.md
+templates/documents/PROJECT-BRIEF-TEMPLATE.md
 templates/documents/README-TEMPLATE.md
+templates/documents/RELEASE-NOTES-TEMPLATE.md
+templates/documents/REQUIREMENTS-TEMPLATE.md
 templates/documents/ROADMAP-TEMPLATE.md
 templates/documents/SASD-COMPLIANCE-TEMPLATE.md
+templates/documents/SECURITY-PLAN-TEMPLATE.md
+templates/documents/TEST-STRATEGY-TEMPLATE.md
 templates/prompts/PROMPT-METADATA-TEMPLATE.md
 templates/repositories/REPOSITORY-METADATA-TEMPLATE.md
 tooling/README.md
+tooling/validate-core-requirements.py
 tooling/validate-document-metadata.py
 tooling/validate-markdown-links.py

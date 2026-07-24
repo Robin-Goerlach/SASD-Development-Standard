@@ -3,7 +3,7 @@ title: "Normative Sprache"
 document-id: SASD-GOV-001
 document-type: normative
 status: Proposed
-version: 0.1.0
+version: 0.2.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -43,13 +43,27 @@ Dieses Dokument legt fest, wie Verbindlichkeit im SASD Development Standard ausg
 
 **KANN** bezeichnet eine optionale Möglichkeit. Die Umsetzung oder Nichtumsetzung beeinflusst die Compliance nicht, sofern keine andere Anforderung daraus eine Pflicht ableitet.
 
-## 3. Nicht normative Formulierungen
+## 3. Grammatische Varianten in der deutschen Fassung
+
+Die Metadaten verwenden die kanonischen Singularformen `MUSS`, `DARF NICHT`, `SOLLTE`, `SOLLTE NICHT` und `KANN`. In deutschen Sätzen besitzen die folgenden großgeschriebenen Flexionsformen dieselbe normative Bedeutung:
+
+| Kanonische Form | Gleichwertige grammatische Form |
+|---|---|
+| MUSS | MÜSSEN |
+| DARF NICHT | DÜRFEN NICHT |
+| SOLLTE | SOLLTEN |
+| SOLLTE NICHT | SOLLTEN NICHT |
+| KANN | KÖNNEN |
+
+Kleingeschriebene Verwendungen sind nur dann normativ, wenn der unmittelbare Kontext eindeutig auf eine bereits identifizierte normative Anforderung verweist. Neue Anforderungen SOLLTEN die großgeschriebenen Formen verwenden.
+
+## 4. Nicht normative Formulierungen
 
 Formulierungen wie „beispielsweise“, „typischerweise“, „könnte“, „möglich“, „Hinweis“ oder „Empfehlung“ setzen ohne ein normatives Schlüsselwort keine eigenständige Verpflichtung.
 
 Informative Beispiele dürfen Anforderungen erläutern, aber nicht erweitern.
 
-## 4. Anforderungen und Qualitätsstufen
+## 5. Anforderungen und Qualitätsstufen
 
 Eine Anforderung kann für eine oder mehrere Qualitätsstufen gelten. Die Zuordnung MUSS im Dokument oder in einer eindeutig referenzierten Anforderungstabelle erfolgen.
 
@@ -60,7 +74,7 @@ Beispiel:
 | README vorhanden | MUSS | MUSS | MUSS |
 | automatisierter Releaseprozess | KANN | SOLLTE | MUSS |
 
-## 5. Anforderungen und Profile
+## 6. Anforderungen und Profile
 
 Ein Profil darf eine allgemeine Anforderung präzisieren oder verschärfen. Es DARF sie nur dann abweichend regeln, wenn:
 
@@ -69,7 +83,7 @@ Ein Profil darf eine allgemeine Anforderung präzisieren oder verschärfen. Es D
 3. der Geltungsbereich eindeutig ist,
 4. keine stillschweigende Abschwächung entsteht.
 
-## 6. Nachweisbarkeit
+## 7. Nachweisbarkeit
 
 Jede MUSS- oder DARF-NICHT-Anforderung SOLLTE einen prüfbaren Nachweis besitzen. Beispiele sind:
 
@@ -81,7 +95,7 @@ Jede MUSS- oder DARF-NICHT-Anforderung SOLLTE einen prüfbaren Nachweis besitzen
 - Architekturentscheidung,
 - Freigabe oder dokumentierte Abweichung.
 
-## 7. Sprachfassungen
+## 8. Sprachfassungen
 
 In der englischen Ausgabe entsprechen die Begriffe:
 

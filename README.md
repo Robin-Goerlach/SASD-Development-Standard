@@ -117,9 +117,10 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 2. Review the [`Version 1.0 Scope`](docs/00-foundation/SCOPE.md).
 3. Review the [`Content Architecture`](docs/00-foundation/CONTENT-ARCHITECTURE.md) and [`Document Catalog`](docs/00-foundation/DOCUMENT-CATALOG.md).
 4. Read the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
-5. Follow the [`Roadmap`](ROADMAP.md).
-6. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md) when starting a project.
-7. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
+5. Review the [`Core Standard`](docs/10-core-standard/README.md), starting with the [`Quality Levels`](docs/10-core-standard/QUALITY-LEVELS.md).
+6. Follow the [`Roadmap`](ROADMAP.md).
+7. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md) when starting a project.
+8. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
 
 ## Normative language
 
@@ -133,15 +134,15 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 ## Project status
 
-The project is currently in the **foundation and architecture phase**. Documents marked as drafts are not yet stable requirements.
+The project is currently in the **Core Standard draft phase**. The complete technology-independent Core Standard is available as Draft 0.2.0; Draft and Proposed documents are not yet stable requirements.
 
 Current priorities:
 
-1. review and approve the proposed Version 1.0 content architecture,
-2. approve normative language, document lifecycle, and metadata rules,
-3. define quality levels and project classification,
-4. develop the technology-independent core standard,
-5. create and pilot the C#/.NET and desktop profiles.
+1. review the Core Standard for consistency, proportionality, and verifiability,
+2. move Foundation, Governance, and Core documents from Draft or Proposed toward approval,
+3. complete project classification and operational process documents,
+4. create the C#/.NET profile,
+5. create the desktop profile and begin pilot migrations.
 
 ## Language
 

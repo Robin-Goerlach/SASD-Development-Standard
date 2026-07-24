@@ -33,3 +33,13 @@ python tooling/validate-markdown-links.py
 ```
 
 The script checks relative Markdown links and reports missing files or links that leave the repository. External URLs and page anchors are intentionally ignored.
+
+## Core requirement validation
+
+Run:
+
+```bash
+python tooling/validate-core-requirements.py
+```
+
+The validator checks the presence and uniqueness of Core requirement IDs.
