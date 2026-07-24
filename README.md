@@ -119,9 +119,10 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 4. Read the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
 5. Review the [`Core Standard`](docs/10-core-standard/README.md), starting with the [`Quality Levels`](docs/10-core-standard/QUALITY-LEVELS.md).
 6. Review the [`C#/.NET Profile`](docs/20-profiles/dotnet/README.md) when working on a .NET project.
-7. Follow the [`Roadmap`](ROADMAP.md).
-8. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md) and the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md) when starting a .NET project.
-9. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
+7. Apply the [`Desktop Application Profile`](docs/20-profiles/desktop/README.md) for WinForms or WPF applications.
+8. Follow the [`Roadmap`](ROADMAP.md).
+9. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
+10. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
 
 ## Normative language
 
@@ -135,14 +136,14 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 ## Project status
 
-The project is currently in the **profile-development and pilot-preparation phase**. All 13 technology-independent Core documents are available as Proposed 0.3.0, and the eight-document C#/.NET Profile is available as Proposed 0.4.0. Proposed documents are pilot-ready candidates, not yet stable Version 1.0 requirements.
+The project is currently in the **pilot-preparation and process-development phase**. All 13 technology-independent Core documents are available as Proposed 0.3.0, the eight-document C#/.NET Profile as Proposed 0.4.0, and the four-document Desktop Application Profile as Proposed 0.5.0. Proposed documents are pilot-ready candidates, not yet stable Version 1.0 requirements.
 
 Current priorities:
 
-1. create the desktop application profile against the Proposed Core and .NET Profile,
-2. complete project classification and operational process documents,
-3. prepare reusable .NET repository templates and CI after pilot feedback,
-4. pilot the Proposed Core and .NET Profile on small, medium, and complex SASD projects,
+1. complete project classification and operational process documents,
+2. pilot Core, C#/.NET and Desktop profiles on selected SASD applications,
+3. refine repository templates, CI and assessment tooling from pilot feedback,
+4. document reference implementations and lessons learned,
 5. move Foundation, Governance, Core, and profiles toward approval.
 
 ## Language

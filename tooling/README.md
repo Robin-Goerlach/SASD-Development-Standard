@@ -68,3 +68,18 @@ Checks the eight Proposed 0.4.0 profile documents, allocated requirement-ID rang
 ### `generate-dotnet-requirements-index.py`
 
 Generates `docs/20-profiles/dotnet/DOTNET-REQUIREMENTS-INDEX.md` from the normative requirement tables.
+
+## Desktop profile checks
+
+```bash
+python tooling/validate-desktop-profile.py
+python tooling/generate-desktop-requirements-index.py --check
+```
+
+### `validate-desktop-profile.py`
+
+Checks the four Proposed 0.5.0 Desktop documents, requirement-ID ranges, normative keywords, duplicates, required sections, generated index and the WinForms/WPF project templates.
+
+### `generate-desktop-requirements-index.py`
+
+Generates `docs/20-profiles/desktop/DESKTOP-REQUIREMENTS-INDEX.md` from the normative requirement tables.

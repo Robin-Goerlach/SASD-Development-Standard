@@ -18,6 +18,8 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 12. [Leitfaden für Einzelentwickler](10-core-standard/SOLO-DEVELOPER-GUIDE.md)
 13. [C#/.NET Profile](20-profiles/dotnet/README.md)
 14. [C#/.NET Profile Review 0.4.0](20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md)
+15. [Desktop Application Profile](20-profiles/desktop/README.md)
+16. [Desktop Profile Review 0.5.0](20-profiles/desktop/DESKTOP-PROFILE-REVIEW-0.5.0.md)
 
 ## Dokumentgruppen
 

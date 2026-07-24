@@ -55,10 +55,10 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-PROF-DOTNET-006 | `docs/20-profiles/dotnet/CONFIGURATION.md` | Normativ | Proposed | Konfiguration, Optionen, Umgebungen und Secrets | C#/.NET-Entwickler | CORE-008 |
 | SASD-PROF-DOTNET-007 | `docs/20-profiles/dotnet/PERSISTENCE.md` | Normativ | Proposed | Persistenz, Migrationen und Datenintegrität | C#/.NET-Entwickler | DOTNET-002, CORE-003 |
 | SASD-PROF-DOTNET-008 | `docs/20-profiles/dotnet/DOTNET-TESTING.md` | Normativ | Proposed | Teststruktur und .NET-Testwerkzeuge | C#/.NET-Entwickler | CORE-009, DOTNET-002 |
-| SASD-PROF-DESKTOP-001 | `docs/20-profiles/desktop/DESKTOP-PROFILE.md` | Normativ | Planned | Geltungsbereich des Desktopprofils | Desktopentwickler | SASD-PROF-DOTNET-001 |
-| SASD-PROF-DESKTOP-002 | `docs/20-profiles/desktop/UI-ARCHITECTURE.md` | Normativ | Planned | UI-Schichten, Zuständigkeiten und Navigation | Desktopentwickler | DESKTOP-001, CORE-003 |
-| SASD-PROF-DESKTOP-003 | `docs/20-profiles/desktop/USER-EXPERIENCE.md` | Normativ | Planned | Bedienbarkeit, Barrierefreiheit und konsistente Interaktion | Desktopentwickler | DESKTOP-001 |
-| SASD-PROF-DESKTOP-004 | `docs/20-profiles/desktop/APPLICATION-LIFECYCLE.md` | Normativ | Planned | Start, Shutdown, Single Instance, Updates und Diagnose | Desktopentwickler | DESKTOP-001, DOTNET-004 bis 006 |
+| SASD-PROF-DESKTOP-001 | `docs/20-profiles/desktop/DESKTOP-PROFILE.md` | Normativ | Proposed | Geltungsbereich des Desktopprofils | Desktopentwickler | SASD-PROF-DOTNET-001 |
+| SASD-PROF-DESKTOP-002 | `docs/20-profiles/desktop/UI-ARCHITECTURE.md` | Normativ | Proposed | UI-Schichten, Zuständigkeiten und Navigation | Desktopentwickler | DESKTOP-001, CORE-003 |
+| SASD-PROF-DESKTOP-003 | `docs/20-profiles/desktop/USER-EXPERIENCE.md` | Normativ | Proposed | Bedienbarkeit, Barrierefreiheit und konsistente Interaktion | Desktopentwickler | DESKTOP-001 |
+| SASD-PROF-DESKTOP-004 | `docs/20-profiles/desktop/APPLICATION-LIFECYCLE.md` | Normativ | Proposed | Start, Shutdown, Single Instance, Updates und Diagnose | Desktopentwickler | DESKTOP-001, DOTNET-004 bis 006 |
 | SASD-PROC-001 | `docs/30-processes/NEW-PROJECT.md` | Normativ | Planned | Wiederholbarer Start eines neuen Projekts | Projektverantwortliche | CORE-001, CORE-002 |
 | SASD-PROC-002 | `docs/30-processes/PROJECT-CLASSIFICATION.md` | Normativ | Planned | Auswahl von Qualitätsstufe und Profilen | Projektverantwortliche | CORE-006 |
 | SASD-PROC-003 | `docs/30-processes/ARCHITECTURE-DECISION-PROCESS.md` | Normativ | Planned | Erstellen, Prüfen und Pflegen von ADRs | Entwickler, Architekten | CORE-003, CORE-012 |
@@ -83,6 +83,13 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-REF-DOTNET-003 | `docs/20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md` | Informativ | Draft | Reviewnachweis für Proposed 0.4.0 | Maintainer, Reviewer | DOTNET-001 bis DOTNET-008 |
 | SASD-REF-DOTNET-004 | `docs/20-profiles/dotnet/DOTNET-REQUIREMENTS-INDEX.md` | Informativ, erzeugt | Draft | Index aller .NET-Profilanforderungen | Anwender, Tooling | SASD-PROF-DOTNET-* |
 | SASD-REF-DOTNET-005 | `docs/20-profiles/dotnet/DOTNET-QUALITY-LEVEL-MATRIX.md` | Informativ | Draft | Konsolidierte Qualitätsstufensicht des .NET-Profils | Anwender, Reviewer | DOTNET-001 bis DOTNET-008 |
+| SASD-REF-DESKTOP-001 | `docs/20-profiles/desktop/DESKTOP-REFERENCE-BASELINE.md` | Informativ | Draft | Primärquellen und technische Basis des Desktopprofils | Desktopentwickler, Reviewer | DESKTOP-001 |
+| SASD-REF-DESKTOP-002 | `docs/20-profiles/desktop/WINDOWS-FORMS-GUIDANCE.md` | Informativ | Draft | Pragmatische Umsetzung mit WinForms | WinForms-Entwickler | DESKTOP-001 bis DESKTOP-004 |
+| SASD-REF-DESKTOP-003 | `docs/20-profiles/desktop/WPF-GUIDANCE.md` | Informativ | Draft | Pragmatische Umsetzung mit WPF | WPF-Entwickler | DESKTOP-001 bis DESKTOP-004 |
+| SASD-REF-DESKTOP-004 | `docs/20-profiles/desktop/DESKTOP-PROJECT-SIZING-GUIDE.md` | Informativ | Draft | Proportionale Desktop-Projektmodelle | Einzelentwickler, Architekten | DESKTOP-001, DESKTOP-002 |
+| SASD-REF-DESKTOP-005 | `docs/20-profiles/desktop/DESKTOP-PROFILE-REVIEW-0.5.0.md` | Informativ | Draft | Reviewnachweis für Proposed 0.5.0 | Maintainer, Reviewer | DESKTOP-001 bis DESKTOP-004 |
+| SASD-REF-DESKTOP-006 | `docs/20-profiles/desktop/DESKTOP-REQUIREMENTS-INDEX.md` | Informativ, erzeugt | Draft | Index aller Desktopanforderungen | Anwender, Tooling | SASD-PROF-DESKTOP-* |
+| SASD-REF-DESKTOP-007 | `docs/20-profiles/desktop/DESKTOP-QUALITY-LEVEL-MATRIX.md` | Informativ | Draft | Konsolidierte Qualitätsstufensicht des Desktopprofils | Anwender, Reviewer | DESKTOP-001 bis DESKTOP-004 |
 | SASD-REF-006 | `docs/10-core-standard/CORE-QUALITY-LEVEL-MATRIX.md` | Informativ, erzeugt | Draft | Vergleich aller Qualitätsstufentabellen | Anwender, Reviewer | SASD-CORE-* |
 
 ## 3. Unterstützende Artefakte für Version 1.0

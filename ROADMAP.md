@@ -32,7 +32,7 @@
 ## Phase 2 — First Profiles
 
 - [x] Create the C#/.NET profile.
-- [ ] Create the desktop application profile.
+- [x] Create the desktop application profile.
 - [x] Define the standard .NET repository and solution structures.
 - [x] Define .NET coding, logging, configuration, persistence, testing, and error-handling rules.
 
@@ -42,7 +42,8 @@
 - [ ] Complete checklists.
 - [ ] Create prompt packages for the SASD Prompt Manager.
 - [x] Add initial reusable `.editorconfig`, MSBuild, package-management, SDK, and CI templates.
-- [ ] Refine reusable templates after .NET pilot feedback.
+- [x] Add initial WinForms and WPF project templates, desktop checklists, and deployment templates.
+- [ ] Refine reusable templates after .NET and Desktop pilot feedback.
 - [ ] Extend repository validation tooling and add CI after rules are approved.
 
 ## Phase 4 — Pilot Projects
