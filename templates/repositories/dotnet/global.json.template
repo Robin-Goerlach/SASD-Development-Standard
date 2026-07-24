@@ -1,0 +1,7 @@
+{
+  "sdk": {
+    "version": "__DOTNET_SDK_VERSION__",
+    "rollForward": "latestFeature",
+    "allowPrerelease": false
+  }
+}

@@ -16,6 +16,8 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 10. [Qualitätsstufen und Anwendbarkeit](10-core-standard/QUALITY-LEVELS.md)
 11. [Core Standard Review 0.3.0](10-core-standard/CORE-STANDARD-REVIEW-0.3.0.md)
 12. [Leitfaden für Einzelentwickler](10-core-standard/SOLO-DEVELOPER-GUIDE.md)
+13. [C#/.NET Profile](20-profiles/dotnet/README.md)
+14. [C#/.NET Profile Review 0.4.0](20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md)
 
 ## Dokumentgruppen
 

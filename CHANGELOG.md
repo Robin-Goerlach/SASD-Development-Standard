@@ -8,6 +8,13 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Complete Proposed 0.4.0 C#/.NET Profile covering SDK and runtime baseline, solution structure, coding conventions, error handling, logging, configuration, persistence, and testing.
+- 277 stable C#/.NET profile requirement IDs with generated requirement index and curated quality-level matrix.
+- .NET Reference Baseline, project sizing guidance, and documented profile review.
+- Initial `Directory.Build.props`, `Directory.Packages.props`, `global.json`, `.editorconfig`, and GitHub Actions templates for .NET repositories.
+- .NET adoption and code-review checklists, profile assessment template, review prompt, and proportional structure examples.
+- Dependency-free .NET profile validator and requirements-index generator.
+
 - Core responsibility map separating primary ownership from intentional cross-cutting controls.
 - Solo-developer guide with compact artefact sets, role combination, and self-review practices.
 - Documented Core Standard consistency and proportionality review for Proposed 0.3.0.
@@ -22,6 +29,9 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+
+- Moved all eight C#/.NET profile documents from Planned 0.1.0 to Proposed 0.4.0.
+- Updated repository navigation, document catalog, roadmap, tooling documentation, and repository manifest for the .NET profile.
 
 - Moved all 13 Core documents from Draft 0.2.0 to Proposed 0.3.0 after consistency and proportionality review.
 - Defined explicit applicability, quality-level precedence, profile hierarchy, `Not Applicable` evidence, and solo-developer role rules.

@@ -1,0 +1,21 @@
+name: .NET CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@__CHECKOUT_ACTION_SHA__
+      - uses: actions/setup-dotnet@__SETUP_DOTNET_ACTION_SHA__
+        with:
+          dotnet-version: '__DOTNET_SDK_CHANNEL__'
+      - run: dotnet restore
+      - run: dotnet build --no-restore --configuration Release
+      - run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test-results.trx"

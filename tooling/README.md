@@ -52,3 +52,19 @@ Mit `--check` prüfen die Generatoren, ob die committed Fassungen aktuell sind.
 ## Perspektive
 
 Spätere Werkzeuge können Repository-Initialisierung, .NET-Basiskonfiguration, Compliance-Matrizen, Publikation und Releaseprüfungen unterstützen. Automatisierung wird erst verbindlich, wenn die zugrunde liegenden Regeln Approved sind.
+
+
+## C#/.NET profile checks
+
+```bash
+python tooling/validate-dotnet-profile.py
+python tooling/generate-dotnet-requirements-index.py --check
+```
+
+### `validate-dotnet-profile.py`
+
+Checks the eight Proposed 0.4.0 profile documents, allocated requirement-ID ranges, normative keywords, exact duplicates, required sections and the generated index.
+
+### `generate-dotnet-requirements-index.py`
+
+Generates `docs/20-profiles/dotnet/DOTNET-REQUIREMENTS-INDEX.md` from the normative requirement tables.

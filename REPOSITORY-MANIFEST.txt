@@ -1,7 +1,8 @@
-SASD Development Standard - Repository Manifest
-Generated: 2026-07-24
-Files (including this manifest): 120
+# Repository Manifest
 
+Generated: 2026-07-24
+
+```text
 .editorconfig
 .github/ISSUE_TEMPLATE/config.yml
 .github/ISSUE_TEMPLATE/documentation.yml
@@ -17,6 +18,7 @@ GITHUB-SETUP.md
 LICENSE
 README.md
 REPOSITORY-DESCRIPTION.txt
+REPOSITORY-MANIFEST.txt
 ROADMAP.md
 SECURITY.md
 artefacts/README.md
@@ -24,8 +26,10 @@ artefacts/publications/README.md
 checklists/development/CORE-STANDARD-SELF-REVIEW-CHECKLIST.md
 checklists/development/DEFINITION-OF-DONE-CHECKLIST.md
 checklists/development/DOCUMENT-REVIEW-CHECKLIST.md
+checklists/development/DOTNET-CODE-REVIEW-CHECKLIST.md
 checklists/development/MILESTONE-CHECKLIST.md
 checklists/project-initiation/CORE-STANDARD-ADOPTION-CHECKLIST.md
+checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md
 checklists/project-initiation/NEW-PROJECT-CHECKLIST.md
 checklists/releases/RELEASE-CHECKLIST.md
 checklists/security/SECURITY-BASELINE-CHECKLIST.md
@@ -64,7 +68,12 @@ docs/20-profiles/desktop/UI-ARCHITECTURE.md
 docs/20-profiles/desktop/USER-EXPERIENCE.md
 docs/20-profiles/dotnet/CODING-STANDARD.md
 docs/20-profiles/dotnet/CONFIGURATION.md
+docs/20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md
 docs/20-profiles/dotnet/DOTNET-PROFILE.md
+docs/20-profiles/dotnet/DOTNET-PROJECT-SIZING-GUIDE.md
+docs/20-profiles/dotnet/DOTNET-QUALITY-LEVEL-MATRIX.md
+docs/20-profiles/dotnet/DOTNET-REFERENCE-BASELINE.md
+docs/20-profiles/dotnet/DOTNET-REQUIREMENTS-INDEX.md
 docs/20-profiles/dotnet/DOTNET-TESTING.md
 docs/20-profiles/dotnet/ERROR-HANDLING.md
 docs/20-profiles/dotnet/LOGGING.md
@@ -91,11 +100,16 @@ docs/40-governance/VERSIONING.md
 docs/50-reference-implementations/README.md
 docs/README.md
 examples/README.md
+examples/dotnet/README.md
+examples/dotnet/complex-product/README.md
+examples/dotnet/maintained-application/README.md
+examples/dotnet/small-tool/README.md
 prompts/architecture/README.md
 prompts/debugging/README.md
 prompts/development/README.md
 prompts/project-initiation/PROJECT-INITIALIZATION-PROMPT.md
 prompts/release/README.md
+prompts/review/DOTNET-PROFILE-REVIEW-PROMPT.md
 prompts/review/README.md
 templates/architecture-decisions/ADR-TEMPLATE.md
 templates/documents/ARCHITECTURE-TEMPLATE.md
@@ -110,15 +124,24 @@ templates/documents/RELEASE-NOTES-TEMPLATE.md
 templates/documents/REQUIREMENTS-TEMPLATE.md
 templates/documents/ROADMAP-TEMPLATE.md
 templates/documents/SASD-COMPLIANCE-TEMPLATE.md
+templates/documents/SASD-DOTNET-COMPLIANCE-TEMPLATE.md
 templates/documents/SECURITY-PLAN-TEMPLATE.md
 templates/documents/TEST-STRATEGY-TEMPLATE.md
 templates/prompts/PROMPT-METADATA-TEMPLATE.md
+templates/repositories/README.md
 templates/repositories/REPOSITORY-METADATA-TEMPLATE.md
+templates/repositories/dotnet/Directory.Build.props
+templates/repositories/dotnet/Directory.Packages.props
+templates/repositories/dotnet/dotnet-ci.yml.template
+templates/repositories/dotnet/editorconfig-dotnet.template
+templates/repositories/dotnet/global.json.template
 tooling/README.md
 tooling/generate-core-quality-matrix.py
 tooling/generate-core-requirements-index.py
+tooling/generate-dotnet-requirements-index.py
 tooling/validate-core-consistency.py
 tooling/validate-core-requirements.py
 tooling/validate-document-metadata.py
+tooling/validate-dotnet-profile.py
 tooling/validate-markdown-links.py
-REPOSITORY-MANIFEST.txt
+```

@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Example:
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="__VERSION__" />
+    <PackageVersion Include="xunit" Version="__VERSION__" />
+    -->
+  </ItemGroup>
+</Project>
