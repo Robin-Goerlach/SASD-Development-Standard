@@ -1,45 +1,54 @@
 # Tooling
 
-This directory contains small tools and reusable configuration files that support the SASD Development Standard.
+Dieses Verzeichnis enthält kleine, dependency-free Prüf- und Generierungswerkzeuge für das Standard-Repository.
 
-## Document metadata validator
-
-Run from the repository root:
+## Prüfungen
 
 ```bash
 python tooling/validate-document-metadata.py
-```
-
-The script checks standard documents for:
-
-- YAML front matter,
-- required metadata fields,
-- known document types and lifecycle states,
-- valid document IDs,
-- duplicate document IDs,
-- ISO-formatted update dates.
-
-The validator has no external Python dependencies. It intentionally validates only the simple top-level metadata format used by this repository.
-
-Automated GitHub workflows will be added only after the corresponding rules are approved.
-
-
-## Markdown link validator
-
-Run from the repository root:
-
-```bash
 python tooling/validate-markdown-links.py
+python tooling/validate-core-requirements.py
+python tooling/validate-core-consistency.py
 ```
 
-The script checks relative Markdown links and reports missing files or links that leave the repository. External URLs and page anchors are intentionally ignored.
+### `validate-document-metadata.py`
 
-## Core requirement validation
+Prüft Front Matter, Dokument-IDs, Statuswerte und Dokumentabhängigkeiten.
 
-Run:
+### `validate-markdown-links.py`
+
+Prüft relative Markdown-Links innerhalb des Repositories.
+
+### `validate-core-requirements.py`
+
+Prüft Vorhandensein und Eindeutigkeit der Core-Anforderungs-IDs.
+
+### `validate-core-consistency.py`
+
+Prüft zusätzlich:
+
+- Proposed-Status und Version 0.3.0 aller Core-Dokumente,
+- erwartete Abschnittsrollen,
+- normative Schlüsselwörter in Requirement-Zeilen,
+- exakte dokumentübergreifende Textduplikate,
+- veraltete Compliance-Begriffe,
+- Platzhalter wie TODO oder TBD,
+- Aktualität der erzeugten Core-Übersichten.
+
+## Erzeugte Übersichten
 
 ```bash
-python tooling/validate-core-requirements.py
+python tooling/generate-core-requirements-index.py
+python tooling/generate-core-quality-matrix.py
 ```
 
-The validator checks the presence and uniqueness of Core requirement IDs.
+Die erzeugten Dateien sind informativ und werden nicht manuell bearbeitet:
+
+- `docs/10-core-standard/CORE-REQUIREMENTS-INDEX.md`
+- `docs/10-core-standard/CORE-QUALITY-LEVEL-MATRIX.md`
+
+Mit `--check` prüfen die Generatoren, ob die committed Fassungen aktuell sind.
+
+## Perspektive
+
+Spätere Werkzeuge können Repository-Initialisierung, .NET-Basiskonfiguration, Compliance-Matrizen, Publikation und Releaseprüfungen unterstützen. Automatisierung wird erst verbindlich, wenn die zugrunde liegenden Regeln Approved sind.

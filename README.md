@@ -134,15 +134,15 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 ## Project status
 
-The project is currently in the **Core Standard draft phase**. The complete technology-independent Core Standard is available as Draft 0.2.0; Draft and Proposed documents are not yet stable requirements.
+The project is currently in the **Core Standard proposal and profile-development phase**. All 13 technology-independent Core documents are available as Proposed 0.3.0 after a documented consistency and proportionality review. Proposed documents are release candidates, not yet stable Version 1.0 requirements.
 
 Current priorities:
 
-1. review the Core Standard for consistency, proportionality, and verifiability,
-2. move Foundation, Governance, and Core documents from Draft or Proposed toward approval,
+1. create the C#/.NET profile against the Proposed Core,
+2. create the desktop application profile,
 3. complete project classification and operational process documents,
-4. create the C#/.NET profile,
-5. create the desktop profile and begin pilot migrations.
+4. pilot the Proposed Core on small, medium, and complex SASD projects,
+5. move Foundation, Governance, Core, and profiles toward approval.
 
 ## Language
 

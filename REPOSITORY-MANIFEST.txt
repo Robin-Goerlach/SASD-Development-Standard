@@ -1,6 +1,6 @@
-SASD Development Standard repository manifest
+SASD Development Standard - Repository Manifest
 Generated: 2026-07-24
-File count: 109
+Files (including this manifest): 120
 
 .editorconfig
 .github/ISSUE_TEMPLATE/config.yml
@@ -17,11 +17,11 @@ GITHUB-SETUP.md
 LICENSE
 README.md
 REPOSITORY-DESCRIPTION.txt
-REPOSITORY-MANIFEST.txt
 ROADMAP.md
 SECURITY.md
 artefacts/README.md
 artefacts/publications/README.md
+checklists/development/CORE-STANDARD-SELF-REVIEW-CHECKLIST.md
 checklists/development/DEFINITION-OF-DONE-CHECKLIST.md
 checklists/development/DOCUMENT-REVIEW-CHECKLIST.md
 checklists/development/MILESTONE-CHECKLIST.md
@@ -38,6 +38,10 @@ docs/00-foundation/SCOPE.md
 docs/00-foundation/VERSION-1.0-ACCEPTANCE-CRITERIA.md
 docs/10-core-standard/AI-ASSISTED-DEVELOPMENT.md
 docs/10-core-standard/ARCHITECTURE.md
+docs/10-core-standard/CORE-QUALITY-LEVEL-MATRIX.md
+docs/10-core-standard/CORE-REQUIREMENTS-INDEX.md
+docs/10-core-standard/CORE-RESPONSIBILITY-MAP.md
+docs/10-core-standard/CORE-STANDARD-REVIEW-0.3.0.md
 docs/10-core-standard/DOCUMENTATION.md
 docs/10-core-standard/KNOWLEDGE-MANAGEMENT.md
 docs/10-core-standard/MAINTENANCE.md
@@ -49,6 +53,7 @@ docs/10-core-standard/RELEASES.md
 docs/10-core-standard/REPOSITORY.md
 docs/10-core-standard/REQUIREMENTS.md
 docs/10-core-standard/SECURITY.md
+docs/10-core-standard/SOLO-DEVELOPER-GUIDE.md
 docs/10-core-standard/TESTING.md
 docs/20-profiles/container/README.md
 docs/20-profiles/database/README.md
@@ -94,6 +99,8 @@ prompts/release/README.md
 prompts/review/README.md
 templates/architecture-decisions/ADR-TEMPLATE.md
 templates/documents/ARCHITECTURE-TEMPLATE.md
+templates/documents/CORE-REQUIREMENT-MATRIX-TEMPLATE.md
+templates/documents/EXCEPTION-RECORD-TEMPLATE.md
 templates/documents/INFORMATIVE-DOCUMENT-TEMPLATE.md
 templates/documents/MAINTENANCE-PLAN-TEMPLATE.md
 templates/documents/NORMATIVE-DOCUMENT-TEMPLATE.md
@@ -108,6 +115,10 @@ templates/documents/TEST-STRATEGY-TEMPLATE.md
 templates/prompts/PROMPT-METADATA-TEMPLATE.md
 templates/repositories/REPOSITORY-METADATA-TEMPLATE.md
 tooling/README.md
+tooling/generate-core-quality-matrix.py
+tooling/generate-core-requirements-index.py
+tooling/validate-core-consistency.py
 tooling/validate-core-requirements.py
 tooling/validate-document-metadata.py
 tooling/validate-markdown-links.py
+REPOSITORY-MANIFEST.txt

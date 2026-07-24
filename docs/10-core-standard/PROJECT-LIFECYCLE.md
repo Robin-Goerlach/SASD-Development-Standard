@@ -2,8 +2,8 @@
 title: "Projektlebenszyklus"
 document-id: SASD-CORE-001
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -49,7 +49,7 @@ Idee
 | SASD-LC-002 | Zweck, Scope, Qualitätsstufe, Status und nächster geplanter Meilenstein MÜSSEN auffindbar dokumentiert sein. |
 | SASD-LC-003 | Phasen dürfen iterativ bearbeitet werden; wesentliche Entscheidungen und Freigaben MÜSSEN dennoch nachvollziehbar bleiben. |
 | SASD-LC-004 | Ein Projekt MUSS offene Risiken, bekannte Einschränkungen und wesentliche technische Schulden sichtbar führen. |
-| SASD-LC-005 | Ein Projekt DARF nicht veröffentlicht oder produktiv eingesetzt werden, wenn bekannte nicht akzeptierte Risiken den vorgesehenen Einsatz unvertretbar machen. |
+| SASD-LC-005 | Ein Projekt DARF NICHT veröffentlicht oder produktiv eingesetzt werden, wenn bekannte nicht akzeptierte Risiken den vorgesehenen Einsatz unvertretbar machen. |
 
 ### 4.2 Idee und Initiierung
 
@@ -72,7 +72,7 @@ Ziel ist die Klärung, ob ein Projekt begonnen werden soll.
 | SASD-LC-020 | Anforderungen MÜSSEN so weit geklärt sein, dass der nächste Meilenstein prüfbar geplant werden kann. |
 | SASD-LC-021 | Annahmen, Unsicherheiten und offene Fragen MÜSSEN von bestätigten Anforderungen unterscheidbar sein. |
 | SASD-LC-022 | Akzeptanzkriterien MÜSSEN für wesentliche Funktionen und Qualitätsziele festgelegt werden. |
-| SASD-LC-023 | Anforderungen SOLLTEN priorisiert werden. |
+| SASD-LC-023 | Vor Beginn eines Meilensteins MUSS erkennbar sein, welche Anforderungen für diesen Meilenstein priorisiert sind; die Priorisierung richtet sich nach dem Anforderungsstandard. |
 | SASD-LC-024 | Änderungen am Scope MÜSSEN hinsichtlich Aufwand, Architektur, Sicherheit, Tests, Dokumentation und Terminplanung bewertet werden. |
 
 **Phasenergebnis:** priorisierte und prüfbare Grundlage für Architektur und Umsetzung.
@@ -121,7 +121,7 @@ Ziel ist die Klärung, ob ein Projekt begonnen werden soll.
 | SASD-LC-061 | Release Notes oder ein Changelog MÜSSEN wesentliche Änderungen, bekannte Einschränkungen und notwendige Migrationsschritte nennen. |
 | SASD-LC-062 | Veröffentlichung und Deployment MÜSSEN für Recommended und Production nachvollziehbar reproduzierbar sein. |
 | SASD-LC-063 | Für Production MUSS ein Rollback-, Wiederherstellungs- oder anderweitiger Schadensbegrenzungsweg vor der Einführung festgelegt sein. |
-| SASD-LC-064 | Veröffentlicht werden DARF nur ein Zustand, der den dokumentierten Freigabekriterien entspricht. |
+| SASD-LC-064 | Ein veröffentlichter Zustand MUSS den dokumentierten Freigabekriterien entsprechen. |
 
 **Phasenergebnis:** identifizierbares, dokumentiertes und unterstützbares Release.
 

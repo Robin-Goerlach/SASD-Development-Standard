@@ -2,8 +2,8 @@
 title: "Sicherheitsstandard"
 document-id: SASD-CORE-008
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -114,7 +114,7 @@ Der Standard gilt für alle technischen Projekte. Die Tiefe der Maßnahmen richt
 
 | ID | Anforderung |
 |---|---|
-| SASD-SEC-070 | Personenbezogene Daten DÜRFEN nur für einen dokumentierten Zweck und in erforderlichem Umfang verarbeitet werden. |
+| SASD-SEC-070 | Personenbezogene Daten MÜSSEN ausschließlich für einen dokumentierten Zweck und in erforderlichem Umfang verarbeitet werden. |
 | SASD-SEC-071 | Aufbewahrungs- und Löschregeln MÜSSEN festgelegt werden, wenn personenbezogene oder vertrauliche Daten gespeichert werden. |
 | SASD-SEC-072 | Test- und Entwicklungsdaten SOLLTEN anonymisiert, synthetisch oder anderweitig geschützt sein. |
 | SASD-SEC-073 | Produktive Daten DÜRFEN NICHT ohne ausdrückliche Freigabe und Schutzmaßnahmen in Entwicklungs- oder KI-Systeme übertragen werden. |

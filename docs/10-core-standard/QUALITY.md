@@ -2,8 +2,8 @@
 title: "Qualitätsstandard"
 document-id: SASD-CORE-007
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -49,7 +49,7 @@ Relevante Qualitätsattribute können sein:
 | SASD-QUAL-001 | Relevante Qualitätsattribute MÜSSEN aus Anforderungen und Risiken abgeleitet werden. |
 | SASD-QUAL-002 | Qualitätsziele MÜSSEN soweit möglich beobachtbar oder prüfbar formuliert werden. |
 | SASD-QUAL-003 | Zielkonflikte MÜSSEN bei wesentlichen Entscheidungen dokumentiert werden. |
-| SASD-QUAL-004 | Ein Projekt DARF Qualitätsmaßnahmen nicht allein nach leicht messbaren Kennzahlen ausrichten. Kennzahlen müssen dem Projektziel dienen. |
+| SASD-QUAL-004 | Ein Projekt DARF NICHT Qualitätsmaßnahmen allein nach leicht messbaren Kennzahlen ausrichten. Kennzahlen MÜSSEN dem Projektziel dienen. |
 
 ### 4.2 Definition of Done
 
@@ -114,7 +114,7 @@ Relevante Qualitätsattribute können sein:
 
 | ID | Anforderung |
 |---|---|
-| SASD-QUAL-070 | Fehler müssen mit vertretbarem Aufwand diagnostizierbar sein. |
+| SASD-QUAL-070 | Fehler MÜSSEN mit vertretbarem Aufwand diagnostizierbar sein. |
 | SASD-QUAL-071 | Relevante Fehlerzustände MÜSSEN verständlich protokolliert oder dem Nutzer angemessen angezeigt werden. |
 | SASD-QUAL-072 | Protokollierung DARF NICHT unnötig Geheimnisse oder personenbezogene Daten offenlegen. |
 | SASD-QUAL-073 | Production-Systeme MÜSSEN für kritische Betriebszustände geeignete Überwachungs- und Diagnosemöglichkeiten besitzen. |

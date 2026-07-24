@@ -13,17 +13,19 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 7. [Dokumentlebenszyklus](40-governance/DOCUMENT-LIFECYCLE.md)
 8. [Dokumentmetadaten](40-governance/DOCUMENT-METADATA.md)
 9. [Core Standard](10-core-standard/README.md)
-10. [Qualitätsstufen](10-core-standard/QUALITY-LEVELS.md)
+10. [Qualitätsstufen und Anwendbarkeit](10-core-standard/QUALITY-LEVELS.md)
+11. [Core Standard Review 0.3.0](10-core-standard/CORE-STANDARD-REVIEW-0.3.0.md)
+12. [Leitfaden für Einzelentwickler](10-core-standard/SOLO-DEVELOPER-GUIDE.md)
 
 ## Dokumentgruppen
 
 | Verzeichnis | Inhalt |
 |---|---|
 | `00-foundation` | Mandat, Scope, Prinzipien, Begriffe und Inhaltsarchitektur |
-| `10-core-standard` | technologieunabhängige Anforderungen |
+| `10-core-standard` | technologieunabhängige Anforderungen, Anwendungshilfen und Reviewnachweise |
 | `20-profiles` | technologie- und projektspezifische Konkretisierungen |
 | `30-processes` | wiederholbare Arbeitsabläufe |
 | `40-governance` | Pflege und Anwendung des Standards |
 | `50-reference-implementations` | Pilotprojekte, Erfahrungen und Beispiele |
 
-Dokumente mit Status Planned, Draft oder Proposed sind noch keine verbindlichen Anforderungen einer stabilen Standardversion.
+Dokumente mit Status Planned, Draft oder Proposed sind noch keine verbindlichen Anforderungen einer stabilen Standardversion. Proposed-Dokumente können für Pilotbewertungen verwendet werden.

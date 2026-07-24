@@ -2,8 +2,8 @@
 title: "Architekturstandard"
 document-id: SASD-CORE-003
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -81,7 +81,7 @@ Der Standard gilt für Software, Infrastruktur, Datenplattformen, Automatisierun
 |---|---|
 | SASD-ARCH-040 | Relevante Qualitätsattribute MÜSSEN priorisiert und durch Architekturmaßnahmen unterstützt werden. |
 | SASD-ARCH-041 | Zielkonflikte, beispielsweise zwischen Sicherheit, Bedienbarkeit, Performance und Einfachheit, MÜSSEN bei wesentlichen Entscheidungen dokumentiert werden. |
-| SASD-ARCH-042 | Architekturentscheidungen DÜRFEN nicht ausschließlich auf hypothetische Skalierungs- oder Erweiterungsanforderungen gestützt werden. |
+| SASD-ARCH-042 | Architekturentscheidungen DÜRFEN NICHT ausschließlich auf hypothetische Skalierungs- oder Erweiterungsanforderungen gestützt werden. |
 | SASD-ARCH-043 | Für Production MÜSSEN Ausfallmodi, Wiederherstellung, Beobachtbarkeit und Kapazitätsgrenzen betrachtet werden. |
 | SASD-ARCH-044 | Barrierefreiheit und Internationalisierung SOLLTEN berücksichtigt werden, wenn Nutzeroberflächen oder öffentliche Inhalte entstehen. |
 

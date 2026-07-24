@@ -8,28 +8,25 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Core responsibility map separating primary ownership from intentional cross-cutting controls.
+- Solo-developer guide with compact artefact sets, role combination, and self-review practices.
+- Documented Core Standard consistency and proportionality review for Proposed 0.3.0.
+- Generated Core requirement index and consolidated quality-level matrix.
+- Requirement assessment matrix and exception record templates.
+- Core self-review checklist for solo developers and small teams.
+- Dependency-free Core consistency validator and generators for derived Core views.
 - Complete technology-independent Core Standard drafts for project lifecycle, requirements, architecture, documentation, repositories, quality levels, quality, security, testing, releases, maintenance, knowledge management, and AI-assisted development.
 - Stable requirement IDs for all Core requirements.
-- Core Standard overview with application order and external reference basis.
 - Core adoption and Definition of Done checklists.
 - Project brief, requirements, architecture, test strategy, security plan, maintenance plan, and release notes templates.
-- Dependency-free Core requirement ID validator.
-- Initial repository structure.
-- Project charter and Version 1.0 scope.
-- Proposed binding content architecture for Version 1.0.
-- Complete Version 1.0 document catalog with stable document IDs and dependencies.
-- Normative language, document lifecycle, and document metadata governance drafts.
-- Initial Version 1.0 acceptance criteria.
-- Initial C#/.NET profile, desktop profile, and process document structure.
-- Normative and informative document templates.
-- Standard document review checklist.
-- Dependency-free document metadata and relative Markdown link validation tools.
-- Documentation index.
+- Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
 
-- Moved all Version 1.0 Core document roles from Planned to Draft in the document catalog.
-- Updated normative-language rules for grammatical variants in the German authoritative edition.
-- Updated README, documentation index, and roadmap for the Core Standard draft phase.
-- Updated README and roadmap to reflect the proposed content architecture and governance model.
-- Expanded the glossary and governance placeholders.
+- Moved all 13 Core documents from Draft 0.2.0 to Proposed 0.3.0 after consistency and proportionality review.
+- Defined explicit applicability, quality-level precedence, profile hierarchy, `Not Applicable` evidence, and solo-developer role rules.
+- Harmonized overall assessment terminology to Not Assessed, Assessment in Progress, Partially Aligned, Aligned with Exceptions, and Aligned.
+- Expanded Compliance and Exception governance and moved both documents to Proposed 0.2.0.
+- Reframed lifecycle requirement `SASD-LC-023` to remove an exact duplicate of the requirements-prioritization rule.
+- Updated adoption guidance, compliance template, README navigation, roadmap, document catalog, and tooling documentation.
+- Clarified that Draft and Proposed documents support pilot alignment only and cannot yet support a formal Version 1.0 alignment claim.

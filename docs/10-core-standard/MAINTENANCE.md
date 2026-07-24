@@ -2,8 +2,8 @@
 title: "Wartungsstandard"
 document-id: SASD-CORE-011
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -33,7 +33,7 @@ Wartung beginnt mit dem ersten nutzbaren Projektstand und endet erst mit kontrol
 |---|---|
 | SASD-MNT-001 | Jedes Projekt MUSS einen verantwortlichen Maintainer oder einen ausdrücklich unbetreuten Status besitzen. |
 | SASD-MNT-002 | Unterstützte Versionen, Plattformen und Laufzeitumgebungen MÜSSEN auffindbar dokumentiert sein. |
-| SASD-MNT-003 | Ein Projekt DARF nicht den Eindruck aktiver Wartung erwecken, wenn keine Wartung mehr vorgesehen ist. |
+| SASD-MNT-003 | Ein Projekt DARF NICHT den Eindruck aktiver Wartung erwecken, wenn keine Wartung mehr vorgesehen ist. |
 | SASD-MNT-004 | Production-Projekte MÜSSEN Vertretung, Übergabe oder Eskalationsweg für kritische Wartungsaufgaben berücksichtigen. |
 
 ### 3.2 Support und Fehlerannahme

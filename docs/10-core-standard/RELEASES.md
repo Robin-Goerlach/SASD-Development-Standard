@@ -2,8 +2,8 @@
 title: "Release-Standard"
 document-id: SASD-CORE-010
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true

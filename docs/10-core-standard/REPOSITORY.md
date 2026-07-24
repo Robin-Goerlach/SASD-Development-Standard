@@ -2,8 +2,8 @@
 title: "Repository- und GitHub-Standard"
 document-id: SASD-CORE-005
 document-type: normative
-status: Draft
-version: 0.2.0
+status: Proposed
+version: 0.3.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -110,7 +110,7 @@ Die folgende Struktur ist der bevorzugte Ausgangspunkt und darf projektspezifisc
 | ID | Anforderung |
 |---|---|
 | SASD-REP-060 | Offene Fehler, Risiken und geplante Arbeiten MÜSSEN in einem auffindbaren System nachverfolgbar sein. |
-| SASD-REP-061 | GitHub Issues, lokale Markdown-Dateien oder andere Systeme sind zulässig, sofern die Source of Truth eindeutig ist. |
+| SASD-REP-061 | GitHub Issues, lokale Markdown-Dateien oder andere Systeme KÖNNEN verwendet werden, sofern die Source of Truth eindeutig ist. |
 | SASD-REP-062 | Kritische Sicherheitsprobleme DÜRFEN NICHT unnötig öffentlich offengelegt werden, bevor ein koordinierter Umgang möglich ist. |
 | SASD-REP-063 | Geschlossene oder verworfene Arbeiten SOLLTEN mit einer erkennbaren Entscheidung enden. |
 

@@ -34,6 +34,8 @@ Dieses Dokument definiert die überprüfbaren Bedingungen, unter denen SASD Deve
 - Qualitätsstufen sind eindeutig unterscheidbar und praktisch auswählbar.
 - MUSS-Anforderungen besitzen nachvollziehbare Prüfkriterien oder Nachweise.
 - Es bestehen keine bekannten ungelösten normativen Widersprüche.
+- Anwendbarkeit, Qualitätsstufenpräzedenz und `Not Applicable` sind eindeutig geregelt.
+- Mindestens ein dokumentierter Core-Konsistenz- und Proportionalitätsreview liegt vor.
 
 ## 4. Profile
 
