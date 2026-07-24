@@ -1,12 +1,16 @@
-# Repository CI Implementation Manifest 0.9.0
+# Repository CI Implementation Manifest 0.10.0
 
 ## Status
 
 ```text
 Implementation prepared: Yes
 Static and local validation: Passed
-First GitHub Actions run: Pending
-Branch rule activated: No
+First GitHub Actions run: Failed - repository boundary contamination detected
+Boundary repair prepared: Yes
+Recovery verification tooling: Prepared
+Green repair-commit run: Pending
+Branch ruleset plan: Prepared
+Branch ruleset activated: No
 Stable Version 1.0 release: No
 ```
 
@@ -14,6 +18,22 @@ This manifest records the initial repository CI implementation for the SASD
 Development Standard. It does not claim that GitHub Actions has already run or
 that a branch rule is active. Those claims require evidence from the committed
 and pushed revision.
+
+
+## First execution result
+
+The first GitHub Actions execution for commit `3ea1a88` completed with failure on
+Ubuntu and Windows. The quality-gate workflow itself produced evidence correctly.
+The blocking findings showed that TaskHost Local update files and a nested starter
+repository had been committed to the Development Standard repository.
+
+The branch rule remains disabled until a repair commit produces a successful run on
+both operating systems and the `SASD merge gate` reports success.
+
+Version 0.10.0 adds remote evidence capture and guarded ruleset management. The
+tools verify the exact remote `main` commit, the Ubuntu and Windows matrix jobs,
+and the aggregate merge gate before allowing activation. The desired ruleset is
+committed as data but is not applied by merely copying or committing this update.
 
 ## Scope
 
@@ -79,13 +99,14 @@ for 14 days.
 
 ## Activation sequence
 
-1. Copy this update into the repository.
+1. Apply the repository-boundary repair and this activation update.
 2. Run the local quality gates.
-3. Commit and push the update.
-4. Confirm that Ubuntu and Windows validation pass.
-5. Confirm that `SASD merge gate` reports success.
-6. Only then configure the `main` branch ruleset to require `SASD merge gate`.
-7. Record the workflow URL and commit SHA in the activation checklist.
+3. Commit and push the repaired repository state.
+4. Verify the exact remote commit with `capture-ci-activation.py --verify-only`.
+5. Review the intended ruleset with `manage-main-ruleset.py --plan`.
+6. Activate only after confirming the switch to branch and pull-request work.
+7. Read the active ruleset back from GitHub.
+8. Generate and commit the activation record and evidence JSON separately.
 
 ## Files introduced
 
@@ -103,6 +124,11 @@ tooling/generate-repository-manifest.py
 tooling/run-quality-gates.py
 tooling/validate-ci-policy.py
 tooling/validate-repository-hygiene.py
+tooling/validate-ci-activation.py
+tooling/capture-ci-activation.py
+tooling/manage-main-ruleset.py
+.github/rulesets/main-merge-gate.json
+docs/50-reference-implementations/repository-self-hosting/
 ```
 
 ## References

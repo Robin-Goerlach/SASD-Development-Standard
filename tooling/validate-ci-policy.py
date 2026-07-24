@@ -20,7 +20,14 @@ def main() -> int:
     codeowners = repo / ".github" / "CODEOWNERS"
     failures: list[str] = []
 
-    required = [workflow, dependabot, codeowners, repo / "tooling/run-quality-gates.py"]
+    required = [
+        workflow,
+        dependabot,
+        codeowners,
+        repo / "tooling/run-quality-gates.py",
+        repo / "tooling/validate-ci-activation.py",
+        repo / ".github/rulesets/main-merge-gate.json",
+    ]
     for path in required:
         if not path.is_file():
             failures.append(f"missing required CI file: {path.relative_to(repo)}")
@@ -82,6 +89,20 @@ def main() -> int:
             if fragment not in text:
                 failures.append(f"CODEOWNERS missing ownership rule: {fragment!r}")
 
+    ruleset = repo / ".github" / "rulesets" / "main-merge-gate.json"
+    if ruleset.is_file():
+        text = ruleset.read_text(encoding="utf-8")
+        for fragment in [
+            "Protect main with SASD merge gate",
+            "~DEFAULT_BRANCH",
+            "required_status_checks",
+            "SASD merge gate",
+            "non_fast_forward",
+            "deletion",
+        ]:
+            if fragment not in text:
+                failures.append(f"ruleset payload missing: {fragment!r}")
+
     if failures:
         print("CI policy validation failed:")
         for failure in failures:
@@ -94,6 +115,7 @@ def main() -> int:
     print("OK   checkout credentials are not persisted")
     print("OK   Dependabot monitors GitHub Actions")
     print("OK   governance-sensitive paths have CODEOWNERS")
+    print("OK   governed main-branch ruleset payload is present")
     print("\nCI policy failures: 0")
     return 0
 

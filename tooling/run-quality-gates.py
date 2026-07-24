@@ -21,6 +21,7 @@ from typing import Any
 
 BLOCKING_CHECKS: tuple[tuple[str, str], ...] = (
     ("repository-hygiene", "validate-repository-hygiene.py"),
+    ("repository-boundary", "validate-repository-boundary.py"),
     ("document-metadata", "validate-document-metadata.py"),
     ("markdown-links", "validate-markdown-links.py"),
     ("core-requirements", "validate-core-requirements.py"),
@@ -31,6 +32,7 @@ BLOCKING_CHECKS: tuple[tuple[str, str], ...] = (
     ("reference-pilots", "validate-reference-pilots.py"),
     ("governance", "validate-governance.py"),
     ("ci-policy", "validate-ci-policy.py"),
+    ("ci-activation", "validate-ci-activation.py"),
     ("repository-manifest", "generate-repository-manifest.py"),
 )
 

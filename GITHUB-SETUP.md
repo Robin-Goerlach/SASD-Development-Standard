@@ -34,30 +34,67 @@
 
 Do not publish Version 1.0 immediately. Begin with a pre-release such as `v0.1.0` after the content architecture is approved.
 
-## Repository CI activation
+## Repository CI recovery and activation
 
-The repository contains `.github/workflows/quality-gates.yml`. Before enabling
-a required status check:
+The repository contains `.github/workflows/quality-gates.yml`. The first remote
+execution correctly exposed a repository-boundary violation. Do not enable a
+required status check until the repair commit itself has passed on Ubuntu and
+Windows.
 
-1. commit and push the CI update,
-2. open **Actions → SASD Quality Gates**,
-3. confirm successful Ubuntu and Windows validation,
-4. confirm the aggregate check named `SASD merge gate`,
-5. inspect the uploaded evidence artifacts,
-6. only then create or update the `main` branch ruleset.
+### 1. Verify the repaired commit
 
-Recommended `main` ruleset settings for the current solo-maintainer phase:
+After committing and pushing the controlled boundary repair:
 
-- require the status check `SASD merge gate`,
-- decide deliberately whether direct pushes remain allowed,
-- do not require an approving review from another person while no second
-  maintainer exists,
-- do not enable a merge queue for the current low-volume repository,
-- keep force pushes and branch deletion disabled.
+```bash
+python tooling/capture-ci-activation.py --verify-only
+```
 
-The required check must already have run successfully before it can be selected
-reliably in repository rules. The completed activation should be recorded using
-`checklists/releases/REPOSITORY-CI-ACTIVATION-CHECKLIST.md`.
+This command verifies that the current local commit is also the current remote
+`main` commit and that the expected Ubuntu, Windows, and aggregate jobs all
+completed successfully.
+
+### 2. Review the intended ruleset
+
+```bash
+python tooling/manage-main-ruleset.py --plan
+```
+
+The governed payload is:
+
+```text
+.github/rulesets/main-merge-gate.json
+```
+
+It targets the default branch, blocks deletion and force pushes, and requires
+`SASD merge gate` with the strict status-check policy.
+
+### 3. Activate deliberately
+
+```bash
+python tooling/manage-main-ruleset.py \
+  --activate \
+  --confirm-switch-to-pull-requests
+```
+
+Activation requires a token with repository `Administration: write`. The token
+must be supplied through `GITHUB_TOKEN`, `GH_TOKEN`, or an authenticated GitHub
+CLI session and is never stored in the repository.
+
+After activation, normal changes use a branch and pull request. A direct push to
+`main` cannot already possess the required successful check.
+
+### 4. Capture the activated state
+
+```bash
+python tooling/capture-ci-activation.py --write --require-active-ruleset
+```
+
+Complete
+`checklists/releases/REPOSITORY-CI-ACTIVATION-CHECKLIST.md` and commit the
+activation record and evidence JSON in a separate evidence commit.
+
+The complete procedure and rollback path are documented in
+`docs/50-reference-implementations/repository-self-hosting/`.
 
 ## Actions security settings
 
@@ -67,4 +104,13 @@ reliably in repository rules. The completed activation should be recorded using
 - Review Dependabot pull requests for GitHub Actions rather than merging them
   without a successful quality-gate run.
 - Preserve full-SHA action pins and the same-line release comments.
+
+
+## Repository-boundary prerequisite
+
+Before enabling `SASD merge gate` as a required check, confirm that
+`python tooling/validate-repository-boundary.py` passes and that no foreign project
+root or nested repository copy is present. The first CI run exposed such a boundary
+violation; branch protection remains intentionally disabled until the repair commit
+passes on Ubuntu and Windows.
 

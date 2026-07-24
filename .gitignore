@@ -1,36 +1,41 @@
-# Build-Ausgaben
-bin/
-obj/
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# Visual Studio / Rider
-.vs/
+# Editors and IDEs
+.vscode/
 .idea/
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
+.vs/
 
-# Lokale Datenbankdateien, falls jemand sie versehentlich ins Projektverzeichnis kopiert
-*.db
-*.sqlite
-*.sqlite3
-
-# Backups
-*backup*.db
-
-# Test- und Coverage-Ausgaben
-TestResults/
-**/TestResults/
-*.trx
-*.coverage
-*.coveragexml
-coverage.cobertura.xml
-
-# Lokale Diagnoseprotokolle
-logs/
+# Temporary and generated files
+*.tmp
+*.temp
+*.bak
 *.log
+~$*
 
-# Optionale lokale Sicherungsziele im Repository
-local-backups/
-
-# Lokale Verifikations- und Publish-Artefakte
-verification-results/
+# Build and tooling output
+bin/
+obj/
 artifacts/
+coverage/
+TestResults/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+# Generated publication artefacts
+artefacts/publications/*.docx
+artefacts/publications/*.pdf
+!artefacts/publications/README.md
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+secrets/

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "canonical_repository": "Robin-Goerlach/SASD-Development-Standard",
+  "repository_kind": "development-standard",
+  "default_branch": "main",
+  "required_markers": [
+    "README.md",
+    "docs/00-foundation/PROJECT-CHARTER.md",
+    "docs/40-governance/NORMATIVE-LANGUAGE.md",
+    "tooling/run-quality-gates.py"
+  ],
+  "allowed_top_level_directories": [
+    ".github",
+    "artefacts",
+    "checklists",
+    "docs",
+    "examples",
+    "prompts",
+    "scripts",
+    "templates",
+    "tooling"
+  ],
+  "allowed_top_level_files": [
+    ".editorconfig",
+    ".gitignore",
+    ".markdownlint.json",
+    "CHANGELOG.md",
+    "CI-IMPLEMENTATION-MANIFEST.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "FOUNDATION-GOVERNANCE-APPROVAL-UPDATE-MANIFEST.md",
+    "FOUNDATION-GOVERNANCE-UPDATE-MANIFEST.md",
+    "GITHUB-SETUP.md",
+    "LICENSE",
+    "README.md",
+    "REPOSITORY-DESCRIPTION.txt",
+    "REPOSITORY-IDENTITY.json",
+    "REPOSITORY-MANIFEST.txt",
+    "ROADMAP.md",
+    "SECURITY.md"
+  ],
+  "forbidden_repository_markers": [
+    "TaskHostLocal.sln",
+    "TaskHostLocal.WinForms",
+    "TaskHostLocal.Tests",
+    "WAVE-01-UPDATE-MANIFEST.md",
+    "WAVE-01-VERIFICATION-UPDATE-MANIFEST.md",
+    "SASD-Development-Standard"
+  ]
+}

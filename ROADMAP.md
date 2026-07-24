@@ -51,7 +51,9 @@
 - [ ] Refine reusable templates after .NET and Desktop pilot feedback.
 - [x] Extend governance validation tooling and add release-readiness reporting.
 - [x] Add repository CI using the formally approved Foundation and Governance rules.
-- [ ] Confirm the first green Ubuntu and Windows CI run and activate `SASD merge gate` for `main`.
+- [x] Add repository-boundary recovery and governed CI-activation tooling.
+- [ ] Commit the boundary repair and confirm the first green Ubuntu and Windows CI run for the exact commit.
+- [ ] Capture CI evidence and activate the `SASD merge gate` ruleset for `main`.
 
 ## Phase 4 — Pilot Projects
 
@@ -72,3 +74,7 @@
 - [ ] Publish a release candidate.
 - [ ] Produce Word and PDF publication artefacts.
 - [ ] Publish Version 1.0.0.
+
+## Repository CI recovery
+
+Complete the controlled cleanup, obtain a green cross-platform CI run for the repair commit, capture remote evidence, and only then activate the governed `main` ruleset.

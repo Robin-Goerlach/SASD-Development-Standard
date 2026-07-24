@@ -18,8 +18,8 @@ depends-on: [SASD-REF-PILOT-004]
 
 Diese Datei wird aus `PILOT-FEEDBACK-LOG.md` erzeugt.
 
-- Feedbackeinträge: **8**
-- Accepted: **6**
+- Feedbackeinträge: **9**
+- Accepted: **7**
 - Confirmed: **1**
 - Candidate: **1**
 - Deferred: **0**
@@ -35,3 +35,4 @@ Diese Datei wird aus `PILOT-FEEDBACK-LOG.md` erzeugt.
 | SASD-PFB-006 | Pilot 01 | Governance, Repository | Accepted |
 | SASD-PFB-007 | Pilot 01 | Pilotprogramm, Prozesse | Accepted |
 | SASD-PFB-008 | Pilot 01 | Evidence, Tooling | Candidate |
+| SASD-PFB-009 | Pilot 01 | Repository-Grenzen, Tooling | Accepted |

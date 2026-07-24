@@ -179,3 +179,42 @@ python tooling/generate-repository-manifest.py --write
 Generated execution evidence is stored below `artifacts/quality-gates/` and is
 not committed.
 
+
+## Repository boundary
+
+`validate-repository-boundary.py` verifies the machine-readable
+`REPOSITORY-IDENTITY.json`, canonical root markers, the allowed top-level layout,
+foreign repository markers, and the Git origin when available. It is a blocking
+quality gate.
+
+## Repository CI recovery and ruleset activation
+
+The activation toolchain separates remote CI evidence from branch-protection
+configuration:
+
+```bash
+python tooling/validate-ci-activation.py
+python tooling/capture-ci-activation.py --verify-only
+python tooling/manage-main-ruleset.py --plan
+```
+
+After the exact remote `main` commit has a successful Ubuntu, Windows, and
+`SASD merge gate` result, evidence can be written with:
+
+```bash
+python tooling/capture-ci-activation.py --write
+```
+
+Ruleset activation is an explicit administrative operation and requires both a
+write-capable token and confirmation of the switch to branch and pull-request
+work:
+
+```bash
+python tooling/manage-main-ruleset.py \
+  --activate \
+  --confirm-switch-to-pull-requests
+```
+
+`capture-ci-activation.py` and `manage-main-ruleset.py` use only the Python
+standard library. Public read operations can work without a token; ruleset
+writes require repository `Administration: write` permission.

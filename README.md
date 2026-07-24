@@ -142,12 +142,12 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 The project is currently in the **first pilot execution and normative-baseline development phase**. Foundation and Governance are formally approved as version 0.8.0 and provide the binding organizational basis for further work. The technology-independent Core is available as Proposed 0.3.0, the C#/.NET Profile as Proposed 0.4.0, the Desktop Application Profile as Proposed 0.5.0, and all seven operational processes as Proposed 0.6.0. The Foundation/Governance approval is not yet a stable Version 1.0 release.
 
-Repository CI is implemented with cross-platform local and GitHub quality gates. The first pushed GitHub Actions run and activation of the required `SASD merge gate` branch rule remain separate evidence steps.
+Repository CI is implemented with cross-platform local and GitHub quality gates. The first remote execution exposed a repository-boundary violation; the repair, remote recovery proof, and activation of the required `SASD merge gate` ruleset remain deliberately separated evidence steps. The self-hosting activation procedure is documented under [`docs/50-reference-implementations/repository-self-hosting/`](docs/50-reference-implementations/repository-self-hosting/).
 
 Current priorities:
 
-1. commit and confirm the first green Ubuntu and Windows repository-CI run,
-2. activate `SASD merge gate` as a required status check after that successful run,
+1. commit the repository-boundary repair and confirm a green Ubuntu and Windows CI run for the exact commit,
+2. capture the remote evidence and activate the governed `SASD merge gate` ruleset,
 3. execute Wave 01 of Pilot 01 on SASD TaskHost Local and record verified evidence,
 4. refine repository templates and assessment tooling from pilot feedback,
 5. select the medium and complex pilot projects,
@@ -157,6 +157,15 @@ Current priorities:
 ## Language
 
 The normative pre-1.0 draft is initially written in German to allow precise development and review. An English edition is planned once the structure and terminology have stabilized.
+
+
+## Repository identity and update packages
+
+This repository declares its canonical identity in `REPOSITORY-IDENTITY.json`.
+Repository quality gates reject foreign project roots, nested repository copies, and
+unexpected top-level content. Update packages that require deletions must be applied
+through a repository-aware script or patch; ZIP extraction alone is only suitable for
+purely additive overlays.
 
 ## Contributing
 

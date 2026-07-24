@@ -8,6 +8,11 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Repository self-hosting records for CI recovery, exact-commit remote evidence, and guarded `main` ruleset activation.
+- Governed ruleset payload requiring `SASD merge gate`, blocking force pushes and default-branch deletion.
+- Dependency-free remote workflow evidence capture, GitHub ruleset management, activation validation, platform wrappers, checklist, template, and review prompt.
+- Machine-readable repository identity, blocking repository-boundary validator, controlled cleanup scripts, update-package manifest template, routing checklist, and review prompt.
+- Incident record and pilot feedback for the accidental cross-repository application of TaskHost Local update packages.
 - Cross-platform repository quality-gate workflow for Ubuntu and Windows with a stable `SASD merge gate` status check.
 - Dependency-free quality-gate orchestrator, CI-policy validator, repository-hygiene validator, and deterministic repository-manifest generator.
 - Immutable full-SHA action pins, read-only workflow permissions, non-persisted checkout credentials, concurrency cancellation, explicit timeouts, Dependabot for GitHub Actions, and CODEOWNERS.
@@ -72,6 +77,12 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Changed
 
+- Split CI recovery into boundary repair, green remote run, evidence capture, ruleset activation, and read-back evidence.
+- Made ruleset activation require explicit acknowledgement that normal changes will move from direct `main` pushes to branch and pull-request work.
+- Added CI activation assets to the blocking repository quality-gate chain without claiming that the pending remote run or ruleset has succeeded.
+- Recorded the first repository quality-gate run as failed evidence rather than pending and kept branch protection disabled.
+- Removed misplaced TaskHost Local projects, workflows, project documentation, verification scripts, and the nested starter-repository copy from the intended repository state.
+- Restored the Development Standard `.gitignore` policy and made repository identity a blocking quality gate.
 - Activated repository CI after formal approval of the Foundation and Governance baseline while keeping the first GitHub run and branch-rule activation as pending evidence.
 - Replaced the manually maintained repository manifest with a deterministic generated-file check and removed stale nested-root entries.
 - Updated repository navigation, contribution guidance, GitHub setup instructions, workflow documentation, and roadmap for the CI baseline.

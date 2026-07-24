@@ -3,7 +3,7 @@ title: "Feedbacklog aus Referenzpiloten"
 document-id: SASD-REF-PILOT-004
 document-type: informative
 status: Draft
-version: 0.8.0
+version: 0.9.1
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -36,6 +36,8 @@ depends-on: [SASD-REF-PILOT-001, SASD-REF-PILOT-002]
 | SASD-PFB-006 | Pilot 01 | Lizenzwahl ist eine Eigentümerentscheidung, auch wenn eine plausible Vorlage vorliegt. | Governance, Repository | Lizenzdatei vor Commit bewusst prüfen; vorbereitete Wahl nicht als automatisch genehmigt darstellen. | Accepted |
 | SASD-PFB-007 | Pilot 01 | Folgewellen würden ohne Verifikationsgate offene Risiken verdecken. | Pilotprogramm, Prozesse | Wave 02 erst nach Commit-, Build-, Test-, Start- und CI-Nachweis beginnen. | Accepted |
 | SASD-PFB-008 | Pilot 01 | Ein öffentlicher Snapshot kann nach lokaler Arbeit veraltet sein. | Evidence, Tooling | Dauerhafte Nachweise nach Commit auf vollständige Commit-ID umstellen. | Candidate |
+
+| SASD-PFB-009 | Pilot 01 | Ein TaskHost-spezifisches Overlay wurde in das Standard-Repository eingespielt; ZIP-Extraktion konnte Fremddateien nicht zurücknehmen. | Repository-Grenzen, Tooling | Kanonische Repository-Identität, Zielprüfung, Löschliste und Anwendungsskript für nicht rein additive Pakete einführen. | Accepted |
 
 ## Änderungsregel
 

@@ -48,3 +48,5 @@ Windows users may also run:
 
 A successful local run does not replace the GitHub Actions result for the committed revision. Changes to workflows, tooling, Foundation, or Governance require particular review because these paths are covered by CODEOWNERS.
 
+After the `main` ruleset is activated, changes should be pushed to a working branch and merged through a pull request after `SASD merge gate` succeeds. The activation procedure and evidence rules are documented under `docs/50-reference-implementations/repository-self-hosting/`.
+

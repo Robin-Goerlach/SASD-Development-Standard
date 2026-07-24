@@ -3,7 +3,7 @@ title: "Referenzimplementierungen"
 document-id: SASD-REF-001
 document-type: informative
 status: Proposed
-version: 0.8.0
+version: 0.10.0
 standard-version: "1.0"
 language: de
 authoritative: false
@@ -25,6 +25,13 @@ Dieses Verzeichnis dokumentiert die praktische Erprobung des SASD Development St
 3. [Pilotportfolio](PILOT-PORTFOLIO.md)
 4. [Feedbacklog](PILOT-FEEDBACK-LOG.md)
 5. [Feedbackübersicht](PILOT-FEEDBACK-SUMMARY.md)
+
+## Repository-Self-Hosting
+
+Das Standard-Repository ist selbst eine Referenzanwendung der freigegebenen
+Foundation- und Governance-Baseline. CI-Recovery, Remote-Evidenz und
+Branch-Ruleset-Aktivierung sind unter
+[`repository-self-hosting/`](repository-self-hosting/) dokumentiert.
 
 ## Aktive Piloten
 

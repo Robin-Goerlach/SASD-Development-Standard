@@ -5,6 +5,7 @@
 .github/ISSUE_TEMPLATE/documentation.yml
 .github/ISSUE_TEMPLATE/standard-change.yml
 .github/PULL_REQUEST_TEMPLATE.md
+.github/rulesets/main-merge-gate.json
 .github/workflows/quality-gates.yml
 .github/workflows/README.md
 .gitignore
@@ -28,6 +29,7 @@ checklists/development/PILOT-WAVE-REVIEW-CHECKLIST.md
 checklists/development/REPOSITORY-CI-REVIEW-CHECKLIST.md
 checklists/development/REVIEW-EXECUTION-CHECKLIST.md
 checklists/development/STANDARD-CHANGE-REVIEW-CHECKLIST.md
+checklists/development/UPDATE-PACKAGE-ROUTING-CHECKLIST.md
 checklists/project-initiation/CORE-STANDARD-ADOPTION-CHECKLIST.md
 checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md
 checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md
@@ -149,6 +151,12 @@ docs/50-reference-implementations/PILOT-FEEDBACK-SUMMARY.md
 docs/50-reference-implementations/PILOT-PORTFOLIO.md
 docs/50-reference-implementations/PILOT-PROGRAM.md
 docs/50-reference-implementations/README.md
+docs/50-reference-implementations/REPOSITORY-BOUNDARY-INCIDENT-2026-07-24.md
+docs/50-reference-implementations/repository-self-hosting/BRANCH-RULESET-PLAN.md
+docs/50-reference-implementations/repository-self-hosting/CI-ACTIVATION-RECORD.md
+docs/50-reference-implementations/repository-self-hosting/CI-ACTIVATION-UPDATE-MANIFEST.md
+docs/50-reference-implementations/repository-self-hosting/CI-RECOVERY-AND-ACTIVATION.md
+docs/50-reference-implementations/repository-self-hosting/README.md
 docs/README.md
 examples/desktop/maintained-winforms-application/README.md
 examples/desktop/maintained-wpf-application/README.md
@@ -187,10 +195,17 @@ prompts/review/PILOT-BASELINE-ASSESSMENT-PROMPT.md
 prompts/review/PILOT-RETROSPECTIVE-PROMPT.md
 prompts/review/PILOT-VERIFICATION-PROMPT.md
 prompts/review/README.md
+prompts/review/REPOSITORY-CI-ACTIVATION-REVIEW-PROMPT.md
+prompts/review/UPDATE-PACKAGE-ROUTING-REVIEW-PROMPT.md
 README.md
 REPOSITORY-DESCRIPTION.txt
+REPOSITORY-IDENTITY.json
 ROADMAP.md
+scripts/capture-ci-activation.ps1
+scripts/capture-ci-activation.sh
 scripts/README.md
+scripts/repair-repository-boundary.ps1
+scripts/repair-repository-boundary.sh
 scripts/validate-repository.ps1
 scripts/validate-repository.sh
 SECURITY.md
@@ -225,6 +240,7 @@ templates/documents/PROJECT-INITIALIZATION-RECORD-TEMPLATE.md
 templates/documents/README-TEMPLATE.md
 templates/documents/RELEASE-NOTES-TEMPLATE.md
 templates/documents/RELEASE-RECORD-TEMPLATE.md
+templates/documents/REPOSITORY-CI-ACTIVATION-RECORD-TEMPLATE.md
 templates/documents/REQUIREMENTS-TEMPLATE.md
 templates/documents/REVIEW-RECORD-TEMPLATE.md
 templates/documents/ROADMAP-TEMPLATE.md
@@ -235,6 +251,7 @@ templates/documents/SECURITY-PLAN-TEMPLATE.md
 templates/documents/STANDARD-CHANGE-PROPOSAL-TEMPLATE.md
 templates/documents/STANDARD-RELEASE-RECORD-TEMPLATE.md
 templates/documents/TEST-STRATEGY-TEMPLATE.md
+templates/documents/UPDATE-PACKAGE-MANIFEST-TEMPLATE.md
 templates/prompts/PROMPT-METADATA-TEMPLATE.md
 templates/repositories/dotnet/desktop/README.md
 templates/repositories/dotnet/desktop/winforms.csproj.template
@@ -246,6 +263,8 @@ templates/repositories/dotnet/editorconfig-dotnet.template
 templates/repositories/dotnet/global.json.template
 templates/repositories/README.md
 templates/repositories/REPOSITORY-METADATA-TEMPLATE.md
+tooling/capture-ci-activation.py
+tooling/ci_activation_common.py
 tooling/generate-core-quality-matrix.py
 tooling/generate-core-requirements-index.py
 tooling/generate-desktop-requirements-index.py
@@ -257,9 +276,11 @@ tooling/generate-pilot-portfolio.py
 tooling/generate-process-quality-matrix.py
 tooling/generate-process-requirements-index.py
 tooling/generate-repository-manifest.py
+tooling/manage-main-ruleset.py
 tooling/README.md
 tooling/report-version-1-readiness.py
 tooling/run-quality-gates.py
+tooling/validate-ci-activation.py
 tooling/validate-ci-policy.py
 tooling/validate-core-consistency.py
 tooling/validate-core-requirements.py
@@ -271,4 +292,5 @@ tooling/validate-governance.py
 tooling/validate-markdown-links.py
 tooling/validate-operational-processes.py
 tooling/validate-reference-pilots.py
+tooling/validate-repository-boundary.py
 tooling/validate-repository-hygiene.py
