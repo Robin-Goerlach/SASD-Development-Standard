@@ -1,6 +1,6 @@
 ---
-title: "Releaseprozess"
-document-id: SASD-PROC-006
+title: "Prozess für Architekturentscheidungen"
+document-id: SASD-PROC-003
 document-type: normative
 status: Planned
 version: 0.1.0
@@ -15,11 +15,11 @@ depends-on: [SASD-CORE-001, SASD-GOV-001]
 normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 ---
 
-# Releaseprozess
+# Prozess für Architekturentscheidungen
 
 ## Zweck
 
-Beschreibt Vorbereitung, Prüfung, Freigabe, Veröffentlichung und Nachbereitung eines Releases.
+Beschreibt Erstellung, Prüfung, Statusänderung und Ablösung von ADRs.
 
 ## Geplanter Prozessaufbau
 

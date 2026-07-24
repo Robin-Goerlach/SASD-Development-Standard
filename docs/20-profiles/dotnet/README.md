@@ -1,7 +1,18 @@
-# Dotnet Profile
+# C#/.NET Profile
 
-**Status:** Geplant
+**Status:** Bestandteil von Version 1.0, Dokumente derzeit Planned
 
-Dieses Profil konkretisiert den SASD Development Standard für den Bereich **dotnet**.
+Dieses Verzeichnis konkretisiert den technologieunabhängigen SASD Core Standard für C#- und .NET-Projekte.
 
-Vor Version 1.0 werden zunächst das C#/.NET-Profil und das Desktopanwendungsprofil vollständig ausgearbeitet. Weitere Profile können als Vorschau oder Roadmap-Inhalt enthalten sein.
+Geplante Dokumente:
+
+- `DOTNET-PROFILE.md`
+- `SOLUTION-STRUCTURE.md`
+- `CODING-STANDARD.md`
+- `ERROR-HANDLING.md`
+- `LOGGING.md`
+- `CONFIGURATION.md`
+- `PERSISTENCE.md`
+- `DOTNET-TESTING.md`
+
+Das Profil wird zunächst an vorhandenen SASD-C#-Repositories validiert.

@@ -1,6 +1,6 @@
 ---
-title: "Sicherheitsstandard"
-document-id: SASD-CORE-008
+title: "Repository- und GitHub-Standard"
+document-id: SASD-CORE-005
 document-type: normative
 status: Planned
 version: 0.1.0
@@ -15,19 +15,19 @@ depends-on: [SASD-FND-003, SASD-GOV-001, SASD-CORE-006]
 normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 ---
 
-# Sicherheitsstandard
+# Repository- und GitHub-Standard
 
 ## Zweck
 
-Definiert grundlegende Sicherheits-, Datenschutz- und Supply-Chain-Anforderungen.
+Definiert Struktur, Metadaten, Git-Nutzung und GitHub-Konventionen.
 
 ## Geplanter Inhalt
 
-- Schutzbedarf und Risiken
-- Secrets und Konfiguration
-- Abhängigkeiten und Supply Chain
-- Datenschutz und Protokollierung
-- Backups und Incident Response
+- Repository-Aufbau
+- README, Lizenz und Metadaten
+- Branches, Commits und Tags
+- Issues, Pull Requests und Releases
+- Repository-Archivierung
 
 ## Bearbeitungsstatus
 

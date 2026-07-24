@@ -5,24 +5,27 @@
 - [x] Establish the standard as an independent product.
 - [x] Create the initial repository structure.
 - [x] Record vision, mission, target groups, and guiding principles.
-- [ ] Approve the binding content architecture for Version 1.0.
-- [ ] Define terminology and normative language.
-- [ ] Define Version 1.0 acceptance criteria.
+- [x] Prepare the binding content architecture for Version 1.0.
+- [x] Define document roles, IDs, and dependencies.
+- [x] Define normative language, document lifecycle, and metadata.
+- [x] Define initial Version 1.0 acceptance criteria.
+- [ ] Review and approve the proposed foundation and governance documents.
 
 ## Phase 1 — Core Standard
 
-- [ ] Define the project lifecycle.
-- [ ] Define documentation requirements.
+- [ ] Define quality levels and project classification.
+- [ ] Define the project lifecycle and requirements management.
+- [ ] Define documentation and repository requirements.
 - [ ] Define architecture and decision-record requirements.
-- [ ] Define quality levels and compliance rules.
-- [ ] Define testing, security, release, and maintenance principles.
+- [ ] Define quality, testing, security, release, and maintenance requirements.
+- [ ] Define knowledge management and AI-assisted development requirements.
 
 ## Phase 2 — First Profiles
 
 - [ ] Create the C#/.NET profile.
 - [ ] Create the desktop application profile.
 - [ ] Define the standard repository and solution structures.
-- [ ] Define logging, configuration, persistence, and error-handling rules.
+- [ ] Define coding, logging, configuration, persistence, testing, and error-handling rules.
 
 ## Phase 3 — Supporting Assets
 
@@ -30,7 +33,7 @@
 - [ ] Complete checklists.
 - [ ] Create prompt packages for the SASD Prompt Manager.
 - [ ] Add reusable `.editorconfig` and build configuration files.
-- [ ] Add initial repository validation tooling.
+- [ ] Extend repository validation tooling.
 
 ## Phase 4 — Pilot Projects
 

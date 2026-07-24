@@ -1,8 +1,22 @@
+---
+title: "Projektcharta — SASD Development Standard Version 1.0"
+document-id: SASD-FND-001
+document-type: normative
+status: Proposed
+version: 0.1.0
+standard-version: "1.0"
+language: de
+authoritative: true
+owner: SASD Development Standard Maintainer
+last-updated: 2026-07-24
+applies-to-quality-levels: [Minimum, Recommended, Production]
+applies-to-profiles: [Core, DotNet, Desktop]
+depends-on: []
+normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
+---
+
 # Projektcharta — SASD Development Standard Version 1.0
 
-**Status:** Entwurf  
-**Dokumenttyp:** Normatives Grundlagen- und Mandatsdokument  
-**Gültigkeit:** SASD Development Standard Version 1.0  
 
 ## Projektdefinition
 

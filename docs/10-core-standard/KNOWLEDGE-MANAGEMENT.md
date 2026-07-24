@@ -1,6 +1,6 @@
 ---
-title: "Sicherheitsstandard"
-document-id: SASD-CORE-008
+title: "Wissensmanagement"
+document-id: SASD-CORE-012
 document-type: normative
 status: Planned
 version: 0.1.0
@@ -15,19 +15,19 @@ depends-on: [SASD-FND-003, SASD-GOV-001, SASD-CORE-006]
 normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 ---
 
-# Sicherheitsstandard
+# Wissensmanagement
 
 ## Zweck
 
-Definiert grundlegende Sicherheits-, Datenschutz- und Supply-Chain-Anforderungen.
+Definiert die dauerhafte Sicherung von Entscheidungen, Betriebswissen und Lessons Learned.
 
 ## Geplanter Inhalt
 
-- Schutzbedarf und Risiken
-- Secrets und Konfiguration
-- Abhängigkeiten und Supply Chain
-- Datenschutz und Protokollierung
-- Backups und Incident Response
+- ADRs
+- Glossare und technische Notizen
+- Lessons Learned
+- Übergaben
+- Veraltetes Wissen und Archivierung
 
 ## Bearbeitungsstatus
 

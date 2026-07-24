@@ -1,6 +1,6 @@
 ---
-title: "Sicherheitsstandard"
-document-id: SASD-CORE-008
+title: "KI-gestützte Entwicklung"
+document-id: SASD-CORE-013
 document-type: normative
 status: Planned
 version: 0.1.0
@@ -15,19 +15,19 @@ depends-on: [SASD-FND-003, SASD-GOV-001, SASD-CORE-006]
 normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 ---
 
-# Sicherheitsstandard
+# KI-gestützte Entwicklung
 
 ## Zweck
 
-Definiert grundlegende Sicherheits-, Datenschutz- und Supply-Chain-Anforderungen.
+Definiert den nachvollziehbaren und verantwortungsvollen Einsatz von KI in technischen Projekten.
 
 ## Geplanter Inhalt
 
-- Schutzbedarf und Risiken
-- Secrets und Konfiguration
-- Abhängigkeiten und Supply Chain
-- Datenschutz und Protokollierung
-- Backups und Incident Response
+- Geeignete Einsatzfälle
+- Prompt- und Kontextmanagement
+- Prüfung generierter Ergebnisse
+- Sicherheit, Datenschutz und Lizenzen
+- Dokumentation von Verantwortung und Entscheidungen
 
 ## Bearbeitungsstatus
 

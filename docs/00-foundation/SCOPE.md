@@ -1,7 +1,22 @@
+---
+title: "Geltungsbereich von Version 1.0"
+document-id: SASD-FND-002
+document-type: normative
+status: Proposed
+version: 0.1.0
+standard-version: "1.0"
+language: de
+authoritative: true
+owner: SASD Development Standard Maintainer
+last-updated: 2026-07-24
+applies-to-quality-levels: [Minimum, Recommended, Production]
+applies-to-profiles: [Core, DotNet, Desktop]
+depends-on: [SASD-FND-001]
+normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
+---
+
 # Geltungsbereich von Version 1.0
 
-**Status:** Entwurf  
-**Dokumenttyp:** Normativ  
 
 ## Enthalten
 

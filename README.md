@@ -109,15 +109,17 @@ Detailed Linux, database, Docker, Kubernetes, and advanced security profiles are
 └── .github/
 ```
 
-See [`docs/00-foundation/CONTENT-ARCHITECTURE.md`](docs/00-foundation/CONTENT-ARCHITECTURE.md) for the planned document architecture.
+See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and the [Version 1.0 document catalog](docs/00-foundation/DOCUMENT-CATALOG.md) for the planned standard structure.
 
 ## Getting started
 
 1. Read the [`Project Charter`](docs/00-foundation/PROJECT-CHARTER.md).
 2. Review the [`Version 1.0 Scope`](docs/00-foundation/SCOPE.md).
-3. Follow the [`Roadmap`](ROADMAP.md).
-4. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md) when starting a project.
-5. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
+3. Review the [`Content Architecture`](docs/00-foundation/CONTENT-ARCHITECTURE.md) and [`Document Catalog`](docs/00-foundation/DOCUMENT-CATALOG.md).
+4. Read the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
+5. Follow the [`Roadmap`](ROADMAP.md).
+6. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md) when starting a project.
+7. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
 
 ## Normative language
 
@@ -127,7 +129,7 @@ The following terms are used intentionally:
 - **SHOULD**: recommended requirement; deviations require a reason,
 - **MAY**: optional practice.
 
-The exact governance and compliance rules will be defined before Version 1.0.
+The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governance/NORMATIVE-LANGUAGE.md). Documents become binding only after reaching the `Approved` state defined by the document lifecycle.
 
 ## Project status
 
@@ -135,11 +137,11 @@ The project is currently in the **foundation and architecture phase**. Documents
 
 Current priorities:
 
-1. define the binding content architecture for Version 1.0,
-2. define document roles and dependencies,
-3. establish quality levels and compliance rules,
-4. create the C#/.NET profile,
-5. validate the standard with selected reference projects.
+1. review and approve the proposed Version 1.0 content architecture,
+2. approve normative language, document lifecycle, and metadata rules,
+3. define quality levels and project classification,
+4. develop the technology-independent core standard,
+5. create and pilot the C#/.NET and desktop profiles.
 
 ## Language
 

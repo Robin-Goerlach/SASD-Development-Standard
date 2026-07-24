@@ -1,6 +1,6 @@
 ---
-title: "Sicherheitsstandard"
-document-id: SASD-CORE-008
+title: "Qualitätsstufen"
+document-id: SASD-CORE-006
 document-type: normative
 status: Planned
 version: 0.1.0
@@ -11,23 +11,23 @@ owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core]
-depends-on: [SASD-FND-003, SASD-GOV-001, SASD-CORE-006]
+depends-on: [SASD-FND-002, SASD-GOV-001]
 normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 ---
 
-# Sicherheitsstandard
+# Qualitätsstufen
 
 ## Zweck
 
-Definiert grundlegende Sicherheits-, Datenschutz- und Supply-Chain-Anforderungen.
+Definiert SASD Minimum, Recommended und Production sowie deren Auswahl.
 
 ## Geplanter Inhalt
 
-- Schutzbedarf und Risiken
-- Secrets und Konfiguration
-- Abhängigkeiten und Supply Chain
-- Datenschutz und Protokollierung
-- Backups und Incident Response
+- Projektklassifikation
+- Anforderungsmatrix
+- Hochstufung einzelner Bereiche
+- Änderung der Qualitätsstufe
+- Compliance-Nachweise
 
 ## Bearbeitungsstatus
 

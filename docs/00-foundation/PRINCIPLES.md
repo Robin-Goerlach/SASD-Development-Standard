@@ -1,7 +1,22 @@
+---
+title: "Grundprinzipien"
+document-id: SASD-FND-003
+document-type: normative
+status: Proposed
+version: 0.1.0
+standard-version: "1.0"
+language: de
+authoritative: true
+owner: SASD Development Standard Maintainer
+last-updated: 2026-07-24
+applies-to-quality-levels: [Minimum, Recommended, Production]
+applies-to-profiles: [Core, DotNet, Desktop]
+depends-on: [SASD-FND-001]
+normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
+---
+
 # Grundprinzipien
 
-**Status:** Entwurf  
-**Dokumenttyp:** Normativ  
 
 ## P-001 — Dokumentation ist Teil des Produkts
 

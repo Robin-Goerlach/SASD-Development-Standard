@@ -1,0 +1,27 @@
+# Dokumentation
+
+Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
+
+## Einstieg
+
+1. [Projektcharta](00-foundation/PROJECT-CHARTER.md)
+2. [Scope von Version 1.0](00-foundation/SCOPE.md)
+3. [Grundprinzipien](00-foundation/PRINCIPLES.md)
+4. [Inhaltsarchitektur](00-foundation/CONTENT-ARCHITECTURE.md)
+5. [Dokumentkatalog](00-foundation/DOCUMENT-CATALOG.md)
+6. [Normative Sprache](40-governance/NORMATIVE-LANGUAGE.md)
+7. [Dokumentlebenszyklus](40-governance/DOCUMENT-LIFECYCLE.md)
+8. [Dokumentmetadaten](40-governance/DOCUMENT-METADATA.md)
+
+## Dokumentgruppen
+
+| Verzeichnis | Inhalt |
+|---|---|
+| `00-foundation` | Mandat, Scope, Prinzipien, Begriffe und Inhaltsarchitektur |
+| `10-core-standard` | technologieunabhängige Anforderungen |
+| `20-profiles` | technologie- und projektspezifische Konkretisierungen |
+| `30-processes` | wiederholbare Arbeitsabläufe |
+| `40-governance` | Pflege und Anwendung des Standards |
+| `50-reference-implementations` | Pilotprojekte, Erfahrungen und Beispiele |
+
+Dokumente mit Status Planned, Draft oder Proposed sind noch keine verbindlichen Anforderungen einer stabilen Standardversion.
