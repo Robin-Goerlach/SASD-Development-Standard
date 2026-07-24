@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- WinExe verhindert, dass beim Start zusätzlich ein Konsolenfenster erscheint. -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <!-- Der Build ist auch auf CI-Hosts möglich; ausgeführt wird die Anwendung weiterhin unter Windows. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+
+    <AssemblyName>TaskHostLocal.WinForms</AssemblyName>
+    <RootNamespace>TaskHostLocal.WinForms</RootNamespace>
+    <VersionPrefix>0.2.0</VersionPrefix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Schlanker SQLite-Zugriff ohne Entity Framework. Die Version wird zentral verwaltet. -->
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+  </ItemGroup>
+</Project>

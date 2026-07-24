@@ -3,7 +3,7 @@ title: "Inhaltsarchitektur für SASD Development Standard Version 1.0"
 document-id: SASD-FND-005
 document-type: normative
 status: Proposed
-version: 0.1.0
+version: 0.2.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -289,7 +289,9 @@ Version 1.0 MUSS Erfahrungen aus mindestens drei Pilotkategorien dokumentieren:
 2. mittlere gepflegte Desktopanwendung,
 3. komplexere, geschichtete C#/.NET-Anwendung.
 
-Der Quellcode der Pilotprojekte verbleibt in den jeweiligen Projekt-Repositories. Dieses Repository dokumentiert Auswahl, angewendete Profile, Qualitätsstufe, Abweichungen und Lessons Learned.
+Der Quellcode der Pilotprojekte verbleibt in den jeweiligen Projekt-Repositories. Dieses Repository dokumentiert Auswahl, angewendete Profile, Qualitätsstufe, Evidenzbasis, Ausgangszustand, priorisierte Lücken, Migrationswellen, Entscheidungen, Abweichungen und Lessons Learned.
+
+Jeder Pilot SOLLTE ein maschinenlesbares Manifest und mindestens Pilot Charter, Klassifikation, Baseline Assessment, Gap Register, Migrationsplan, Evidenzzuordnung und Review besitzen. Eine Referenzimplementierung gilt erst als praktisch durchgeführt, wenn mindestens eine Welle technisch im Ziel-Repository ausgeführt und mit Build-, Test- oder Laufzeitnachweisen belegt wurde.
 
 ## 9. Dokumentmetadaten
 

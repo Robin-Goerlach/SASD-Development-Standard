@@ -1,38 +1,32 @@
-# Operating systems
-.DS_Store
-Thumbs.db
-Desktop.ini
+# Build-Ausgaben
+bin/
+obj/
 
-# Editors and IDEs
-.vscode/
+# Visual Studio / Rider
+.vs/
 .idea/
 *.user
 *.suo
-*.userosscache
-*.sln.docstates
-.vs/
 
-# Temporary and generated files
-*.tmp
-*.temp
-*.bak
-*.log
-~$*
+# Lokale Datenbankdateien, falls jemand sie versehentlich ins Projektverzeichnis kopiert
+*.db
+*.sqlite
+*.sqlite3
 
-# Build and tooling output
-bin/
-obj/
-artifacts/
-coverage/
+# Backups
+*backup*.db
+
+# Test- und Coverage-Ausgaben
 TestResults/
+**/TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage.cobertura.xml
 
-# Generated publication artefacts
-artefacts/publications/*.docx
-artefacts/publications/*.pdf
-!artefacts/publications/README.md
+# Lokale Diagnoseprotokolle
+logs/
+*.log
 
-# Local secrets and environment files
-.env
-.env.*
-!.env.example
-secrets/
+# Optionale lokale Sicherungsziele im Repository
+local-backups/

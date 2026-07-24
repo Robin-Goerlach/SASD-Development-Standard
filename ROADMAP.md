@@ -52,10 +52,13 @@
 
 ## Phase 4 — Pilot Projects
 
-- [ ] Apply classification and initialization or migration to one small project.
+- [x] Select and classify one small project: SASD TaskHost Local.
+- [x] Prepare its evidence-based baseline assessment, gap register, migration plan, and Wave 01.
+- [ ] Execute and validate Wave 01 in the SASD TaskHost Local repository.
+- [ ] Record verified results and lessons learned from the small-project pilot.
 - [ ] Apply the full process chain to one medium project.
 - [ ] Apply the full process chain to one more complex C#/.NET project.
-- [ ] Record deviations and lessons learned.
+- [ ] Consolidate deviations and lessons learned across all pilots.
 
 ## Phase 5 — Version 1.0
 

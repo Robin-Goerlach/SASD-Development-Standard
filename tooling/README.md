@@ -9,6 +9,7 @@ python tooling/validate-document-metadata.py
 python tooling/validate-markdown-links.py
 python tooling/validate-core-requirements.py
 python tooling/validate-core-consistency.py
+python tooling/validate-reference-pilots.py
 ```
 
 ### `validate-document-metadata.py`
@@ -101,3 +102,19 @@ Checks all seven Proposed 0.6.0 process documents, requirement-ID ranges, normat
 
 - `docs/30-processes/PROCESS-REQUIREMENTS-INDEX.md`
 - `docs/30-processes/PROCESS-QUALITY-LEVEL-MATRIX.md`
+
+
+## Reference pilot checks
+
+```bash
+python tooling/generate-pilot-portfolio.py --check
+python tooling/validate-reference-pilots.py
+```
+
+### `generate-pilot-portfolio.py`
+
+Erzeugt `docs/50-reference-implementations/PILOT-PORTFOLIO.md` aus den `pilot.json`-Manifesten.
+
+### `validate-reference-pilots.py`
+
+Prüft Pilot-IDs, Statuswerte, Qualitätsstufen, Pflichtdokumente, Gap- und Decision-IDs sowie die Aktualität des Portfolios.

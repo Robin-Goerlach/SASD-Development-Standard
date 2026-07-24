@@ -1,65 +1,59 @@
 # Changelog
 
-All notable changes to the SASD Development Standard will be documented in this file.
+Alle nennenswerten Änderungen an **SASD TaskHost Local** sollen in dieser Datei dokumentiert werden.
 
-The format is based on Keep a Changelog principles, and the project intends to use Semantic Versioning once the first public versioning policy is approved.
+Das Format orientiert sich pragmatisch an einer einfachen Versionshistorie. Die Versionierung ist vorerst projektintern zu verstehen und wird erst nach einem stabilen lauffähigen Stand als Release-Version relevant.
 
-## [Unreleased]
+## Unreleased
 
 ### Added
 
-- Complete Proposed 0.6.0 operational process handbook for project classification, new-project initialization, architecture decisions, reviews, legacy migration, releases, and project archival.
-- Stable operational process requirement IDs with generated requirement index and quality-level matrix.
-- Process map, documented process review, project classification and initialization records, ADR index, review record, migration assessment and plan, release record, and project archival record.
-- Classification, ADR, review, legacy migration, release readiness, and archival checklists.
-- Project classification, ADR preparation, legacy migration review, and release preparation prompt templates.
-- Process examples and dependency-free operational-process validator and generators.
-
-
-- Complete Proposed 0.5.0 Desktop Application Profile covering technology selection, UI architecture, user experience, accessibility, application lifecycle, publishing, installation, updates, and support.
-- 215 stable Desktop profile requirement IDs with generated requirement index and consolidated quality-level matrix.
-- WinForms and WPF implementation guidance, desktop project sizing guide, primary-source reference baseline, and documented profile review.
-- Desktop adoption, UX review, and release smoke-test checklists.
-- Desktop application brief, UX test report, deployment plan, and profile assessment templates.
-- Initial WinForms and WPF project-file templates, desktop structure examples, review prompt, validator, and requirements-index generator.
-
-- Complete Proposed 0.4.0 C#/.NET Profile covering SDK and runtime baseline, solution structure, coding conventions, error handling, logging, configuration, persistence, and testing.
-- 277 stable C#/.NET profile requirement IDs with generated requirement index and curated quality-level matrix.
-- .NET Reference Baseline, project sizing guidance, and documented profile review.
-- Initial `Directory.Build.props`, `Directory.Packages.props`, `global.json`, `.editorconfig`, and GitHub Actions templates for .NET repositories.
-- .NET adoption and code-review checklists, profile assessment template, review prompt, and proportional structure examples.
-- Dependency-free .NET profile validator and requirements-index generator.
-
-- Core responsibility map separating primary ownership from intentional cross-cutting controls.
-- Solo-developer guide with compact artefact sets, role combination, and self-review practices.
-- Documented Core Standard consistency and proportionality review for Proposed 0.3.0.
-- Generated Core requirement index and consolidated quality-level matrix.
-- Requirement assessment matrix and exception record templates.
-- Core self-review checklist for solo developers and small teams.
-- Dependency-free Core consistency validator and generators for derived Core views.
-- Complete technology-independent Core Standard drafts for project lifecycle, requirements, architecture, documentation, repositories, quality levels, quality, security, testing, releases, maintenance, knowledge management, and AI-assisted development.
-- Stable requirement IDs for all Core requirements.
-- Core adoption and Definition of Done checklists.
-- Project brief, requirements, architecture, test strategy, security plan, maintenance plan, and release notes templates.
-- Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
+- Erstes Pilot-Alignment zum SASD Development Standard dokumentiert.
+- Separates xUnit-Testprojekt mit SQLite-Integrationstests ergänzt.
+- Tests für Datenbankinitialisierung, Bestandsdaten, Listen, Aufgaben, Suche, Statuswechsel und Backup ergänzt.
+- Windows-CI für Restore, Build, Tests, Coverage und NuGet-Audit ergänzt.
+- Dependabot für NuGet und GitHub Actions eingerichtet.
+- `global.json`, `.editorconfig`, `Directory.Build.props` und zentrale Paketverwaltung ergänzt.
+- Startdiagnose unter `%LocalAppData%\SASD\TaskHostLocal\logs` ergänzt.
+- `SECURITY.md`, MIT License und ADR-006 ergänzt.
+- PowerShell-Skripte für Datensicherung und technische Verifikation ergänzt.
+- Statischer Wave-01-Validator ergänzt.
+- Projekt als lokales Windows-Forms-/SQLite-Vorhaben angelegt.
+- Erste Repository- und Dokumentationsstruktur aufgebaut.
+- Strategische Einordnung, Lastenheft, Pflichtenheft, UI-Konzept, Datenmodell, Roadmap und manueller Testplan ergänzt.
 
 ### Changed
 
-- Moved all seven operational process documents from Planned 0.1.0 to Proposed 0.6.0.
-- Clarified the separation of structural project size, quality level, risk characteristics, lifecycle intent, and applicable profiles.
-- Updated repository navigation, document catalog, roadmap, tooling documentation, and repository manifest for the operational processes.
+- `Microsoft.Data.Sqlite` innerhalb der .NET-8-Linie auf 8.0.29 aktualisiert.
+- Datenbankpfad ist für isolierte Integrationstests konfigurierbar.
+- Datenbankinitialisierung erfolgt transaktional, idempotent und mit Objektprüfung.
+- Schemaversion und zusätzlicher Aufgabenindex ergänzt.
+- Sortierung von Aufgaben mit optionalem Fälligkeitsdatum explizit als `CASE` formuliert.
+- Known Issues und manueller Testplan auf Migrationswelle 01 aktualisiert.
+- Dateirechte im Repository normalisiert (`100755` → `100644`).
+- Dokumentation stärker auf Lastenheft/Pflichtenheft v0.2 ausgerichtet.
 
+### Verification pending
 
-- Moved all four Desktop profile documents from Planned 0.1.0 to Proposed 0.5.0.
-- Updated repository navigation, document catalog, roadmap, tooling documentation, and repository manifest for the Desktop profile.
+- .NET Restore, Build und Tests müssen nach dem Einspielen lokal oder über GitHub Actions ausgeführt werden.
+- Der historische SQLite-Startfehler bleibt bis zum erfolgreichen Windows-Smoke-Test in Verifikation.
 
-- Moved all eight C#/.NET profile documents from Planned 0.1.0 to Proposed 0.4.0.
-- Updated repository navigation, document catalog, roadmap, tooling documentation, and repository manifest for the .NET profile.
+### Known Issues
 
-- Moved all 13 Core documents from Draft 0.2.0 to Proposed 0.3.0 after consistency and proportionality review.
-- Defined explicit applicability, quality-level precedence, profile hierarchy, `Not Applicable` evidence, and solo-developer role rules.
-- Harmonized overall assessment terminology to Not Assessed, Assessment in Progress, Partially Aligned, Aligned with Exceptions, and Aligned.
-- Expanded Compliance and Exception governance and moved both documents to Proposed 0.2.0.
-- Reframed lifecycle requirement `SASD-LC-023` to remove an exact duplicate of the requirements-prioritization rule.
-- Updated adoption guidance, compliance template, README navigation, roadmap, document catalog, and tooling documentation.
-- Clarified that Draft and Proposed documents support pilot alignment only and cannot yet support a formal Version 1.0 alignment claim.
+- Der historische SQLite-Startfehler benötigt noch einen manuellen Windows-Smoke-Test.
+- README-Screenshot fehlt noch.
+
+## v0.1.0 – Initialer Arbeitsstand
+
+### Added
+
+- Erste C# WinForms-Anwendung.
+- SQLite-Anbindung über `Microsoft.Data.Sqlite`.
+- Grundstruktur mit Forms, Models, Services, Repositories und Database.
+- Grundlegende Listen- und Aufgabenlogik.
+- Erste README-Datei.
+
+### Status
+
+- Build wurde im damaligen Arbeitsstand als erfolgreich dokumentiert.
+- Der Stand war wegen eines gemeldeten SQLite-Laufzeitfehlers noch nicht arbeitsfähig.

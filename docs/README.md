@@ -23,6 +23,8 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 17. [Operative Prozesse](30-processes/README.md)
 18. [Prozesslandkarte](30-processes/PROCESS-MAP.md)
 19. [Prozessreview 0.6.0](30-processes/PROCESS-REVIEW-0.6.0.md)
+20. [Referenzimplementierungen](50-reference-implementations/README.md)
+21. [Pilot 01 – SASD TaskHost Local](50-reference-implementations/pilot-01-sasd-taskhost-local/README.md)
 
 ## Dokumentgruppen
 
@@ -33,6 +35,6 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 | `20-profiles` | technologie- und projektspezifische Konkretisierungen |
 | `30-processes` | Proposed-Prozesse für Klassifikation, Initialisierung, ADRs, Reviews, Migration, Releases und Archivierung |
 | `40-governance` | Pflege und Anwendung des Standards |
-| `50-reference-implementations` | Pilotprojekte, Erfahrungen und Beispiele |
+| `50-reference-implementations` | Pilotprogramm, Evidenzmodell, Portfolio, Assessments, Migrationswellen und Lessons Learned |
 
 Dokumente mit Status Planned, Draft oder Proposed sind noch keine verbindlichen Anforderungen einer stabilen Standardversion. Proposed-Dokumente können für Pilotbewertungen verwendet werden.

@@ -3,7 +3,7 @@ title: "Dokumentkatalog für Version 1.0"
 document-id: SASD-FND-006
 document-type: normative
 status: Proposed
-version: 0.3.0
+version: 0.4.0
 standard-version: "1.0"
 language: de
 authoritative: true
@@ -73,7 +73,7 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-GOV-005 | `docs/40-governance/CHANGE-PROCESS.md` | Normativ | Draft | Änderungsvorschläge, Bewertung und Entscheidung | Maintainer, Beitragende | GOV-004 |
 | SASD-GOV-006 | `docs/40-governance/EXCEPTIONS.md` | Normativ | Draft | Ausnahmen, Risiken und Ablaufdaten | Projektverantwortliche | GOV-001 |
 | SASD-GOV-007 | `docs/40-governance/COMPLIANCE.md` | Normativ | Draft | Anwendung, Nachweise und Compliance-Erklärung | Projektverantwortliche, Reviewer | CORE-006, GOV-006 |
-| SASD-REF-001 | `docs/50-reference-implementations/README.md` | Informativ | Draft | Auswahl und Dokumentation der Pilotprojekte | Maintainer, Anwender | SASD-GOV-007 |
+| SASD-REF-001 | `docs/50-reference-implementations/README.md` | Informativ | Proposed | Einstieg, Pilotkategorien und aktive Referenzprojekte | Maintainer, Anwender | SASD-GOV-007, SASD-PROC-005 |
 | SASD-REF-002 | `docs/10-core-standard/CORE-RESPONSIBILITY-MAP.md` | Informativ | Draft | Zuständigkeitsgrenzen und zulässige Querschnittsregeln des Core | Autoren, Reviewer | SASD-CORE-* |
 | SASD-REF-003 | `docs/10-core-standard/SOLO-DEVELOPER-GUIDE.md` | Informativ | Draft | Pragmatische Anwendung durch Einzelentwickler | Einzelentwickler, kleine Teams | SASD-CORE-006, SASD-GOV-007 |
 | SASD-REF-004 | `docs/10-core-standard/CORE-STANDARD-REVIEW-0.3.0.md` | Informativ | Draft | Reviewnachweis für den Übergang Draft zu Proposed | Maintainer, Reviewer | SASD-CORE-*, SASD-GOV-006, SASD-GOV-007 |
@@ -96,6 +96,20 @@ Ein Eintrag mit Status **Planned** bedeutet, dass die Dokumentrolle beschlossen,
 | SASD-REF-PROC-002 | `docs/30-processes/PROCESS-REVIEW-0.6.0.md` | Informativ | Draft | Reviewnachweis für Proposed 0.6.0 | Maintainer, Reviewer | SASD-PROC-001 bis SASD-PROC-007 |
 | SASD-REF-PROC-003 | `docs/30-processes/PROCESS-REQUIREMENTS-INDEX.md` | Informativ, erzeugt | Draft | Index aller operativen Prozessanforderungen | Anwender, Tooling | SASD-PROC-001 bis SASD-PROC-007 |
 | SASD-REF-PROC-004 | `docs/30-processes/PROCESS-QUALITY-LEVEL-MATRIX.md` | Informativ, erzeugt | Draft | Qualitätsstufensicht der operativen Prozesse | Anwender, Reviewer | SASD-PROC-001 bis SASD-PROC-007 |
+
+| SASD-REF-PILOT-001 | `docs/50-reference-implementations/PILOT-PROGRAM.md` | Informativ | Proposed | Pilotlebenszyklus, Auswahl, Mindestartefakte und Standardfeedback | Maintainer, Reviewer | SASD-PROC-002, SASD-PROC-004, SASD-PROC-005 |
+| SASD-REF-PILOT-002 | `docs/50-reference-implementations/PILOT-EVIDENCE-MODEL.md` | Informativ | Proposed | Evidenzklassen und Vertrauensregeln für Pilotbewertungen | Reviewer, Anwender | SASD-GOV-007, SASD-PROC-004 |
+| SASD-REF-PILOT-003 | `docs/50-reference-implementations/PILOT-PORTFOLIO.md` | Informativ, erzeugt | Draft | Maschinenlesbar erzeugte Übersicht der Piloten | Maintainer, Anwender | SASD-REF-PILOT-001, SASD-REF-PILOT-002 |
+| SASD-REF-PILOT-101 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/README.md` | Informativ | Draft | Einstieg in Pilot 01 | Maintainer, Anwender | SASD-REF-PILOT-001, SASD-PROC-005 |
+| SASD-REF-PILOT-102 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/PILOT-CHARTER.md` | Informativ | Draft | Ziel, Scope und Erfolgskriterien von Pilot 01 | Maintainer, Reviewer | SASD-PROC-002, SASD-PROC-005 |
+| SASD-REF-PILOT-103 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/PROJECT-CLASSIFICATION.md` | Informativ | Draft | Klassifikation des kleinen WinForms-/SQLite-Projekts | Maintainer, Reviewer | SASD-CORE-006, SASD-PROC-002 |
+| SASD-REF-PILOT-104 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/BASELINE-ASSESSMENT.md` | Informativ | Draft | Evidenzbasiertes öffentliches Ausgangsassessment | Maintainer, Reviewer | SASD-PROC-005, SASD-REF-PILOT-002 |
+| SASD-REF-PILOT-105 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/GAP-REGISTER.md` | Informativ | Draft | Priorisierte Lücken und Nachweise | Maintainer, Entwickler | SASD-GOV-006, SASD-GOV-007 |
+| SASD-REF-PILOT-106 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/MIGRATION-PLAN.md` | Informativ | Draft | Wellenbasierter Migrationsplan | Maintainer, Entwickler | SASD-PROC-005 |
+| SASD-REF-PILOT-107 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/WAVE-01-PLAN.md` | Informativ | Draft | Ausführbarer Plan für Stabilisierung und Engineering-Basis | Entwickler, Reviewer | SASD-PROC-004, SASD-PROF-DOTNET-008, SASD-PROF-DESKTOP-004 |
+| SASD-REF-PILOT-108 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/EVIDENCE-MAP.md` | Informativ | Draft | Quellen und geplante lokale Nachweise | Reviewer, Maintainer | SASD-GOV-007, SASD-REF-PILOT-002 |
+| SASD-REF-PILOT-109 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/DECISION-LOG.md` | Informativ | Draft | Pilotentscheidungen und Overengineering-Grenzen | Maintainer, Reviewer | SASD-PROC-003 |
+| SASD-REF-PILOT-110 | `docs/50-reference-implementations/pilot-01-sasd-taskhost-local/PILOT-REVIEW.md` | Informativ | Draft | Review der Pilotvorbereitung | Maintainer, Reviewer | SASD-PROC-004 |
 
 ## 3. Unterstützende Artefakte für Version 1.0
 
