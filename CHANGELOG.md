@@ -8,6 +8,9 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Formal Foundation and Governance Approval Record 0.8.0, completed approval checklist, and SHA-256 manifest for all 14 Approved normative documents.
+- Approval validation and manifest-generation tooling with deterministic Git commit resolution guidance.
+
 - Complete Proposed 0.8.0 Foundation and Governance baseline covering normative language, document lifecycle, metadata, versioning, change control, exceptions, Alignment and Version 1.0 acceptance gates.
 - 232 stable Governance requirement IDs, generated requirement index, responsibility map, review record and approval-readiness record.
 - Standard change proposal, document approval, release record and deprecation templates.
@@ -63,6 +66,10 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+
+- Promoted all seven Foundation documents and all seven Governance documents from Proposed to Approved 0.8.0 after the documented Maintainer review.
+- Corrected the Alignment model dependency from the still-Proposed Core quality-level document to the Approved glossary definition, removing the final approval blocker.
+- Updated repository navigation, roadmap, document catalog, readiness reporting, and governance validation for the Approved baseline.
 
 - Promoted all seven Foundation documents and all seven Governance documents to Proposed 0.8.0 after consistency review.
 - Separated document review, formal approval and GitHub publication as distinct states and evidence.

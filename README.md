@@ -116,7 +116,7 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 1. Read the [`Project Charter`](docs/00-foundation/PROJECT-CHARTER.md).
 2. Review the [`Version 1.0 Scope`](docs/00-foundation/SCOPE.md).
 3. Review the [`Content Architecture`](docs/00-foundation/CONTENT-ARCHITECTURE.md) and [`Document Catalog`](docs/00-foundation/DOCUMENT-CATALOG.md).
-4. Review the [`Governance Overview`](docs/40-governance/README.md), then read the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
+4. Review the [`Governance Overview`](docs/40-governance/README.md), the [`Foundation & Governance Approval Record`](docs/40-governance/FOUNDATION-GOVERNANCE-APPROVAL-0.8.0.md), and then the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
 5. Review the [`Core Standard`](docs/10-core-standard/README.md), starting with the [`Quality Levels`](docs/10-core-standard/QUALITY-LEVELS.md).
 6. Review the [`C#/.NET Profile`](docs/20-profiles/dotnet/README.md) when working on a .NET project.
 7. Apply the [`Desktop Application Profile`](docs/20-profiles/desktop/README.md) for WinForms or WPF applications.
@@ -138,11 +138,11 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 ## Project status
 
-The project is currently in the **first pilot execution and governance approval-readiness phase**. Foundation and Governance are available as Proposed 0.8.0 after a structured consistency review; formal Maintainer approval remains pending. The technology-independent Core is available as Proposed 0.3.0, the C#/.NET Profile as Proposed 0.4.0, the Desktop Application Profile as Proposed 0.5.0, and all seven operational processes as Proposed 0.6.0. Proposed documents are pilot-ready candidates, not yet stable Version 1.0 requirements.
+The project is currently in the **first pilot execution and normative-baseline development phase**. Foundation and Governance are formally approved as version 0.8.0 and provide the binding organizational basis for further work. The technology-independent Core is available as Proposed 0.3.0, the C#/.NET Profile as Proposed 0.4.0, the Desktop Application Profile as Proposed 0.5.0, and all seven operational processes as Proposed 0.6.0. The Foundation/Governance approval is not yet a stable Version 1.0 release.
 
 Current priorities:
 
-1. complete the Maintainer approval review for Foundation and Governance,
+1. add repository CI based on the approved Governance rules,
 2. execute Wave 01 of Pilot 01 on SASD TaskHost Local and record verified evidence,
 3. refine repository templates, CI and assessment tooling from pilot feedback,
 4. select the medium and complex pilot projects,

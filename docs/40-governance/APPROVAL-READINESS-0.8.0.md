@@ -17,6 +17,8 @@ normative-keywords: []
 
 # Foundation and Governance Approval Readiness 0.8.0
 
+> **Historischer Vorfreigabenachweis:** Dieses Dokument hält den Zustand unmittelbar vor der Maintainer-Freigabe fest. Die Entscheidung ist im [Foundation & Governance Approval Record 0.8.0](FOUNDATION-GOVERNANCE-APPROVAL-0.8.0.md) dokumentiert. Die hier enthaltenen Pending-Angaben bleiben zur Nachvollziehbarkeit unverändert.
+
 ## 1. Status
 
 ```text

@@ -2,13 +2,15 @@
 title: "Metadaten für Standarddokumente"
 document-id: SASD-GOV-003
 document-type: normative
-status: Proposed
+status: Approved
 version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true
 owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
+approved-on: 2026-07-24
+approval-record: SASD-REF-GOV-005
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core, DotNet, Desktop]
 depends-on: [SASD-GOV-001, SASD-GOV-002]

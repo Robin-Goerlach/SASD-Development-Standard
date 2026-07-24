@@ -12,20 +12,22 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 6. [Dokumentkatalog](00-foundation/DOCUMENT-CATALOG.md)
 7. [Governance Overview](40-governance/README.md)
 8. [Foundation & Governance Review 0.8.0](40-governance/FOUNDATION-GOVERNANCE-REVIEW-0.8.0.md)
-9. [Approval Readiness 0.8.0](40-governance/APPROVAL-READINESS-0.8.0.md)
-10. [Core Standard](10-core-standard/README.md)
-11. [Qualitätsstufen und Anwendbarkeit](10-core-standard/QUALITY-LEVELS.md)
-12. [Core Standard Review 0.3.0](10-core-standard/CORE-STANDARD-REVIEW-0.3.0.md)
-13. [Leitfaden für Einzelentwickler](10-core-standard/SOLO-DEVELOPER-GUIDE.md)
-14. [C#/.NET Profile](20-profiles/dotnet/README.md)
-15. [C#/.NET Profile Review 0.4.0](20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md)
-16. [Desktop Application Profile](20-profiles/desktop/README.md)
-17. [Desktop Profile Review 0.5.0](20-profiles/desktop/DESKTOP-PROFILE-REVIEW-0.5.0.md)
-18. [Operative Prozesse](30-processes/README.md)
-19. [Prozesslandkarte](30-processes/PROCESS-MAP.md)
-20. [Prozessreview 0.6.0](30-processes/PROCESS-REVIEW-0.6.0.md)
-21. [Referenzimplementierungen](50-reference-implementations/README.md)
-22. [Pilot 01 – SASD TaskHost Local](50-reference-implementations/pilot-01-sasd-taskhost-local/README.md)
+9. [Approval Readiness 0.8.0](40-governance/APPROVAL-READINESS-0.8.0.md) — historisch
+10. [Foundation & Governance Approval 0.8.0](40-governance/FOUNDATION-GOVERNANCE-APPROVAL-0.8.0.md)
+11. [Approval Manifest 0.8.0](40-governance/FOUNDATION-GOVERNANCE-APPROVAL-MANIFEST-0.8.0.md)
+12. [Core Standard](10-core-standard/README.md)
+13. [Qualitätsstufen und Anwendbarkeit](10-core-standard/QUALITY-LEVELS.md)
+14. [Core Standard Review 0.3.0](10-core-standard/CORE-STANDARD-REVIEW-0.3.0.md)
+15. [Leitfaden für Einzelentwickler](10-core-standard/SOLO-DEVELOPER-GUIDE.md)
+16. [C#/.NET Profile](20-profiles/dotnet/README.md)
+17. [C#/.NET Profile Review 0.4.0](20-profiles/dotnet/DOTNET-PROFILE-REVIEW-0.4.0.md)
+18. [Desktop Application Profile](20-profiles/desktop/README.md)
+19. [Desktop Profile Review 0.5.0](20-profiles/desktop/DESKTOP-PROFILE-REVIEW-0.5.0.md)
+20. [Operative Prozesse](30-processes/README.md)
+21. [Prozesslandkarte](30-processes/PROCESS-MAP.md)
+22. [Prozessreview 0.6.0](30-processes/PROCESS-REVIEW-0.6.0.md)
+23. [Referenzimplementierungen](50-reference-implementations/README.md)
+24. [Pilot 01 – SASD TaskHost Local](50-reference-implementations/pilot-01-sasd-taskhost-local/README.md)
 
 ## Dokumentgruppen
 
@@ -38,7 +40,7 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 | `40-governance` | Pflege und Anwendung des Standards |
 | `50-reference-implementations` | Pilotprogramm, Evidenzmodell, Portfolio, Assessments, Migrationswellen und Lessons Learned |
 
-Dokumente mit Status Planned, Draft oder Proposed sind noch keine verbindlichen Anforderungen einer stabilen Standardversion. Proposed-Dokumente können für Pilotbewertungen verwendet werden.
+Foundation und Governance sind als `Approved 0.8.0` freigegeben. Core, Profile und Prozesse befinden sich weiterhin im Status `Proposed` und können für Pilotbewertungen verwendet werden, sind aber noch keine normative Basis eines stabilen Version-1.0-Releases.
 
 ## Pilotfeedback
 

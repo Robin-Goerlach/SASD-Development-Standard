@@ -2,16 +2,18 @@
 title: "Compliance- und Alignment-Modell"
 document-id: SASD-GOV-007
 document-type: normative
-status: Proposed
+status: Approved
 version: 0.8.0
 standard-version: "1.0"
 language: de
 authoritative: true
 owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
+approved-on: 2026-07-24
+approval-record: SASD-REF-GOV-005
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core, DotNet, Desktop]
-depends-on: [SASD-CORE-006, SASD-GOV-001, SASD-GOV-002, SASD-GOV-006]
+depends-on: [SASD-FND-004, SASD-GOV-001, SASD-GOV-002, SASD-GOV-006]
 normative-keywords: [MUSS, DARF NICHT, SOLLTE, SOLLTE NICHT, KANN]
 ---
 

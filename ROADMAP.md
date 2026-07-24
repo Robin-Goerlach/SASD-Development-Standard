@@ -10,7 +10,7 @@
 - [x] Define normative language, document lifecycle, and metadata.
 - [x] Define initial Version 1.0 acceptance criteria.
 - [x] Review the proposed foundation and governance documents for consistency and approval readiness.
-- [ ] Record formal Maintainer approval of the Foundation and Governance baseline.
+- [x] Record formal Maintainer approval of the Foundation and Governance baseline.
 
 ## Phase 1 — Core Standard
 
@@ -50,7 +50,7 @@
 - [x] Add initial WinForms and WPF project templates, desktop checklists, and deployment templates.
 - [ ] Refine reusable templates after .NET and Desktop pilot feedback.
 - [x] Extend governance validation tooling and add release-readiness reporting.
-- [ ] Add repository CI after the Foundation and Governance rules are formally approved.
+- [ ] Add repository CI using the formally approved Foundation and Governance rules.
 
 ## Phase 4 — Pilot Projects
 

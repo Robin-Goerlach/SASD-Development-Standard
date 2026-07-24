@@ -133,3 +133,12 @@ python tooling/report-version-1-readiness.py
 ```
 
 The readiness reporter is informational. It intentionally reports non-Approved documents as release blockers and does not change document status.
+
+## Foundation and Governance approval
+
+```bash
+python tooling/generate-foundation-governance-approval-manifest.py --check
+python tooling/validate-foundation-governance-approval.py
+```
+
+The manifest generator verifies SHA-256 hashes for the 14 Approved Foundation and Governance documents. The approval validator checks status, version, approval metadata, catalog entries, the resolved Governance dependency, and the completed approval evidence.

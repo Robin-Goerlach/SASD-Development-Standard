@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Foundation and Governance Proposed 0.8.0."""
+"""Validate Foundation and Governance Approved 0.8.0."""
 from __future__ import annotations
 import re
 import subprocess
@@ -55,8 +55,8 @@ def main() -> int:
             continue
         text = path.read_text(encoding="utf-8")
         fm = meta(text)
-        if "status: Proposed" not in fm:
-            errors.append("status is not Proposed")
+        if "status: Approved" not in fm:
+            errors.append("status is not Approved")
         if "version: 0.8.0" not in fm:
             errors.append("version is not 0.8.0")
         if PLACEHOLDER.search(text):
@@ -98,9 +98,9 @@ def main() -> int:
             print(f"FAIL missing Foundation document: {path.relative_to(repo)}")
             continue
         fm = meta(path.read_text(encoding="utf-8"))
-        if "status: Proposed" not in fm or "version: 0.8.0" not in fm:
+        if "status: Approved" not in fm or "version: 0.8.0" not in fm:
             failures += 1
-            print(f"FAIL Foundation document not Proposed 0.8.0: {path.relative_to(repo)}")
+            print(f"FAIL Foundation document not Approved 0.8.0: {path.relative_to(repo)}")
 
     for rel in TEMPLATES:
         path = repo / rel
@@ -110,6 +110,13 @@ def main() -> int:
 
     result = subprocess.run([sys.executable, str(repo / "tooling" / "generate-governance-requirements-index.py"), "--check"], check=False)
     if result.returncode:
+        failures += 1
+
+    approval = subprocess.run(
+        [sys.executable, str(repo / "tooling" / "validate-foundation-governance-approval.py")],
+        check=False,
+    )
+    if approval.returncode:
         failures += 1
 
     print(f"\nValidated {total} Governance requirements; failures: {failures}")
