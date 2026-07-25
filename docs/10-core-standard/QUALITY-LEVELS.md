@@ -2,13 +2,17 @@
 title: "Qualitätsstufen und Anwendbarkeit"
 document-id: SASD-CORE-006
 document-type: normative
-status: Proposed
-version: 0.3.0
+status: Approved
+version: 0.9.0
 standard-version: "1.0"
+approval-bundle: SASD-NORMATIVE-BASELINE-0.9.0
+approval-review-state: approved
 language: de
 authoritative: true
 owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
+approved-on: 2026-07-24
+approval-record: SASD-REF-BASELINE-007
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core]
 depends-on: [SASD-FND-002, SASD-FND-003, SASD-GOV-001, SASD-GOV-006, SASD-GOV-007]

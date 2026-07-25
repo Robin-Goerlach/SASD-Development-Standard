@@ -117,16 +117,17 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 1. Read the [`Project Charter`](docs/00-foundation/PROJECT-CHARTER.md).
 2. Review the [`Version 1.0 Scope`](docs/00-foundation/SCOPE.md).
 3. Review the [`Content Architecture`](docs/00-foundation/CONTENT-ARCHITECTURE.md) and [`Document Catalog`](docs/00-foundation/DOCUMENT-CATALOG.md).
-4. Review the [`Governance Overview`](docs/40-governance/README.md), the [`Foundation & Governance Approval Record`](docs/40-governance/FOUNDATION-GOVERNANCE-APPROVAL-0.8.0.md), and then the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
-5. Review the [`Core Standard`](docs/10-core-standard/README.md), starting with the [`Quality Levels`](docs/10-core-standard/QUALITY-LEVELS.md).
-6. Review the [`C#/.NET Profile`](docs/20-profiles/dotnet/README.md) when working on a .NET project.
-7. Apply the [`Desktop Application Profile`](docs/20-profiles/desktop/README.md) for WinForms or WPF applications.
-8. Use the [`Operational Process Handbook`](docs/30-processes/README.md) to classify, initialize, review, migrate, release, and archive projects.
-9. Review the [`Reference Implementation Program`](docs/50-reference-implementations/README.md) and [`Pilot 01 – SASD TaskHost Local`](docs/50-reference-implementations/pilot-01-sasd-taskhost-local/README.md).
-10. Follow the [`Roadmap`](ROADMAP.md).
-11. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
-12. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
-13. Run the local repository quality gates with `python tooling/run-quality-gates.py` or the scripts in [`scripts/`](scripts/README.md).
+4. Review the [`Governance Overview`](docs/40-governance/README.md), the [`Foundation & Governance Approval Record`](docs/40-governance/FOUNDATION-GOVERNANCE-APPROVAL-0.8.0.md), and the rules for [`Normative Language`](docs/40-governance/NORMATIVE-LANGUAGE.md), [`Document Lifecycle`](docs/40-governance/DOCUMENT-LIFECYCLE.md), and [`Document Metadata`](docs/40-governance/DOCUMENT-METADATA.md).
+5. Review the [`Normative Baseline Approval 0.9.0`](docs/40-governance/NORMATIVE-BASELINE-APPROVAL-0.9.0.md), its [`Approval Manifest`](docs/40-governance/NORMATIVE-BASELINE-APPROVAL-MANIFEST-0.9.0.md), and the preceding [`Integrated Review`](docs/40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md).
+6. Review the [`Core Standard`](docs/10-core-standard/README.md), starting with the [`Quality Levels`](docs/10-core-standard/QUALITY-LEVELS.md).
+7. Review the [`C#/.NET Profile`](docs/20-profiles/dotnet/README.md) when working on a .NET project.
+8. Apply the [`Desktop Application Profile`](docs/20-profiles/desktop/README.md) for WinForms or WPF applications.
+9. Use the [`Operational Process Handbook`](docs/30-processes/README.md) to classify, initialize, review, migrate, release, and archive projects.
+10. Review the [`Reference Implementation Program`](docs/50-reference-implementations/README.md) and [`Pilot 01 – SASD TaskHost Local`](docs/50-reference-implementations/pilot-01-sasd-taskhost-local/README.md).
+11. Follow the [`Roadmap`](ROADMAP.md).
+12. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
+13. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
+14. Run the local repository quality gates with `python tooling/run-quality-gates.py` or the scripts in [`scripts/`](scripts/README.md).
 
 ## Normative language
 
@@ -140,19 +141,19 @@ The exact interpretation is defined in [`NORMATIVE-LANGUAGE.md`](docs/40-governa
 
 ## Project status
 
-The project is currently in the **first pilot execution and normative-baseline development phase**. Foundation and Governance are formally approved as version 0.8.0 and provide the binding organizational basis for further work. The technology-independent Core is available as Proposed 0.3.0, the C#/.NET Profile as Proposed 0.4.0, the Desktop Application Profile as Proposed 0.5.0, and all seven operational processes as Proposed 0.6.0. The Foundation/Governance approval is not yet a stable Version 1.0 release.
+The project is currently in the **Approved normative-baseline and release-candidate preparation phase**. Foundation and Governance remain Approved as version 0.8.0. The 13 Core documents, eight C#/.NET documents, four Desktop documents, and seven operational processes are formally approved as the unified **Approved 0.9.0 normative baseline**. This approval is not yet a GitHub release, a release candidate, or a stable Version 1.0 release.
 
-Repository CI is implemented with cross-platform local and GitHub quality gates. The first remote execution exposed a repository-boundary violation; the repair, remote recovery proof, and activation of the required `SASD merge gate` ruleset remain deliberately separated evidence steps. The self-hosting activation procedure is documented under [`docs/50-reference-implementations/repository-self-hosting/`](docs/50-reference-implementations/repository-self-hosting/).
+The approval is intentionally separated from remote CI evidence and publication. Ubuntu, Windows, and `SASD merge gate` validation for the Approval commit, the open TaskHost Local Wave 01 verification, and repository-ruleset evidence remain documented release conditions. The self-hosting procedure is documented under [`docs/50-reference-implementations/repository-self-hosting/`](docs/50-reference-implementations/repository-self-hosting/).
 
 Current priorities:
 
-1. commit the repository-boundary repair and confirm a green Ubuntu and Windows CI run for the exact commit,
-2. capture the remote evidence and activate the governed `SASD merge gate` ruleset,
-3. execute Wave 01 of Pilot 01 on SASD TaskHost Local and record verified evidence,
-4. refine repository templates and assessment tooling from pilot feedback,
-5. select the medium and complex pilot projects,
-6. complete and review the prompt packages,
-7. move Core, profiles, and processes toward approval.
+1. obtain a green Ubuntu and Windows quality-gate run for the Approval commit,
+2. capture the remote evidence and activate or explicitly defer the governed `SASD merge gate` ruleset,
+3. execute and verify Wave 01 of Pilot 01 on SASD TaskHost Local,
+4. resolve every documented release condition,
+5. complete remaining templates, checklists, and Prompt Manager packages,
+6. prepare `1.0.0-rc.1` release records and publication artefacts,
+7. select the medium and complex pilot projects for post-approval validation.
 
 ## Language
 

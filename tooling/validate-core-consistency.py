@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate structural consistency of the Proposed SASD Core Standard."""
+"""Validate structural consistency of the SASD Core Standard."""
 
 from __future__ import annotations
 
@@ -36,10 +36,10 @@ def main() -> int:
             continue
         text = path.read_text(encoding="utf-8")
         errors: list[str] = []
-        if "status: Proposed" not in text.split("---", 2)[1]:
-            errors.append("metadata status is not Proposed")
-        if "version: 0.3.0" not in text.split("---", 2)[1]:
-            errors.append("metadata version is not 0.3.0")
+        if not any(marker in text.split("---", 2)[1] for marker in ("status: Proposed", "status: Approved")):
+            errors.append("metadata status is neither Proposed nor Approved")
+        if "version: 0.9.0" not in text.split("---", 2)[1]:
+            errors.append("metadata version is not 0.9.0")
         for heading in ["Zweck", "Geltungsbereich", "Normative Anforderungen", "Verantwortlichkeiten", "Nachweise und Prüfkriterien", "Ausnahmen und Abweichungen", "Verwandte Dokumente"]:
             if heading not in text:
                 errors.append(f"missing required section concept: {heading}")

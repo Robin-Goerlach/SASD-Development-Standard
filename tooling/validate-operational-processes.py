@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Proposed 0.6.0 operational process handbook."""
+"""Validate the 0.9.0 operational process handbook."""
 
 from __future__ import annotations
 import re
@@ -59,10 +59,10 @@ def main() -> int:
             continue
         text = path.read_text(encoding="utf-8")
         meta = text.split("---", 2)[1] if text.startswith("---") else ""
-        if "status: Proposed" not in meta:
-            errors.append("metadata status is not Proposed")
-        if "version: 0.6.0" not in meta:
-            errors.append("metadata version is not 0.6.0")
+        if not any(marker in meta for marker in ("status: Proposed", "status: Approved")):
+            errors.append("metadata status is neither Proposed nor Approved")
+        if "version: 0.9.0" not in meta:
+            errors.append("metadata version is not 0.9.0")
         for section in SECTIONS:
             if section not in text:
                 errors.append(f"missing section concept: {section}")

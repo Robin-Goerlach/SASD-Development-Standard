@@ -22,6 +22,7 @@ checklists/development/DOTNET-CODE-REVIEW-CHECKLIST.md
 checklists/development/FOUNDATION-GOVERNANCE-APPROVAL-CHECKLIST.md
 checklists/development/LEGACY-MIGRATION-CHECKLIST.md
 checklists/development/MILESTONE-CHECKLIST.md
+checklists/development/NORMATIVE-BASELINE-APPROVAL-REVIEW-CHECKLIST.md
 checklists/development/PILOT-BASELINE-CHECKLIST.md
 checklists/development/PILOT-CLOSEOUT-CHECKLIST.md
 checklists/development/PILOT-IMPLEMENTATION-REVIEW-CHECKLIST.md
@@ -128,6 +129,17 @@ docs/40-governance/FOUNDATION-GOVERNANCE-APPROVAL-MANIFEST-0.8.0.md
 docs/40-governance/FOUNDATION-GOVERNANCE-REVIEW-0.8.0.md
 docs/40-governance/GOVERNANCE-REQUIREMENTS-INDEX.md
 docs/40-governance/GOVERNANCE-RESPONSIBILITY-MAP.md
+docs/40-governance/NORMATIVE-BASELINE-APPROVAL-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-APPROVAL-CHECKLIST-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-APPROVAL-MANIFEST-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-APPROVAL-READINESS-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-APPROVAL-UPDATE-MANIFEST-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-DEPENDENCY-MAP-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-REVIEW-CHECKLIST-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-REVIEW-MANIFEST-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-REVIEW-UPDATE-MANIFEST-0.9.0.md
+docs/40-governance/NORMATIVE-BASELINE-STATUS-REGISTER-0.9.0.md
 docs/40-governance/NORMATIVE-LANGUAGE.md
 docs/40-governance/README.md
 docs/40-governance/VERSIONING.md
@@ -191,6 +203,7 @@ prompts/review/DESKTOP-APPLICATION-REVIEW-PROMPT.md
 prompts/review/DOTNET-PROFILE-REVIEW-PROMPT.md
 prompts/review/FOUNDATION-GOVERNANCE-REVIEW-PROMPT.md
 prompts/review/LEGACY-MIGRATION-REVIEW-PROMPT.md
+prompts/review/NORMATIVE-BASELINE-APPROVAL-REVIEW-PROMPT.md
 prompts/review/PILOT-BASELINE-ASSESSMENT-PROMPT.md
 prompts/review/PILOT-RETROSPECTIVE-PROMPT.md
 prompts/review/PILOT-VERIFICATION-PROMPT.md
@@ -223,6 +236,7 @@ templates/documents/INFORMATIVE-DOCUMENT-TEMPLATE.md
 templates/documents/LEGACY-MIGRATION-ASSESSMENT-TEMPLATE.md
 templates/documents/LEGACY-MIGRATION-PLAN-TEMPLATE.md
 templates/documents/MAINTENANCE-PLAN-TEMPLATE.md
+templates/documents/NORMATIVE-BASELINE-APPROVAL-RECORD-TEMPLATE.md
 templates/documents/NORMATIVE-DOCUMENT-TEMPLATE.md
 templates/documents/PILOT-BASELINE-ASSESSMENT-TEMPLATE.md
 templates/documents/PILOT-CHARTER-TEMPLATE.md
@@ -271,12 +285,15 @@ tooling/generate-desktop-requirements-index.py
 tooling/generate-dotnet-requirements-index.py
 tooling/generate-foundation-governance-approval-manifest.py
 tooling/generate-governance-requirements-index.py
+tooling/generate-normative-baseline-approval-manifest.py
+tooling/generate-normative-baseline-review.py
 tooling/generate-pilot-feedback-summary.py
 tooling/generate-pilot-portfolio.py
 tooling/generate-process-quality-matrix.py
 tooling/generate-process-requirements-index.py
 tooling/generate-repository-manifest.py
 tooling/manage-main-ruleset.py
+tooling/normative_baseline_common.py
 tooling/README.md
 tooling/report-version-1-readiness.py
 tooling/run-quality-gates.py
@@ -290,6 +307,8 @@ tooling/validate-dotnet-profile.py
 tooling/validate-foundation-governance-approval.py
 tooling/validate-governance.py
 tooling/validate-markdown-links.py
+tooling/validate-normative-baseline-approval.py
+tooling/validate-normative-baseline-review.py
 tooling/validate-operational-processes.py
 tooling/validate-reference-pilots.py
 tooling/validate-repository-boundary.py

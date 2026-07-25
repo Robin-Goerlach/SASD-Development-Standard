@@ -1,6 +1,6 @@
 # C#/.NET Profile
 
-**Status:** Proposed 0.4.0 für Pilotierung
+**Status:** Approved 0.9.0 — integrierter Freigabekandidat
 
 Dieses Verzeichnis konkretisiert den technologieunabhängigen SASD Core Standard für C#- und .NET-Projekte.
 
@@ -19,7 +19,8 @@ Dieses Verzeichnis konkretisiert den technologieunabhängigen SASD Core Standard
 
 - [Reference Baseline](DOTNET-REFERENCE-BASELINE.md)
 - [Project Sizing Guide](DOTNET-PROJECT-SIZING-GUIDE.md)
-- [Profile Review 0.4.0](DOTNET-PROFILE-REVIEW-0.4.0.md)
+- [Historischer Profile Review 0.4.0](DOTNET-PROFILE-REVIEW-0.4.0.md)
+- [Integrierter normativer Review 0.9.0](../../40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md)
 - [Requirements Index](DOTNET-REQUIREMENTS-INDEX.md)
 - [Quality Level Matrix](DOTNET-QUALITY-LEVEL-MATRIX.md)
 
@@ -34,4 +35,4 @@ SASD Core Standard
 + Qualitätsstufe Minimum, Recommended oder Production
 ```
 
-Die Dokumente haben den Status Proposed. Sie sind für Pilotbewertungen geeignet, aber noch keine Approved-Anforderungen der Version 1.0.
+Die Dokumente wurden bereichsübergreifend geprüft und auf Approved 0.9.0 vereinheitlicht. Sie sind noch keine Approved-Anforderungen der Version 1.0.

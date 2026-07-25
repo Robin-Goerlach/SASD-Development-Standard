@@ -1,6 +1,6 @@
 # Operative Prozesse
 
-Die Prozessdokumente übersetzen den Core Standard und die Profile in wiederholbare Arbeitsabläufe. Alle sieben Prozesse sind als **Proposed 0.6.0** pilotbereit, aber noch nicht Bestandteil einer stabilen Approved-Version.
+Die Prozessdokumente übersetzen den Core Standard und die Profile in wiederholbare Arbeitsabläufe. Alle sieben Prozesse sind als **Approved 0.9.0** als integrierte Freigabekandidaten, aber noch nicht Bestandteil einer stabilen Approved-Version.
 
 ## Prozessübersicht
 
@@ -15,7 +15,8 @@ Die Prozessdokumente übersetzen den Core Standard und die Profile in wiederholb
 ## Begleitdokumente
 
 - [Prozesslandkarte](PROCESS-MAP.md)
-- [Prozessreview 0.6.0](PROCESS-REVIEW-0.6.0.md)
+- [Historischer Prozessreview 0.6.0](PROCESS-REVIEW-0.6.0.md)
+- [Integrierter normativer Review 0.9.0](../40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md)
 - [Index aller Prozessanforderungen](PROCESS-REQUIREMENTS-INDEX.md)
 - [Qualitätsstufenmatrix](PROCESS-QUALITY-LEVEL-MATRIX.md)
 

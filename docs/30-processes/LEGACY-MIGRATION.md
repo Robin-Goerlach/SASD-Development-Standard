@@ -2,13 +2,17 @@
 title: "Migration bestehender Projekte"
 document-id: SASD-PROC-005
 document-type: normative
-status: Proposed
-version: 0.6.0
+status: Approved
+version: 0.9.0
 standard-version: "1.0"
+approval-bundle: SASD-NORMATIVE-BASELINE-0.9.0
+approval-review-state: approved
 language: de
 authoritative: true
 owner: SASD Development Standard Maintainer
 last-updated: 2026-07-24
+approved-on: 2026-07-24
+approval-record: SASD-REF-BASELINE-007
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core, DotNet, Desktop]
 depends-on: [SASD-PROC-002, SASD-PROC-003, SASD-PROC-004, SASD-CORE-005, SASD-GOV-007]

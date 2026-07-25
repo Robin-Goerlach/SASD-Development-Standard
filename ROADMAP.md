@@ -27,8 +27,9 @@
 - [x] Define applicability, precedence, and solo-developer role combination.
 - [x] Add generated requirement and quality-level indexes.
 - [x] Move the Core documents from Draft to Proposed.
-- [ ] Pilot the Proposed Core on real projects and record adjustments.
-- [ ] Approve the Core documents for the Version 1.0 release candidate.
+- [x] Complete the integrated cross-layer review and unify Core as Proposed 0.9.0.
+- [x] Document the outstanding pilot verification as an explicit release condition.
+- [x] Approve the Core documents as normative baseline 0.9.0 with release conditions.
 
 ## Phase 2 — First Profiles
 
@@ -36,6 +37,8 @@
 - [x] Create the desktop application profile.
 - [x] Define the standard .NET repository and solution structures.
 - [x] Define .NET coding, logging, configuration, persistence, testing, and error-handling rules.
+- [x] Complete the integrated cross-layer review and unify both profiles as Proposed 0.9.0.
+- [x] Approve the C#/.NET and Desktop profiles in the normative-baseline Maintainer decision.
 
 ## Phase 3 — Processes and Supporting Assets
 
@@ -52,6 +55,8 @@
 - [x] Extend governance validation tooling and add release-readiness reporting.
 - [x] Add repository CI using the formally approved Foundation and Governance rules.
 - [x] Add repository-boundary recovery and governed CI-activation tooling.
+- [x] Complete the integrated process review and unify all seven processes as Proposed 0.9.0.
+- [x] Approve the operational processes in the normative-baseline Approval commit.
 - [ ] Commit the boundary repair and confirm the first green Ubuntu and Windows CI run for the exact commit.
 - [ ] Capture CI evidence and activate the `SASD merge gate` ruleset for `main`.
 
@@ -69,8 +74,11 @@
 
 ## Phase 5 — Version 1.0
 
-- [ ] Consolidate feedback from pilot projects.
-- [ ] Resolve remaining contradictions and duplicated rules.
+- [x] Formally approve all 32 normative baseline documents as version 0.9.0.
+- [x] Add the approval record, checklist, SHA-256 manifest, and blocking approval validator.
+- [x] Consolidate and approve Core, profiles, and processes as normative baseline 0.9.0.
+- [ ] Consolidate verified feedback from pilot projects before the stable release.
+- [x] Resolve contradictions, exact duplicates, and formal dependency cycles in the 0.9.0 baseline.
 - [ ] Publish a release candidate.
 - [ ] Produce Word and PDF publication artefacts.
 - [ ] Publish Version 1.0.0.

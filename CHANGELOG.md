@@ -8,6 +8,14 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Formal normative-baseline Approval Record 0.9.0, completed approval checklist, and SHA-256 manifest for 32 documents and 1,345 requirements.
+- Blocking approval validator and lifecycle-aware Core, profile, process, and integrated-review validators.
+- Documented release conditions separating normative approval from remote CI, TaskHost pilot verification, ruleset evidence, and publication.
+- Integrated 0.9.0 normative-baseline review for the 13 Core, eight C#/.NET, four Desktop, and seven operational-process documents.
+- Deterministic dependency map and SHA-256 review manifest for the 32-document approval bundle.
+- Bundle-wide validation for 1,345 requirements, duplicate obligations, unresolved markers, external dependency approval, and dependency cycles.
+- Approval-readiness record, completed review checklist, approval-record template, review checklist, and reusable approval-review prompt.
+
 - Repository self-hosting records for CI recovery, exact-commit remote evidence, and guarded `main` ruleset activation.
 - Governed ruleset payload requiring `SASD merge gate`, blocking force pushes and default-branch deletion.
 - Dependency-free remote workflow evidence capture, GitHub ruleset management, activation validation, platform wrappers, checklist, template, and review prompt.
@@ -77,6 +85,12 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Changed
 
+- Promoted all 13 Core, eight C#/.NET, four Desktop, and seven operational-process documents from Proposed to Approved 0.9.0.
+- Updated document catalog, navigation, roadmap, readiness reporting, and quality gates for the approved normative baseline.
+- Unified all 32 remaining normative documents as Proposed 0.9.0 without granting formal Maintainer approval.
+- Removed three formal dependency cycles by clarifying direction between Architecture and Security, Quality and Testing, Repository and Releases, and Knowledge Management and Maintenance.
+- Integrated the normative-baseline validator into the canonical repository quality gates.
+- Updated Core, profile, process, repository, roadmap, and tooling navigation for the integrated approval candidate.
 - Split CI recovery into boundary repair, green remote run, evidence capture, ruleset activation, and read-back evidence.
 - Made ruleset activation require explicit acknowledgement that normal changes will move from direct `main` pushes to branch and pull-request work.
 - Added CI activation assets to the blocking repository quality-gate chain without claiming that the pending remote run or ruleset has succeeded.

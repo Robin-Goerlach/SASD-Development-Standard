@@ -27,7 +27,12 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 21. [Prozesslandkarte](30-processes/PROCESS-MAP.md)
 22. [Prozessreview 0.6.0](30-processes/PROCESS-REVIEW-0.6.0.md)
 23. [Referenzimplementierungen](50-reference-implementations/README.md)
-24. [Pilot 01 – SASD TaskHost Local](50-reference-implementations/pilot-01-sasd-taskhost-local/README.md)
+24. [Integrierter normativer Review 0.9.0](40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md)
+25. [Normative Baseline Approval 0.9.0](40-governance/NORMATIVE-BASELINE-APPROVAL-0.9.0.md)
+26. [Approval Manifest 0.9.0](40-governance/NORMATIVE-BASELINE-APPROVAL-MANIFEST-0.9.0.md)
+27. [Approval Checklist 0.9.0](40-governance/NORMATIVE-BASELINE-APPROVAL-CHECKLIST-0.9.0.md)
+28. [Statusregister 0.9.0](40-governance/NORMATIVE-BASELINE-STATUS-REGISTER-0.9.0.md)
+29. [Pilot 01 – SASD TaskHost Local](50-reference-implementations/pilot-01-sasd-taskhost-local/README.md)
 
 ## Dokumentgruppen
 
@@ -40,7 +45,7 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 | `40-governance` | Pflege und Anwendung des Standards |
 | `50-reference-implementations` | Pilotprogramm, Evidenzmodell, Portfolio, Assessments, Migrationswellen und Lessons Learned |
 
-Foundation und Governance sind als `Approved 0.8.0` freigegeben. Core, Profile und Prozesse befinden sich weiterhin im Status `Proposed` und können für Pilotbewertungen verwendet werden, sind aber noch keine normative Basis eines stabilen Version-1.0-Releases.
+Foundation und Governance sind als `Approved 0.8.0` freigegeben. Core, C#/.NET-Profil, Desktopprofil und Prozesse bilden gemeinsam die `Approved 0.9.0` normative Baseline. Die Freigabe ist noch kein Release Candidate und keine stabile Version 1.0.0; Remote-CI, Pilotverifikation und Publikationsnachweise bleiben Release-Auflagen.
 
 ## Pilotfeedback
 

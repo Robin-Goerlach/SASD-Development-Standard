@@ -1,6 +1,6 @@
 # Desktop Application Profile
 
-**Normative status:** Proposed 0.5.0
+**Normative status:** Approved 0.9.0 — integrated approval candidate
 **Primary scope:** C#/.NET desktop applications on Windows, especially WinForms and WPF
 
 The Desktop Application Profile adds UI, UX, accessibility, lifecycle, packaging and support requirements to the technology-independent Core and the C#/.NET Profile.
@@ -20,7 +20,8 @@ The Desktop Application Profile adds UI, UX, accessibility, lifecycle, packaging
 - [Desktop Project Sizing Guide](DESKTOP-PROJECT-SIZING-GUIDE.md)
 - [Desktop Quality Level Matrix](DESKTOP-QUALITY-LEVEL-MATRIX.md)
 - [Desktop Requirements Index](DESKTOP-REQUIREMENTS-INDEX.md)
-- [Desktop Profile Review 0.5.0](DESKTOP-PROFILE-REVIEW-0.5.0.md)
+- [Historical Desktop Profile Review 0.5.0](DESKTOP-PROFILE-REVIEW-0.5.0.md)
+- [Integrated Normative Review 0.9.0](../../40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md)
 
 ## Adoption path
 

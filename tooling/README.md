@@ -28,7 +28,7 @@ Prüft Vorhandensein und Eindeutigkeit der Core-Anforderungs-IDs.
 
 Prüft zusätzlich:
 
-- Proposed-Status und Version 0.3.0 aller Core-Dokumente,
+- Proposed- oder Approved-Status und Version 0.9.0 aller Core-Dokumente,
 - erwartete Abschnittsrollen,
 - normative Schlüsselwörter in Requirement-Zeilen,
 - exakte dokumentübergreifende Textduplikate,
@@ -64,7 +64,7 @@ python tooling/generate-dotnet-requirements-index.py --check
 
 ### `validate-dotnet-profile.py`
 
-Checks the eight Proposed 0.4.0 profile documents, allocated requirement-ID ranges, normative keywords, exact duplicates, required sections and the generated index.
+Checks the eight Proposed or Approved 0.9.0 profile documents, allocated requirement-ID ranges, normative keywords, exact duplicates, required sections and the generated index.
 
 ### `generate-dotnet-requirements-index.py`
 
@@ -79,7 +79,7 @@ python tooling/generate-desktop-requirements-index.py --check
 
 ### `validate-desktop-profile.py`
 
-Checks the four Proposed 0.5.0 Desktop documents, requirement-ID ranges, normative keywords, duplicates, required sections, generated index and the WinForms/WPF project templates.
+Checks the four Proposed or Approved 0.9.0 Desktop documents, requirement-ID ranges, normative keywords, duplicates, required sections, generated index and the WinForms/WPF project templates.
 
 ### `generate-desktop-requirements-index.py`
 
@@ -96,7 +96,7 @@ python tooling/generate-process-quality-matrix.py --check
 
 ### `validate-operational-processes.py`
 
-Checks all seven Proposed 0.6.0 process documents, requirement-ID ranges, normative keywords, exact duplicates, expected process sections, templates and generated views.
+Checks all seven Proposed or Approved 0.9.0 process documents, requirement-ID ranges, normative keywords, exact duplicates, expected process sections, templates and generated views.
 
 ### Generated process views
 
@@ -218,3 +218,30 @@ python tooling/manage-main-ruleset.py \
 `capture-ci-activation.py` and `manage-main-ruleset.py` use only the Python
 standard library. Public read operations can work without a token; ruleset
 writes require repository `Administration: write` permission.
+
+## Integrated normative baseline review
+
+The 32 Core, C#/.NET, Desktop, and operational-process documents are reviewed as one bundle:
+
+```bash
+python tooling/generate-normative-baseline-review.py --check
+python tooling/validate-normative-baseline-review.py
+```
+
+The generator maintains:
+
+- `docs/40-governance/NORMATIVE-BASELINE-DEPENDENCY-MAP-0.9.0.md`
+- `docs/40-governance/NORMATIVE-BASELINE-REVIEW-MANIFEST-0.9.0.md`
+
+The validator checks the 32-document bundle, 1,345 requirements, exact duplicates, unresolved markers, external dependency approval, dependency cycles, required document sections, and current generated evidence. It does not grant Maintainer approval.
+
+
+## Normative baseline approval
+
+```bash
+python tooling/generate-normative-baseline-approval-manifest.py --check
+python tooling/validate-normative-baseline-review.py
+python tooling/validate-normative-baseline-approval.py
+```
+
+The review validator supports both the Proposed review state and the later Approved state. The approval validator is blocking once the 32-document bundle is Approved and verifies approval metadata, evidence records, dependency state, catalog entries, requirement count, and SHA-256 manifest freshness.

@@ -4,9 +4,9 @@ Der Core Standard enthält die technologieunabhängigen Anforderungen des SASD D
 
 ## Status
 
-Alle 13 Core-Dokumente liegen nach dem Konsistenz- und Proportionalitätsreview als **Proposed 0.3.0** vor. Sie sind Freigabekandidaten, aber noch keine verbindlichen Anforderungen einer veröffentlichten Version 1.0.
+Alle 13 Core-Dokumente liegen nach dem Konsistenz- und Proportionalitätsreview als **Approved 0.9.0** vor. Sie sind Freigabekandidaten, aber noch keine verbindlichen Anforderungen einer veröffentlichten Version 1.0.
 
-Die Reviewentscheidung und verbleibenden offenen Punkte sind in [Core Standard Review 0.3.0](CORE-STANDARD-REVIEW-0.3.0.md) dokumentiert.
+Der historische Übergang zu Proposed ist in [Core Standard Review 0.3.0](CORE-STANDARD-REVIEW-0.3.0.md) dokumentiert. Die bündelweite Freigabeprüfung ist im [integrierten Review 0.9.0](../40-governance/NORMATIVE-BASELINE-REVIEW-0.9.0.md) festgehalten.
 
 ## Empfohlene Lesereihenfolge
 
@@ -92,4 +92,4 @@ Der Core Standard ist eine eigenständige SASD-Spezifikation. Er orientiert sich
 
 ## Nächster Reifeschritt
 
-Der nächste Schritt ist die Pilotierung an kleinen, mittleren und komplexeren Projekten. Die Ergebnisse entscheiden, welche Proposed-Anforderungen vor `Approved` angepasst werden müssen.
+Der integrierte Review ist abgeschlossen. Vor `Approved` stehen die bewusste Maintainer-Entscheidung, die CI-Verifikation des Approval-Inhalts und die dokumentierte Behandlung der noch offenen Pilotnachweise.
