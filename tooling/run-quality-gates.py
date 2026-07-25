@@ -30,6 +30,7 @@ BLOCKING_CHECKS: tuple[tuple[str, str], ...] = (
     ("desktop-profile", "validate-desktop-profile.py"),
     ("operational-processes", "validate-operational-processes.py"),
     ("reference-pilots", "validate-reference-pilots.py"),
+    ("version-1-pilot-coverage", "validate-version-1-pilot-coverage.py"),
     ("governance", "validate-governance.py"),
     ("normative-baseline-review", "validate-normative-baseline-review.py"),
     ("normative-baseline-approval", "validate-normative-baseline-approval.py"),

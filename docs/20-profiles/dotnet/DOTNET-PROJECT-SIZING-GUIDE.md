@@ -3,7 +3,7 @@ title: "C#/.NET Project Sizing Guide"
 document-id: SASD-REF-DOTNET-002
 document-type: informative
 status: Draft
-version: 0.4.0
+version: 0.9.0
 standard-version: "1.0"
 language: de
 authoritative: false

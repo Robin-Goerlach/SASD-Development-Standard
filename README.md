@@ -123,7 +123,7 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 7. Review the [`C#/.NET Profile`](docs/20-profiles/dotnet/README.md) when working on a .NET project.
 8. Apply the [`Desktop Application Profile`](docs/20-profiles/desktop/README.md) for WinForms or WPF applications.
 9. Use the [`Operational Process Handbook`](docs/30-processes/README.md) to classify, initialize, review, migrate, release, and archive projects.
-10. Review the [`Reference Implementation Program`](docs/50-reference-implementations/README.md) and [`Pilot 01 – SASD TaskHost Local`](docs/50-reference-implementations/pilot-01-sasd-taskhost-local/README.md).
+10. Review the [`Reference Implementation Program`](docs/50-reference-implementations/README.md), [`Pilot 01 – SASD TaskHost Local`](docs/50-reference-implementations/pilot-01-sasd-taskhost-local/README.md), [`Pilot 02 – SASD Prompt Manager`](docs/50-reference-implementations/pilot-02-sasd-prompt-manager/README.md), and [`Pilot 03 – SASD Mail Workbench`](docs/50-reference-implementations/pilot-03-sasd-mail-workbench/README.md).
 11. Follow the [`Roadmap`](ROADMAP.md).
 12. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
 13. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
@@ -147,13 +147,13 @@ The approval is intentionally separated from remote CI evidence and publication.
 
 Current priorities:
 
-1. obtain a green Ubuntu and Windows quality-gate run for the Approval commit,
-2. capture the remote evidence and activate or explicitly defer the governed `SASD merge gate` ruleset,
+1. obtain a green Ubuntu and Windows quality-gate run for the current commit,
+2. capture remote evidence and activate or explicitly defer the governed `SASD merge gate` ruleset,
 3. execute and verify Wave 01 of Pilot 01 on SASD TaskHost Local,
-4. resolve every documented release condition,
-5. complete remaining templates, checklists, and Prompt Manager packages,
-6. prepare `1.0.0-rc.1` release records and publication artefacts,
-7. select the medium and complex pilot projects for post-approval validation.
+4. confirm the public baselines of Pilot 02 and Pilot 03 in local clones tied to exact commits,
+5. execute the first controlled waves for Prompt Manager and Mail Workbench,
+6. consolidate lessons learned across all three project sizes,
+7. prepare `1.0.0-rc.1` records and Markdown-to-Word/PDF publication tooling.
 
 ## Language
 
@@ -178,4 +178,4 @@ This repository is licensed under the [MIT License](LICENSE), unless a document 
 
 ## Current pilot status
 
-Pilot 01 (SASD TaskHost Local) is `In Execution`. A Wave 01 update artifact has been prepared and statically reviewed, while target commit, .NET build/test, Windows runtime and CI verification remain pending. See `docs/50-reference-implementations/`.
+The Version 1.0 portfolio now covers all three required project sizes. Pilot 01 (TaskHost Local) is `In Execution` with an unverified Wave 01 artifact. Pilot 02 (Prompt Manager) and Pilot 03 (Mail Workbench) are `Baseline Assessed`; their target commits, local builds, tests, runtime checks and migration evidence remain pending. See [`VERSION-1.0-PILOT-READINESS.md`](docs/50-reference-implementations/VERSION-1.0-PILOT-READINESS.md).

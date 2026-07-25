@@ -20,7 +20,7 @@ ROWS = [
 def build() -> str:
     lines = [
         "---", 'title: "Qualitätsstufenmatrix der operativen Prozesse"', "document-id: SASD-REF-PROC-004",
-        "document-type: informative", "status: Draft", "version: 0.6.0", 'standard-version: "1.0"',
+        "document-type: informative", "status: Draft", "version: 0.9.0", 'standard-version: "1.0"',
         "language: de", "authoritative: false", "owner: SASD Development Standard Maintainer",
         "last-updated: 2026-07-24", "applies-to-quality-levels: [Minimum, Recommended, Production]",
         "applies-to-profiles: [Core, DotNet, Desktop]",

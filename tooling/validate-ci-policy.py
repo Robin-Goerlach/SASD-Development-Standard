@@ -7,17 +7,19 @@ import re
 import sys
 from pathlib import Path
 
-
 USES = re.compile(r"^\s*-?\s*uses:\s*([^\s#]+)(?:\s+#\s*(.+))?\s*$", re.MULTILINE)
 FULL_SHA = re.compile(r"^[0-9a-f]{40}$")
 WRITE_PERMISSION = re.compile(r"^\s+[a-zA-Z0-9_-]+:\s*write\s*$", re.MULTILINE)
+DEPENDABOT_ECOSYSTEM = re.compile(r"package-ecosystem:\s*[\"']?([^\"'\s]+)[\"']?")
+DEPENDABOT_ROOT = re.compile(r"directory:\s*[\"']?/[\"']?(?:\s|$)")
+DEPENDABOT_WEEKLY = re.compile(r"interval:\s*[\"']?weekly[\"']?(?:\s|$)")
 
 
 def main() -> int:
     repo = Path(__file__).resolve().parents[1]
-    workflow = repo / ".github" / "workflows" / "quality-gates.yml"
-    dependabot = repo / ".github" / "dependabot.yml"
-    codeowners = repo / ".github" / "CODEOWNERS"
+    workflow = repo / ".github/workflows/quality-gates.yml"
+    dependabot = repo / ".github/dependabot.yml"
+    codeowners = repo / ".github/CODEOWNERS"
     failures: list[str] = []
 
     required = [
@@ -79,9 +81,18 @@ def main() -> int:
 
     if dependabot.is_file():
         text = dependabot.read_text(encoding="utf-8")
-        for fragment in ["version: 2", "package-ecosystem: github-actions", "directory: /", "interval: weekly"]:
-            if fragment not in text:
-                failures.append(f"Dependabot configuration missing: {fragment!r}")
+        if not re.search(r"^version:\s*2\s*$", text, re.MULTILINE):
+            failures.append("Dependabot configuration must use version 2")
+        ecosystems = DEPENDABOT_ECOSYSTEM.findall(text)
+        if ecosystems != ["github-actions"]:
+            failures.append(
+                "Dependabot must contain exactly one github-actions update block; found: "
+                + (", ".join(ecosystems) if ecosystems else "none")
+            )
+        if not DEPENDABOT_ROOT.search(text):
+            failures.append("Dependabot github-actions directory must be repository root /")
+        if not DEPENDABOT_WEEKLY.search(text):
+            failures.append("Dependabot schedule must be weekly")
 
     if codeowners.is_file():
         text = codeowners.read_text(encoding="utf-8")
@@ -89,7 +100,7 @@ def main() -> int:
             if fragment not in text:
                 failures.append(f"CODEOWNERS missing ownership rule: {fragment!r}")
 
-    ruleset = repo / ".github" / "rulesets" / "main-merge-gate.json"
+    ruleset = repo / ".github/rulesets/main-merge-gate.json"
     if ruleset.is_file():
         text = ruleset.read_text(encoding="utf-8")
         for fragment in [
@@ -113,7 +124,7 @@ def main() -> int:
     print("OK   workflow triggers, permissions, concurrency and timeouts")
     print("OK   action references use full commit SHAs with release comments")
     print("OK   checkout credentials are not persisted")
-    print("OK   Dependabot monitors GitHub Actions")
+    print("OK   Dependabot monitors only GitHub Actions from the repository root")
     print("OK   governance-sensitive paths have CODEOWNERS")
     print("OK   governed main-branch ruleset payload is present")
     print("\nCI policy failures: 0")

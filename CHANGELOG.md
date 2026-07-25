@@ -8,6 +8,12 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Pilot 02 for SASD Prompt Manager with Medium/Recommended classification, public baseline assessment, 12-item gap register, two-wave migration plan, verification plan, evidence map, decision log, baseline review, and initial lessons learned.
+- Pilot 03 for SASD Mail Workbench with Large/Complex classification, staged Recommended-to-Production gate, public baseline assessment, 12-item gap register, recovery- and security-focused migration plan, verification plan, evidence map, decision log, baseline review, and initial lessons learned.
+- Version 1.0 pilot-readiness record covering Small, Medium, and Large/Complex project categories.
+- Pilot manifest schema 1.2 and validation for baseline-assessed projects without a prepared implementation artifact.
+- Blocking pilot-coverage validation for the three required project sizes and generated portfolio/readiness views.
+
 - Formal normative-baseline Approval Record 0.9.0, completed approval checklist, and SHA-256 manifest for 32 documents and 1,345 requirements.
 - Blocking approval validator and lifecycle-aware Core, profile, process, and integrated-review validators.
 - Documented release conditions separating normative approval from remote CI, TaskHost pilot verification, ruleset evidence, and publication.
@@ -84,6 +90,10 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+
+- Updated the pilot programme and evidence model to distinguish public baseline assessment from implementation and technical verification.
+- Hardened CI-policy validation so semantically valid quoted Dependabot directory values are accepted while the repository remains limited to GitHub Actions dependency updates.
+- Updated repository navigation and roadmap for the complete three-size pilot portfolio.
 
 - Promoted all 13 Core, eight C#/.NET, four Desktop, and seven operational-process documents from Proposed to Approved 0.9.0.
 - Updated document catalog, navigation, roadmap, readiness reporting, and quality gates for the approved normative baseline.

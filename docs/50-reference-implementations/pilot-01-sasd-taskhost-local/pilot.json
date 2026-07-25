@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "pilot_id": "SASD-PILOT-001",
   "title": "Pilot 01 – SASD TaskHost Local",
   "target_repository": "https://github.com/Robin-Goerlach/SASD-TaskHost-Local",
@@ -32,7 +32,8 @@
     "review": "PILOT-REVIEW.md",
     "implementation_review": "WAVE-01-IMPLEMENTATION-REVIEW.md",
     "verification_plan": "WAVE-01-VERIFICATION-PLAN.md",
-    "interim_retrospective": "INTERIM-RETROSPECTIVE.md"
+    "interim_retrospective": "INTERIM-RETROSPECTIVE.md",
+    "lessons_learned": "INTERIM-RETROSPECTIVE.md"
   },
   "implementation_state": "Artifact Prepared",
   "verification_state": "Pending",
@@ -43,5 +44,17 @@
     "sha256": "61a199c1785c9b5e614a1564644f8b1db756b7030a9008675aa411088fb072d7",
     "file_count": 36,
     "prepared_on": "2026-07-24"
+  },
+  "observation": {
+    "branch": "main",
+    "observed_on": "2026-07-24",
+    "commit_sha": null,
+    "evidence_classes": [
+      "O",
+      "R",
+      "A",
+      "I",
+      "U"
+    ]
   }
 }

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.2",
+  "pilot_id": "SASD-PILOT-003",
+  "title": "Pilot 03 – SASD Mail Workbench",
+  "target_repository": "https://github.com/Robin-Goerlach/SASD-Mail-Workbench",
+  "category": "complex-layered-dotnet-mail-platform",
+  "project_size": "Large",
+  "quality_level": "Recommended",
+  "profiles": [
+    "Core",
+    "DotNet",
+    "Desktop"
+  ],
+  "profile_applicability": {
+    "Core": "Full",
+    "DotNet": "Full",
+    "Desktop": "Partial until GUI milestone"
+  },
+  "production_gate": "Required before processing real mailboxes, credentials or customer data.",
+  "status": "Baseline Assessed",
+  "baseline_date": "2026-07-25",
+  "standard_documents": {
+    "core": "Approved 0.9.0",
+    "dotnet": "Approved 0.9.0",
+    "desktop": "Approved 0.9.0 (partial applicability)",
+    "processes": "Approved 0.9.0"
+  },
+  "execution_statement": "Public baseline assessed; exact commit, local build/tests, architecture evidence, recovery fault injection, security review and CI verification remain pending.",
+  "documents": {
+    "charter": "PILOT-CHARTER.md",
+    "classification": "PROJECT-CLASSIFICATION.md",
+    "baseline": "BASELINE-ASSESSMENT.md",
+    "gaps": "GAP-REGISTER.md",
+    "migration_plan": "MIGRATION-PLAN.md",
+    "wave_01": "WAVE-01-PLAN.md",
+    "verification_plan": "VERIFICATION-PLAN.md",
+    "evidence": "EVIDENCE-MAP.md",
+    "decisions": "DECISION-LOG.md",
+    "review": "PILOT-REVIEW.md",
+    "lessons_learned": "INITIAL-LESSONS-LEARNED.md"
+  },
+  "implementation_state": "Not Started",
+  "verification_state": "Pending",
+  "current_wave": "Wave 01 planned",
+  "target_commit": null,
+  "implementation_artifact": null,
+  "observation": {
+    "branch": "main",
+    "observed_on": "2026-07-25",
+    "commit_sha": null,
+    "evidence_classes": [
+      "O",
+      "R",
+      "I",
+      "U"
+    ]
+  }
+}

@@ -3,7 +3,7 @@ title: "C#/.NET Quality Level Matrix"
 document-id: SASD-REF-DOTNET-005
 document-type: informative
 status: Draft
-version: 0.4.0
+version: 0.9.0
 standard-version: "1.0"
 language: de
 authoritative: false

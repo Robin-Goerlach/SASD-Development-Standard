@@ -3,8 +3,8 @@
 ## Profile selection
 
 - Core quality level: SASD Recommended
-- C#/.NET Profile: Proposed 0.4.0 during pilot
-- Desktop Profile: Proposed 0.5.0 during pilot
+- C#/.NET Profile: Proposed 0.9.0 during pilot
+- Desktop Profile: Proposed 0.9.0 during pilot
 - UI technology: WPF
 
 ## Intended structure

@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse, re, sys
 from collections import Counter
 from pathlib import Path
-DATE="2026-07-24"; VERSION="0.8.0"
+DATE="2026-07-25"; VERSION="0.11.0"
 ROW=re.compile(r"^\| (SASD-PFB-\d{3}) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| (Candidate|Accepted|Deferred|Rejected|Confirmed) \|$", re.M)
 
 def render(repo:Path)->str:

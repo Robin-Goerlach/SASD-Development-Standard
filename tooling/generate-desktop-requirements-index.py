@@ -22,7 +22,7 @@ def generate(repo: Path) -> str:
                 rows.append((match.group(1), name, match.group(2)))
     rows.sort(key=lambda item: item[0])
     body = ["---", 'title: "Desktop Requirements Index"', "document-id: SASD-REF-DESKTOP-006",
-            "document-type: informative", "status: Draft", "version: 0.5.0",
+            "document-type: informative", "status: Draft", "version: 0.9.0",
             'standard-version: "1.0"', "language: de", "authoritative: false",
             "owner: SASD Development Standard Maintainer", "last-updated: 2026-07-24",
             "applies-to-quality-levels: [Minimum, Recommended, Production]",

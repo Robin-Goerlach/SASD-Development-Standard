@@ -68,9 +68,12 @@
 - [ ] Commit and validate Wave 01 in the SASD TaskHost Local repository.
 - [x] Record interim lessons learned from the Wave 01 artifact.
 - [ ] Record verified results and final lessons learned from the small-project pilot.
-- [ ] Apply the full process chain to one medium project.
-- [ ] Apply the full process chain to one more complex C#/.NET project.
-- [ ] Consolidate deviations and lessons learned across all pilots.
+- [x] Select, classify, and baseline-assess one medium project: SASD Prompt Manager.
+- [ ] Execute and verify Wave 01 for SASD Prompt Manager.
+- [x] Select, classify, and baseline-assess one complex project: SASD Mail Workbench.
+- [ ] Execute and verify Wave 01 for SASD Mail Workbench.
+- [x] Record initial cross-size lessons from all three baselines.
+- [ ] Consolidate verified deviations and final lessons learned across all pilots.
 
 ## Phase 5 — Version 1.0
 

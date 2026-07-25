@@ -3,12 +3,12 @@ title: "Feedbacklog aus Referenzpiloten"
 document-id: SASD-REF-PILOT-004
 document-type: informative
 status: Draft
-version: 0.9.1
+version: 0.11.0
 standard-version: "1.0"
 language: de
 authoritative: false
 owner: SASD Development Standard Maintainer
-last-updated: 2026-07-24
+last-updated: 2026-07-25
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core, DotNet, Desktop]
 depends-on: [SASD-REF-PILOT-001, SASD-REF-PILOT-002]
@@ -38,6 +38,11 @@ depends-on: [SASD-REF-PILOT-001, SASD-REF-PILOT-002]
 | SASD-PFB-008 | Pilot 01 | Ein öffentlicher Snapshot kann nach lokaler Arbeit veraltet sein. | Evidence, Tooling | Dauerhafte Nachweise nach Commit auf vollständige Commit-ID umstellen. | Candidate |
 
 | SASD-PFB-009 | Pilot 01 | Ein TaskHost-spezifisches Overlay wurde in das Standard-Repository eingespielt; ZIP-Extraktion konnte Fremddateien nicht zurücknehmen. | Repository-Grenzen, Tooling | Kanonische Repository-Identität, Zielprüfung, Löschliste und Anwendungsskript für nicht rein additive Pakete einführen. | Accepted |
+
+| SASD-PFB-010 | Pilot 02 | Eine plausible Schichtenstruktur sagt wenig über Testabdeckung in Application, Infrastructure und Persistenz aus. | .NET-Profil, Testing | Baseline und Wave-Plan müssen sichtbare Struktur von ausgeführter Evidenz trennen. | Confirmed |
+| SASD-PFB-011 | Pilot 02 | Promptdaten können Secrets und vertraulichen Kontext enthalten, obwohl die Anwendung lokal arbeitet. | Security, Datenschutz | Vertraulichkeits- und Recovery-Bewertung auch für lokale Einzelplatzanwendungen explizit durchführen. | Accepted |
+| SASD-PFB-012 | Pilot 03 | Architektur- und Produktreife entwickeln sich unterschiedlich; das Desktopprofil ist vor der GUI nur teilweise anwendbar. | Profile, Lifecycle | Profilanwendbarkeit pro Projektphase dokumentieren und fehlende spätere Features nicht als aktuelle Lücke werten. | Accepted |
+| SASD-PFB-013 | Pilot 03 | Ein komplexes Repository kann bereits viele professionelle Artefakte besitzen, ohne dass deren Ausführung nachgewiesen ist. | Evidence, Reviews | Complex-Piloten priorisieren Ausführung, Recovery und Trust Boundaries vor weiteren Standarddateien. | Confirmed |
 
 ## Änderungsregel
 

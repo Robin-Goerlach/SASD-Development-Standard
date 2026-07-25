@@ -109,7 +109,9 @@ Checks all seven Proposed or Approved 0.9.0 process documents, requirement-ID ra
 ```bash
 python tooling/generate-pilot-portfolio.py --check
 python tooling/generate-pilot-feedback-summary.py --check
+python tooling/generate-pilot-readiness.py --check
 python tooling/validate-reference-pilots.py
+python tooling/validate-version-1-pilot-coverage.py
 ```
 
 ### `generate-pilot-portfolio.py`
@@ -122,7 +124,11 @@ Erzeugt die kompakte Statusübersicht aus dem Pilotfeedbacklog.
 
 ### `validate-reference-pilots.py`
 
-Prüft Pilot-IDs, Manifest-Schema 1.1, Qualitätsstufen, Umsetzungs- und Verifikationszustände, Artefakt-Hashes, Pflichtdokumente, Gap- und Decision-IDs sowie die Aktualität der erzeugten Übersichten.
+Prüft Pilot-IDs, Manifest-Schemas 1.1 und 1.2, Qualitätsstufen, Umsetzungs- und Verifikationszustände, optionale Artefakt-Hashes, Pflichtdokumente, Gap- und Decision-IDs sowie die Aktualität der erzeugten Übersichten.
+
+### `validate-version-1-pilot-coverage.py`
+
+Prüft die für Version 1.0 erforderliche Small-, Medium- und Large/Complex-Abdeckung, Baseline-Artefakte, Standardbezug, Gap Register und Lessons Learned. Die Prüfung bestätigt die Bewertung, nicht eine technische Migration.
 
 ## Foundation and Governance
 
@@ -245,3 +251,15 @@ python tooling/validate-normative-baseline-approval.py
 ```
 
 The review validator supports both the Proposed review state and the later Approved state. The approval validator is blocking once the 32-document bundle is Approved and verifies approval metadata, evidence records, dependency state, catalog entries, requirement count, and SHA-256 manifest freshness.
+
+## Pilotportfolio und Version-1.0-Abdeckung
+
+```bash
+python tooling/generate-pilot-portfolio.py --check
+python tooling/generate-pilot-feedback-summary.py --check
+python tooling/generate-pilot-readiness.py --check
+python tooling/validate-reference-pilots.py
+python tooling/validate-version-1-pilot-coverage.py
+```
+
+Die Abdeckungsprüfung bestätigt Small-, Medium- und Large-Piloten sowie die zugehörigen Baseline-, Gap-, Migrations- und Lessons-Learned-Nachweise. Sie behauptet keine erfolgreichen Builds, Tests, Laufzeittests oder CI-Läufe der Ziel-Repositories.
