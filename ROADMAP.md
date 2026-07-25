@@ -82,7 +82,12 @@
 - [x] Consolidate and approve Core, profiles, and processes as normative baseline 0.9.0.
 - [ ] Consolidate verified feedback from pilot projects before the stable release.
 - [x] Resolve contradictions, exact duplicates, and formal dependency cycles in the 0.9.0 baseline.
-- [ ] Publish a release candidate.
+- [x] Prepare the `1.0.0-rc.1` release plan, blocker register, notes, record, deterministic package builder, verifier, preview workflow, and readiness validation.
+- [ ] Close exact-commit Ubuntu, Windows, and `SASD merge gate` evidence.
+- [ ] Verify at least one practical pilot wave for Release Candidate readiness.
+- [ ] Activate or explicitly defer the governed `main` ruleset.
+- [ ] Build, independently verify, approve, tag, and publish `1.0.0-rc.1` as a GitHub Pre-release.
+- [ ] Practically review the Release Candidate and decide whether `rc.2` is required.
 - [ ] Produce Word and PDF publication artefacts.
 - [ ] Publish Version 1.0.0.
 

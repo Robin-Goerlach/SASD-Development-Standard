@@ -44,3 +44,19 @@ Add `--require-active-ruleset` in the shell version or
 `-RequireActiveRuleset` in PowerShell after the branch ruleset has been
 activated. The scripts write committed evidence only after reading the exact
 remote workflow and ruleset state.
+
+## Release Candidate preparation
+
+PowerShell:
+
+```powershell
+.\scripts\prepare-release-candidate.ps1 -Mode preview
+```
+
+Linux/WSL:
+
+```bash
+bash scripts/prepare-release-candidate.sh preview
+```
+
+`release` mode additionally requires a clean Git checkout and a fully passing generated RC-readiness report. Neither wrapper creates tags or publishes GitHub Releases.

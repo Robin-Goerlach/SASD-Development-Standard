@@ -8,6 +8,7 @@
 .github/rulesets/main-merge-gate.json
 .github/workflows/quality-gates.yml
 .github/workflows/README.md
+.github/workflows/release-candidate-preview.yml
 .gitignore
 .markdownlint.json
 artefacts/publications/README.md
@@ -40,10 +41,12 @@ checklists/project-initiation/PROJECT-CLASSIFICATION-CHECKLIST.md
 checklists/releases/DESKTOP-RELEASE-SMOKE-TEST-CHECKLIST.md
 checklists/releases/PILOT-VERIFICATION-CHECKLIST.md
 checklists/releases/PROJECT-ARCHIVAL-CHECKLIST.md
+checklists/releases/RELEASE-ARTIFACT-VERIFICATION-CHECKLIST.md
 checklists/releases/RELEASE-CHECKLIST.md
 checklists/releases/RELEASE-READINESS-CHECKLIST.md
 checklists/releases/REPOSITORY-CI-ACTIVATION-CHECKLIST.md
 checklists/releases/STANDARD-RELEASE-GOVERNANCE-CHECKLIST.md
+checklists/releases/VERSION-1.0-RC-CHECKLIST.md
 checklists/security/SECURITY-BASELINE-CHECKLIST.md
 CI-IMPLEMENTATION-MANIFEST.md
 CODE_OF_CONDUCT.md
@@ -142,6 +145,12 @@ docs/40-governance/NORMATIVE-BASELINE-REVIEW-UPDATE-MANIFEST-0.9.0.md
 docs/40-governance/NORMATIVE-BASELINE-STATUS-REGISTER-0.9.0.md
 docs/40-governance/NORMATIVE-LANGUAGE.md
 docs/40-governance/README.md
+docs/40-governance/VERSION-1.0-PUBLICATION-PROFILE.md
+docs/40-governance/VERSION-1.0-RC1-RELEASE-RECORD-DRAFT.md
+docs/40-governance/VERSION-1.0-RELEASE-CANDIDATE-BLOCKERS.md
+docs/40-governance/VERSION-1.0-RELEASE-CANDIDATE-PLAN.md
+docs/40-governance/VERSION-1.0-RELEASE-CANDIDATE-READINESS.md
+docs/40-governance/VERSION-1.0-RELEASE-NOTES-DRAFT.md
 docs/40-governance/VERSIONING.md
 docs/50-reference-implementations/pilot-01-sasd-taskhost-local/BASELINE-ASSESSMENT.md
 docs/50-reference-implementations/pilot-01-sasd-taskhost-local/DECISION-LOG.md
@@ -227,6 +236,7 @@ prompts/project-initiation/PROJECT-INITIALIZATION-PROMPT.md
 prompts/release/README.md
 prompts/release/RELEASE-PREPARATION-PROMPT.md
 prompts/release/STANDARD-RELEASE-READINESS-PROMPT.md
+prompts/release/VERSION-1.0-RC-REVIEW-PROMPT.md
 prompts/review/DESKTOP-APPLICATION-REVIEW-PROMPT.md
 prompts/review/DOTNET-PROFILE-REVIEW-PROMPT.md
 prompts/review/FOUNDATION-GOVERNANCE-REVIEW-PROMPT.md
@@ -239,11 +249,14 @@ prompts/review/README.md
 prompts/review/REPOSITORY-CI-ACTIVATION-REVIEW-PROMPT.md
 prompts/review/UPDATE-PACKAGE-ROUTING-REVIEW-PROMPT.md
 README.md
+RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md
 REPOSITORY-DESCRIPTION.txt
 REPOSITORY-IDENTITY.json
 ROADMAP.md
 scripts/capture-ci-activation.ps1
 scripts/capture-ci-activation.sh
+scripts/prepare-release-candidate.ps1
+scripts/prepare-release-candidate.sh
 scripts/README.md
 scripts/repair-repository-boundary.ps1
 scripts/repair-repository-boundary.sh
@@ -261,6 +274,7 @@ templates/documents/DESKTOP-UX-TEST-REPORT-TEMPLATE.md
 templates/documents/DOCUMENT-APPROVAL-RECORD-TEMPLATE.md
 templates/documents/EXCEPTION-RECORD-TEMPLATE.md
 templates/documents/INFORMATIVE-DOCUMENT-TEMPLATE.md
+templates/documents/KNOWN-ISSUES-TEMPLATE.md
 templates/documents/LEGACY-MIGRATION-ASSESSMENT-TEMPLATE.md
 templates/documents/LEGACY-MIGRATION-PLAN-TEMPLATE.md
 templates/documents/MAINTENANCE-PLAN-TEMPLATE.md
@@ -279,7 +293,9 @@ templates/documents/PROJECT-ARCHIVAL-RECORD-TEMPLATE.md
 templates/documents/PROJECT-BRIEF-TEMPLATE.md
 templates/documents/PROJECT-CLASSIFICATION-TEMPLATE.md
 templates/documents/PROJECT-INITIALIZATION-RECORD-TEMPLATE.md
+templates/documents/PUBLICATION-MANIFEST-TEMPLATE.json
 templates/documents/README-TEMPLATE.md
+templates/documents/RELEASE-CANDIDATE-RECORD-TEMPLATE.md
 templates/documents/RELEASE-NOTES-TEMPLATE.md
 templates/documents/RELEASE-RECORD-TEMPLATE.md
 templates/documents/REPOSITORY-CI-ACTIVATION-RECORD-TEMPLATE.md
@@ -305,6 +321,7 @@ templates/repositories/dotnet/editorconfig-dotnet.template
 templates/repositories/dotnet/global.json.template
 templates/repositories/README.md
 templates/repositories/REPOSITORY-METADATA-TEMPLATE.md
+tooling/build-release-candidate.py
 tooling/capture-ci-activation.py
 tooling/ci_activation_common.py
 tooling/generate-core-quality-matrix.py
@@ -320,10 +337,12 @@ tooling/generate-pilot-portfolio.py
 tooling/generate-pilot-readiness.py
 tooling/generate-process-quality-matrix.py
 tooling/generate-process-requirements-index.py
+tooling/generate-release-candidate-readiness.py
 tooling/generate-repository-manifest.py
 tooling/manage-main-ruleset.py
 tooling/normative_baseline_common.py
 tooling/README.md
+tooling/release_candidate_common.py
 tooling/report-version-1-readiness.py
 tooling/run-quality-gates.py
 tooling/validate-ci-activation.py
@@ -340,6 +359,8 @@ tooling/validate-normative-baseline-approval.py
 tooling/validate-normative-baseline-review.py
 tooling/validate-operational-processes.py
 tooling/validate-reference-pilots.py
+tooling/validate-release-candidate-preparation.py
 tooling/validate-repository-boundary.py
 tooling/validate-repository-hygiene.py
 tooling/validate-version-1-pilot-coverage.py
+tooling/verify-release-candidate.py

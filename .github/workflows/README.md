@@ -52,3 +52,17 @@ bash scripts/validate-repository.sh
 ```
 
 A local success and a GitHub Actions success are separate evidence records.
+
+## `release-candidate-preview.yml`
+
+This workflow is manual only. It runs the same blocking repository checks, creates deterministic `1.0.0-rc.1` preview archives, verifies ZIP integrity, checksums and safe paths, and uploads the result for 14 days. It is deliberately read-only and does not create a tag or GitHub Release.
+
+Local equivalent:
+
+```powershell
+.\scripts\prepare-release-candidate.ps1 -Mode preview
+```
+
+```bash
+bash scripts/prepare-release-candidate.sh preview
+```

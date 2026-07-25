@@ -136,3 +136,7 @@ docs/50-reference-implementations/repository-self-hosting/
 - GitHub secure-use guidance: <https://docs.github.com/en/actions/reference/security/secure-use>
 - GitHub ruleset status checks: <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets>
 - Dependabot updates for Actions: <https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/auto-update-actions>
+
+## Release Candidate preview workflow
+
+Version 0.12.0 adds a separate, manually triggered, read-only preview workflow. It runs the canonical quality gates, builds deterministic Source and Markdown preview archives, verifies them, and uploads temporary evidence. The workflow does not possess write permissions and cannot create tags or GitHub Releases. Its existence is preparation evidence only; a successful run must be captured separately.

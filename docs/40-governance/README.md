@@ -38,3 +38,14 @@ Die 32 noch nicht freigegebenen Core-, Profil- und Prozessdokumente bilden nach 
 - [Historical Review](NORMATIVE-BASELINE-REVIEW-0.9.0.md)
 
 The 32 Core, C#/.NET, Desktop, and operational-process documents are Approved 0.9.0. Publication as a release candidate remains subject to the documented release conditions.
+
+## Release Candidate 1.0.0-rc.1
+
+- [Release-Candidate-Plan](VERSION-1.0-RELEASE-CANDIDATE-PLAN.md)
+- [generierte Readiness](VERSION-1.0-RELEASE-CANDIDATE-READINESS.md)
+- [Blockerregister](VERSION-1.0-RELEASE-CANDIDATE-BLOCKERS.md)
+- [Release Notes Draft](VERSION-1.0-RELEASE-NOTES-DRAFT.md)
+- [Release Record Draft](VERSION-1.0-RC1-RELEASE-RECORD-DRAFT.md)
+- [Publikationsprofil](VERSION-1.0-PUBLICATION-PROFILE.md)
+
+Die Dokumente bereiten den ersten Release Candidate vor, erteilen aber keine Freigabe und veröffentlichen keinen Tag.

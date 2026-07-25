@@ -8,6 +8,12 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Version `1.0.0-rc.1` release-candidate plan, explicit blocker register, generated readiness report, draft Release Notes, draft Release Record, and publication profile.
+- Deterministic source and Markdown archive builder with stable ordering, timestamps, embedded metadata, SHA-256 manifest, and independent safe-path verifier.
+- Read-only manually triggered GitHub Actions preview workflow that runs all quality gates, builds preview packages, verifies them, and uploads evidence without creating tags or releases.
+- Release Candidate record, Known Issues, and publication-manifest templates; RC and artifact-verification checklists; release-review prompt; PowerShell and shell wrappers.
+- Blocking structural RC-preparation validation and Version 1.0 readiness integration that keep publication blocked while pilot and remote CI/ruleset evidence remain open.
+
 - Pilot 02 for SASD Prompt Manager with Medium/Recommended classification, public baseline assessment, 12-item gap register, two-wave migration plan, verification plan, evidence map, decision log, baseline review, and initial lessons learned.
 - Pilot 03 for SASD Mail Workbench with Large/Complex classification, staged Recommended-to-Production gate, public baseline assessment, 12-item gap register, recovery- and security-focused migration plan, verification plan, evidence map, decision log, baseline review, and initial lessons learned.
 - Version 1.0 pilot-readiness record covering Small, Medium, and Large/Complex project categories.

@@ -15,69 +15,97 @@ DEPENDABOT_ROOT = re.compile(r"directory:\s*[\"']?/[\"']?(?:\s|$)")
 DEPENDABOT_WEEKLY = re.compile(r"interval:\s*[\"']?weekly[\"']?(?:\s|$)")
 
 
+def validate_action_references(label: str, text: str, failures: list[str]) -> None:
+    matches = list(USES.finditer(text))
+    if not matches:
+        failures.append(f"{label} contains no action references")
+    for match in matches:
+        reference, version_comment = match.groups()
+        if "@" not in reference:
+            failures.append(f"{label} has invalid action reference: {reference}")
+            continue
+        action, revision = reference.rsplit("@", 1)
+        if not action.startswith("actions/"):
+            failures.append(f"{label} uses non-baseline third-party action: {action}")
+        if not FULL_SHA.fullmatch(revision):
+            failures.append(f"{label} action is not pinned to a full commit SHA: {reference}")
+        if not version_comment or not re.search(r"\bv\d", version_comment):
+            failures.append(f"{label} action pin lacks a same-line release comment: {reference}")
+
+
+def validate_common_workflow(label: str, text: str, failures: list[str]) -> None:
+    for fragment in [
+        "permissions:\n  contents: read",
+        "concurrency:",
+        "cancel-in-progress: true",
+        "persist-credentials: false",
+        "timeout-minutes:",
+    ]:
+        if fragment not in text:
+            failures.append(f"{label} missing required policy fragment: {fragment!r}")
+    for fragment in ["pull_request_target:", "write-all", "GITHUB_TOKEN", "curl |", "wget |"]:
+        if fragment in text:
+            failures.append(f"{label} contains forbidden fragment: {fragment!r}")
+    if WRITE_PERMISSION.search(text):
+        failures.append(f"{label} grants a write permission")
+    validate_action_references(label, text, failures)
+
+
 def main() -> int:
     repo = Path(__file__).resolve().parents[1]
-    workflow = repo / ".github/workflows/quality-gates.yml"
+    quality_workflow = repo / ".github/workflows/quality-gates.yml"
+    preview_workflow = repo / ".github/workflows/release-candidate-preview.yml"
     dependabot = repo / ".github/dependabot.yml"
     codeowners = repo / ".github/CODEOWNERS"
     failures: list[str] = []
 
     required = [
-        workflow,
+        quality_workflow,
+        preview_workflow,
         dependabot,
         codeowners,
         repo / "tooling/run-quality-gates.py",
         repo / "tooling/validate-ci-activation.py",
+        repo / "tooling/build-release-candidate.py",
+        repo / "tooling/verify-release-candidate.py",
         repo / ".github/rulesets/main-merge-gate.json",
     ]
     for path in required:
         if not path.is_file():
             failures.append(f"missing required CI file: {path.relative_to(repo)}")
 
-    if workflow.is_file():
-        text = workflow.read_text(encoding="utf-8")
-        required_fragments = [
+    if quality_workflow.is_file():
+        text = quality_workflow.read_text(encoding="utf-8")
+        validate_common_workflow("quality-gates workflow", text, failures)
+        for fragment in [
             "push:",
             "pull_request:",
             "workflow_dispatch:",
-            "permissions:\n  contents: read",
-            "concurrency:",
-            "cancel-in-progress: true",
-            "persist-credentials: false",
             "tooling/run-quality-gates.py",
             "if: ${{ always() }}",
             "SASD merge gate",
-            "timeout-minutes:",
-        ]
-        for fragment in required_fragments:
+        ]:
             if fragment not in text:
-                failures.append(f"workflow missing required policy fragment: {fragment!r}")
-
-        forbidden = ["pull_request_target:", "write-all", "GITHUB_TOKEN", "curl |", "wget |"]
-        for fragment in forbidden:
-            if fragment in text:
-                failures.append(f"workflow contains forbidden fragment: {fragment!r}")
-        if WRITE_PERMISSION.search(text):
-            failures.append("workflow grants a write permission")
-
-        matches = list(USES.finditer(text))
-        if not matches:
-            failures.append("workflow contains no action references")
-        for match in matches:
-            reference, version_comment = match.groups()
-            if "@" not in reference:
-                failures.append(f"invalid action reference: {reference}")
-                continue
-            action, revision = reference.rsplit("@", 1)
-            if not action.startswith("actions/"):
-                failures.append(f"third-party action is not allowed in baseline workflow: {action}")
-            if not FULL_SHA.fullmatch(revision):
-                failures.append(f"action is not pinned to a full commit SHA: {reference}")
-            if not version_comment or not re.search(r"\bv\d", version_comment):
-                failures.append(f"action pin lacks a same-line release comment: {reference}")
-
+                failures.append(f"quality-gates workflow missing required fragment: {fragment!r}")
         if text.count("timeout-minutes:") < 2:
-            failures.append("each workflow job must define a timeout")
+            failures.append("each quality-gates workflow job must define a timeout")
+
+    if preview_workflow.is_file():
+        text = preview_workflow.read_text(encoding="utf-8")
+        validate_common_workflow("RC preview workflow", text, failures)
+        for fragment in [
+            "workflow_dispatch:",
+            "tooling/run-quality-gates.py",
+            "tooling/build-release-candidate.py --mode preview",
+            "tooling/verify-release-candidate.py",
+            "actions/upload-artifact@",
+            "retention-days: 14",
+        ]:
+            if fragment not in text:
+                failures.append(f"RC preview workflow missing required fragment: {fragment!r}")
+        for forbidden in ["contents: write", "gh release", "git tag", "create-release", "softprops/action-gh-release"]:
+            if forbidden in text:
+                failures.append(f"RC preview workflow may not publish: {forbidden!r}")
 
     if dependabot.is_file():
         text = dependabot.read_text(encoding="utf-8")
@@ -96,7 +124,12 @@ def main() -> int:
 
     if codeowners.is_file():
         text = codeowners.read_text(encoding="utf-8")
-        for fragment in ["* @Robin-Goerlach", "/.github/ @Robin-Goerlach", "/tooling/ @Robin-Goerlach"]:
+        for fragment in [
+            "* @Robin-Goerlach",
+            "/.github/ @Robin-Goerlach",
+            "/tooling/ @Robin-Goerlach",
+            "/docs/40-governance/ @Robin-Goerlach",
+        ]:
             if fragment not in text:
                 failures.append(f"CODEOWNERS missing ownership rule: {fragment!r}")
 
@@ -121,9 +154,10 @@ def main() -> int:
         print(f"\nFailures: {len(failures)}")
         return 1
 
-    print("OK   workflow triggers, permissions, concurrency and timeouts")
+    print("OK   quality-gate and RC-preview workflows use read-only permissions")
     print("OK   action references use full commit SHAs with release comments")
     print("OK   checkout credentials are not persisted")
+    print("OK   RC-preview workflow cannot create tags or releases")
     print("OK   Dependabot monitors only GitHub Actions from the repository root")
     print("OK   governance-sensitive paths have CODEOWNERS")
     print("OK   governed main-branch ruleset payload is present")

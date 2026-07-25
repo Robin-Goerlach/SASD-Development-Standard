@@ -1,0 +1,60 @@
+name: SASD Release Candidate Preview
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sasd-rc-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Build RC preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+
+      - name: Run repository quality gates
+        env:
+          PYTHONUTF8: "1"
+        run: >-
+          python tooling/run-quality-gates.py
+          --output-dir artifacts/quality-gates/release-candidate-preview
+
+      - name: Build deterministic preview artifacts
+        env:
+          PYTHONUTF8: "1"
+        run: >-
+          python tooling/build-release-candidate.py --mode preview
+          --output-dir artifacts/release-candidate
+
+      - name: Verify preview artifacts
+        env:
+          PYTHONUTF8: "1"
+        run: >-
+          python tooling/verify-release-candidate.py
+          --directory artifacts/release-candidate
+
+      - name: Upload preview artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: sasd-1.0.0-rc.1-preview-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            artifacts/release-candidate
+            artifacts/quality-gates/release-candidate-preview
+          if-no-files-found: error
+          retention-days: 14

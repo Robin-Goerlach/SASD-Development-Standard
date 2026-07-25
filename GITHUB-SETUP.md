@@ -114,3 +114,9 @@ root or nested repository copy is present. The first CI run exposed such a bound
 violation; branch protection remains intentionally disabled until the repair commit
 passes on Ubuntu and Windows.
 
+
+## Release Candidate preview workflow
+
+`.github/workflows/release-candidate-preview.yml` is intentionally manual and read-only. It runs all repository quality gates, builds deterministic preview archives, verifies checksums and safe paths, and uploads the result as a temporary Actions artifact. It cannot create a tag or GitHub Release.
+
+Run it from **Actions → SASD Release Candidate Preview → Run workflow** only after the branch commit has passed the normal `SASD Quality Gates`. Publication of `v1.0.0-rc.1` remains a separate Maintainer decision using the completed Release Record and RC checklist.

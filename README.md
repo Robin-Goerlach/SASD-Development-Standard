@@ -147,13 +147,27 @@ The approval is intentionally separated from remote CI evidence and publication.
 
 Current priorities:
 
-1. obtain a green Ubuntu and Windows quality-gate run for the current commit,
-2. capture remote evidence and activate or explicitly defer the governed `SASD merge gate` ruleset,
-3. execute and verify Wave 01 of Pilot 01 on SASD TaskHost Local,
-4. confirm the public baselines of Pilot 02 and Pilot 03 in local clones tied to exact commits,
-5. execute the first controlled waves for Prompt Manager and Mail Workbench,
-6. consolidate lessons learned across all three project sizes,
-7. prepare `1.0.0-rc.1` records and Markdown-to-Word/PDF publication tooling.
+1. close the exact-commit Ubuntu, Windows, and `SASD merge gate` evidence,
+2. verify at least one practical pilot wave, beginning with TaskHost Local,
+3. activate or explicitly defer the governed `main` ruleset,
+4. build and independently verify the `1.0.0-rc.1` preview archives,
+5. complete the Release Record, Known Issues, and Maintainer decision,
+6. publish and practically review `1.0.0-rc.1`,
+7. produce and visually inspect Word and PDF artefacts before stable `1.0.0`.
+
+## Version 1.0 Release Candidate preparation
+
+The repository now contains a controlled plan for `1.0.0-rc.1`, an explicit blocker register, a generated readiness report, draft Release Notes and Release Record, deterministic archive tooling, independent verification, and a read-only manually triggered preview workflow.
+
+Start with the [`Release Candidate Plan`](docs/40-governance/VERSION-1.0-RELEASE-CANDIDATE-PLAN.md) and the generated [`Release Candidate Readiness`](docs/40-governance/VERSION-1.0-RELEASE-CANDIDATE-READINESS.md). A preview package can be built locally with:
+
+```bash
+python tooling/run-quality-gates.py
+python tooling/build-release-candidate.py --mode preview
+python tooling/verify-release-candidate.py --directory artifacts/release-candidate
+```
+
+Preview mode creates no tag and publishes no GitHub Release. Release mode remains blocked until the readiness report has no open blocking checks.
 
 ## Language
 

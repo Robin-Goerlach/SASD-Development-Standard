@@ -8,6 +8,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from release_candidate_common import readiness as release_candidate_readiness
+
 
 def front_matter(path: Path) -> dict[str, str]:
     text = path.read_text(encoding="utf-8")
@@ -56,6 +58,15 @@ def main() -> int:
     print(f"Technically verified (Passed): {verified}")
     print("Size coverage: " + ", ".join(f"{size}={size_counts.get(size, 0)}" for size in ("Small", "Medium", "Large")))
     print("Interpretation: portfolio coverage is not target-repository execution evidence.")
+
+    rc = release_candidate_readiness(repo)
+    print("\nRelease Candidate 1.0.0-rc.1")
+    print("-" * 56)
+    print(f"Technically ready: {rc['ready']}")
+    print(f"Blocking open checks: {len(rc['blocking_failures'])}")
+    if rc["blocking_failures"]:
+        print("Open checks: " + ", ".join(rc["blocking_failures"]))
+    print("Interpretation: readiness is separate from Maintainer approval, tagging and publication.")
 
     if not_approved:
         print("\nNot yet Approved:")

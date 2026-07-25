@@ -263,3 +263,18 @@ python tooling/validate-version-1-pilot-coverage.py
 ```
 
 Die Abdeckungsprüfung bestätigt Small-, Medium- und Large-Piloten sowie die zugehörigen Baseline-, Gap-, Migrations- und Lessons-Learned-Nachweise. Sie behauptet keine erfolgreichen Builds, Tests, Laufzeittests oder CI-Läufe der Ziel-Repositories.
+
+## Version 1.0 Release Candidate preparation
+
+```bash
+python tooling/generate-release-candidate-readiness.py --check
+python tooling/validate-release-candidate-preparation.py
+python tooling/build-release-candidate.py --mode preview
+python tooling/verify-release-candidate.py --directory artifacts/release-candidate
+```
+
+The readiness generator distinguishes Approved content, pilot coverage, practical pilot verification, exact-commit remote CI evidence, and active ruleset evidence. `--require-ready` fails while a blocking RC condition is open.
+
+The package builder creates deterministic source and Markdown ZIP files, a machine-readable release manifest, `SHA256SUMS.txt`, and a build report. Preview mode may be used before release readiness and is visibly marked as such. Release mode requires a clean Git working tree and complete readiness.
+
+The independent verifier checks SHA-256 values, ZIP integrity, safe paths, excluded build state, release metadata, and manifest consistency. The tools do not create a Git tag or GitHub Release.

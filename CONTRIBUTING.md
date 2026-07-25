@@ -50,3 +50,7 @@ A successful local run does not replace the GitHub Actions result for the commit
 
 After the `main` ruleset is activated, changes should be pushed to a working branch and merged through a pull request after `SASD merge gate` succeeds. The activation procedure and evidence rules are documented under `docs/50-reference-implementations/repository-self-hosting/`.
 
+
+## Release Candidate changes
+
+Changes to release plans, readiness checks, packaging tools, release notes, release records, workflows, checksums or publication profiles require focused review by the repository Maintainer. A contributor must not create or move a release tag, publish a GitHub Release, or mark a pending execution as passed. Preview artifacts are review material and not published releases.

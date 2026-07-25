@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "standard_version": "1.0.0-rc.1",
+  "source_commit": "<commit>",
+  "generated_at": "<UTC timestamp>",
+  "authoritative_language": "de",
+  "artifacts": [
+    {
+      "path": "<filename>",
+      "sha256": "<hash>",
+      "size_bytes": 0
+    }
+  ],
+  "quality_gate_evidence": "<path or URL>",
+  "release_record": "<path>",
+  "known_issues": "<path>"
+}

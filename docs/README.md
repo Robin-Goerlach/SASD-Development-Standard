@@ -33,6 +33,9 @@ Dieses Verzeichnis enthält die Source of Truth des SASD Development Standard.
 27. [Approval Checklist 0.9.0](40-governance/NORMATIVE-BASELINE-APPROVAL-CHECKLIST-0.9.0.md)
 28. [Statusregister 0.9.0](40-governance/NORMATIVE-BASELINE-STATUS-REGISTER-0.9.0.md)
 29. [Pilot 01 – SASD TaskHost Local](50-reference-implementations/pilot-01-sasd-taskhost-local/README.md)
+30. [Release-Candidate-Plan 1.0.0-rc.1](40-governance/VERSION-1.0-RELEASE-CANDIDATE-PLAN.md)
+31. [Release-Candidate-Readiness](40-governance/VERSION-1.0-RELEASE-CANDIDATE-READINESS.md)
+32. [Release-Candidate-Blockerregister](40-governance/VERSION-1.0-RELEASE-CANDIDATE-BLOCKERS.md)
 
 ## Dokumentgruppen
 
