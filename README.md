@@ -127,7 +127,8 @@ See the [content architecture](docs/00-foundation/CONTENT-ARCHITECTURE.md) and t
 11. Follow the [`Roadmap`](ROADMAP.md).
 12. Use the [`New Project Checklist`](checklists/project-initiation/NEW-PROJECT-CHECKLIST.md), the [`.NET Profile Adoption Checklist`](checklists/project-initiation/DOTNET-PROFILE-ADOPTION-CHECKLIST.md), and for desktop projects the [`Desktop Profile Adoption Checklist`](checklists/project-initiation/DESKTOP-PROFILE-ADOPTION-CHECKLIST.md).
 13. Record important technical decisions using the [`ADR Template`](templates/architecture-decisions/ADR-TEMPLATE.md).
-14. Run the local repository quality gates with `python tooling/run-quality-gates.py` or the scripts in [`scripts/`](scripts/README.md).
+14. Review and build the [`SASD Prompt Package`](prompts/README.md) when using AI-assisted project workflows.
+15. Run the local repository quality gates with `python tooling/run-quality-gates.py` or the scripts in [`scripts/`](scripts/README.md).
 
 ## Normative language
 
@@ -168,6 +169,18 @@ python tooling/verify-release-candidate.py --directory artifacts/release-candida
 ```
 
 Preview mode creates no tag and publishes no GitHub Release. Release mode remains blocked until the readiness report has no open blocking checks.
+
+## SASD Prompt Package
+
+The repository contains the candidate `sasd-development-standard-v1` prompt package with **39 versioned prompts**, **nine lifecycle categories**, a registry of **35 variables**, generated catalogs and checksums, JSON schemas, deterministic archive tooling, and independent artifact verification.
+
+```bash
+python tooling/validate-prompt-packages.py
+python tooling/build-prompt-package.py --clean --output-dir artifacts/prompt-packages
+python tooling/verify-prompt-package.py --directory artifacts/prompt-packages
+```
+
+The package is the canonical SASD exchange format. Direct import into a specific SASD Prompt Manager build is intentionally not claimed until an exact-version adapter passes the documented import/export roundtrip.
 
 ## Language
 

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "format": "sasd-prompt-package/1.0",
+  "package_id": "sasd-development-standard-v1",
+  "name": "SASD Development Standard Version 1 Prompt Package",
+  "version": "0.13.0",
+  "status": "candidate",
+  "standard_version": "1.0",
+  "authoritative_language": "de",
+  "maintainer": "Robin Görlach",
+  "license": "MIT",
+  "description": "Versioniertes Promptpaket für den vollständigen SASD-Projektlebenszyklus.",
+  "catalog": "catalog.json",
+  "variables": "variables.json",
+  "categories": "categories.json",
+  "workflow": "workflow.json",
+  "prompt_roots": [
+    "project-initiation",
+    "research",
+    "requirements",
+    "architecture",
+    "development",
+    "debugging",
+    "review",
+    "documentation",
+    "release"
+  ],
+  "supporting_resources": [
+    "prompts/PACKAGE-SPECIFICATION.md",
+    "prompts/QUALITY-GUIDE.md",
+    "prompts/SECURITY-GUIDE.md",
+    "prompts/VARIABLES.md",
+    "prompts/PROMPT-MANAGER-IMPORT-ADAPTER-PLAN.md",
+    "prompts/schema/prompt.schema.json",
+    "prompts/schema/prompt-package.schema.json",
+    "templates/prompts/VERSIONED-PROMPT-TEMPLATE.md",
+    "templates/prompts/PROMPT-PACKAGE-MANIFEST-TEMPLATE.json",
+    "templates/documents/PROMPT-MANAGER-IMPORT-MAPPING-TEMPLATE.md",
+    "checklists/development/PROMPT-PACKAGE-REVIEW-CHECKLIST.md",
+    "checklists/development/PROMPT-MANAGER-IMPORT-ROUNDTRIP-CHECKLIST.md"
+  ],
+  "compatibility": {
+    "canonical_exchange_format": true,
+    "prompt_manager_direct_import": false,
+    "note": "Das Paket ist das kanonische Austauschformat. Ein direkter SASD-Prompt-Manager-Import muss gegen dessen konkrete Importversion implementiert und getestet werden."
+  },
+  "created_on": "2026-07-25"
+}

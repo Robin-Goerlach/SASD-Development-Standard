@@ -1,3 +1,9 @@
-# Release Prompts
+# Releases
 
-Versioned prompt packages for the **release** phase will be created after the corresponding normative process has been approved.
+Prompts für Readiness, Release Candidates, Release Notes und Veröffentlichung.
+
+- Paket: `sasd-development-standard-v1`
+- Paketversion: `0.13.0`
+- enthaltene Prompts: **4**
+
+Die maschinenlesbare Übersicht wird unter `prompts/packages/sasd-development-standard-v1/catalog.json` erzeugt.

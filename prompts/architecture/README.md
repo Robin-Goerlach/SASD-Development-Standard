@@ -1,3 +1,9 @@
-# Architecture Prompts
+# Architektur
 
-Versioned prompt packages for the **architecture** phase will be created after the corresponding normative process has been approved.
+Prompts für Architektur, ADRs, Persistenz und Bedrohungsmodelle.
+
+- Paket: `sasd-development-standard-v1`
+- Paketversion: `0.13.0`
+- enthaltene Prompts: **4**
+
+Die maschinenlesbare Übersicht wird unter `prompts/packages/sasd-development-standard-v1/catalog.json` erzeugt.

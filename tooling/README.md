@@ -278,3 +278,20 @@ The readiness generator distinguishes Approved content, pilot coverage, practica
 The package builder creates deterministic source and Markdown ZIP files, a machine-readable release manifest, `SHA256SUMS.txt`, and a build report. Preview mode may be used before release readiness and is visibly marked as such. Release mode requires a clean Git working tree and complete readiness.
 
 The independent verifier checks SHA-256 values, ZIP integrity, safe paths, excluded build state, release metadata, and manifest consistency. The tools do not create a Git tag or GitHub Release.
+
+
+## SASD Prompt Package
+
+```bash
+python tooling/generate-prompt-catalog.py --check
+python tooling/validate-prompt-packages.py
+python tooling/build-prompt-package.py --clean --output-dir artifacts/prompt-packages
+python tooling/verify-prompt-package.py --directory artifacts/prompt-packages
+```
+
+- `generate-prompt-catalog.py` maintains the machine-readable catalog, human-readable catalog, and tracked-file checksums.
+- `validate-prompt-packages.py` checks package identity, prompt metadata, sections, variables, placeholders, category and workflow coverage, security markers, and generated evidence.
+- `build-prompt-package.py` creates a deterministic candidate ZIP with a fixed timestamp, build manifest, and SHA-256 sums.
+- `verify-prompt-package.py` independently checks sums, ZIP integrity, safe paths, one archive root, identity, and required files.
+
+The package is an exchange format. These tools do not write to the SASD Prompt Manager and do not prove direct-import compatibility.

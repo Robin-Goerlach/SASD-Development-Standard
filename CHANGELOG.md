@@ -8,6 +8,11 @@ The format is based on Keep a Changelog principles, and the project intends to u
 
 ### Added
 
+- Candidate `sasd-development-standard-v1` prompt package 0.13.0 with 39 stable prompt IDs across nine project-lifecycle categories and a central registry of 35 variables.
+- Prompt-package specification, quality and security guidance, schemas, generated JSON/Markdown catalogs, checksums, workflow ordering, templates, review and import-roundtrip checklists.
+- Dependency-free catalog generation, structural validation, deterministic ZIP building, independent artifact verification, local wrappers, and a read-only manual GitHub Actions preview workflow.
+- Explicit Prompt Manager adapter plan that prevents direct-import compatibility claims until an exact application version passes lossless import/export roundtrip testing.
+
 - Version `1.0.0-rc.1` release-candidate plan, explicit blocker register, generated readiness report, draft Release Notes, draft Release Record, and publication profile.
 - Deterministic source and Markdown archive builder with stable ordering, timestamps, embedded metadata, SHA-256 manifest, and independent safe-path verifier.
 - Read-only manually triggered GitHub Actions preview workflow that runs all quality gates, builds preview packages, verifies them, and uploads evidence without creating tags or releases.

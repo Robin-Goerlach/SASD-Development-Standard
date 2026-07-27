@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "package_id": "sasd-development-standard-v1",
+  "stages": [
+    {
+      "stage": 10,
+      "name": "Initiierung",
+      "prompt_ids": [
+        "SASD-PROMPT-INIT-001",
+        "SASD-PROMPT-INIT-002",
+        "SASD-PROMPT-INIT-003",
+        "SASD-PROMPT-INIT-004"
+      ]
+    },
+    {
+      "stage": 20,
+      "name": "Recherche",
+      "prompt_ids": [
+        "SASD-PROMPT-RESEARCH-001",
+        "SASD-PROMPT-RESEARCH-002",
+        "SASD-PROMPT-RESEARCH-003"
+      ]
+    },
+    {
+      "stage": 30,
+      "name": "Anforderungen",
+      "prompt_ids": [
+        "SASD-PROMPT-REQ-001",
+        "SASD-PROMPT-REQ-002",
+        "SASD-PROMPT-REQ-003"
+      ]
+    },
+    {
+      "stage": 40,
+      "name": "Architektur",
+      "prompt_ids": [
+        "SASD-PROMPT-ARCH-001",
+        "SASD-PROMPT-ARCH-002",
+        "SASD-PROMPT-ARCH-003",
+        "SASD-PROMPT-ARCH-004"
+      ]
+    },
+    {
+      "stage": 50,
+      "name": "Entwicklung",
+      "prompt_ids": [
+        "SASD-PROMPT-DEV-001",
+        "SASD-PROMPT-DEV-002",
+        "SASD-PROMPT-DEV-003"
+      ]
+    },
+    {
+      "stage": 60,
+      "name": "Debugging",
+      "prompt_ids": [
+        "SASD-PROMPT-DEBUG-001",
+        "SASD-PROMPT-DEBUG-002",
+        "SASD-PROMPT-DEBUG-003"
+      ]
+    },
+    {
+      "stage": 70,
+      "name": "Review",
+      "prompt_ids": [
+        "SASD-PROMPT-REVIEW-001",
+        "SASD-PROMPT-REVIEW-002",
+        "SASD-PROMPT-REVIEW-003",
+        "SASD-PROMPT-REVIEW-004",
+        "SASD-PROMPT-REVIEW-005",
+        "SASD-PROMPT-REVIEW-006",
+        "SASD-PROMPT-REVIEW-007",
+        "SASD-PROMPT-REVIEW-008",
+        "SASD-PROMPT-REVIEW-009",
+        "SASD-PROMPT-REVIEW-010",
+        "SASD-PROMPT-REVIEW-011",
+        "SASD-PROMPT-REVIEW-012"
+      ]
+    },
+    {
+      "stage": 80,
+      "name": "Dokumentation",
+      "prompt_ids": [
+        "SASD-PROMPT-DOC-001",
+        "SASD-PROMPT-DOC-002",
+        "SASD-PROMPT-DOC-003"
+      ]
+    },
+    {
+      "stage": 90,
+      "name": "Release",
+      "prompt_ids": [
+        "SASD-PROMPT-RELEASE-001",
+        "SASD-PROMPT-RELEASE-002",
+        "SASD-PROMPT-RELEASE-003",
+        "SASD-PROMPT-RELEASE-004"
+      ]
+    }
+  ]
+}

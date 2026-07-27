@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sasd.example/schemas/prompt-package.schema.json",
+  "title": "SASD Prompt Package Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "format",
+    "package_id",
+    "name",
+    "version",
+    "status",
+    "standard_version",
+    "authoritative_language",
+    "license",
+    "catalog",
+    "variables",
+    "categories",
+    "workflow",
+    "prompt_roots",
+    "supporting_resources",
+    "compatibility"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "format": {
+      "const": "sasd-prompt-package/1.0"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "candidate",
+        "stable",
+        "deprecated",
+        "retired"
+      ]
+    },
+    "standard_version": {
+      "type": "string"
+    },
+    "authoritative_language": {
+      "type": "string"
+    },
+    "maintainer": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "catalog": {
+      "type": "string"
+    },
+    "variables": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "string"
+    },
+    "workflow": {
+      "type": "string"
+    },
+    "prompt_roots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "created_on": {
+      "type": "string"
+    },
+    "supporting_resources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

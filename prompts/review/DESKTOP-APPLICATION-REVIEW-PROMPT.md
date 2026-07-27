@@ -1,36 +1,44 @@
-# Desktop Application Review Prompt
+---
+prompt-id: "SASD-PROMPT-REVIEW-003"
+title: "Desktopanwendung prüfen"
+version: "0.13.0"
+status: "Candidate"
+package-id: "sasd-development-standard-v1"
+category: "review"
+language: "de"
+summary: "Prüft WinForms- oder WPF-Anwendungen auf UI-Architektur, UX, Accessibility und Lebenszyklus."
+variables: ["project_name", "repository_tree", "quality_level", "architecture_context", "evidence", "environment", "source_material", "output_language"]
+tags: ["desktop", "winforms", "wpf", "accessibility"]
+quality-levels: ["Minimum", "Recommended", "Production"]
+profiles: ["Core", ".NET", "Desktop"]
+last-reviewed: "2026-07-25"
+---
 
-Review the supplied C#/.NET desktop repository against the SASD Desktop Application Profile.
+# Desktopanwendung prüfen
+## Zweck
 
-## Required context
+Prüfe die Desktopanwendung **{{project_name}}** gegen das SASD Desktop Application Profile.
 
-- repository tree and relevant source files,
-- selected quality level,
-- UI technology and target framework,
-- supported Windows matrix,
-- build/test instructions,
-- screenshots or descriptions of critical states,
-- deployment and update model.
+## Eingaben
 
-## Review tasks
+- Repository-Struktur: {{repository_tree}}
+- Qualitätsstufe: {{quality_level}}
+- UI-Architektur: {{architecture_context}}
+- Build-, Test- und Laufzeitnachweise: {{evidence}}
+- Zielumgebung: {{environment}}
+- Screenshots und relevante Dateien: {{source_material}}
 
-1. Identify the project size model actually implemented.
-2. Check separation of UI, application logic and infrastructure.
-3. Inspect event handlers, ViewModels, Presenter and UI services for misplaced logic.
-4. Review threading, cancellation, repeated execution and shutdown behavior.
-5. Review validation, errors, focus, keyboard, accessibility, DPI and multi-monitor behavior.
-6. Review data paths, migration, crash diagnosis, packaging, updates and uninstall behavior.
-7. Map findings to exact `SASD-DESKTOP-REQ-*` IDs.
-8. Distinguish defect, open requirement, not applicable item and justified exception.
-9. Prioritize findings by data-loss, security, accessibility, operability and maintainability impact.
-10. Produce concrete remediation steps without demanding unnecessary architecture.
+## Arbeitsauftrag
 
-## Output
+Bewerte Größenmodell, Trennung von UI/Fachlogik/Infrastruktur, Eventhandler oder ViewModels, Threading, Abbruch, wiederholte Ausführung, Shutdown, Validierung, Fehlermeldungen, Tastaturbedienung, Fokus, Accessibility, DPI, Mehrmonitor, Datenpfade, Migration, Diagnose, Packaging, Update und Uninstall. Ordne Befunde `SASD-DESKTOP-REQ-*` zu.
 
-- executive assessment,
-- strengths,
-- critical findings,
-- requirement matrix,
-- proportional target architecture,
-- prioritized remediation plan,
-- proposed evidence for reassessment.
+## Qualitätsregeln
+
+- MVVM, MVP, DI oder Generic Host nicht pauschal verlangen.
+- UX-Befunde durch konkrete Zustände oder Tests belegen.
+- Datenverlust- und Accessibility-Risiken priorisieren.
+- Zielplattformen und unterstützte Windowsversionen explizit berücksichtigen.
+
+## Ausgabeformat
+
+Liefere in {{output_language}}: Gesamtbewertung, Stärken, kritische Befunde, Requirement-Matrix, proportionale Zielarchitektur, UX-Testplan und priorisierte Maßnahmen.

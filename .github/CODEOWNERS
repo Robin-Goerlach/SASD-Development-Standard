@@ -7,3 +7,7 @@
 /scripts/ @Robin-Goerlach
 /docs/00-foundation/ @Robin-Goerlach
 /docs/40-governance/ @Robin-Goerlach
+
+# Prompt-package sources and schemas
+/prompts/ @Robin-Goerlach
+/templates/prompts/ @Robin-Goerlach

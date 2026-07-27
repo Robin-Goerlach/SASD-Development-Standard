@@ -1,21 +1,47 @@
-# Repository CI Activation Review Prompt
+---
+prompt-id: "SASD-PROMPT-REVIEW-011"
+title: "Repository-CI und Merge Gate prüfen"
+version: "0.13.0"
+status: "Candidate"
+package-id: "sasd-development-standard-v1"
+category: "review"
+language: "de"
+summary: "Prüft exakte Commit-Evidenz, plattformübergreifende Jobs und tatsächliche Ruleset-Aktivierung."
+variables: ["repository_url", "evidence", "environment", "constraints", "output_language"]
+tags: ["ci", "merge-gate", "ruleset", "evidence"]
+quality-levels: ["Minimum", "Recommended", "Production"]
+profiles: ["Core"]
+last-reviewed: "2026-07-25"
+---
 
-Review the repository CI activation evidence without inferring success from
-workflow source files alone.
+# Repository-CI und Merge Gate prüfen
+## Zweck
 
-Verify separately:
+Prüfe die CI-Aktivierung und Branch-Governance für **{{repository_url}}**.
 
-1. repository identity and boundary checks,
-2. exact commit SHA,
-3. completed GitHub Actions workflow for that SHA,
-4. successful Linux and Windows jobs,
-5. successful aggregate merge gate,
-6. uploaded evidence artifacts,
-7. ruleset existence and active enforcement,
-8. required-check context and strict policy,
-9. force-push and deletion protection,
-10. documented rollback path.
+## Eingaben
 
-Classify each statement as Verified, Prepared, Pending, Failed, or Not
-Applicable. Treat test source, workflow YAML, local logs, and a remote successful
-run as different evidence classes.
+- GitHub-Actions- und Ruleset-Nachweise: {{evidence}}
+- lokale und Remote-Umgebung: {{environment}}
+- geplante Schutzregeln und Randbedingungen: {{constraints}}
+
+## Arbeitsauftrag
+
+1. Bestätige Repository-Identität und exakte Commit-SHA.
+2. Prüfe abgeschlossene GitHub-Actions-Läufe für genau diesen Commit.
+3. Bestätige erfolgreiche Linux-, Windows- und aggregierte Merge-Gate-Jobs.
+4. Prüfe hochgeladene Evidenzartefakte und deren Commitbezug.
+5. Unterscheide Ruleset-Datei, API-Plan, tatsächliche Aktivierung und Enforcement.
+6. Prüfe Required Check Context, Strict Policy, Force-Push- und Löschschutz.
+7. Dokumentiere Rollback und Maintainerzugang.
+
+## Qualitätsregeln
+
+- Workflow-Quelltext ist kein erfolgreicher Lauf.
+- Ein vorhandenes Ruleset-Template ist kein aktives Ruleset.
+- Evidenz aus einem anderen Commit ist nicht übertragbar.
+- Schreibberechtigungen und Bypass-Regeln kritisch prüfen.
+
+## Ausgabeformat
+
+Liefere in {{output_language}} eine Matrix mit Verified, Prepared, Pending, Failed oder Not Applicable, dazu Blocker, API-/UI-Nachweise und Aktivierungsempfehlung.

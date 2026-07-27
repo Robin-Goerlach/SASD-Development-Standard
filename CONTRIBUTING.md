@@ -32,6 +32,22 @@ Contributions should:
 - Use **MUST**, **SHOULD**, and **MAY** only in normative documents.
 - Explain the reason behind important requirements.
 - Avoid copying the same rule into multiple normative documents.
+
+## Prompt-package contributions
+
+A packaged prompt contribution must:
+
+- retain or receive a unique stable `prompt-id`,
+- use the versioned frontmatter defined by `prompts/PACKAGE-SPECIFICATION.md`,
+- declare every `{{variable_name}}` both in prompt metadata and the central registry,
+- include purpose, inputs, task, quality rules, and output format,
+- distinguish evidence from assumptions and prohibit unverified success claims,
+- contain no real secrets, credentials, private keys, or personal production data,
+- update workflow ordering, category documentation, and generated catalogs when required,
+- pass `python tooling/validate-prompt-packages.py`.
+
+A contributor must not claim direct SASD Prompt Manager compatibility without an exact-version mapping and a documented import/export roundtrip.
+
 ## Verification before submission
 
 Run the same dependency-free checks used by repository CI:

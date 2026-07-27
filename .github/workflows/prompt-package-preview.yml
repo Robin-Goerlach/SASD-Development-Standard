@@ -1,0 +1,60 @@
+name: SASD Prompt Package Preview
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sasd-prompt-package-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Build prompt package preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+
+      - name: Run repository quality gates
+        env:
+          PYTHONUTF8: "1"
+        run: >-
+          python tooling/run-quality-gates.py
+          --output-dir artifacts/quality-gates/prompt-package-preview
+
+      - name: Build deterministic prompt package
+        env:
+          PYTHONUTF8: "1"
+        run: >-
+          python tooling/build-prompt-package.py --clean
+          --output-dir artifacts/prompt-packages
+
+      - name: Verify prompt package
+        env:
+          PYTHONUTF8: "1"
+        run: >-
+          python tooling/verify-prompt-package.py
+          --directory artifacts/prompt-packages
+
+      - name: Upload prompt-package preview
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: sasd-prompt-package-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            artifacts/prompt-packages
+            artifacts/quality-gates/prompt-package-preview
+          if-no-files-found: error
+          retention-days: 14

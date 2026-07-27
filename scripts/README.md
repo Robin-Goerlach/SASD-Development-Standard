@@ -60,3 +60,20 @@ bash scripts/prepare-release-candidate.sh preview
 ```
 
 `release` mode additionally requires a clean Git checkout and a fully passing generated RC-readiness report. Neither wrapper creates tags or publishes GitHub Releases.
+
+
+## Prompt package
+
+PowerShell:
+
+```powershell
+.\scripts\build-prompt-package.ps1
+```
+
+Linux/WSL:
+
+```bash
+bash scripts/build-prompt-package.sh
+```
+
+The wrappers validate, build, and independently verify the candidate package under `artifacts/prompt-packages/`. They do not import data into the Prompt Manager.

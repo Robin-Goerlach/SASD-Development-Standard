@@ -66,3 +66,18 @@ Local equivalent:
 ```bash
 bash scripts/prepare-release-candidate.sh preview
 ```
+
+
+## `prompt-package-preview.yml`
+
+This workflow is manual only and read-only. It executes the complete repository checks, builds the deterministic `sasd-development-standard-v1` candidate prompt package, verifies checksums and safe ZIP paths, and uploads the package plus validation evidence for 14 days. It neither imports Prompt Manager data nor publishes a GitHub Release.
+
+Local equivalent:
+
+```powershell
+.\scripts\build-prompt-package.ps1
+```
+
+```bash
+bash scripts/build-prompt-package.sh
+```

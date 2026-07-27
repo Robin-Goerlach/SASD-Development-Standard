@@ -1,31 +1,47 @@
-# Prompt: Normative Baseline Approval Review
+---
+prompt-id: "SASD-PROMPT-REVIEW-010"
+title: "Normative Baseline freigabereif prüfen"
+version: "0.13.0"
+status: "Candidate"
+package-id: "sasd-development-standard-v1"
+category: "review"
+language: "de"
+summary: "Prüft ein normatives Dokumentbündel auf Vollständigkeit, Zyklen, Doppelungen und Freigabereife."
+variables: ["standard_version", "source_material", "evidence", "constraints", "output_language"]
+tags: ["normative-baseline", "approval", "dependencies", "consistency"]
+quality-levels: ["Minimum", "Recommended", "Production"]
+profiles: ["Core"]
+last-reviewed: "2026-07-25"
+---
 
-Review the supplied SASD normative baseline as a single approval bundle.
+# Normative Baseline freigabereif prüfen
+## Zweck
 
-Evaluate:
+Prüfe die normative Baseline des SASD Development Standard **{{standard_version}}** als ein zusammenhängendes Freigabebündel.
 
-1. completeness of the included normative documents,
-2. contradictions and duplicated obligations across layers,
-3. dependency direction and dependency cycles,
-4. external dependencies that are not yet Approved,
-5. proportionality for Minimum, Recommended and Production,
-6. practicality for solo developers and small teams,
-7. separation of Core rules, profiles and operational processes,
-8. traceability through document and requirement IDs,
-9. evidence, exception and release implications,
-10. whether formal approval is justified or must remain pending.
+## Eingaben
 
-Do not treat existing test code, workflow files, review documents or generated manifests as proof
-of successful execution. Distinguish review completion, Maintainer approval, CI verification and
-release publication.
+- enthaltene Dokumente und Anforderungen: {{source_material}}
+- Review-, Pilot- und CI-Nachweise: {{evidence}}
+- Freigabegrenzen und Randbedingungen: {{constraints}}
 
-Return:
+## Arbeitsauftrag
 
-- scope summary,
-- blocking findings,
-- major and minor findings,
-- dependency findings,
-- proportionality assessment,
-- pilot and CI conditions,
-- explicit approval recommendation,
-- required evidence for the approval record.
+1. Prüfe Vollständigkeit und eindeutigen Freigabeumfang.
+2. Identifiziere Widersprüche und doppelte Pflichten über alle Ebenen.
+3. Prüfe Abhängigkeitsrichtung, Zyklen und nicht freigegebene externe Abhängigkeiten.
+4. Bewerte Proportionalität für Minimum, Recommended und Production.
+5. Prüfe Praktikabilität für Einzelentwickler und kleine Teams.
+6. Prüfe Trennung von Core, Profilen und Prozessen.
+7. Bewerte Traceability, Evidenz-, Ausnahme- und Releasefolgen.
+8. Formuliere eine ausdrückliche Freigabeempfehlung.
+
+## Qualitätsregeln
+
+- Testcode, Workflowdateien und generierte Manifeste sind keine Ausführungsnachweise.
+- Reviewabschluss, Maintainer-Approval, CI und Release bleiben getrennte Zustände.
+- Kein Dokument darf durch Freigabe eines abhängigen, noch instabilen Dokuments indirekt verändert werden.
+
+## Ausgabeformat
+
+Erzeuge in {{output_language}}: Bündelscope, Blocker, Major/Minor Findings, Abhängigkeitsgraph, Proportionalitätsbewertung, Bedingungen und Freigabeempfehlung.

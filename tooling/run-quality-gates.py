@@ -37,6 +37,7 @@ BLOCKING_CHECKS: tuple[tuple[str, str], ...] = (
     ("ci-policy", "validate-ci-policy.py"),
     ("ci-activation", "validate-ci-activation.py"),
     ("release-candidate-preparation", "validate-release-candidate-preparation.py"),
+    ("prompt-packages", "validate-prompt-packages.py"),
     ("repository-manifest", "generate-repository-manifest.py"),
 )
 

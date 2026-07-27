@@ -1,29 +1,46 @@
-# Prompt: Review Version 1.0 Release Candidate
+---
+prompt-id: "SASD-PROMPT-RELEASE-003"
+title: "Version 1.0 Release Candidate prüfen"
+version: "0.13.0"
+status: "Candidate"
+package-id: "sasd-development-standard-v1"
+category: "release"
+language: "de"
+summary: "Prüft den RC gegen exakten Commit, CI, Pilot, Ruleset, Artefakte und Releaseunterlagen."
+variables: ["repository_url", "release_version", "evidence", "source_material", "output_language"]
+tags: ["release-candidate", "ci", "pilot", "checksums"]
+quality-levels: ["Minimum", "Recommended", "Production"]
+profiles: ["Core"]
+last-reviewed: "2026-07-25"
+---
 
-Review the proposed SASD Development Standard `1.0.0-rc.1` without assuming that prepared tooling or documents prove successful execution.
+# Version 1.0 Release Candidate prüfen
+## Zweck
 
-## Required inputs
+Prüfe den vorgeschlagenen SASD Release Candidate **{{release_version}}**.
 
-- exact repository and commit,
-- Release Candidate Plan,
-- blocker register,
-- release readiness report,
-- Release Record,
-- Release Notes,
-- Known Issues,
-- quality-gate evidence,
-- pilot evidence,
-- release manifest and checksums.
+## Eingaben
 
-## Review tasks
+- Repository und exakter Commit: {{repository_url}}
+- CI-, Pilot- und Ruleset-Nachweise: {{evidence}}
+- Plan, Blockerregister, Release Record, Notes, Known Issues, Manifest und Prüfsummen: {{source_material}}
 
-1. Confirm that all normative documents are Approved and unchanged from their approval manifests.
-2. Confirm Ubuntu, Windows and `SASD merge gate` for the exact releasecommit.
-3. Confirm at least one practically executed pilot with build, tests and runtime evidence.
-4. Distinguish active ruleset evidence from a committed ruleset template.
-5. Verify release archives, checksums, safe paths and reproducibility.
-6. Identify every remaining `Pending`, unresolved blocker or unstated exception.
-7. Check that Release Notes accurately describe limitations and pre-release status.
-8. Recommend one of: Approve RC, Approve with explicit temporary decision, or Do not approve.
+## Arbeitsauftrag
 
-Do not approve based only on source code, workflow files, test files, generated templates or local static validation.
+1. Bestätige Approved-Dokumente und unveränderte Approval-Manifeste.
+2. Bestätige Ubuntu, Windows und `SASD merge gate` für den Releasecommit.
+3. Bestätige mindestens einen praktisch ausgeführten Pilotdurchlauf.
+4. Unterscheide aktives Ruleset und committed Template.
+5. Verifiziere Archive, Prüfsummen, sichere Pfade und Reproduzierbarkeit.
+6. Identifiziere jedes Pending, jeden Blocker und jede nicht erklärte Ausnahme.
+7. Prüfe die ehrliche Kennzeichnung als Pre-release.
+
+## Qualitätsregeln
+
+- Keine Freigabe allein aufgrund von Quellcode, Workflowdateien, Testdateien oder Vorlagen.
+- Releaseartefakte müssen exakt den geprüften Dateien entsprechen.
+- Eine Entscheidung trotz Abweichung muss befristet und dokumentiert sein.
+
+## Ausgabeformat
+
+Empfehle in {{output_language}}: Approve RC, Approve with explicit temporary decision oder Do not approve; ergänze Gate-Tabelle, Evidenzlinks, Blocker und Abschlussaktionen.

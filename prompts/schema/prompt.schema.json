@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sasd.example/schemas/prompt.schema.json",
+  "title": "SASD Prompt Metadata",
+  "type": "object",
+  "required": [
+    "prompt-id",
+    "title",
+    "version",
+    "status",
+    "package-id",
+    "category",
+    "language",
+    "summary",
+    "variables",
+    "tags",
+    "quality-levels",
+    "profiles",
+    "last-reviewed"
+  ],
+  "properties": {
+    "prompt-id": {
+      "type": "string",
+      "pattern": "^SASD-PROMPT-[A-Z]+-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "enum": [
+        "Draft",
+        "Candidate",
+        "Stable",
+        "Deprecated",
+        "Retired"
+      ]
+    },
+    "package-id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "quality-levels": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Minimum",
+          "Recommended",
+          "Production"
+        ]
+      }
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last-reviewed": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "additionalProperties": false
+}

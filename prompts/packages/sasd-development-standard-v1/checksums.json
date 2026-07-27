@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "package_id": "sasd-development-standard-v1",
+  "package_version": "0.13.0",
+  "file_count": 66,
+  "files": [
+    {
+      "path": "checklists/development/PROMPT-MANAGER-IMPORT-ROUNDTRIP-CHECKLIST.md",
+      "sha256": "590a500b2d6ea2b675454d6d5785d9e297deea1a9d0899fd4dcf9bbbefd9046f"
+    },
+    {
+      "path": "checklists/development/PROMPT-PACKAGE-REVIEW-CHECKLIST.md",
+      "sha256": "2cefb3b67524a919f80a48569855d546948e710425bb4a33ade97aa83c041d97"
+    },
+    {
+      "path": "prompts/architecture/ADR-PREPARATION-PROMPT.md",
+      "sha256": "a587dd0804d6e447b62911ea36a02e13b0a2b290a71cfb6084782604a373b2e8"
+    },
+    {
+      "path": "prompts/architecture/ARCHITECTURE-DESIGN-PROMPT.md",
+      "sha256": "7fe6e1b2612c588cf9466dacf6c160323139546df6b7c64cd5fdfb9a2598fffc"
+    },
+    {
+      "path": "prompts/architecture/DATA-PERSISTENCE-DESIGN-PROMPT.md",
+      "sha256": "50a916ad5becb7676ca080d8a36b00a9a5334037bc9c6d4711bbdd3881810d8d"
+    },
+    {
+      "path": "prompts/architecture/README.md",
+      "sha256": "41b5302bb128d8bda316a51ed1c376408c8da5df493d955051f24fe138d220f8"
+    },
+    {
+      "path": "prompts/architecture/THREAT-MODEL-PROMPT.md",
+      "sha256": "cc01b8379fec902366b80a0de59f4366ebacefc904546d78a82fe5369bb9b02d"
+    },
+    {
+      "path": "prompts/debugging/BUILD-FAILURE-ANALYSIS-PROMPT.md",
+      "sha256": "12072edd614c9495fd06d8a2cba357aafb4273ca3f6bab089308f51fd554bb84"
+    },
+    {
+      "path": "prompts/debugging/README.md",
+      "sha256": "44dee2aeeeecaaf7a532771f6198b01f506de917243e99fb8fe76bdc59031afe"
+    },
+    {
+      "path": "prompts/debugging/RUNTIME-INCIDENT-REPRODUCTION-PROMPT.md",
+      "sha256": "ed2bae0643db0369fc5dedb991683b07c272afb9533d9bdd03e6b33e21c9493a"
+    },
+    {
+      "path": "prompts/debugging/SYSTEMATIC-DEBUGGING-PROMPT.md",
+      "sha256": "c04afa57e816265c5b622d8a94c5cb0ceda209e6ed3a2f0a4d375379dbbd0192"
+    },
+    {
+      "path": "prompts/development/CODE-COMMENT-DOCUMENTATION-PROMPT.md",
+      "sha256": "6a27d7f619672dbae69c214a9693d01cb31b5a4334350de537e5411c811d120c"
+    },
+    {
+      "path": "prompts/development/MILESTONE-IMPLEMENTATION-PROMPT.md",
+      "sha256": "89807ee246a6d1ba56d32e3ed450357888e1965eee678ef22e5e1e0c5c45c55c"
+    },
+    {
+      "path": "prompts/development/PILOT-WAVE-EXECUTION-PROMPT.md",
+      "sha256": "1e5a22493c156211ec3b64b2dfd7975bc94d2016ff36f600bcd773a2ac33b1f1"
+    },
+    {
+      "path": "prompts/development/README.md",
+      "sha256": "4d79ce1688e6663241e9b3713a77a61ce036c0a60374e52e4ff65af68e563c58"
+    },
+    {
+      "path": "prompts/documentation/DOCUMENT-CONSISTENCY-REVIEW-PROMPT.md",
+      "sha256": "4a0e95374f2116a31bc3d03ace0b94c111e1cf963291183fea20c208a5a4c69c"
+    },
+    {
+      "path": "prompts/documentation/README-REPOSITORY-DOCUMENTATION-PROMPT.md",
+      "sha256": "4ad33bdc3e56a3bf28081866382ec44bb7c46a28692a9bfab7b3b15af1ff6066"
+    },
+    {
+      "path": "prompts/documentation/README.md",
+      "sha256": "003b6c6bb3d60cefccd971f2f802b69823c2cd8bcd4d9f9d1419d16f708d0898"
+    },
+    {
+      "path": "prompts/documentation/TECHNICAL-GUIDE-PROMPT.md",
+      "sha256": "09e1db540842997731a57502eac6dd9487c5ecefee29dd7a5723997355b55605"
+    },
+    {
+      "path": "prompts/PACKAGE-SPECIFICATION.md",
+      "sha256": "c5146170bb51d756a64434a3edca63e25c831b263ff9ddc11a0189b72b7aace0"
+    },
+    {
+      "path": "prompts/packages/sasd-development-standard-v1/categories.json",
+      "sha256": "74174c81d97b57a0c991d25d339353e42c91385629e6200304a25561c188934e"
+    },
+    {
+      "path": "prompts/packages/sasd-development-standard-v1/manifest.json",
+      "sha256": "7626c4a859dc5eed0737e7446e70a622c81a2547d74f8c543e61585d3e72bf2f"
+    },
+    {
+      "path": "prompts/packages/sasd-development-standard-v1/README.md",
+      "sha256": "c412e278ffe2ed1082f6ef057a1ed492f6372fc55b01a446d159f09e77f6948d"
+    },
+    {
+      "path": "prompts/packages/sasd-development-standard-v1/variables.json",
+      "sha256": "891a06ab15a80e51a30b05c93d5e6bc187bc3199729ad9b33257098e119c7d98"
+    },
+    {
+      "path": "prompts/packages/sasd-development-standard-v1/workflow.json",
+      "sha256": "4a8f667f6395682ade1550d205fef8a199ded7f23fa7a914e3afed74f153a87b"
+    },
+    {
+      "path": "prompts/project-initiation/IDEA-PROBLEM-VALIDATION-PROMPT.md",
+      "sha256": "0e417a69d1208d27af5c51279b513d522ce79ce7ec8f0aa83b1c4d2b07901326"
+    },
+    {
+      "path": "prompts/project-initiation/PROJECT-CLASSIFICATION-PROMPT.md",
+      "sha256": "277661476650b4ed86a8eb08d5eeddd179e1457382c2bf4a9d605db815e491c6"
+    },
+    {
+      "path": "prompts/project-initiation/PROJECT-INITIALIZATION-PROMPT.md",
+      "sha256": "caff93d0232ec3ca41b5c6af07f6232aa494c1c743b12a2e2135a6cb0aabb841"
+    },
+    {
+      "path": "prompts/project-initiation/README.md",
+      "sha256": "7104bfc09b5f376873116609c3e18be8118b181a401b398e00617722d7b2b7ed"
+    },
+    {
+      "path": "prompts/project-initiation/SCOPE-NON-GOALS-PROMPT.md",
+      "sha256": "3b0faf897397600c96fe292247543d0aebde956cf68b371f163224a92e6dd037"
+    },
+    {
+      "path": "prompts/PROMPT-MANAGER-IMPORT-ADAPTER-PLAN.md",
+      "sha256": "a68827092af336862601b6dbf9a9c5553f92d0b2255c168a58b747b5210f97f1"
+    },
+    {
+      "path": "prompts/QUALITY-GUIDE.md",
+      "sha256": "e83fd7267bad9ff247f93b6d7867a18ba72a03ea1729ce29231ab7d4eb2def22"
+    },
+    {
+      "path": "prompts/README.md",
+      "sha256": "b706b7fe354b5699517e22753acb76208789b5cc08feb86d4c79c2384630b27c"
+    },
+    {
+      "path": "prompts/release/README.md",
+      "sha256": "667045dd1aca7b3591823977c21c93bcc3607da6007a7e1a8346214a77c456cd"
+    },
+    {
+      "path": "prompts/release/RELEASE-NOTES-PROMPT.md",
+      "sha256": "33c69036651c0b22835184bd7f6149ed32ffd4e10fabda3381ec05a0a90daf33"
+    },
+    {
+      "path": "prompts/release/RELEASE-PREPARATION-PROMPT.md",
+      "sha256": "10dc768869895e8cc045895bccdda45233d432d142b789a99c9c30f60cf75b83"
+    },
+    {
+      "path": "prompts/release/STANDARD-RELEASE-READINESS-PROMPT.md",
+      "sha256": "dee7dc3400ce335c1f913f5bbd464e506309b403701d18eec19a187dc4c55905"
+    },
+    {
+      "path": "prompts/release/VERSION-1.0-RC-REVIEW-PROMPT.md",
+      "sha256": "01d787f0967ca260074b0bd95f62ed11c1fbc9cb6b59bdc9f65679f7732097c4"
+    },
+    {
+      "path": "prompts/requirements/LASTENHEFT-PROMPT.md",
+      "sha256": "5e9c573863feea0ebeb0c1cdbf2ce299c5d2692ceb7f4eb61ad0988e3a91eae7"
+    },
+    {
+      "path": "prompts/requirements/PFLICHTENHEFT-PROMPT.md",
+      "sha256": "d653c766bd1058848c858c3a0b961770d52210c2d6ccd9daec378db3c44b35ce"
+    },
+    {
+      "path": "prompts/requirements/README.md",
+      "sha256": "c7472bc2c1b32a3f5475c33ed894bd01914985966127d015678cda0a993b708c"
+    },
+    {
+      "path": "prompts/requirements/REQUIREMENTS-TRACEABILITY-PROMPT.md",
+      "sha256": "fda4ef11bbfa592ff6350f7b27d6decd6cbb2e1894c53f3704783ee5ffc8bd8c"
+    },
+    {
+      "path": "prompts/research/EXISTING-SOLUTIONS-ANALYSIS-PROMPT.md",
+      "sha256": "645f8e068b97c118d95ff4b5cf60d7bf111dafdc3d0547cc34b41fe82c4fcbf1"
+    },
+    {
+      "path": "prompts/research/PRIMARY-SOURCE-RESEARCH-PROMPT.md",
+      "sha256": "0b6f8fb71c0d52d5522e0ac9531c7511b20f20cec241eed61a87bb9b628d6abd"
+    },
+    {
+      "path": "prompts/research/README.md",
+      "sha256": "40ea140816f6eb5332a430dca47e9d6aff77048ef6992f4984f167807338e2c8"
+    },
+    {
+      "path": "prompts/research/TECHNOLOGY-EVALUATION-PROMPT.md",
+      "sha256": "e70bd4cc9d3e367fe567c4a1c6b3b66d036556ff4cd367bbc8dc7f017a989853"
+    },
+    {
+      "path": "prompts/review/DESKTOP-APPLICATION-REVIEW-PROMPT.md",
+      "sha256": "4a0b4ecf60c633b0687799b000f58a8747075d0286e75819434aa4491358edbc"
+    },
+    {
+      "path": "prompts/review/DOTNET-PROFILE-REVIEW-PROMPT.md",
+      "sha256": "57c01c2ba9e4fb2ca7d83b101c742050893ad2782221fe9aae73df64c3d21307"
+    },
+    {
+      "path": "prompts/review/FOUNDATION-GOVERNANCE-REVIEW-PROMPT.md",
+      "sha256": "bf033fa96ca071c36013540932113269edde2be14b1fe905dc2e556c7aa28a43"
+    },
+    {
+      "path": "prompts/review/LEGACY-MIGRATION-REVIEW-PROMPT.md",
+      "sha256": "2d10e042979253422b6648152a679d07048b97efe023cd5fba5280727494f512"
+    },
+    {
+      "path": "prompts/review/NORMATIVE-BASELINE-APPROVAL-REVIEW-PROMPT.md",
+      "sha256": "ee8de3c37647169447e805bdf667536738d20e91a01b87cd6dc4ab3d57abbe2c"
+    },
+    {
+      "path": "prompts/review/PILOT-BASELINE-ASSESSMENT-PROMPT.md",
+      "sha256": "62141be90ebf5317bf3d88a7c523608c8b254587b188e36ae1f4def95dc9f9f9"
+    },
+    {
+      "path": "prompts/review/PILOT-RETROSPECTIVE-PROMPT.md",
+      "sha256": "533c9668b07af9a1120f78508d2592fdd76bf356ddc95a7c4bd9e26b676702c1"
+    },
+    {
+      "path": "prompts/review/PILOT-VERIFICATION-PROMPT.md",
+      "sha256": "a7ccb5bcb95997e34006cc6a8e835d51bb32a14bf2514a1a9b7700b305d154f0"
+    },
+    {
+      "path": "prompts/review/README.md",
+      "sha256": "94c0154ba3bac06269f9d36e727206fd98964b9009f5e9cefba6593c61538c11"
+    },
+    {
+      "path": "prompts/review/REPOSITORY-CI-ACTIVATION-REVIEW-PROMPT.md",
+      "sha256": "f0a3800fb83432ecab125247304c5da3e885c025f3cf00ad551f7ea3c8dcac26"
+    },
+    {
+      "path": "prompts/review/REPOSITORY-REVIEW-PROMPT.md",
+      "sha256": "47c4c55ec127cbf04b37f4f5730851eea6c6ef21af6c1c83db1f3d0a41d84369"
+    },
+    {
+      "path": "prompts/review/SECURITY-REVIEW-PROMPT.md",
+      "sha256": "c0a35de349d90ced69f824676681e44b937f187774c4420f20ac86fdd9128348"
+    },
+    {
+      "path": "prompts/review/UPDATE-PACKAGE-ROUTING-REVIEW-PROMPT.md",
+      "sha256": "fc1b983b8c769135b6d21a7214438a6cabf631686b4430714dfd62f538b03963"
+    },
+    {
+      "path": "prompts/schema/prompt-package.schema.json",
+      "sha256": "e96063559b3ec7ba5b350323a1641676395ddda2fad1083146e0041ca0e10b3a"
+    },
+    {
+      "path": "prompts/schema/prompt.schema.json",
+      "sha256": "fbeb6fd105d4168512179b2e33f667984ede7305665e273f9eb6080c202ecf9a"
+    },
+    {
+      "path": "prompts/SECURITY-GUIDE.md",
+      "sha256": "a7e7294f1b1b8a1cf33a30e315855f4431a20d425cfdd42e83bfd5460136264d"
+    },
+    {
+      "path": "prompts/VARIABLES.md",
+      "sha256": "a53feccb202075d266c03fe70d1c8a2bc2feec41991cb54d79ed9d0e162cfd64"
+    },
+    {
+      "path": "templates/documents/PROMPT-MANAGER-IMPORT-MAPPING-TEMPLATE.md",
+      "sha256": "4d2fc9589c5630840edcc258bbb81564676b597f75ff0b99f03086a85164dcbf"
+    },
+    {
+      "path": "templates/prompts/PROMPT-PACKAGE-MANIFEST-TEMPLATE.json",
+      "sha256": "200bd8c0e1b54254969ba700709f61ba2431bdd29c3e8bcca8cca9ce29df4483"
+    },
+    {
+      "path": "templates/prompts/VERSIONED-PROMPT-TEMPLATE.md",
+      "sha256": "3c8c26b6d12f9a9b37781a308f8135639496a6878454e72992a552c14dc30823"
+    }
+  ]
+}

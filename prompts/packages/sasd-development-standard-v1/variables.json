@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "package_id": "sasd-development-standard-v1",
+  "package_version": "0.13.0",
+  "placeholder_syntax": "{{variable_name}}",
+  "variables": [
+    {
+      "name": "project_name",
+      "description": "Name des Projekts.",
+      "required_by_default": true,
+      "sensitive": false,
+      "type": "string"
+    },
+    {
+      "name": "project_description",
+      "description": "Ausführliche Beschreibung der Idee, des Problems oder des bestehenden Projekts.",
+      "required_by_default": true,
+      "sensitive": false,
+      "type": "string"
+    },
+    {
+      "name": "project_context",
+      "description": "Geschäftlicher, technischer und organisatorischer Kontext.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "target_users",
+      "description": "Zielgruppen und Benutzerrollen.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "stakeholders",
+      "description": "Interne und externe Stakeholder.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "goals",
+      "description": "Gewünschte Ziele und messbare Ergebnisse.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "constraints",
+      "description": "Zeitliche, technische, finanzielle, rechtliche oder organisatorische Randbedingungen.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "non_goals",
+      "description": "Explizite Nicht-Ziele und ausgeschlossene Funktionen.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "quality_level",
+      "description": "SASD-Qualitätsstufe: Minimum, Recommended oder Production.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": "Recommended"
+    },
+    {
+      "name": "profiles",
+      "description": "Anwendbare SASD-Profile.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": "Core"
+    },
+    {
+      "name": "repository_url",
+      "description": "Kanonische URL des zu prüfenden Repositories.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "repository_tree",
+      "description": "Relevanter Repository- und Solution-Dateibaum.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "source_material",
+      "description": "Bereitgestellte Dokumente, Quelltexte, Logs oder Recherchequellen.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "current_state",
+      "description": "Nachgewiesener Ist-Zustand.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "target_state",
+      "description": "Gewünschter Zielzustand.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "requirements",
+      "description": "Anforderungen oder Anforderungsliste.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "architecture_context",
+      "description": "Systemkontext, Komponenten, Schnittstellen und technische Entscheidungen.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "decision_topic",
+      "description": "Zu entscheidendes Architektur- oder Technikthema.",
+      "required_by_default": true,
+      "sensitive": false,
+      "type": "string"
+    },
+    {
+      "name": "implementation_scope",
+      "description": "Begrenzter Implementierungsumfang oder Milestone.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "acceptance_criteria",
+      "description": "Prüfbare Akzeptanzkriterien.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "issue_description",
+      "description": "Fehlerbild oder beobachtetes Problem.",
+      "required_by_default": true,
+      "sensitive": false,
+      "type": "string"
+    },
+    {
+      "name": "reproduction_steps",
+      "description": "Bekannte Schritte zur Reproduktion.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "logs_and_errors",
+      "description": "Fehlermeldungen, Logs, Stacktraces oder Buildausgaben.",
+      "required_by_default": false,
+      "sensitive": true,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "code_context",
+      "description": "Relevante Codeausschnitte oder Dateipfade.",
+      "required_by_default": false,
+      "sensitive": true,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "environment",
+      "description": "Betriebssystem, Runtime, SDK, Datenbank und sonstige Umgebungsdaten.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "security_context",
+      "description": "Schutzbedarf, Datenarten, Vertrauensgrenzen und Bedrohungen.",
+      "required_by_default": false,
+      "sensitive": true,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "release_version",
+      "description": "Geplante Releaseversion.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "release_scope",
+      "description": "Inhalt und Grenzen des Releases.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "evidence",
+      "description": "Build-, Test-, CI-, Laufzeit- oder Reviewnachweise.",
+      "required_by_default": false,
+      "sensitive": true,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "output_language",
+      "description": "Gewünschte Sprache der Ausgabe.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": "Deutsch"
+    },
+    {
+      "name": "target_audience",
+      "description": "Adressaten der erzeugten Dokumentation.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": "Entwickler und Maintainer"
+    },
+    {
+      "name": "document_type",
+      "description": "Gewünschter Dokumenttyp.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "existing_documentation",
+      "description": "Vorhandene Dokumentation, die berücksichtigt werden muss.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "pilot_wave_plan",
+      "description": "Freigegebener Plan einer Pilot- oder Migrationswelle.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "standard_version",
+      "description": "Anzuwendende SASD-Standardversion.",
+      "required_by_default": false,
+      "sensitive": false,
+      "type": "string",
+      "default": "1.0"
+    }
+  ]
+}

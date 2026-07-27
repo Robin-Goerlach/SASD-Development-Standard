@@ -55,6 +55,7 @@ def main() -> int:
     repo = Path(__file__).resolve().parents[1]
     quality_workflow = repo / ".github/workflows/quality-gates.yml"
     preview_workflow = repo / ".github/workflows/release-candidate-preview.yml"
+    prompt_preview_workflow = repo / ".github/workflows/prompt-package-preview.yml"
     dependabot = repo / ".github/dependabot.yml"
     codeowners = repo / ".github/CODEOWNERS"
     failures: list[str] = []
@@ -62,6 +63,7 @@ def main() -> int:
     required = [
         quality_workflow,
         preview_workflow,
+        prompt_preview_workflow,
         dependabot,
         codeowners,
         repo / "tooling/run-quality-gates.py",
@@ -107,6 +109,24 @@ def main() -> int:
             if forbidden in text:
                 failures.append(f"RC preview workflow may not publish: {forbidden!r}")
 
+
+    if prompt_preview_workflow.is_file():
+        text = prompt_preview_workflow.read_text(encoding="utf-8")
+        validate_common_workflow("prompt-package preview workflow", text, failures)
+        for fragment in [
+            "workflow_dispatch:",
+            "tooling/run-quality-gates.py",
+            "tooling/build-prompt-package.py --clean",
+            "tooling/verify-prompt-package.py",
+            "actions/upload-artifact@",
+            "retention-days: 14",
+        ]:
+            if fragment not in text:
+                failures.append(f"prompt-package preview workflow missing required fragment: {fragment!r}")
+        for forbidden in ["contents: write", "gh release", "git tag", "create-release", "softprops/action-gh-release"]:
+            if forbidden in text:
+                failures.append(f"prompt-package preview workflow may not publish: {forbidden!r}")
+
     if dependabot.is_file():
         text = dependabot.read_text(encoding="utf-8")
         if not re.search(r"^version:\s*2\s*$", text, re.MULTILINE):
@@ -129,6 +149,7 @@ def main() -> int:
             "/.github/ @Robin-Goerlach",
             "/tooling/ @Robin-Goerlach",
             "/docs/40-governance/ @Robin-Goerlach",
+            "/prompts/ @Robin-Goerlach",
         ]:
             if fragment not in text:
                 failures.append(f"CODEOWNERS missing ownership rule: {fragment!r}")
@@ -154,10 +175,10 @@ def main() -> int:
         print(f"\nFailures: {len(failures)}")
         return 1
 
-    print("OK   quality-gate and RC-preview workflows use read-only permissions")
+    print("OK   quality-gate, RC-preview and prompt-preview workflows use read-only permissions")
     print("OK   action references use full commit SHAs with release comments")
     print("OK   checkout credentials are not persisted")
-    print("OK   RC-preview workflow cannot create tags or releases")
+    print("OK   preview workflows cannot create tags or releases")
     print("OK   Dependabot monitors only GitHub Actions from the repository root")
     print("OK   governance-sensitive paths have CODEOWNERS")
     print("OK   governed main-branch ruleset payload is present")

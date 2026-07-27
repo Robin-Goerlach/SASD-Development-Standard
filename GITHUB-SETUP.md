@@ -120,3 +120,10 @@ passes on Ubuntu and Windows.
 `.github/workflows/release-candidate-preview.yml` is intentionally manual and read-only. It runs all repository quality gates, builds deterministic preview archives, verifies checksums and safe paths, and uploads the result as a temporary Actions artifact. It cannot create a tag or GitHub Release.
 
 Run it from **Actions → SASD Release Candidate Preview → Run workflow** only after the branch commit has passed the normal `SASD Quality Gates`. Publication of `v1.0.0-rc.1` remains a separate Maintainer decision using the completed Release Record and RC checklist.
+
+
+## Prompt-package preview workflow
+
+`.github/workflows/prompt-package-preview.yml` is manual and read-only. It runs the repository quality gates, builds the deterministic candidate prompt package, verifies checksums and ZIP safety, and uploads the result for 14 days. It does not modify Prompt Manager data, create a release, or claim application-version compatibility.
+
+Run it from **Actions → SASD Prompt Package Preview → Run workflow** after the current commit has passed the standard quality gates.

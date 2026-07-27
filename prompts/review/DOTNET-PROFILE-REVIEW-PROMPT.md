@@ -1,37 +1,43 @@
-# C#/.NET Profile Review Prompt
+---
+prompt-id: "SASD-PROMPT-REVIEW-002"
+title: "C#/.NET-Profilreview"
+version: "0.13.0"
+status: "Candidate"
+package-id: "sasd-development-standard-v1"
+category: "review"
+language: "de"
+summary: "Prüft ein C#/.NET-Repository gegen Core und das SASD-.NET-Profil."
+variables: ["project_name", "repository_tree", "quality_level", "evidence", "architecture_context", "source_material", "output_language"]
+tags: ["dotnet", "csharp", "profile-review", "tests"]
+quality-levels: ["Minimum", "Recommended", "Production"]
+profiles: ["Core", ".NET"]
+last-reviewed: "2026-07-25"
+---
 
-Review the supplied C#/.NET repository against the SASD Development Standard Core and the Proposed C#/.NET Profile.
+# C#/.NET-Profilreview
+## Zweck
 
-## Required context
+Prüfe **{{project_name}}** gegen den SASD Core Standard und das C#/.NET-Profil.
 
-- repository tree,
-- project and solution files,
-- `global.json`, `Directory.Build.props`, `Directory.Packages.props`, `.editorconfig`,
-- README and architecture documents,
-- selected quality level,
-- build/test output,
-- relevant configuration, logging, persistence and test code.
+## Eingaben
 
-## Review tasks
+- Repository-Struktur: {{repository_tree}}
+- Qualitätsstufe: {{quality_level}}
+- Build-, Test- und CI-Nachweise: {{evidence}}
+- Architektur: {{architecture_context}}
+- Projektdateien und Konfiguration: {{source_material}}
 
-1. Determine applicable profile requirements.
-2. Separate satisfied, not applicable, exception, open and not assessed requirements.
-3. Identify build reproducibility, support, package and analyzer risks.
-4. Review project boundaries and dependency directions.
-5. Review nullable, async, disposal, error and logging practices.
-6. Review configuration, secrets, paths, persistence and migrations.
-7. Review test isolation, provider realism, CI and packaging.
-8. Prioritize findings by risk and migration effort.
-9. Do not recommend extra projects, abstractions or frameworks without a concrete benefit.
-10. Produce a practical phased migration plan for a solo developer or small team.
+## Arbeitsauftrag
 
-## Output
+Prüfe SDK- und Runtimewahl, Solutionstruktur, Abhängigkeitsrichtung, Nullable, Analyzer, Async, Ressourcenfreigabe, Fehlerbehandlung, Logging, Konfiguration, Secrets, Datenpfade, Persistenz, Migrationen, Testisolation, Paketverwaltung, CI und Packaging. Ordne Befunde exakten `SASD-DOTNET-REQ-*`-IDs zu.
 
-- executive summary,
-- selected applicability assumptions,
-- critical findings,
-- requirement assessment table with evidence,
-- quick wins,
-- phased migration plan,
-- proposed exceptions,
-- validation commands.
+## Qualitätsregeln
+
+- Unterscheide erfüllt, nicht anwendbar, Ausnahme, offen und nicht bewertet.
+- Empfehle keine zusätzlichen Projekte, Abstraktionen oder Frameworks ohne konkreten Nutzen.
+- Sourcecode und erfolgreicher Lauf sind verschiedene Nachweise.
+- Priorisiere Datenverlust, Security, Buildreproduzierbarkeit und Wartbarkeit.
+
+## Ausgabeformat
+
+Erzeuge in {{output_language}}: Zusammenfassung, Annahmen, Befunde, Requirement-Matrix, Quick Wins, Migrationsplan, Ausnahmen und Validierungsbefehle.

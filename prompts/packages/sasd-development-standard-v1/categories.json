@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "categories": [
+    {
+      "id": "project-initiation",
+      "title": "Projektinitialisierung",
+      "description": "Prompts für Idee, Klassifikation, Scope und Projektstart.",
+      "order": 1
+    },
+    {
+      "id": "research",
+      "title": "Recherche",
+      "description": "Prompts für Primärquellen, bestehende Lösungen und Technologieentscheidungen.",
+      "order": 2
+    },
+    {
+      "id": "requirements",
+      "title": "Anforderungen",
+      "description": "Prompts für Lastenheft, Pflichtenheft und Traceability.",
+      "order": 3
+    },
+    {
+      "id": "architecture",
+      "title": "Architektur",
+      "description": "Prompts für Architektur, ADRs, Persistenz und Bedrohungsmodelle.",
+      "order": 4
+    },
+    {
+      "id": "development",
+      "title": "Entwicklung",
+      "description": "Prompts für Milestones, Pilotwellen und verständliche C#-Dokumentation.",
+      "order": 5
+    },
+    {
+      "id": "debugging",
+      "title": "Debugging",
+      "description": "Prompts für reproduzierbare Fehler-, Build- und Laufzeitanalysen.",
+      "order": 6
+    },
+    {
+      "id": "review",
+      "title": "Reviews",
+      "description": "Prompts für Repository-, Profil-, Security-, Migrations- und Pilotreviews.",
+      "order": 7
+    },
+    {
+      "id": "documentation",
+      "title": "Dokumentation",
+      "description": "Prompts für README, Konsistenzprüfungen und technische Anleitungen.",
+      "order": 8
+    },
+    {
+      "id": "release",
+      "title": "Releases",
+      "description": "Prompts für Readiness, Release Candidates, Release Notes und Veröffentlichung.",
+      "order": 9
+    }
+  ]
+}

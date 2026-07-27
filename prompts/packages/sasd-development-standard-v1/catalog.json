@@ -1,0 +1,1356 @@
+{
+  "schema_version": "1.0",
+  "package_id": "sasd-development-standard-v1",
+  "package_version": "0.13.0",
+  "prompt_count": 39,
+  "prompts": [
+    {
+      "prompt_id": "SASD-PROMPT-ARCH-001",
+      "title": "Architecture Decision Record vorbereiten",
+      "summary": "Erstellt einen prüfbaren ADR-Entwurf mit Optionen, Entscheidungskriterien und Konsequenzen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "architecture",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "decision_topic",
+        "architecture_context",
+        "requirements",
+        "constraints",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "adr",
+        "architecture",
+        "decision",
+        "tradeoffs"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/architecture/ADR-PREPARATION-PROMPT.md",
+      "sha256": "a587dd0804d6e447b62911ea36a02e13b0a2b290a71cfb6084782604a373b2e8"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-ARCH-002",
+      "title": "Projektarchitektur entwerfen",
+      "summary": "Entwirft eine proportionale Architektur aus Anforderungen, Risiken und Betriebsmodell.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "architecture",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "requirements",
+        "project_context",
+        "constraints",
+        "quality_level",
+        "profiles",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "architecture",
+        "components",
+        "interfaces",
+        "data-flow"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/architecture/ARCHITECTURE-DESIGN-PROMPT.md",
+      "sha256": "7fe6e1b2612c588cf9466dacf6c160323139546df6b7c64cd5fdfb9a2598fffc"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-ARCH-003",
+      "title": "Daten- und Persistenzkonzept entwerfen",
+      "summary": "Entwirft Datenmodell, Speicherstrategie, Migration, Backup und Wiederherstellung.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "architecture",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "requirements",
+        "architecture_context",
+        "security_context",
+        "constraints",
+        "quality_level",
+        "output_language"
+      ],
+      "tags": [
+        "data",
+        "persistence",
+        "migration",
+        "backup"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET"
+      ],
+      "source_file": "prompts/architecture/DATA-PERSISTENCE-DESIGN-PROMPT.md",
+      "sha256": "50a916ad5becb7676ca080d8a36b00a9a5334037bc9c6d4711bbdd3881810d8d"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-ARCH-004",
+      "title": "Bedrohungsmodell erstellen",
+      "summary": "Erstellt ein proportioniertes Bedrohungsmodell mit Assets, Grenzen, Szenarien und Maßnahmen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "architecture",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "architecture_context",
+        "security_context",
+        "target_users",
+        "source_material",
+        "quality_level",
+        "output_language"
+      ],
+      "tags": [
+        "security",
+        "threat-model",
+        "trust-boundaries",
+        "risk"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/architecture/THREAT-MODEL-PROMPT.md",
+      "sha256": "cc01b8379fec902366b80a0de59f4366ebacefc904546d78a82fe5369bb9b02d"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DEBUG-001",
+      "title": "Systematische Fehleranalyse",
+      "summary": "Strukturiert Reproduktion, Hypothesen, Experimente, Ursache, Fix und Regressionstest.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "debugging",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "issue_description",
+        "reproduction_steps",
+        "logs_and_errors",
+        "code_context",
+        "environment",
+        "evidence",
+        "output_language"
+      ],
+      "tags": [
+        "debugging",
+        "root-cause",
+        "reproduction",
+        "regression"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/debugging/SYSTEMATIC-DEBUGGING-PROMPT.md",
+      "sha256": "c04afa57e816265c5b622d8a94c5cb0ceda209e6ed3a2f0a4d375379dbbd0192"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DEBUG-002",
+      "title": "Buildfehler analysieren",
+      "summary": "Analysiert Restore-, Compiler-, Analyzer-, Test- und Packagingfehler reproduzierbar.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "debugging",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_tree",
+        "logs_and_errors",
+        "environment",
+        "constraints",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "build",
+        "restore",
+        "compiler",
+        "ci"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        ".NET"
+      ],
+      "source_file": "prompts/debugging/BUILD-FAILURE-ANALYSIS-PROMPT.md",
+      "sha256": "12072edd614c9495fd06d8a2cba357aafb4273ca3f6bab089308f51fd554bb84"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DEBUG-003",
+      "title": "Laufzeitvorfall reproduzieren",
+      "summary": "Plant eine sichere Reproduktion eines Laufzeitfehlers mit Daten-, Umgebungs- und Rollbackschutz.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "debugging",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "issue_description",
+        "environment",
+        "logs_and_errors",
+        "security_context",
+        "reproduction_steps",
+        "output_language"
+      ],
+      "tags": [
+        "runtime",
+        "incident",
+        "recovery",
+        "diagnostics"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/debugging/RUNTIME-INCIDENT-REPRODUCTION-PROMPT.md",
+      "sha256": "ed2bae0643db0369fc5dedb991683b07c272afb9533d9bdd03e6b33e21c9493a"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DEV-001",
+      "title": "Begrenzten Milestone implementieren",
+      "summary": "Steuert eine begrenzte Implementierung mit Tests, Dokumentation und nachvollziehbaren Commitgrenzen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "development",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_tree",
+        "implementation_scope",
+        "acceptance_criteria",
+        "architecture_context",
+        "constraints",
+        "evidence",
+        "output_language"
+      ],
+      "tags": [
+        "implementation",
+        "milestone",
+        "tests",
+        "commits"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/development/MILESTONE-IMPLEMENTATION-PROMPT.md",
+      "sha256": "89807ee246a6d1ba56d32e3ed450357888e1965eee678ef22e5e1e0c5c45c55c"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DEV-002",
+      "title": "Pilot-Migrationswelle ausführen",
+      "summary": "Führt eine freigegebene Pilotwelle evidenzbasiert und ohne Scope-Ausweitung aus.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "development",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_url",
+        "pilot_wave_plan",
+        "current_state",
+        "evidence",
+        "environment",
+        "output_language"
+      ],
+      "tags": [
+        "pilot",
+        "migration",
+        "execution",
+        "evidence"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/development/PILOT-WAVE-EXECUTION-PROMPT.md",
+      "sha256": "1e5a22493c156211ec3b64b2dfd7975bc94d2016ff36f600bcd773a2ac33b1f1"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DEV-003",
+      "title": "Code kommentieren und dokumentieren",
+      "summary": "Ergänzt verständliche XML-Dokumentation und Begründungskommentare ohne den Code nachzuerzählen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "development",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "code_context",
+        "target_audience",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "documentation",
+        "xml-comments",
+        "code-comments",
+        "maintainability"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        ".NET"
+      ],
+      "source_file": "prompts/development/CODE-COMMENT-DOCUMENTATION-PROMPT.md",
+      "sha256": "6a27d7f619672dbae69c214a9693d01cb31b5a4334350de537e5411c811d120c"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DOC-001",
+      "title": "README und Repository-Dokumentation erstellen",
+      "summary": "Erstellt eine ehrliche, navigierbare README und ein angemessenes Dokumentationsset.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "documentation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "target_users",
+        "repository_tree",
+        "current_state",
+        "requirements",
+        "constraints",
+        "target_audience",
+        "output_language"
+      ],
+      "tags": [
+        "readme",
+        "documentation",
+        "repository",
+        "onboarding"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/documentation/README-REPOSITORY-DOCUMENTATION-PROMPT.md",
+      "sha256": "4ad33bdc3e56a3bf28081866382ec44bb7c46a28692a9bfab7b3b15af1ff6066"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DOC-002",
+      "title": "Dokumentkonsistenz prüfen",
+      "summary": "Prüft Widersprüche, veraltete Aussagen, Links, Versionen und Zuständigkeiten in Projektdokumenten.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "documentation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "existing_documentation",
+        "current_state",
+        "requirements",
+        "evidence",
+        "output_language"
+      ],
+      "tags": [
+        "documentation-review",
+        "consistency",
+        "links",
+        "versioning"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/documentation/DOCUMENT-CONSISTENCY-REVIEW-PROMPT.md",
+      "sha256": "4a0e95374f2116a31bc3d03ace0b94c111e1cf963291183fea20c208a5a4c69c"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-DOC-003",
+      "title": "Technische Anleitung erstellen",
+      "summary": "Erstellt eine reproduzierbare Installations-, Betriebs- oder Troubleshooting-Anleitung.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "documentation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "document_type",
+        "target_audience",
+        "environment",
+        "source_material",
+        "constraints",
+        "evidence",
+        "output_language"
+      ],
+      "tags": [
+        "guide",
+        "operations",
+        "installation",
+        "troubleshooting"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/documentation/TECHNICAL-GUIDE-PROMPT.md",
+      "sha256": "09e1db540842997731a57502eac6dd9487c5ecefee29dd7a5723997355b55605"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-INIT-001",
+      "title": "SASD-Projektinitialisierung",
+      "summary": "Initialisiert ein neues technisches Projekt mit Vision, Scope, Klassifikation, Risiken und erstem Milestone.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "project-initiation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "project_context",
+        "target_users",
+        "stakeholders",
+        "goals",
+        "constraints",
+        "non_goals",
+        "quality_level",
+        "profiles",
+        "output_language"
+      ],
+      "tags": [
+        "project-initiation",
+        "scope",
+        "roadmap",
+        "risk"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/project-initiation/PROJECT-INITIALIZATION-PROMPT.md",
+      "sha256": "caff93d0232ec3ca41b5c6af07f6232aa494c1c743b12a2e2135a6cb0aabb841"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-INIT-002",
+      "title": "SASD-Projektklassifikation",
+      "summary": "Trennt Projektgröße, Qualitätsstufe, Lebensdauer, Risikomerkmale und Profile.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "project-initiation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "project_context",
+        "constraints",
+        "quality_level",
+        "profiles",
+        "evidence",
+        "output_language"
+      ],
+      "tags": [
+        "classification",
+        "quality-level",
+        "risk",
+        "profiles"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/project-initiation/PROJECT-CLASSIFICATION-PROMPT.md",
+      "sha256": "277661476650b4ed86a8eb08d5eeddd179e1457382c2bf4a9d605db815e491c6"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-INIT-003",
+      "title": "Idee und Problem validieren",
+      "summary": "Prüft, ob ein Projekt ein reales Problem löst und welchen minimalen validierbaren Umfang es benötigt.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "project-initiation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "target_users",
+        "goals",
+        "constraints",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "idea",
+        "problem-validation",
+        "mvp",
+        "scope"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/project-initiation/IDEA-PROBLEM-VALIDATION-PROMPT.md",
+      "sha256": "0e417a69d1208d27af5c51279b513d522ce79ce7ec8f0aa83b1c4d2b07901326"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-INIT-004",
+      "title": "Scope und Nicht-Ziele festlegen",
+      "summary": "Formuliert einen begrenzten Projektumfang und schützt vor unkontrollierter Ausweitung.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "project-initiation",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "goals",
+        "requirements",
+        "constraints",
+        "non_goals",
+        "quality_level",
+        "output_language"
+      ],
+      "tags": [
+        "scope",
+        "non-goals",
+        "prioritization",
+        "milestone"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/project-initiation/SCOPE-NON-GOALS-PROMPT.md",
+      "sha256": "3b0faf897397600c96fe292247543d0aebde956cf68b371f163224a92e6dd037"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RELEASE-001",
+      "title": "Release vorbereiten",
+      "summary": "Erstellt einen risikobasierten Release-Readiness-Plan mit Artefakten, Tests und Rollback.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "release",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "release_version",
+        "release_scope",
+        "quality_level",
+        "evidence",
+        "constraints",
+        "security_context",
+        "output_language"
+      ],
+      "tags": [
+        "release",
+        "readiness",
+        "rollback",
+        "artifacts"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/release/RELEASE-PREPARATION-PROMPT.md",
+      "sha256": "10dc768869895e8cc045895bccdda45233d432d142b789a99c9c30f60cf75b83"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RELEASE-002",
+      "title": "Standardrelease bewerten",
+      "summary": "Bewertet ein SASD-Standardrelease gegen Freigaben, Tags, Validatoren, Piloten und Publikationsartefakte.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "release",
+      "language": "de",
+      "variables": [
+        "standard_version",
+        "repository_url",
+        "release_version",
+        "evidence",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "standard-release",
+        "governance",
+        "approval",
+        "publication"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/release/STANDARD-RELEASE-READINESS-PROMPT.md",
+      "sha256": "dee7dc3400ce335c1f913f5bbd464e506309b403701d18eec19a187dc4c55905"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RELEASE-003",
+      "title": "Version 1.0 Release Candidate prüfen",
+      "summary": "Prüft den RC gegen exakten Commit, CI, Pilot, Ruleset, Artefakte und Releaseunterlagen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "release",
+      "language": "de",
+      "variables": [
+        "repository_url",
+        "release_version",
+        "evidence",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "release-candidate",
+        "ci",
+        "pilot",
+        "checksums"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/release/VERSION-1.0-RC-REVIEW-PROMPT.md",
+      "sha256": "01d787f0967ca260074b0bd95f62ed11c1fbc9cb6b59bdc9f65679f7732097c4"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RELEASE-004",
+      "title": "Release Notes erstellen",
+      "summary": "Erstellt ehrliche, nutzerorientierte Release Notes aus Changelog, Scope und Nachweisen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "release",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "release_version",
+        "release_scope",
+        "evidence",
+        "source_material",
+        "target_audience",
+        "output_language"
+      ],
+      "tags": [
+        "release-notes",
+        "changelog",
+        "known-issues",
+        "communication"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/release/RELEASE-NOTES-PROMPT.md",
+      "sha256": "33c69036651c0b22835184bd7f6149ed32ffd4e10fabda3381ec05a0a90daf33"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REQ-001",
+      "title": "Lastenheft erstellen",
+      "summary": "Erstellt ein lösungsneutrales Lastenheft aus Projektidee und Stakeholderbedarf.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "requirements",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "target_users",
+        "stakeholders",
+        "goals",
+        "constraints",
+        "non_goals",
+        "source_material",
+        "quality_level",
+        "output_language"
+      ],
+      "tags": [
+        "requirements",
+        "lastenheft",
+        "stakeholders",
+        "scope"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/requirements/LASTENHEFT-PROMPT.md",
+      "sha256": "5e9c573863feea0ebeb0c1cdbf2ce299c5d2692ceb7f4eb61ad0988e3a91eae7"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REQ-002",
+      "title": "Pflichtenheft ableiten",
+      "summary": "Leitet aus freigegebenen Anforderungen eine technische und organisatorische Umsetzungsspezifikation ab.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "requirements",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "requirements",
+        "architecture_context",
+        "constraints",
+        "quality_level",
+        "profiles",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "requirements",
+        "pflichtenheft",
+        "solution-design",
+        "acceptance"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/requirements/PFLICHTENHEFT-PROMPT.md",
+      "sha256": "d653c766bd1058848c858c3a0b961770d52210c2d6ccd9daec378db3c44b35ce"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REQ-003",
+      "title": "Anforderungs-Traceability prüfen",
+      "summary": "Prüft die Rückverfolgbarkeit zwischen Zielen, Anforderungen, Architektur, Tests und Releases.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "requirements",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "goals",
+        "requirements",
+        "architecture_context",
+        "evidence",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "traceability",
+        "requirements",
+        "tests",
+        "coverage"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/requirements/REQUIREMENTS-TRACEABILITY-PROMPT.md",
+      "sha256": "fda4ef11bbfa592ff6350f7b27d6decd6cbb2e1894c53f3704783ee5ffc8bd8c"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RESEARCH-001",
+      "title": "Bestehende Lösungen analysieren",
+      "summary": "Analysiert vergleichbare Produkte und trennt Funktionsideen von belastbaren Anforderungen.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "research",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_description",
+        "target_users",
+        "constraints",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "research",
+        "competition",
+        "feature-analysis",
+        "market"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/research/EXISTING-SOLUTIONS-ANALYSIS-PROMPT.md",
+      "sha256": "645f8e068b97c118d95ff4b5cf60d7bf111dafdc3d0547cc34b41fe82c4fcbf1"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RESEARCH-002",
+      "title": "Technische Primärquellen recherchieren",
+      "summary": "Plant und dokumentiert eine technische Recherche mit Primärquellen und klarer Unsicherheit.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "research",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "project_context",
+        "source_material",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "research",
+        "primary-sources",
+        "evidence",
+        "technology"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/research/PRIMARY-SOURCE-RESEARCH-PROMPT.md",
+      "sha256": "0b6f8fb71c0d52d5522e0ac9531c7511b20f20cec241eed61a87bb9b628d6abd"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-RESEARCH-003",
+      "title": "Technologieauswahl bewerten",
+      "summary": "Vergleicht Technologien anhand von Projektanforderungen, Lebenszyklus und Betriebsrisiken.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "research",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "requirements",
+        "architecture_context",
+        "constraints",
+        "source_material",
+        "quality_level",
+        "output_language"
+      ],
+      "tags": [
+        "technology-selection",
+        "tradeoffs",
+        "architecture",
+        "lifecycle"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/research/TECHNOLOGY-EVALUATION-PROMPT.md",
+      "sha256": "e70bd4cc9d3e367fe567c4a1c6b3b66d036556ff4cd367bbc8dc7f017a989853"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-001",
+      "title": "Repository vollständig prüfen",
+      "summary": "Prüft Struktur, Build, Dokumentation, Sicherheit, Tests, Releases und Auffälligkeiten.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_url",
+        "repository_tree",
+        "quality_level",
+        "profiles",
+        "evidence",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "repository-review",
+        "quality",
+        "security",
+        "documentation"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/REPOSITORY-REVIEW-PROMPT.md",
+      "sha256": "47c4c55ec127cbf04b37f4f5730851eea6c6ef21af6c1c83db1f3d0a41d84369"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-002",
+      "title": "C#/.NET-Profilreview",
+      "summary": "Prüft ein C#/.NET-Repository gegen Core und das SASD-.NET-Profil.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_tree",
+        "quality_level",
+        "evidence",
+        "architecture_context",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "dotnet",
+        "csharp",
+        "profile-review",
+        "tests"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET"
+      ],
+      "source_file": "prompts/review/DOTNET-PROFILE-REVIEW-PROMPT.md",
+      "sha256": "57c01c2ba9e4fb2ca7d83b101c742050893ad2782221fe9aae73df64c3d21307"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-003",
+      "title": "Desktopanwendung prüfen",
+      "summary": "Prüft WinForms- oder WPF-Anwendungen auf UI-Architektur, UX, Accessibility und Lebenszyklus.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_tree",
+        "quality_level",
+        "architecture_context",
+        "evidence",
+        "environment",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "desktop",
+        "winforms",
+        "wpf",
+        "accessibility"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/review/DESKTOP-APPLICATION-REVIEW-PROMPT.md",
+      "sha256": "4a0b4ecf60c633b0687799b000f58a8747075d0286e75819434aa4491358edbc"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-004",
+      "title": "Security Review durchführen",
+      "summary": "Prüft Schutzbedarf, Angriffsflächen, Secrets, Abhängigkeiten, Daten und Wiederherstellung.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_tree",
+        "architecture_context",
+        "security_context",
+        "quality_level",
+        "evidence",
+        "source_material",
+        "output_language"
+      ],
+      "tags": [
+        "security-review",
+        "secrets",
+        "supply-chain",
+        "privacy"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/SECURITY-REVIEW-PROMPT.md",
+      "sha256": "c0a35de349d90ced69f824676681e44b937f187774c4420f20ac86fdd9128348"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-005",
+      "title": "Legacy-Projekt für SASD-Migration prüfen",
+      "summary": "Plant eine schrittweise, risikoarme Migration eines bestehenden Projekts.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_url",
+        "current_state",
+        "target_state",
+        "evidence",
+        "constraints",
+        "quality_level",
+        "profiles",
+        "output_language"
+      ],
+      "tags": [
+        "legacy",
+        "migration",
+        "stabilization",
+        "waves"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/LEGACY-MIGRATION-REVIEW-PROMPT.md",
+      "sha256": "2d10e042979253422b6648152a679d07048b97efe023cd5fba5280727494f512"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-006",
+      "title": "Pilot-Baseline bewerten",
+      "summary": "Erstellt eine evidenzbasierte Ausgangsbewertung für einen Referenzpiloten.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_url",
+        "repository_tree",
+        "current_state",
+        "quality_level",
+        "profiles",
+        "evidence",
+        "output_language"
+      ],
+      "tags": [
+        "pilot",
+        "baseline",
+        "evidence",
+        "gaps"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/review/PILOT-BASELINE-ASSESSMENT-PROMPT.md",
+      "sha256": "62141be90ebf5317bf3d88a7c523608c8b254587b188e36ae1f4def95dc9f9f9"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-007",
+      "title": "Pilotwelle verifizieren",
+      "summary": "Verifiziert eine umgesetzte Pilotwelle gegen Plan, Commit und tatsächliche Ausführungsnachweise.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_url",
+        "pilot_wave_plan",
+        "evidence",
+        "environment",
+        "current_state",
+        "output_language"
+      ],
+      "tags": [
+        "pilot",
+        "verification",
+        "ci",
+        "runtime"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core",
+        ".NET",
+        "Desktop"
+      ],
+      "source_file": "prompts/review/PILOT-VERIFICATION-PROMPT.md",
+      "sha256": "a7ccb5bcb95997e34006cc6a8e835d51bb32a14bf2514a1a9b7700b305d154f0"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-008",
+      "title": "Pilotretrospektive durchführen",
+      "summary": "Bewertet Zielprojekt und Standard getrennt und leitet konkrete Verbesserungen ab.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "pilot_wave_plan",
+        "evidence",
+        "current_state",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "pilot",
+        "retrospective",
+        "lessons-learned",
+        "standard-change"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/PILOT-RETROSPECTIVE-PROMPT.md",
+      "sha256": "533c9668b07af9a1120f78508d2592fdd76bf356ddc95a7c4bd9e26b676702c1"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-009",
+      "title": "Foundation und Governance prüfen",
+      "summary": "Prüft Vision, Scope, Dokumentlebenszyklus, Versionierung, Ausnahmen und Freigabereife.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "standard_version",
+        "source_material",
+        "evidence",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "governance",
+        "foundation",
+        "approval",
+        "versioning"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/FOUNDATION-GOVERNANCE-REVIEW-PROMPT.md",
+      "sha256": "bf033fa96ca071c36013540932113269edde2be14b1fe905dc2e556c7aa28a43"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-010",
+      "title": "Normative Baseline freigabereif prüfen",
+      "summary": "Prüft ein normatives Dokumentbündel auf Vollständigkeit, Zyklen, Doppelungen und Freigabereife.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "standard_version",
+        "source_material",
+        "evidence",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "normative-baseline",
+        "approval",
+        "dependencies",
+        "consistency"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/NORMATIVE-BASELINE-APPROVAL-REVIEW-PROMPT.md",
+      "sha256": "ee8de3c37647169447e805bdf667536738d20e91a01b87cd6dc4ab3d57abbe2c"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-011",
+      "title": "Repository-CI und Merge Gate prüfen",
+      "summary": "Prüft exakte Commit-Evidenz, plattformübergreifende Jobs und tatsächliche Ruleset-Aktivierung.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "repository_url",
+        "evidence",
+        "environment",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "ci",
+        "merge-gate",
+        "ruleset",
+        "evidence"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/REPOSITORY-CI-ACTIVATION-REVIEW-PROMPT.md",
+      "sha256": "f0a3800fb83432ecab125247304c5da3e885c025f3cf00ad551f7ea3c8dcac26"
+    },
+    {
+      "prompt_id": "SASD-PROMPT-REVIEW-012",
+      "title": "Updatepaket und Ziel-Repository prüfen",
+      "summary": "Prüft Repository-Identität, Overlay-Sicherheit, Löschungen, Rollback und verbleibende Nachweise.",
+      "version": "0.13.0",
+      "status": "Candidate",
+      "category": "review",
+      "language": "de",
+      "variables": [
+        "project_name",
+        "repository_url",
+        "source_material",
+        "evidence",
+        "constraints",
+        "output_language"
+      ],
+      "tags": [
+        "update-package",
+        "repository-boundary",
+        "rollback",
+        "routing"
+      ],
+      "quality_levels": [
+        "Minimum",
+        "Recommended",
+        "Production"
+      ],
+      "profiles": [
+        "Core"
+      ],
+      "source_file": "prompts/review/UPDATE-PACKAGE-ROUTING-REVIEW-PROMPT.md",
+      "sha256": "fc1b983b8c769135b6d21a7214438a6cabf631686b4430714dfd62f538b03963"
+    }
+  ]
+}

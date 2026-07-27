@@ -48,7 +48,8 @@
 - [x] Add process templates, checklists, examples, prompts, indexes, and validation tooling.
 - [ ] Complete remaining document templates.
 - [ ] Complete remaining checklists.
-- [ ] Complete prompt packages for the SASD Prompt Manager.
+- [x] Complete the versioned SASD Prompt Package, catalogs, schemas, deterministic builder, verifier, and lifecycle workflow.
+- [ ] Implement and roundtrip-test a direct Prompt Manager import adapter against an exact application commit.
 - [x] Add initial reusable `.editorconfig`, MSBuild, package-management, SDK, and CI templates.
 - [x] Add initial WinForms and WPF project templates, desktop checklists, and deployment templates.
 - [ ] Refine reusable templates after .NET and Desktop pilot feedback.

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "format": "sasd-prompt-package/1.0",
+  "package_id": "replace-me",
+  "name": "Replace me",
+  "version": "0.1.0",
+  "status": "draft",
+  "standard_version": "1.0",
+  "authoritative_language": "de",
+  "maintainer": "",
+  "license": "MIT",
+  "description": "",
+  "catalog": "catalog.json",
+  "variables": "variables.json",
+  "categories": "categories.json",
+  "workflow": "workflow.json",
+  "prompt_roots": [],
+  "supporting_resources": [],
+  "compatibility": {
+    "canonical_exchange_format": true,
+    "prompt_manager_direct_import": false,
+    "note": ""
+  },
+  "created_on": "YYYY-MM-DD"
+}
