@@ -68,9 +68,9 @@ $manualRecordRelative = [System.IO.Path]::GetRelativePath((Split-Path -Parent $r
 $content = @"
 # TaskHost Local – Wave 01 Verification Record
 
-**Status:** Passed  
-**Generated UTC:** $generatedUtc  
-**Verified commit:** ``$($summary.commitSha)``  
+**Status:** Passed
+**Generated UTC:** $generatedUtc
+**Verified commit:** ``$($summary.commitSha)``
 **Tester:** $Tester
 
 ## Evidence

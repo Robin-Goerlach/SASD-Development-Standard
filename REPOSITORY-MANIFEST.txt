@@ -6,6 +6,7 @@
 .github/ISSUE_TEMPLATE/standard-change.yml
 .github/PULL_REQUEST_TEMPLATE.md
 .github/rulesets/main-merge-gate.json
+.github/workflows/ci.yml
 .github/workflows/prompt-package-preview.yml
 .github/workflows/quality-gates.yml
 .github/workflows/README.md
@@ -299,10 +300,12 @@ RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md
 REPOSITORY-DESCRIPTION.txt
 REPOSITORY-IDENTITY.json
 ROADMAP.md
+scripts/backup-taskhost-data.ps1
 scripts/build-prompt-package.ps1
 scripts/build-prompt-package.sh
 scripts/capture-ci-activation.ps1
 scripts/capture-ci-activation.sh
+scripts/finalize-wave-01.ps1
 scripts/prepare-release-candidate.ps1
 scripts/prepare-release-candidate.sh
 scripts/README.md
@@ -310,6 +313,8 @@ scripts/repair-repository-boundary.ps1
 scripts/repair-repository-boundary.sh
 scripts/validate-repository.ps1
 scripts/validate-repository.sh
+scripts/verify-prompt-package-import.ps1
+scripts/verify-wave-01.ps1
 SECURITY.md
 templates/architecture-decisions/ADR-INDEX-TEMPLATE.md
 templates/architecture-decisions/ADR-TEMPLATE.md
@@ -412,11 +417,13 @@ tooling/validate-markdown-links.py
 tooling/validate-normative-baseline-approval.py
 tooling/validate-normative-baseline-review.py
 tooling/validate-operational-processes.py
+tooling/validate-prompt-package-import.py
 tooling/validate-prompt-packages.py
 tooling/validate-reference-pilots.py
 tooling/validate-release-candidate-preparation.py
 tooling/validate-repository-boundary.py
 tooling/validate-repository-hygiene.py
 tooling/validate-version-1-pilot-coverage.py
+tooling/validate-wave-01.py
 tooling/verify-prompt-package.py
 tooling/verify-release-candidate.py
