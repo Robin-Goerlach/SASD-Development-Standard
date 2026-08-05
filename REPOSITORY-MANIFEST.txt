@@ -209,6 +209,13 @@ docs/50-reference-implementations/repository-self-hosting/CI-ACTIVATION-UPDATE-M
 docs/50-reference-implementations/repository-self-hosting/CI-RECOVERY-AND-ACTIVATION.md
 docs/50-reference-implementations/repository-self-hosting/README.md
 docs/50-reference-implementations/VERSION-1.0-PILOT-READINESS.md
+docs/90-project-history/README.md
+docs/90-project-history/update-manifests/FOUNDATION-GOVERNANCE-APPROVAL-UPDATE-MANIFEST.md
+docs/90-project-history/update-manifests/FOUNDATION-GOVERNANCE-UPDATE-MANIFEST.md
+docs/90-project-history/update-manifests/PILOT-PORTFOLIO-EXPANSION-UPDATE-MANIFEST.md
+docs/90-project-history/update-manifests/PROMPT-PACKAGE-UPDATE-MANIFEST.md
+docs/90-project-history/update-manifests/README.md
+docs/90-project-history/update-manifests/RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md
 docs/README.md
 examples/desktop/maintained-winforms-application/README.md
 examples/desktop/maintained-wpf-application/README.md
@@ -225,12 +232,8 @@ examples/processes/SMALL-TOOL-CLASSIFICATION-EXAMPLE.md
 examples/README.md
 examples/reference-implementations/README.md
 examples/reference-implementations/sasd-taskhost-local-wave-01/README.md
-FOUNDATION-GOVERNANCE-APPROVAL-UPDATE-MANIFEST.md
-FOUNDATION-GOVERNANCE-UPDATE-MANIFEST.md
 GITHUB-SETUP.md
 LICENSE
-PILOT-PORTFOLIO-EXPANSION-UPDATE-MANIFEST.md
-PROMPT-PACKAGE-UPDATE-MANIFEST.md
 prompts/architecture/ADR-PREPARATION-PROMPT.md
 prompts/architecture/ARCHITECTURE-DESIGN-PROMPT.md
 prompts/architecture/DATA-PERSISTENCE-DESIGN-PROMPT.md
@@ -296,7 +299,6 @@ prompts/schema/prompt.schema.json
 prompts/SECURITY-GUIDE.md
 prompts/VARIABLES.md
 README.md
-RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md
 REPOSITORY-DESCRIPTION.txt
 REPOSITORY-IDENTITY.json
 ROADMAP.md

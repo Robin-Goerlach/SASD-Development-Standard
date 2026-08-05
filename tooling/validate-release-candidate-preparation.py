@@ -29,7 +29,7 @@ REQUIRED = [
     "tooling/build-release-candidate.py",
     "tooling/verify-release-candidate.py",
     ".github/workflows/release-candidate-preview.yml",
-    "RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md",
+    "docs/90-project-history/update-manifests/RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md",
 ]
 
 

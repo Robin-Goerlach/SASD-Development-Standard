@@ -13,6 +13,13 @@ from pathlib import Path
 
 VALID_TYPES = {"normative", "informative", "supporting"}
 VALID_STATUSES = {"Planned", "Draft", "Proposed", "Approved", "Deprecated", "Retired"}
+
+# Projektinterne Historiennachweise sind keine Dokumente des aktuellen
+# Standards. Sie bleiben als unveränderte Evidenz erhalten und werden
+# deshalb nicht nach dem Metadatenschema für Standarddokumente geprüft.
+NON_STANDARD_DOCUMENT_ROOTS = (
+    Path("docs/90-project-history"),
+)
 REQUIRED_NORMATIVE = {
     "title",
     "document-id",
@@ -87,7 +94,14 @@ def parse_inline_list(value: str) -> list[str]:
 
 def main() -> int:
     repo = Path(__file__).resolve().parents[1]
-    docs = sorted((repo / "docs").rglob("*.md"))
+    docs = sorted(
+        path
+        for path in (repo / "docs").rglob("*.md")
+        if not any(
+            excluded_root in path.relative_to(repo).parents
+            for excluded_root in NON_STANDARD_DOCUMENT_ROOTS
+        )
+    )
     document_ids: dict[str, Path] = {}
     results: dict[Path, tuple[list[str], dict[str, str] | None]] = {}
 
