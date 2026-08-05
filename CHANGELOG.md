@@ -101,6 +101,8 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+- Consolidated the canonical project status, public README entry paths, Version 1.0 scope freeze, and release-oriented roadmap.
+- Reframed post-1.0 planning around explicit Version 1.1, 1.2, and 2.0 stop conditions instead of an open-ended build-phase backlog.
 
 - Updated the pilot programme and evidence model to distinguish public baseline assessment from implementation and technical verification.
 - Hardened CI-policy validation so semantically valid quoted Dependabot directory values are accepted while the repository remains limited to GitHub Actions dependency updates.
