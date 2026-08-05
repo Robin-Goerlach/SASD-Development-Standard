@@ -235,6 +235,7 @@ examples/reference-implementations/README.md
 examples/reference-implementations/sasd-taskhost-local-wave-01/README.md
 GITHUB-SETUP.md
 LICENSE
+PROJECT-STATUS.md
 prompts/architecture/ADR-PREPARATION-PROMPT.md
 prompts/architecture/ARCHITECTURE-DESIGN-PROMPT.md
 prompts/architecture/DATA-PERSISTENCE-DESIGN-PROMPT.md

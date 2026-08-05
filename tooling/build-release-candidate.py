@@ -50,6 +50,7 @@ SOURCE_FILES = [
     "LICENSE",
     "docs/90-project-history/update-manifests/PILOT-PORTFOLIO-EXPANSION-UPDATE-MANIFEST.md",
     "README.md",
+    "PROJECT-STATUS.md",
     "docs/90-project-history/update-manifests/RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md",
     "REPOSITORY-DESCRIPTION.txt",
     "REPOSITORY-IDENTITY.json",
@@ -60,6 +61,7 @@ SOURCE_FILES = [
 MARKDOWN_DIRECTORIES = ["checklists", "docs", "examples", "prompts", "templates"]
 MARKDOWN_FILES = [
     "README.md",
+    "PROJECT-STATUS.md",
     "LICENSE",
     "CHANGELOG.md",
     "ROADMAP.md",

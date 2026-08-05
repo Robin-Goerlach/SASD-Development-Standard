@@ -5,6 +5,7 @@
   "default_branch": "main",
   "required_markers": [
     "README.md",
+    "PROJECT-STATUS.md",
     "docs/00-foundation/PROJECT-CHARTER.md",
     "docs/40-governance/NORMATIVE-LANGUAGE.md",
     "tooling/run-quality-gates.py"
@@ -30,6 +31,7 @@
     "CONTRIBUTING.md",
     "GITHUB-SETUP.md",
     "LICENSE",
+    "PROJECT-STATUS.md",
     "README.md",
     "REPOSITORY-DESCRIPTION.txt",
     "REPOSITORY-IDENTITY.json",
