@@ -5,12 +5,12 @@ This roadmap is release-oriented. It separates what must be completed for the ne
 The current human-readable state is maintained in [`PROJECT-STATUS.md`](PROJECT-STATUS.md). Generated release readiness and pilot readiness remain the technical evidence sources.
 
 ## Planning principles
-
 1. **No rewrite:** the Approved 0.8.0/0.9.0 baseline is the product foundation.
 2. **Hard Version 1.0 scope freeze:** no new major profile or governance domain before stable `1.0.0`.
-3. **Evidence before claims:** prepared scripts, tests, or artifacts do not count as successful execution.
-4. **One release boundary at a time:** finish the current release before expanding the next one.
-5. **Breaking changes require Version 2.0:** compatible guidance and optional profiles do not automatically justify a major version.
+3. **Specification before validation:** finish a stable theory baseline, then test it through real reference products.
+4. **Evidence before claims:** prepared scripts, tests, or artifacts do not count as successful execution.
+5. **One release boundary at a time:** practical validation precedes Release Candidate publication.
+6. **Breaking changes require Version 2.0:** compatible guidance and optional profiles do not automatically justify a major version.
 
 ## Current baseline
 
@@ -26,12 +26,46 @@ Completed before this roadmap revision:
 - [x] Canonical repository boundary restored.
 - [x] Historical one-time update manifests moved out of the repository root.
 - [x] Version 1.0 scope freeze and canonical project status established.
+- [x] Exact-commit Ubuntu, Windows, and `SASD merge gate` validation demonstrated.
+- [x] Exact-commit TaskHost Local remote baseline demonstrated for restore, build, audit, and publish.
+
+## Version 1.0 Specification Candidate — Practical-validation handoff
+
+### Goal
+
+Establish an honest, stable documentation baseline that can be applied and evaluated by real reference products without claiming that practical validation is complete.
+
+> **Die Theorie ist vollständig genug, um praktisch angewendet und bewertet zu werden. Ihre Praxistauglichkeit ist noch nicht abschließend bestätigt.**
+
+### Documentation closure
+
+- [x] Approved Foundation, Governance, Core, C#/.NET, Desktop, and process baselines available.
+- [x] Scope freeze, repository boundary, quality gates, pilot portfolio, release tooling, and remote technical baseline established.
+- [ ] Complete the final consistency pass for the Specification Candidate.
+- [ ] Record the Specification Candidate handoff commit and keep all practical-validation limitations explicit.
+
+### Practical reference validation
+
+- [ ] Apply the frozen baseline while continuing SASD TaskHost Local.
+- [ ] Apply the frozen baseline while continuing SASD Prompt Manager.
+- [ ] Apply the frozen baseline while continuing SASD Mail Workbench.
+- [ ] Record build, test, runtime, security, maintenance, and release evidence proportionally.
+- [ ] Classify findings as standard defect, clarification, project-specific exception, rejected feedback, or future enhancement.
+- [ ] Consolidate justified changes before Release Candidate preparation resumes.
+
+### Stop condition
+
+This phase is complete when the documentation baseline is stable, at least one reference product has produced meaningful end-to-end practical evidence, pilot findings have been evaluated, and required standard corrections have passed approval and quality gates.
+
+The Specification Candidate is not a published release and receives no `v1.0.0` or `v1.0.0-rc.1` tag.
 
 ## Version `1.0.0-rc.1` — First publishable candidate
 
 ### Goal
 
-Publish the Approved Version 1.0 product basis as a reproducible GitHub Pre-release backed by real CI, pilot, governance, and artifact evidence.
+After practical reference validation, publish the corrected Version 1.0 product basis as a reproducible GitHub Pre-release backed by real CI, pilot, governance, and artifact evidence.
+
+Release Candidate preparation is intentionally paused while the Specification Candidate is applied and evaluated through the reference products.
 
 ### Release blockers
 

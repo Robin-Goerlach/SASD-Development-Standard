@@ -39,6 +39,14 @@ Die dreizehn Core-, acht C#/.NET-, vier Desktop- und sieben operativen Prozessdo
 
 Der normative Geltungsbereich bleibt in [`SASD-FND-002`](../00-foundation/SCOPE.md) definiert. Der operative Releaseumfang und die Verschiebung nicht releasekritischer Themen sind im informativen [Scope Freeze für Version 1.0](VERSION-1.0-SCOPE-FREEZE.md) dokumentiert.
 
+## Version 1.0 Spezifikationsbaseline
+
+- [Spezifikationsbaseline und Validierungsübergabe](VERSION-1.0-SPECIFICATION-BASELINE.md)
+
+> **Die Theorie ist vollständig genug, um praktisch angewendet und bewertet zu werden. Ihre Praxistauglichkeit ist noch nicht abschließend bestätigt.**
+
+Der Specification Candidate ist die feste Arbeitsgrundlage für die nun folgende Referenzproduktentwicklung. Die Release-Candidate-Phase bleibt bis zu ausreichender praktischer Evidenz pausiert; die bestehenden Blocker bleiben offen.
+
 ## Release Candidate `1.0.0-rc.1`
 
 - [Release-Candidate-Plan](VERSION-1.0-RELEASE-CANDIDATE-PLAN.md)

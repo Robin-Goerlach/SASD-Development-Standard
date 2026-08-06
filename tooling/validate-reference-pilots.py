@@ -23,7 +23,7 @@ VALID_STATUSES = {
 VALID_LEVELS = {"Minimum", "Recommended", "Production"}
 VALID_IMPL = {"Not Started", "Artifact Prepared", "Committed", "Verified"}
 VALID_VERIFY = {"Pending", "Partial", "Passed", "Failed"}
-VALID_EVIDENCE = {"O", "R", "A", "B", "T", "C", "M", "I", "U"}
+VALID_EVIDENCE = {"V", "O", "R", "A", "B", "T", "C", "M", "I", "U"}
 REQUIRED_KEYS = {
     "schema_version",
     "pilot_id",

@@ -7,6 +7,8 @@ The format is based on Keep a Changelog principles, and the project intends to u
 ## [Unreleased]
 
 ### Added
+- Version 1.0 Specification Candidate strategy defining the honest documentation baseline, practical-validation handoff, release pause, and criteria for resuming Release Candidate preparation.
+- Permanent TaskHost Local remote-baseline evidence record for standard commit `d80baf0cccf66b5c940cfd7f05e399c83f880e1a`, target commit `2404feb0904b22274972b5803520e6d86a70047d`, and GitHub Actions run `31100169566`.
 
 - Candidate `sasd-development-standard-v1` prompt package 0.13.0 with 39 stable prompt IDs across nine project-lifecycle categories and a central registry of 35 variables.
 - Prompt-package specification, quality and security guidance, schemas, generated JSON/Markdown catalogs, checksums, workflow ordering, templates, review and import-roundtrip checklists.
@@ -101,6 +103,8 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+- Reframed the current project state from immediate release-evidence closure to specification-baseline closure followed by practical validation through the separate reference-product repositories.
+- Kept every practical-pilot and release blocker open while distinguishing the passed TaskHost remote technical baseline from full product and standard validation.
 - Replaced the misplaced in-repository TaskHost build with an exact-commit cross-repository baseline verification against the public TaskHost Local repository.
 - Consolidated the canonical project status, public README entry paths, Version 1.0 scope freeze, and release-oriented roadmap.
 - Reframed post-1.0 planning around explicit Version 1.1, 1.2, and 2.0 stop conditions instead of an open-ended build-phase backlog.

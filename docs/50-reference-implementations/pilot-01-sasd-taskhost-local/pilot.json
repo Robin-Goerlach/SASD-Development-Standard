@@ -19,7 +19,7 @@
     "desktop": "Proposed 0.5.0",
     "processes": "Proposed 0.6.0"
   },
-  "execution_statement": "Public target repository and exact baseline commit pinned; cross-repository restore, build, available-test, NuGet-audit and publish verification prepared. Wave 01 target integration, mandatory automated tests, headless self-check, manual Windows smoke test and final pilot verification remain pending.",
+  "execution_statement": "Public target repository and exact baseline commit pinned; cross-repository Windows restore, build, NuGet-audit and publish verification passed in GitHub Actions run 31100169566. No automated test project is present in the pinned target commit. Wave 01 target integration, mandatory automated tests, headless self-check, manual Windows smoke test and final pilot verification remain pending.",
   "documents": {
     "charter": "PILOT-CHARTER.md",
     "classification": "PROJECT-CLASSIFICATION.md",
@@ -54,7 +54,8 @@
       "R",
       "A",
       "I",
-      "U"
+      "U",
+      "V"
     ]
   }
 }

@@ -8,7 +8,7 @@ standard-version: "1.0"
 language: de
 authoritative: false
 owner: SASD Development Standard Maintainer
-last-updated: 2026-07-25
+last-updated: 2026-08-06
 applies-to-quality-levels: [Recommended, Production]
 applies-to-profiles: [Core]
 depends-on: [SASD-FND-007, SASD-GOV-004, SASD-CORE-010, SASD-PROC-006, SASD-REF-BASELINE-007, SASD-REF-PILOT-007, SASD-REF-CI-003]
@@ -30,6 +30,8 @@ Der Plan trennt ausdrücklich:
 6. **Git-Tag und GitHub Release**.
 
 Keiner dieser Schritte darf durch das bloße Vorhandensein von Skripten, Vorlagen oder Workflowdateien als abgeschlossen gelten.
+
+> **Aktueller Planungszustand:** Die RC-Vorbereitung ist pausiert. Zuerst wird der Version 1.0 Specification Candidate als stabile Dokumentationsbaseline abgeschlossen und durch die Referenzprodukte praktisch angewendet. Die vorhandenen RC-Dokumente und Werkzeuge bleiben vorbereitet, erteilen aber keine Freigabe.
 
 ## 2. Vorgesehene Releaseidentität
 
@@ -78,6 +80,8 @@ Nicht Bestandteil des Release Candidate sind:
 
 ### Phase RC-1 – Evidenz schließen
 
+Diese Phase wird erst nach dem dokumentierten Abschluss der praktischen Referenzvalidierung wieder aufgenommen.
+
 - erfolgreichen Ubuntu- und Windows-Lauf für den vorgesehenen Releasecommit nachweisen,
 - `SASD merge gate` für exakt denselben Commit nachweisen,
 - Ruleset aktivieren oder eine dokumentierte Maintainer-Entscheidung zur Verschiebung treffen,
@@ -121,7 +125,7 @@ Nicht Bestandteil des Release Candidate sind:
 | Gate | Bedeutung | Aktueller Zustand |
 |---|---|---|
 | G1 Normative Freigabe | alle erforderlichen normativen Dokumente Approved | Erfüllt |
-| G2 Repository-Qualität | lokale und Remote-Quality-Gates erfolgreich | Remote-Nachweis offen |
+| G2 Repository-Qualität | lokale und Remote-Quality-Gates erfolgreich | Mechanismus nachgewiesen; für den späteren RC-Commit erneut erforderlich |
 | G3 Pilotpraxis | mindestens ein Pilotdurchlauf technisch verifiziert | Offen |
 | G4 CI-Governance | Merge Gate nachgewiesen; Ruleset bewertet | Offen |
 | G5 Releaseunterlagen | Notes, Record, Known Issues und Manifest vorbereitet | Mit diesem Update vorbereitet |
@@ -153,6 +157,7 @@ Der Paketbau muss:
 - bei identischem Quellstand identische Archive erzeugen.
 
 ## 8. Verwandte Dokumente
+- [Spezifikationsbaseline und Validierungsübergabe](VERSION-1.0-SPECIFICATION-BASELINE.md)
 
 - [Release-Readiness](VERSION-1.0-RELEASE-CANDIDATE-READINESS.md)
 - [Blockerregister](VERSION-1.0-RELEASE-CANDIDATE-BLOCKERS.md)

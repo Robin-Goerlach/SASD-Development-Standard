@@ -8,13 +8,14 @@ standard-version: "1.0"
 language: de
 authoritative: false
 owner: SASD Development Standard Maintainer
-last-updated: 2026-07-25
+last-updated: 2026-08-06
 applies-to-quality-levels: [Recommended, Production]
 applies-to-profiles: [Core]
 depends-on: [SASD-REF-RC-001, SASD-REF-PILOT-007, SASD-REF-CI-003]
 ---
 
 # Release-Candidate-Blockerregister 1.0.0-rc.1
+Die RC-Vorbereitung ist während der praktischen Validierung des Version 1.0 Specification Candidate pausiert. Kein bestehender Blocker wird dadurch geschlossen oder als `Accepted for RC` behandelt. Der erfolgreiche TaskHost-Remote-Baseline-Lauf ist vorbereitende Evidenz, aber kein abgeschlossener Pilotdurchlauf.
 
 ## Statusmodell
 
@@ -41,6 +42,7 @@ depends-on: [SASD-REF-RC-001, SASD-REF-PILOT-007, SASD-REF-CI-003]
 
 | Thema | Begründung |
 |---|---|
+| TaskHost Remote Technical Baseline | Restore, Build, NuGet-Audit und Publish sind für einen exakten Zielcommit nachgewiesen; Tests, Laufzeitprüfung und Pilotabschluss bleiben offen. |
 | Word- und PDF-Ausgabe | Für die stabile Version 1.0 erforderlich; im RC muss der Publikationspfad vorbereitet und anschließend praktisch geprüft werden. |
 | vollständige technische Verifikation aller drei Piloten | Für Version 1.0 sollen alle Baselines bestätigt und Erkenntnisse konsolidiert werden; der erste RC verlangt mindestens einen verifizierten praktischen Durchlauf. |
 | englische normative Ausgabe | Nach Stabilisierung vorgesehen, aber nicht Bestandteil des deutschen Version-1.0-RC-Umfangs. |

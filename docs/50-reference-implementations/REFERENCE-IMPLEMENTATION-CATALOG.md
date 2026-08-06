@@ -31,8 +31,9 @@ Dieser Katalog verbindet den SASD Development Standard mit öffentlich erreichba
 | Plattform | Windows, .NET 8, Windows Forms, SQLite |
 | Beobachteter Branch | `main` |
 | Gepinnter Ziel-Commit | `2404feb0904b22274972b5803520e6d86a70047d` |
-| Aktueller Nachweisumfang | exakter Remote-Checkout, Restore, Build, verfügbare Tests, NuGet-Audit und Publish |
-| Noch offen | Wave-01-Integration im Ziel-Repository, verpflichtende Tests, Headless-Self-Check, manueller Windows-Smoke-Test und Pilotabschluss |
+| Aktueller Nachweisumfang | Remote Technical Baseline `Passed`: exakter Remote-Checkout, Restore, Build, NuGet-Audit und Publish |
+| Registrierter Nachweis | [GitHub-Actions-Run 31100169566 und Evidenzgrenzen](pilot-01-sasd-taskhost-local/REMOTE-BASELINE-EVIDENCE-2026-08-06.md) |
+| Noch offen | Wave-01-Integration im Ziel-Repository, angemessene automatisierte Tests, Headless-Self-Check, manueller Windows-Smoke-Test und Pilotabschluss |
 
 Der gepinnte Commit ist eine unveränderliche Baseline für den Remote-Nachweis. Ein erfolgreicher Baseline-Workflow bedeutet noch nicht, dass Wave 01 oder der Pilot abgeschlossen ist.
 
