@@ -279,7 +279,14 @@ finally {
     )
 
     if (-not [string]::IsNullOrWhiteSpace($errorMessage)) {
-        $markdown += @('## Failure', '', "```text`n$errorMessage`n```", '')
+        $markdown += @(
+            '## Failure',
+            '',
+            '```text',
+            $errorMessage,
+            '```',
+            ''
+        )
     }
 
     $markdown -join [Environment]::NewLine |
