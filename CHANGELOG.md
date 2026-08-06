@@ -101,6 +101,7 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+- Replaced the misplaced in-repository TaskHost build with an exact-commit cross-repository baseline verification against the public TaskHost Local repository.
 - Consolidated the canonical project status, public README entry paths, Version 1.0 scope freeze, and release-oriented roadmap.
 - Reframed post-1.0 planning around explicit Version 1.1, 1.2, and 2.0 stop conditions instead of an open-ended build-phase backlog.
 

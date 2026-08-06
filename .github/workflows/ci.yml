@@ -1,4 +1,4 @@
-name: Build, test and verify
+name: TaskHost Local reference baseline
 
 "on":
   push:
@@ -11,48 +11,102 @@ permissions:
   contents: read
 
 concurrency:
-  group: taskhost-local-ci-${{ github.ref }}
+  group: taskhost-reference-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify:
-    name: Windows Wave 01 verification
+    name: Exact-commit remote baseline verification
     runs-on: windows-latest
     timeout-minutes: 25
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Check out SASD Development Standard
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: standard
+          persist-credentials: false
+
+      - name: Read pinned TaskHost target
+        id: target
+        shell: pwsh
+        working-directory: standard
+        run: |
+          $pilotPath = 'docs/50-reference-implementations/pilot-01-sasd-taskhost-local/pilot.json'
+          $pilot = Get-Content $pilotPath -Raw | ConvertFrom-Json
+
+          $expectedRepository = 'https://github.com/Robin-Goerlach/SASD-TaskHost-Local'
+          if ($pilot.target_repository -ne $expectedRepository) {
+            throw "Unexpected target repository: $($pilot.target_repository)"
+          }
+          if ($pilot.target_commit -notmatch '^[0-9a-f]{40}$') {
+            throw "pilot.json does not contain a full immutable target_commit."
+          }
+
+          "repository=Robin-Goerlach/SASD-TaskHost-Local" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          "commit=$($pilot.target_commit)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+      - name: Check out TaskHost Local target commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ steps.target.outputs.repository }}
+          ref: ${{ steps.target.outputs.commit }}
+          path: target
+          persist-credentials: false
 
       - name: Set up .NET 8
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
         with:
           dotnet-version: 8.0.x
 
-      - name: Execute repository verification
-        shell: powershell
+      - name: Pin the available .NET 8 SDK for this run
+        shell: pwsh
+        run: |
+          $sdk = dotnet --list-sdks |
+            ForEach-Object { ($_ -split ' ')[0] } |
+            Where-Object { $_ -match '^8\.0\.\d+$' } |
+            Sort-Object { [version]$_ } -Descending |
+            Select-Object -First 1
+
+          if ([string]::IsNullOrWhiteSpace($sdk)) {
+            throw 'No .NET 8 SDK is available on the runner.'
+          }
+
+          @{
+            sdk = @{
+              version = $sdk
+              rollForward = 'latestPatch'
+              allowPrerelease = $false
+            }
+          } | ConvertTo-Json -Depth 4 | Set-Content -Path global.json -Encoding utf8NoBOM
+
+          Write-Host "Pinned .NET SDK $sdk for this verification run."
+
+      - name: Verify exact TaskHost baseline
+        shell: pwsh
         run: >-
-          .\scripts\verify-wave-01.ps1
+          ./standard/scripts/verify-external-dotnet-reference.ps1
+          -TargetRepositoryRoot ./target
+          -EvidenceRoot ./evidence/taskhost-local
           -Configuration Release
-          -EvidenceRoot .\verification-results\ci
 
       - name: Publish verification summary
         if: always()
-        shell: powershell
+        shell: pwsh
         run: |
-          $summary = '.\verification-results\ci\verification-summary.md'
+          $summary = './evidence/taskhost-local/verification-summary.md'
           if (Test-Path $summary) {
             Get-Content $summary | Add-Content $env:GITHUB_STEP_SUMMARY
           }
           else {
-            '# Verification summary was not generated' | Add-Content $env:GITHUB_STEP_SUMMARY
+            '# TaskHost baseline summary was not generated' | Add-Content $env:GITHUB_STEP_SUMMARY
           }
 
       - name: Upload verification evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: taskhost-local-wave-01-evidence-${{ github.sha }}
-          path: verification-results/ci
+          name: taskhost-baseline-standard-${{ github.sha }}-target-${{ steps.target.outputs.commit }}
+          path: evidence/taskhost-local
           if-no-files-found: error
           retention-days: 30

@@ -204,6 +204,7 @@ docs/50-reference-implementations/PILOT-FEEDBACK-SUMMARY.md
 docs/50-reference-implementations/PILOT-PORTFOLIO.md
 docs/50-reference-implementations/PILOT-PROGRAM.md
 docs/50-reference-implementations/README.md
+docs/50-reference-implementations/REFERENCE-IMPLEMENTATION-CATALOG.md
 docs/50-reference-implementations/REPOSITORY-BOUNDARY-INCIDENT-2026-07-24.md
 docs/50-reference-implementations/repository-self-hosting/BRANCH-RULESET-PLAN.md
 docs/50-reference-implementations/repository-self-hosting/CI-ACTIVATION-RECORD.md
@@ -318,6 +319,7 @@ scripts/repair-repository-boundary.ps1
 scripts/repair-repository-boundary.sh
 scripts/validate-repository.ps1
 scripts/validate-repository.sh
+scripts/verify-external-dotnet-reference.ps1
 scripts/verify-prompt-package-import.ps1
 scripts/verify-wave-01.ps1
 SECURITY.md

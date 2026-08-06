@@ -18,6 +18,10 @@ depends-on: [SASD-GOV-007, SASD-PROC-005]
 
 Dieses Verzeichnis dokumentiert die praktische Erprobung des SASD Development Standard an realen SASD-Projekten. Der Quellcode verbleibt in den jeweiligen Projekt-Repositories; hier werden Auswahl, Klassifikation, Ausgangslage, Migrationswellen, Nachweise und Erkenntnisse versioniert.
 
+## Katalog
+
+- [Referenzimplementierungskatalog](REFERENCE-IMPLEMENTATION-CATALOG.md)
+
 ## Pilotprogramm
 
 1. [Pilotprogramm](PILOT-PROGRAM.md)

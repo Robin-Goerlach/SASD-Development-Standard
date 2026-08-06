@@ -81,3 +81,13 @@ Local equivalent:
 ```bash
 bash scripts/build-prompt-package.sh
 ```
+
+
+## `ci.yml` – TaskHost Local reference baseline
+
+This read-only Windows workflow checks out the Development Standard and the
+public `Robin-Goerlach/SASD-TaskHost-Local` repository separately. The target
+revision is the immutable `target_commit` recorded in Pilot 01. The workflow
+records restore, build, available tests, NuGet audit execution, and publish
+evidence without copying product source into this repository or claiming that
+Wave 01 is complete.

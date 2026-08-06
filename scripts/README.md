@@ -77,3 +77,12 @@ bash scripts/build-prompt-package.sh
 ```
 
 The wrappers validate, build, and independently verify the candidate package under `artifacts/prompt-packages/`. They do not import data into the Prompt Manager.
+
+
+## External .NET reference baseline
+
+The `verify-external-dotnet-reference.ps1` script verifies a separate public
+.NET target repository without copying its product source into this repository.
+It records exact standard and target commits, restore, build, available tests,
+NuGet audit execution, and publish evidence. It deliberately leaves headless
+runtime verification, the manual Windows smoke test, and pilot closeout pending.

@@ -4,9 +4,9 @@
 >
 > This file is informative. Generated readiness reports and Approved normative documents take precedence when details differ.
 
-**Last reviewed:** 2026-08-05
+**Last reviewed:** 2026-08-06
 
-**Current phase:** Pre-1.0 consolidation and release-evidence closure
+**Current phase:** Pre-1.0 release-evidence closure
 
 **Next planned release:** `1.0.0-rc.1`
 
@@ -81,9 +81,9 @@ Use these sources in this order:
 
 ## Current work sequence
 
-1. Finish public status, entry-point, scope-freeze, and roadmap consolidation.
-2. Freeze a clean candidate commit and obtain exact-commit Ubuntu, Windows, and merge-gate evidence.
-3. Execute and verify TaskHost Local Wave 01.
+1. Preserve the successful exact-commit Ubuntu, Windows, and `SASD merge gate` evidence.
+2. Establish an immutable remote baseline for TaskHost Local and retain its evidence artifact.
+3. Integrate and verify TaskHost Local Wave 01 in the target repository, including tests, headless self-check, and manual Windows smoke testing.
 4. Activate or explicitly defer the governed `main` ruleset.
 5. Build and independently verify `1.0.0-rc.1` artifacts.
 6. Publish and review the Release Candidate.
