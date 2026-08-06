@@ -1,0 +1,25 @@
+# Canonical repository line endings
+#
+# Generated manifests and catalogs contain SHA-256 values of repository
+# files. Text files therefore require identical bytes on every platform.
+* text=auto eol=lf
+
+# Explicit binary formats
+*.7z binary
+*.doc binary
+*.docx binary
+*.gif binary
+*.gz binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.ods binary
+*.pdf binary
+*.png binary
+*.ppt binary
+*.pptx binary
+*.tar binary
+*.webp binary
+*.xls binary
+*.xlsx binary
+*.zip binary

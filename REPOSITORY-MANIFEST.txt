@@ -1,4 +1,5 @@
 .editorconfig
+.gitattributes
 .github/CODEOWNERS
 .github/dependabot.yml
 .github/ISSUE_TEMPLATE/config.yml

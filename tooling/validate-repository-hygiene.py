@@ -42,6 +42,8 @@ def main() -> int:
             continue
 
         raw = path.read_bytes()
+        if b"\r" in raw:
+            failures.append(f"non-LF line ending in text file: {relative}")
         if raw.startswith(b"\xef\xbb\xbf"):
             failures.append(f"UTF-8 BOM is not allowed: {relative}")
         try:
@@ -65,7 +67,7 @@ def main() -> int:
 
     print("OK   repository root is not duplicated")
     print("OK   no forbidden generated files or symbolic links")
-    print("OK   checked text files are UTF-8 with final newlines")
+    print("OK   checked text files are UTF-8 with LF endings and final newlines")
     print("OK   no trailing whitespace or structured-text tabs")
     print("\nRepository hygiene failures: 0")
     return 0

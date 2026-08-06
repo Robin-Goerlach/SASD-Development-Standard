@@ -38,6 +38,7 @@ SOURCE_DIRECTORIES = [
 ]
 SOURCE_FILES = [
     ".editorconfig",
+    ".gitattributes",
     ".gitignore",
     ".markdownlint.json",
     "CHANGELOG.md",

@@ -4,6 +4,7 @@
   "repository_kind": "development-standard",
   "default_branch": "main",
   "required_markers": [
+    ".gitattributes",
     "README.md",
     "PROJECT-STATUS.md",
     "docs/00-foundation/PROJECT-CHARTER.md",
@@ -23,6 +24,7 @@
   ],
   "allowed_top_level_files": [
     ".editorconfig",
+    ".gitattributes",
     ".gitignore",
     ".markdownlint.json",
     "CHANGELOG.md",
