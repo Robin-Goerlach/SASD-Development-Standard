@@ -41,8 +41,10 @@ Establish an honest, stable documentation baseline that can be applied and evalu
 
 - [x] Approved Foundation, Governance, Core, C#/.NET, Desktop, and process baselines available.
 - [x] Scope freeze, repository boundary, quality gates, pilot portfolio, release tooling, and remote technical baseline established.
-- [ ] Complete the final consistency pass for the Specification Candidate.
-- [ ] Record the Specification Candidate handoff commit and keep all practical-validation limitations explicit.
+- [x] Complete the final consistency pass for the Specification Candidate.
+- [x] Record Specification Candidate handoff commit `ce3bb90` and keep all practical-validation limitations explicit.
+- [x] Add a progressive-disclosure entry path, compact Quick Start, and explicit user/specification/maintainer navigation before pilot execution.
+- [x] Add lightweight pilot friction capture so practical validation measures usability and value as well as technical evidence.
 
 ### Practical reference validation
 
@@ -50,6 +52,7 @@ Establish an honest, stable documentation baseline that can be applied and evalu
 - [ ] Apply the frozen baseline while continuing SASD Prompt Manager.
 - [ ] Apply the frozen baseline while continuing SASD Mail Workbench.
 - [ ] Record build, test, runtime, security, maintenance, and release evidence proportionally.
+- [ ] Measure time-to-productivity, SASD overhead, findability, duplicate maintenance, tooling friction, and concrete prevented defects.
 - [ ] Classify findings as standard defect, clarification, project-specific exception, rejected feedback, or future enhancement.
 - [ ] Consolidate justified changes before Release Candidate preparation resumes.
 
@@ -139,7 +142,7 @@ Make the stable standard substantially easier to start and apply without weakeni
 
 ### Planned work
 
-- [ ] Add a compact Quick Start for new projects.
+- [ ] Refine the pre-1.0 Quick Start from real pilot and adoption evidence.
 - [ ] Add a compact migration path for existing projects.
 - [ ] Provide filtered requirement views for `Minimum`, `Recommended`, and `Production`.
 - [ ] Improve the Solo Developer Guide with end-to-end examples.

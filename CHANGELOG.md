@@ -7,6 +7,9 @@ The format is based on Keep a Changelog principles, and the project intends to u
 ## [Unreleased]
 
 ### Added
+- Root `QUICKSTART.md` providing a deliberately small new-project entry path based on progressive disclosure.
+- Lightweight Pilot Friction Log template for time-to-productivity, findability, duplication, tooling friction, and concrete SASD benefits without creating a new mandatory conformance artifact.
+- Informative external usability-review record preserving the 2026-08-07 critique, current assessment, decisions, and Version 1.0 revisit questions.
 - Version 1.0 Specification Candidate strategy defining the honest documentation baseline, practical-validation handoff, release pause, and criteria for resuming Release Candidate preparation.
 - Permanent TaskHost Local remote-baseline evidence record for standard commit `d80baf0cccf66b5c940cfd7f05e399c83f880e1a`, target commit `2404feb0904b22274972b5803520e6d86a70047d`, and GitHub Actions run `31100169566`.
 
@@ -103,6 +106,9 @@ The format is based on Keep a Changelog principles, and the project intends to u
 - Initial repository structure, project charter, Version 1.0 scope, content architecture, document catalog, governance drafts, and validation tools.
 
 ### Changed
+- Reworked root and documentation navigation into **Using SASD**, **SASD Specification**, and **Maintaining SASD** views so full complexity remains available without being imposed at first contact.
+- Clarified that SASD tooling and prompt packages support the standard but do not silently define new normative requirements or require a particular AI vendor/model.
+- Extended pilot-program and retrospective guidance to observe practical friction and measurable value before changing normative content.
 - Reframed the current project state from immediate release-evidence closure to specification-baseline closure followed by practical validation through the separate reference-product repositories.
 - Kept every practical-pilot and release blocker open while distinguishing the passed TaskHost remote technical baseline from full product and standard validation.
 - Replaced the misplaced in-repository TaskHost build with an exact-commit cross-repository baseline verification against the public TaskHost Local repository.

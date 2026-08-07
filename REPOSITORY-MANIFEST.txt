@@ -221,6 +221,7 @@ docs/90-project-history/update-manifests/PILOT-PORTFOLIO-EXPANSION-UPDATE-MANIFE
 docs/90-project-history/update-manifests/PROMPT-PACKAGE-UPDATE-MANIFEST.md
 docs/90-project-history/update-manifests/README.md
 docs/90-project-history/update-manifests/RELEASE-CANDIDATE-PREPARATION-UPDATE-MANIFEST.md
+docs/90-project-history/USABILITY-REVIEW-2026-08-07.md
 docs/README.md
 examples/desktop/maintained-winforms-application/README.md
 examples/desktop/maintained-wpf-application/README.md
@@ -304,6 +305,7 @@ prompts/schema/prompt-package.schema.json
 prompts/schema/prompt.schema.json
 prompts/SECURITY-GUIDE.md
 prompts/VARIABLES.md
+QUICKSTART.md
 README.md
 REPOSITORY-DESCRIPTION.txt
 REPOSITORY-IDENTITY.json
@@ -345,6 +347,7 @@ templates/documents/NORMATIVE-DOCUMENT-TEMPLATE.md
 templates/documents/PILOT-BASELINE-ASSESSMENT-TEMPLATE.md
 templates/documents/PILOT-CHARTER-TEMPLATE.md
 templates/documents/PILOT-EVIDENCE-MAP-TEMPLATE.md
+templates/documents/PILOT-FRICTION-LOG-TEMPLATE.md
 templates/documents/PILOT-GAP-REGISTER-TEMPLATE.md
 templates/documents/PILOT-IMPLEMENTATION-REVIEW-TEMPLATE.md
 templates/documents/PILOT-RETROSPECTIVE-TEMPLATE.md

@@ -15,6 +15,10 @@ Das Paket deckt Projektinitialisierung, Recherche, Anforderungen, Architektur, E
 
 ## Wichtige Abgrenzung
 
+Das Prompt-Paket ist ein **unterstützendes Artefakt**, nicht der normative Kern des SASD Development Standard. SASD setzt weder einen bestimmten KI-Anbieter noch ein bestimmtes Modell oder dieses konkrete Prompt-Paket voraus.
+
+Promptformulierungen dürfen sich mit Modellen, Werkzeugen und Praxiserfahrung schneller weiterentwickeln als die normative Baseline. Eine solche Paketänderung ändert den normativen Standard nicht automatisch und darf keine neuen normativen Anforderungen einschleusen.
+
 Die Dateien bilden ein stabiles SASD-Austauschformat. Sie sind **nicht** als ungeprüfte Kopie des internen Datenformats einer bestimmten Prompt-Manager-Version zu verstehen. Ein Importadapter darf erst als kompatibel bezeichnet werden, wenn Export, Import, Variablen, IDs und Roundtrip gegen einen exakten Prompt-Manager-Commit geprüft wurden.
 
 ## Verwendung

@@ -3,12 +3,12 @@ title: "Pilotprogramm für Version 1.0"
 document-id: SASD-REF-PILOT-001
 document-type: informative
 status: Proposed
-version: 0.11.0
+version: 0.12.0
 standard-version: "1.0"
 language: de
 authoritative: false
 owner: SASD Development Standard Maintainer
-last-updated: 2026-07-25
+last-updated: 2026-08-07
 applies-to-quality-levels: [Minimum, Recommended, Production]
 applies-to-profiles: [Core, DotNet, Desktop]
 depends-on: [SASD-FND-002, SASD-GOV-007, SASD-PROC-002, SASD-PROC-004, SASD-PROC-005]
@@ -99,6 +99,7 @@ Ein Projekt eignet sich besonders, wenn:
 - Vorbereitete CI-Konfiguration belegt keinen erfolgreichen CI-Lauf.
 - Profile dürfen abhängig vom Projektstand nur teilweise anwendbar sein; diese Begrenzung muss sichtbar sein.
 - Pilotfeedback darf zu Änderungen am Standard führen.
+- Reibung wird zunächst beobachtet und gebündelt; nicht jede einzelne Irritation rechtfertigt eine spontane Normänderung.
 
 ## 8. Verifikationsgate zwischen Wellen
 
@@ -110,7 +111,26 @@ Eine Folgewelle mit neuen Produkt- oder Architekturänderungen SOLLTE erst begin
 4. hinsichtlich Datenmigration und Rückfallweg bewertet,
 5. im Gap Register und Evidenzmodell aktualisiert wurde.
 
-## 9. Ergebnisse für den Standard
+## 9. Usability- und Reibungsbeobachtung
+
+Die Piloten prüfen nicht nur technische Konformität und Evidenz, sondern auch, wie sich SASD in echter Produktarbeit anfühlt. Diese Beobachtung ist eine eigene Sicht und verändert den Umsetzungs- oder Verifikationsstatus eines Piloten nicht.
+
+Nach Möglichkeit werden pro Pilot oder Welle leichtgewichtig erfasst:
+
+- Zeit bis zur ersten produktiven Produktarbeit,
+- initialer SASD-Zusatz- und Dokumentationsaufwand,
+- unnötige Doppelpflege,
+- häufiges Nachschlagen und Schwierigkeiten beim Finden der richtigen Vorgabe,
+- Regeln, Vorlagen oder Checklisten mit erkennbarem Nutzen,
+- Tooling- und Quality-Gate-Reibung,
+- konkrete Fehler oder Fehlentscheidungen, die SASD verhindert oder früher sichtbar gemacht hat,
+- Aufwand für Build, Tests und Releases im Verhältnis zum Projektrisiko.
+
+Dafür steht die [Pilot Friction Log Vorlage](../../templates/documents/PILOT-FRICTION-LOG-TEMPLATE.md) zur Verfügung. Sie ist bewusst kein neues Pflichtartefakt: gleichwertige Notizen sind ausreichend, sofern die Beobachtungen später in Retrospektive, Feedback oder Gap-Bewertung nachvollziehbar zusammengeführt werden können.
+
+Einzelne Reibungsmomente werden nicht sofort durch Standardänderungen beantwortet. Wiederkehrende Beobachtungen werden nach der Welle gebündelt und mindestens als Standardfehler, Klarstellungsbedarf, projektspezifische Ausnahme, zukünftige Verbesserung oder verworfenes Feedback klassifiziert.
+
+## 10. Ergebnisse für den Standard
 
 Nach jeder Baseline und jeder Welle wird bewertet:
 
@@ -122,3 +142,5 @@ Nach jeder Baseline und jeder Welle wird bewertet:
 6. War die gewählte Qualitätsstufe angemessen?
 7. Wurde unnötige Architektur vermieden?
 8. Wurden Beobachtung, Artefakt, Commit und Verifikation klar getrennt?
+9. Wo entstand messbare oder wiederkehrende Reibung?
+10. Welchen konkreten Aufwand hat SASD reduziert oder welchen Fehler verhindert?

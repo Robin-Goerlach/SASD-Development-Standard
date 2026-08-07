@@ -4,9 +4,9 @@
 >
 > This file is informative. Generated readiness reports and Approved normative documents take precedence when details differ.
 
-**Last reviewed:** 2026-08-06
+**Last reviewed:** 2026-08-07
 
-**Current phase:** Version 1.0 specification-baseline closure
+**Current phase:** Version 1.0 Specification Candidate — usability and pilot-readiness closure
 
 **Next development phase:** Practical validation through reference implementations
 
@@ -23,6 +23,7 @@
 | Total normative documents | **46/46 Approved** |
 | Normative requirements in the 0.9.0 baseline | **1,345** |
 | Specification baseline | **Complete enough for practical application and evaluation** |
+| User entry path | **Progressive disclosure with Quick Start and role-oriented navigation** |
 | Pilot size coverage | Small, Medium, and Large baselines documented |
 | TaskHost remote technical baseline | **Passed** for exact target commit `2404feb0904b22274972b5803520e6d86a70047d` |
 | Technically verified pilots | **0/3** |
@@ -39,6 +40,18 @@
 The repository is therefore treated as a **Version 1.0 Specification Candidate**. It is a stable working baseline for reference-product development, not a published Release Candidate and not the stable Version 1.0 release.
 
 See the [Version 1.0 Specification Baseline and Validation Handoff](docs/40-governance/VERSION-1.0-SPECIFICATION-BASELINE.md).
+
+## User entry and progressive disclosure
+
+The Specification Candidate now distinguishes three navigation views:
+
+1. **Using SASD** for developers applying the standard to a product,
+2. **SASD Specification** for the complete normative and explanatory depth,
+3. **Maintaining SASD** for governance, baselines, pilots, release readiness, and repository-specific validation.
+
+New projects start with [`QUICKSTART.md`](QUICKSTART.md) and the existing Project Brief rather than a full-document reading sequence. The complete depth remains available when project stage, risk, quality level, or lifecycle work requires it.
+
+This is a usability change, not a reduction of applicable normative requirements.
 
 ## What is complete
 
@@ -59,9 +72,11 @@ The remaining uncertainty is not primarily missing theory. It is the practical q
 
 The reference products must now show:
 
-- whether requirements are understandable and applicable,
+- whether requirements are understandable, findable, and applicable,
 - whether quality levels scale to Small, Medium, and Large projects,
 - whether templates and checklists support rather than obstruct the work,
+- how much initial SASD overhead, documentation effort, lookup friction, and duplicate maintenance actually occur,
+- which rules, templates, and quality gates demonstrably save time or prevent defects,
 - whether build, test, security, runtime, maintenance, and release expectations are realistic,
 - which findings are genuine standard defects, project-specific exceptions, or future improvements.
 
@@ -109,8 +124,8 @@ Use these sources in this order:
 
 ## Current work sequence
 
-1. Complete and verify the Version 1.0 Specification Candidate documentation.
-2. Freeze the resulting documentation baseline as the practical validation starting point.
+1. Complete and verify the Version 1.0 Specification Candidate usability and pilot-readiness pass.
+2. Freeze the resulting entry/navigation baseline as the practical validation starting point.
 3. Continue each reference product in its own repository and project conversation.
 4. Collect concrete implementation, test, runtime, security, maintenance, and release evidence.
 5. Classify pilot findings and feed only justified changes back into the standard.
